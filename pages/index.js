@@ -2,11 +2,35 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import MainLayout from "../components/layout/MainLayout"
+import { useState } from 'react'
+import Image from 'next/image'
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
+
+import MapIcon from "../assets/img/map-icon.png"
+import CalendarIcon from "../assets/img/calendar-icon.png"
+import Section03Img01 from "../assets/img/home-page/section-03-img-01.png"
+import Section03Img02 from "../assets/img/home-page/section-03-img-02.png"
+import Section03ArrowIcon from "../assets/img/home-page/section-03-arrow-icon.png"
+import Section04Img from "../assets/img/home-page/section-04-img.png"
+import Section05Img01 from "../assets/img/home-page/section-05-img-01.png"
+import Section05Img02 from "../assets/img/home-page/section-05-img-02.png"
+import Section06Img from "../assets/img/home-page/section-06-img.png"
+import Section07Img01 from "../assets/img/home-page/section-07-img-01.png"
+import Section07Img02 from "../assets/img/home-page/section-07-img-02.png"
+import Section07Img03 from "../assets/img/home-page/section-07-img-03.png"
+import Section07Img04 from "../assets/img/home-page/section-07-img-04.png"
+import Section08Img01 from "../assets/img/home-page/section-08-img-01.png"
+import Section08Img02 from "../assets/img/home-page/section-08-img-02.png"
+import Section08Img03 from "../assets/img/home-page/section-08-img-03.png"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
+  const [pickUpDate, setPickUpDate] = useState(new Date())
+  const [dropOffDate, setDropOffDate] = useState(new Date())
 
   return (
     <>
@@ -19,7 +43,7 @@ export default function Home() {
       <MainLayout>
         <section id={styles.heroSection} className='py-5'>
           <div className='container'>
-            <div className='row row-cols-md-2 gap-5'>
+            <div className='row row-cols-lg-2 gap-5'>
               <div>
                 <h1>Explore the VEHDE’s world of car sharing innovation</h1>
                 <div className='d-flex gap-3 align-items-center mt-5'>
@@ -28,6 +52,187 @@ export default function Home() {
                 </div>
               </div>
               <div></div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.reserveCarSection}>
+          <div className='container'>
+            <div className={styles.reserveCarSectionWrapper}>
+              <h2 className='text-center mb-4'> The smartest place to rent a car</h2>
+              <div className="input-box">
+                <div className="row">
+                  <div className="col-lg-5">
+                    <div>
+                      <label htmlFor="">Location</label>
+                    </div>
+                    <div className="d-flex gap-2 align-items-center">
+                      <Image src={MapIcon} alt="Map Icon" />
+                      <input type="text" placeholder='Address' />
+                    </div>
+                  </div>
+                  <div className="col-lg-2">
+                    <div>
+                      <label htmlFor="">Pick-up</label>
+                    </div>
+                    <div className="d-flex gap-2 align-items-center">
+                      <Image src={CalendarIcon} alt="Calendar Icon" />
+                      <DatePicker
+                        selected={pickUpDate}
+                        onChange={(date) => setPickUpDate(date)}
+                        timeInputLabel="Time:"
+                        dateFormat="MM/dd/yyyy h:mm aa"
+                        showTimeInput
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-2 mb-lg-0 mb-3">
+                    <div>
+                      <label htmlFor="">Drop-off</label>
+                    </div>
+                    <div className="d-flex gap-2 align-items-center">
+                      <Image src={CalendarIcon} alt="Calendar Icon" />
+                      <DatePicker
+                        selected={dropOffDate}
+                        startDate={pickUpDate}
+                        onChange={(date) => setDropOffDate(date)}
+                        timeInputLabel="Time:"
+                        dateFormat="MM/dd/yyyy h:mm aa"
+                        showTimeInput
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-3 justify-content-lg-end d-flex pe-3">
+                    <button className='my-btn'>Reserve my car</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.section03} className='mb-5'>
+          <div className="container">
+            <div className="row row-cols-md-2 row-cols-1 align-items-center">
+              <div className="col">
+                <h2>Collaborative strategy for flexible mobility</h2>
+                <p>Right from your doorstep you can optimize your travel experience through our carefully designed collaboration that supports flexibility in your daily mobility.</p>
+                <div className='d-flex align-items-center gap-2'>
+                  <a href="#">See how our collaborative strategy works</a>
+                  <span><Image src={Section03ArrowIcon} alt="Arrow Icon" /></span>
+                </div>
+              </div>
+              <div className="col d-flex flex-column">
+                <div className={`flex-1 ${styles.section03FirstCol}`}>
+                  <Image src={Section03Img01} alt="" className='img-fuild' />
+                </div>
+                <div className='flex-1'>
+                  <Image src={Section03Img02} alt="" className='img-fluid' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.section04}>
+          <div className="container">
+            <div className="wrapper text-center">
+              <h2>Switch to smart mobility</h2>
+              <p>Smart transportation for increasing mobility and optimum daily productive life. Unlike the generic vehicular models, our innovative algorithm is designed specifically to optimize your car search experience.</p>
+              <Image src={Section04Img} alt="Car with map" className='img-fluid' />
+            </div>
+          </div>
+        </section>
+        <section id={styles.section05}>
+          <div className="container">
+            <div className="wrapper">
+              <h2 className="text-center">Enhance your productivity</h2>
+              <div className="row row-cols-lg-2 row-cols-1 align-items-center my-5">
+                <div className="col text-lg-start text-center">
+                  <Image src={Section05Img01} alt='Car with round fuel pipe' className='img-fluid' />
+                </div>
+                <div className="col text-lg-start text-center">
+                  <h3>Host</h3>
+                  <p>Whether you are an individual or a car rental company, you can become a host by listing your car to rent. Stay ahead! List your car today.</p>
+                  <button className='my-btn mx-lg-1 mx-auto'>Apply To Host</button>
+                </div>
+              </div>
+              <div className="row row-cols-lg-2 flex-lg-row flex-column-reverse align-items-center mt-5 justify-content-between">
+                <div className="col text-lg-start text-center">
+                  <h3>Renter</h3>
+                  <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
+                  <button className='my-btn mx-lg-1 mx-auto'>Rent A Car</button>
+                </div>
+                <div className="col">
+                  <Image src={Section05Img02} alt='Car with round fuel pipe' className='img-fluid' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.section06}>
+          <div className="container">
+            <div className="wrapper">
+              <h2 className="text-center">VEHDE your way to top destinations in the United States</h2>
+              <div className="image-map-wrapper my-5 text-center">
+                <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} usemap="#infographic" />
+                <map name="infographic">
+                  <area shape='circle' coords='0,200,100' alt="Circle" />
+                  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"></area>
+                </map>
+              </div>
+              <div className="d-flex justify-content-center">
+                <button className="my-btn" style={{ maxWidth: "fit-content" }}>Show all destinations</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.section07}>
+          <div className="container">
+            <div className="wrapper">
+              <div className="row row-cols-md-4 row-cols-1 align-items-center">
+                <div className="col text-center mb-5 mb-lg-0">
+                  <Image src={Section07Img01} alt="Air Bnb" className='img-fluid' />
+                </div>
+                <div className="col text-center">
+                  <Image src={Section07Img02} alt="Air Bnb" className='img-fluid' />
+                </div>
+                <div className="col text-center">
+                  <Image src={Section07Img03} alt="Air Bnb" className='img-fluid' />
+                </div>
+                <div className="col text-center">
+                  <Image src={Section07Img04} alt="Air Bnb" className='img-fluid' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.section08}>
+          <div className="container">
+            <div className="wrapper">
+              <h2 className='text-center'>Mask and Safety</h2>
+              <div className="row row-cols-md-3 row-cols-1 align-items-center">
+                <div className="col p-3">
+                  <div className="text-center">
+                    <Image src={Section08Img01} alt="Car in hand" />
+                    <h3>Your safety, our no 1 priority.</h3>
+                    <p>We are fully committed to your safety, even as our innovative strategies help enhance your accessibility to mobility of greater value to your productivity.</p>
+                  </div>
+                </div>
+                <div className="col p-3">
+                  <div className="text-center">
+                    <Image src={Section08Img02} alt="Car in hand" />
+                    <h3>Mask & Social Safety</h3>
+                    <p>With your support, when you observe safety procedures, every day, we protect our great asset –Health.</p>
+                    <a href="#">Learn more about mask and social safety</a>
+                  </div>
+                </div>
+                <div className="col p-3">
+                  <div className="text-center">
+                    <Image src={Section08Img03} alt="Car in hand" />
+                    <h3>COVID-19 Vaccine</h3>
+                    <p>Let’s crunch the virus! Our commitment to vaccination moves us closer to full recovery in our various communities.</p>
+                    <a href="#">Learn more about vaccination program</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
