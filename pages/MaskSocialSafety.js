@@ -3,6 +3,15 @@ import React from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import styles from "../styles/MaskSocialSafety.module.css"
 
+import HeroSectionImg from "../assets/img/mask-social-safety/heroSectionImg.png"
+import RightArrow from "../assets/img/home-page/section-03-arrow-icon.png"
+import Section02Img01 from "../assets/img/mask-social-safety/section-02-img-01.png"
+import Section02Img02 from "../assets/img/mask-social-safety/section-02-img-02.png"
+import Section02Img03 from "../assets/img/mask-social-safety/section-02-img-03.png"
+import Section03MapImg from "../assets/img/mask-social-safety/section-03-map-img.png"
+import Image from 'next/image'
+import Link from 'next/link'
+
 const MaskSocialSafety = () => {
     return (
         <>
@@ -14,7 +23,95 @@ const MaskSocialSafety = () => {
             </Head>
             <MainLayout>
                 <section id={styles.heroSection}>
-                    <h1>Test</h1>
+                    <div className="container">
+                        <div className="wrapper">
+                            <div className="row row-cols-md-2 row-cols-1 align-items-center">
+                                <div className="col mb-lg-0 mb-5">
+                                    <h1>Mask and social safety</h1>
+                                    <p>The Centers for Disease Control and Prevention (CDC) is the national public health agency of the United States. The agency's main goal is the protection of public health and safety through the control and prevention of disease, injury, and disability in the US and worldwide.
+                                    </p>
+                                </div>
+                                <div className="col text-center">
+                                    <Image src={HeroSectionImg} alt="Girl Mask Image" className='img-fluid' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id={styles.section02}>
+                    <div className="container">
+                        <div className="wrapper">
+                            <h2 className="text-center">
+                                Use masks to slow the
+                                spread of COVID-19
+                            </h2>
+                            <div className="row row-cols-lg-2 row-cols-1 mt-5">
+                                <div className="col text-lg-start text-center">
+                                    <Image src={Section02Img01} className='img-fluid' />
+                                </div>
+                                <div className="col">
+                                    <div className="mb-4">
+                                        <h3>Wearing a mask</h3>
+                                        <p>Wearing a mask in the right way should improve its effectiveness. First, wash your hands. Put the mask on your face. Put the loops behind your ears. The mask must cover your nose</p>
+                                        <div className="d-flex align-items-center">
+                                            <Link href="#" className='me-3'>Learn more about wearing a mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                        </div>
+                                    </div>
+                                    <div className="mb-4">
+                                        <h3>Who should wear a mask?</h3>
+                                        <p>In areas with high numbers of COVID-19 cases, consider wearing a mask in crowded outdoor settings and for activities with close contact with others who are not fully vaccinated.</p>
+                                        <div className="d-flex align-items-center">
+                                            <Link href="#" className='me-3'>Learn more about people that should wear mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row row-cols-lg-2 row-cols-1 mt-lg-5 align-items-center">
+                                <div className="col order-lg-1 order-2">
+                                    <div>
+                                        <h3>Types of masks and respirators</h3>
+                                        <p>CDC provides relevant information on different types of masks and respirators you can use to protect yourself and others from getting and spreading COVID-19.</p>
+                                        <div className="d-flex align-items-center">
+                                            <Link href="#" className='me-3'>Learn more about types of masks and respirators</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col text-lg-end text-center order-lg-2 order-1">
+                                    <Image src={Section02Img02} className='img-fluid' />
+                                </div>
+                            </div>
+                            <div className="row row-cols-lg-2 row-cols-1 mt-lg-5 mt-4 align-items-center">
+                                <div className="col text-lg-start text-center">
+                                    <Image src={Section02Img03} className='img-fluid' />
+                                </div>
+                                <div className="col">
+                                    <div>
+                                        <h3>Guidance for wearing masks</h3>
+                                        <p>A mask is NOT a substitute for social distancing. Masks should still be worn in addition to staying at least 6 feet apart, especially when indoors around people who don’t live in your household.</p>
+                                        <div className="d-flex align-items-center">
+                                            <Link href="#" className='me-3'>Learn more about guidance for wearing mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id={styles.section03}>
+                    <div className="container">
+                        <div className="wrapper">
+                            <div className="text-center">
+                                <h2>Please select from below for specific information regarding mask in each state</h2>
+                                <div className="d-flex justify-content-center align-items-center gap-3">
+                                    <Link href="#">Learn about a mask in California</Link><Image src={RightArrow} alt='Right Arrow' />
+                                </div>
+                                <h3> <span>State of</span> California</h3>
+                            </div>
+                            <div className='text-center'>
+                                <Image src={Section03MapImg} alt="Map Img" className='img-fluid' />
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </MainLayout>
         </>
