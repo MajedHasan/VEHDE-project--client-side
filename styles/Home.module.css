@@ -155,6 +155,12 @@
   color: #717171;
 }
 
+#section05>div>div>div>div img {
+  max-width: 320px;
+  width: 100%;
+  margin: auto;
+}
+
 #section06 {
   margin-bottom: 80px;
 }
@@ -175,6 +181,294 @@
   font-weight: 500;
   font-size: 45px;
 }
+
+.section06ButtonContainer {
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section06Button {
+  height: 14px;
+  width: 14px;
+  background: #dd4f4d;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.section06ButtonWrapper {
+  position: relative;
+  /* top: 19%;
+  left: 47.5%; */
+  /* background-color: #dd4f4d; */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  /* z-index: 9; */
+}
+
+.section06BoxWrapper {
+  width: 350px;
+  height: 0px;
+  margin-top: -25px;
+  margin-left: -25px;
+  background: #FFFFFF;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  padding: 0px;
+  visibility: hidden;
+}
+
+.section06BoxWrapper>div {
+  position: relative;
+  z-index: 9999;
+  background: #FFFFFF;
+  padding: 8px;
+}
+
+.section06ButtonWrapper:hover .section06BoxWrapper {
+  height: auto;
+  margin-top: 0px;
+  margin-left: -125px;
+  border: 1px solid #DE4F4D;
+  padding: 1px;
+  visibility: visible;
+}
+
+.section06BoxWrapper::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0%;
+  transform: rotate(45deg);
+  background: #FFFFFF;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #DE4F4D;
+  transition: all 0.4s ease;
+  display: none;
+}
+
+.section06BoxWrapper::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -20%;
+  background: #FFFFFF;
+  width: 25px;
+  height: 16px;
+  z-index: 99;
+  transition: all 0.4s ease;
+  display: none;
+}
+
+.section06ButtonWrapper:hover .section06BoxWrapper::after,
+.section06ButtonWrapper:hover .section06BoxWrapper::before {
+  display: block;
+}
+
+.section06BoxWrapper h2 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #DE4F4D;
+}
+
+.section06BoxWrapper h3 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+}
+
+.section06BoxWrapper>div>div>span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #DE4F4D;
+}
+
+.section06BoxWrapper>div>img {
+  border: 1px solid #DE4F4D;
+  border-radius: 5px;
+}
+
+.section06BoxWrapper p {
+  font-weight: 400;
+  font-size: 11px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+/* Button Boxes */
+.section06ButtonWrapper01 {
+  top: 18.5%;
+  left: 47.5%;
+}
+
+.section06ButtonWrapper02 {
+  top: 25.7%;
+  left: 22.7%;
+}
+
+.section06ButtonWrapper03 {
+  top: 39.6%;
+  left: 10.4%;
+}
+
+.section06ButtonWrapper04 {
+  top: 40.4%;
+  left: 28%;
+}
+
+.section06ButtonWrapper05 {
+  top: 44.7%;
+  left: 21%;
+}
+
+.section06ButtonWrapper06 {
+  top: 58.5%;
+  left: 26.2%;
+}
+
+.section06ButtonWrapper07 {
+  top: 75.5%;
+  left: 40.4%;
+}
+
+.section06ButtonWrapper08 {
+  top: 40.5%;
+  left: 68.7%;
+}
+
+.section06ButtonWrapper09 {
+  top: 70.7%;
+  left: 72.3%;
+}
+
+/* xxx Button Boxes xxx */
+
+
+@media only screen and (max-width:991px) {
+  .section06ButtonContainer {
+    display: none;
+  }
+
+  .section06ButtonContainer:hover {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .section06ButtonContainer:hover {
+    overflow: visible;
+  }
+
+  /* Button Boxes */
+  .section06ButtonWrapper01 {
+    top: 17.5%;
+    left: 47.2%;
+  }
+
+  .section06ButtonWrapper02 {
+    top: 24.7%;
+    left: 22.1%;
+  }
+
+  .section06ButtonWrapper03 {
+    top: 37.1%;
+    left: 10%;
+  }
+
+  .section06ButtonWrapper04 {
+    top: 36.4%;
+    left: 28%;
+  }
+
+  .section06ButtonWrapper05 {
+    top: 38.7%;
+    left: 21%;
+  }
+
+  .section06ButtonWrapper06 {
+    top: 51%;
+    left: 26%;
+  }
+
+  .section06ButtonWrapper07 {
+    top: 67%;
+    left: 40%;
+  }
+
+  .section06ButtonWrapper08 {
+    top: 30%;
+    left: 68.2%;
+  }
+
+  .section06ButtonWrapper09 {
+    top: 58.7%;
+    left: 72%;
+  }
+
+  /* xxx Button Boxes xxx */
+}
+
+@media only screen and (max-width:768px) {
+
+  .section06ButtonWrapper {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Button Boxes */
+  .section06ButtonWrapper02 {
+    top: 25%;
+    left: 22.5%;
+  }
+
+  .section06ButtonWrapper03 {
+    top: 37.8%;
+    left: 10.4%;
+  }
+
+  .section06ButtonWrapper04 {
+    top: 37.4%;
+    left: 27.8%;
+  }
+
+  .section06ButtonWrapper05 {
+    top: 40.5%;
+    left: 20.6%;
+  }
+
+  .section06ButtonWrapper06 {
+    top: 53%;
+    left: 26.2%;
+  }
+
+  .section06ButtonWrapper07 {
+    top: 69%;
+    left: 40.3%;
+  }
+
+  .section06ButtonWrapper08 {
+    top: 32.8%;
+    left: 68.5%;
+  }
+
+  .section06ButtonWrapper09 {
+    top: 62%;
+    left: 72%;
+  }
+
+  /* xxx Button Boxes xxx */
+}
+
+
 
 #section08 {
   margin: 70px 0;
@@ -212,7 +506,15 @@
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width:1024px) {
+  .section03FirstCol {
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
   #heroSection h1 {
     font-size: 40px;
     max-width: none;
@@ -223,9 +525,19 @@
     letter-spacing: inherit;
   }
 
-  .section03FirstCol {
-    margin-top: 30px;
-    margin-right: 0px;
+  .reserveCarSectionWrapper>div>div>div {
+    padding: 0 15px;
+  }
+
+  .reserveCarSectionWrapper>div {
+    border-radius: 15px;
+    padding: 12px 10px;
+  }
+
+  .reserveCarSectionWrapper>div>div>div>button {
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 
   #section03>div>div>div h2 {

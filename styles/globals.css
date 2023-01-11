@@ -194,6 +194,10 @@ button {
   right: 12px;
 }
 
+#header .mobileMenuItem {
+  display: none;
+}
+
 
 
 
@@ -252,6 +256,12 @@ button {
 }
 
 
+@media only screen and (max-width:991px) {
+  #header .mobileMenuItem {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 767px) {
 
   .my-btn,
@@ -270,4 +280,15 @@ button {
   #logo {
     max-width: 60px;
   }
+}
+
+
+
+/* ============================= Home Page Swiper Slider ============================= */
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  text-align: center;
 }

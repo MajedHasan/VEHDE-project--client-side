@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import MainLayout from "../components/layout/MainLayout"
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from "next/link"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -16,6 +17,8 @@ import Section04Img from "../assets/img/home-page/section-04-img.png"
 import Section05Img01 from "../assets/img/home-page/section-05-img-01.png"
 import Section05Img02 from "../assets/img/home-page/section-05-img-02.png"
 import Section06Img from "../assets/img/home-page/section-06-img.png"
+import Section06RedArrow from "../assets/img/home-page/section-06-red-arrow.png"
+import Section06ButtonBoxImg01 from "../assets/img/home-page/section-06-button-box-img-01.png"
 import Section07Img01 from "../assets/img/home-page/section-07-img-01.png"
 import Section07Img02 from "../assets/img/home-page/section-07-img-02.png"
 import Section07Img03 from "../assets/img/home-page/section-07-img-03.png"
@@ -23,6 +26,13 @@ import Section07Img04 from "../assets/img/home-page/section-07-img-04.png"
 import Section08Img01 from "../assets/img/home-page/section-08-img-01.png"
 import Section08Img02 from "../assets/img/home-page/section-08-img-02.png"
 import Section08Img03 from "../assets/img/home-page/section-08-img-03.png"
+
+
+import { Navigation, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -61,7 +71,7 @@ export default function Home() {
               <h2 className='text-center mb-4'> The smartest place to rent a car</h2>
               <div className="input-box">
                 <div className="row">
-                  <div className="col-lg-5">
+                  <div className="col-xl-5 col-lg-3">
                     <div>
                       <label htmlFor="">Location</label>
                     </div>
@@ -70,7 +80,7 @@ export default function Home() {
                       <input type="text" placeholder='Address' />
                     </div>
                   </div>
-                  <div className="col-lg-2">
+                  <div className="col-xl-2 col-lg-3">
                     <div>
                       <label htmlFor="">Pick-up</label>
                     </div>
@@ -85,7 +95,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className="col-lg-2 mb-lg-0 mb-3">
+                  <div className="col-xl-2 col-lg-3 mb-lg-0 mb-3">
                     <div>
                       <label htmlFor="">Drop-off</label>
                     </div>
@@ -102,7 +112,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-lg-3 justify-content-lg-end d-flex pe-3">
-                    <button className='my-btn'>Reserve my car</button>
+                    <button className='my-btn w-lg-auto w-100'>Reserve my car</button>
                   </div>
                 </div>
               </div>
@@ -120,7 +130,7 @@ export default function Home() {
                   <span><Image src={Section03ArrowIcon} alt="Arrow Icon" /></span>
                 </div>
               </div>
-              <div className="col d-flex flex-column">
+              <div className="col d-flex flex-lg-row flex-column">
                 <div className={`flex-1 ${styles.section03FirstCol}`}>
                   <Image src={Section03Img01} alt="" className='img-fuild' />
                 </div>
@@ -160,7 +170,7 @@ export default function Home() {
                   <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
                   <button className='my-btn mx-lg-1 mx-auto'>Rent A Car</button>
                 </div>
-                <div className="col">
+                <div className="col text-lg-end text-center">
                   <Image src={Section05Img02} alt='Car with round fuel pipe' className='img-fluid' />
                 </div>
               </div>
@@ -171,12 +181,172 @@ export default function Home() {
           <div className="container">
             <div className="wrapper">
               <h2 className="text-center">VEHDE your way to top destinations in the United States</h2>
-              <div className="image-map-wrapper my-5 text-center">
-                <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} usemap="#infographic" />
-                <map name="infographic">
-                  <area shape='circle' coords='0,200,100' alt="Circle" />
-                  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"></area>
-                </map>
+              <div className="image-map-wrapper my-5 text-center position-relative">
+                <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} />
+                <div className={styles.section06ButtonContainer}>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper01}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper02}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper03}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper04}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper05}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper06}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper07}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper08}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper09}`}>
+                    <button className={styles.section06Button}></button>
+                    <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                      <div className='col-7 text-start'>
+                        <h2>Mount Rushmore</h2>
+                        <h3>South Dakota</h3>
+                        <p>
+                          Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.
+                        </p>
+                        <div className='d-flex align-items-center'>
+                          <span>More Detail</span><Image src={Section06RedArrow} alt='Red Arrow' />
+                        </div>
+                      </div>
+                      <div className='col-5'>
+                        <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="d-flex justify-content-center">
                 <button className="my-btn" style={{ maxWidth: "fit-content" }}>Show all destinations</button>
@@ -187,7 +357,41 @@ export default function Home() {
         <section id={styles.section07}>
           <div className="container">
             <div className="wrapper">
-              <div className="row row-cols-md-4 row-cols-1 align-items-center">
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={false}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: true,
+                }}
+                navigation={false}
+                modules={[Autoplay, Navigation]}
+                slidesPerView={4}
+                breakpoints={{
+                  549: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                <SwiperSlide><Image src={Section07Img01} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img02} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img03} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img04} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img01} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img02} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img03} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+                <SwiperSlide><Image src={Section07Img04} alt="Air Bnb" className='img-fluid' /></SwiperSlide>
+              </Swiper>
+              {/* <div className="row row-cols-md-4 row-cols-1 align-items-center">
                 <div className="col text-center mb-5 mb-lg-0">
                   <Image src={Section07Img01} alt="Air Bnb" className='img-fluid' />
                 </div>
@@ -200,7 +404,7 @@ export default function Home() {
                 <div className="col text-center">
                   <Image src={Section07Img04} alt="Air Bnb" className='img-fluid' />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -221,7 +425,7 @@ export default function Home() {
                     <Image src={Section08Img02} alt="Car in hand" />
                     <h3>Mask & Social Safety</h3>
                     <p>With your support, when you observe safety procedures, every day, we protect our great asset –Health.</p>
-                    <a href="#">Learn more about mask and social safety</a>
+                    <Link href="MaskSocialSafety">Learn more about mask and social safety</Link>
                   </div>
                 </div>
                 <div className="col p-3">

@@ -19,9 +19,9 @@ const Header = () => {
             <div className='container'>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="container-fluid">
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
-                        </button>
+                        </button> */}
                         <Link className="navbar-brand" href="/">
                             <Image src={logo} alt="Logo" className='img-fluid' id="logo" />
                         </Link>
@@ -66,6 +66,28 @@ const Header = () => {
                                             <Image src={HelpIcon} alt="Help Icon" />
                                             <span>Careers</span>
                                         </Link>
+                                    </div>
+                                    <div className="mobileMenuItem">
+                                        <div className='my-3'>
+                                            <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                                <span>About Us</span>
+                                            </Link>
+                                        </div>
+                                        <div className='mb-3'>
+                                            <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                                <span>Smart Guide</span>
+                                            </Link>
+                                        </div>
+                                        <div className='mb-3'>
+                                            <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                                <span>Renter</span>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                                <span>Host</span>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             }
