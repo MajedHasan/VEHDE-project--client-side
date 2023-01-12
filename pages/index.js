@@ -433,7 +433,7 @@ export default function Home() {
                     <Image src={Section08Img03} alt="Car in hand" />
                     <h3>COVID-19 Vaccine</h3>
                     <p>Let’s crunch the virus! Our commitment to vaccination moves us closer to full recovery in our various communities.</p>
-                    <a href="#">Learn more about vaccination program</a>
+                    <Link href="VaccinationProgram">Learn more about vaccination program</Link>
                   </div>
                 </div>
               </div>

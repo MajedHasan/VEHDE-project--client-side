@@ -28,7 +28,7 @@ const Header = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">About Us</a>
+                                    <Link className="nav-link active" aria-current="page" href="/AboutUs">About Us</Link>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">Smart Guide</a>
@@ -69,7 +69,7 @@ const Header = () => {
                                     </div>
                                     <div className="mobileMenuItem">
                                         <div className='my-3'>
-                                            <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                            <Link href="/AboutUs" className='d-flex align-items-center w-100 gap-2'>
                                                 <span>About Us</span>
                                             </Link>
                                         </div>
