@@ -3,13 +3,11 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    padding-bottom: 80px !important;
-    padding-top: 80px;
 }
 
 #heroSection>div>div {
-    padding-top: 10px;
-    padding-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 140px;
 }
 
 #heroSection>div>div>div>div>h1 {
@@ -40,6 +38,18 @@
     display: block;
 }
 
+
+@media only screen and (max-width:991px) {
+    #heroSection>div {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    #heroSection>div>div>div>div>div>p,
+    #heroSection>div>div>div>div>div a,
+    #heroSection>div>div>div>div>div>h1 {
+        color: #FFFFFF;
+    }
+}
 
 @media only screen and (max-width:768px) {
     #heroSection>div>div>div>div>h1 {

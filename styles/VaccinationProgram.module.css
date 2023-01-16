@@ -129,6 +129,13 @@
 }
 
 
+@media only screen and (max-width:991px) {
+    #heroSection>div>div>div>div>p {
+        color: #000000;
+        font-weight: 600;
+    }
+}
+
 @media only screen and (max-width:768px) {
     #section02>div>div {
         border-radius: 20px;

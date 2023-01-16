@@ -1,0 +1,136 @@
+#heroSection {
+    background: url(../assets/img/SmartGuid2/heroSectionImg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 120px !important;
+}
+
+#heroSection h1 {
+    font-size: 55px;
+    color: #030719;
+    max-width: 415px;
+}
+
+#heroSection>div>div {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+#section02 {
+    margin-top: -120px;
+    margin-bottom: 100px;
+}
+
+#section02>div>div {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    padding: 40px 60px;
+    margin-top: -100px;
+}
+
+#section02>div>div>div>h2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 56px;
+}
+
+#section02>div>div>div>p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+}
+
+#section03>div>div>div>div>h2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 56px;
+}
+
+#section03>div>div>div>div>p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #717171;
+}
+
+#section03>div>div>div>div>div>a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 32px;
+    color: #DE4F4D;
+}
+
+#section04>div>div>div>div:nth-child(1)>div input {
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #D9D9D9;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section04>div>div>div>div:nth-child(1)>div input:enabled:checked,
+#section04>div>div>div>div:nth-child(1)>div input:checked,
+#section04>div>div>div>div:nth-child(1)>div input::before,
+#section04>div>div>div>div:nth-child(1)>div input::before {
+    background: #DE4F4D;
+}
+
+#section04>div>div>div>div:nth-child(1)>div input::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 25px;
+    color: #FFFFFF;
+    display: none;
+}
+
+#section04>div>div>div>div:nth-child(1)>div input:checked:after {
+    display: block;
+}
+
+#section04>div>div>div>div:nth-child(1)>div label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+#section04>div>div>div>div:nth-child(2)>div {
+    background: #F1F1F1;
+    border-radius: 23px;
+    padding: 30px 60px;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    #heroSection h1 {
+        font-size: 40px;
+        max-width: none;
+    }
+
+    #section02>div>div {
+        border-radius: 25px;
+        padding: 15px 20px;
+    }
+
+    #section02>div>div>div>h2 {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    #section02>div>div>div>p {
+        font-size: 16px;
+        line-height: 15px;
+    }
+}

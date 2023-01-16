@@ -292,3 +292,21 @@ button {
 .swiper-slide {
   text-align: center;
 }
+
+
+/* ============================= Smart Guid Page Swiper Slider ============================= */
+.SmartGuidSection02 span.swiper-pagination-bullet-active {
+  background: #DE4F4D !important;
+  color: #FFFFFF !important;
+}
+
+.SmartGuidSection02 .swiper-pagination {
+  left: 12% !important;
+}
+
+@media only screen and (max-width:768px) {
+  .SmartGuidSection02 .swiper-pagination {
+    left: 0% !important;
+    bottom: 0px !important;
+  }
+}

@@ -19,19 +19,21 @@ const WelcomeOnboard = () => {
             </Head>
             <MainLayout>
                 <section id={styles.heroSection}>
-                    <div className="container">
-                        <div className="wrapper">
-                            <div className="row align-items-center">
-                                <div className="col-lg-5 mb-lg-0 mb-5">
-                                    <h1>Get started</h1>
-                                    <h2>Welcome onboard, to VEHDE!</h2>
-                                    <p>We bring you the greatest flexibility in the ever-growing carsharing sector of the transportation industry. Whether it is for your daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
-                                    <div className='d-flex'>
-                                        <Link href="#" className='my-btn'>Brows available cars</Link>
+                    <div>
+                        <div className="container">
+                            <div className="wrapper">
+                                <div className="row align-items-center">
+                                    <div className="col-lg-5 mb-lg-0 mb-5">
+                                        <h1>Get started</h1>
+                                        <h2>Welcome onboard, to VEHDE!</h2>
+                                        <p>We bring you the greatest flexibility in the ever-growing carsharing sector of the transportation industry. Whether it is for your daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
+                                        <div className='d-flex'>
+                                            <Link href="#" className='my-btn'>Brows available cars</Link>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-7 text-center">
-                                    {/* <Image src={HeroSectionImg} alt="Patent Vaccination Program Image" className='img-fluid' /> */}
+                                    <div className="col-lg-7 text-center">
+                                        {/* <Image src={HeroSectionImg} alt="Patent Vaccination Program Image" className='img-fluid' /> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
