@@ -32,11 +32,11 @@ const Footer = () => {
                     <div className='col-md-2 mt-md-0 mt-5'>
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><Link href="#">Careers</Link></li>
-                            <li><Link href="#">Safety</Link></li>
-                            <li><Link href="#">Smart Guide</Link></li>
-                            <li><Link href="#">Get Started</Link></li>
-                            <li><Link href="#">FAQ</Link></li>
+                            <li><Link href="/Careers">Careers</Link></li>
+                            <li><Link href="/Safety">Safety</Link></li>
+                            <li><Link href="/SmartGuid2">Smart Guide</Link></li>
+                            <li><Link href="/WelcomeOnboard">Get Started</Link></li>
+                            <li><Link href="/FAQ">FAQ</Link></li>
                         </ul>
                     </div>
                     <div className='col-md-2 mt-md-0 mt-5'>
@@ -65,7 +65,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='copyright text-center'>
-                    <p className='mb-0'>©️ {new Date().getFullYear()} VEHDE Technologies, LLC</p>
+                    <p className='mb-0'>&copy; {new Date().getFullYear()} VEHDE Technologies, LLC</p>
                 </div>
             </div>
         </footer>

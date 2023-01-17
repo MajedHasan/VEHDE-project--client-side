@@ -31,7 +31,7 @@ const Header = () => {
                                     <Link className="nav-link active" aria-current="page" href="/AboutUs">About Us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Smart Guide</a>
+                                    <a className="nav-link" href="/SmartGuid">Smart Guide</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">Renter</a>
@@ -50,19 +50,19 @@ const Header = () => {
                             {
                                 openMenuItem === true && <div id='more-menu-item' className='toggle-menu'>
                                     <div className='mb-3'>
-                                        <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                        <Link href="/WelcomeOnboard" className='d-flex align-items-center w-100 gap-2'>
                                             <Image src={ShuttleIcon} alt="Shuttle Icon" />
                                             <span>Get Started</span>
                                         </Link>
                                     </div>
                                     <div className='mb-3'>
-                                        <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                        <Link href="/FAQ" className='d-flex align-items-center w-100 gap-2'>
                                             <Image src={BagIcon} alt="Bag Icon" />
                                             <span>FAQ</span>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                        <Link href="/Careers" className='d-flex align-items-center w-100 gap-2'>
                                             <Image src={HelpIcon} alt="Help Icon" />
                                             <span>Careers</span>
                                         </Link>
@@ -74,7 +74,7 @@ const Header = () => {
                                             </Link>
                                         </div>
                                         <div className='mb-3'>
-                                            <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                            <Link href="/SmartGuid" className='d-flex align-items-center w-100 gap-2'>
                                                 <span>Smart Guide</span>
                                             </Link>
                                         </div>
@@ -99,12 +99,12 @@ const Header = () => {
                             {
                                 openProfileItem && <div id='profile-item' className='toggle-menu'>
                                     <div className='mb-3'>
-                                        <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                        <Link href="/Login" className='d-flex align-items-center w-100 gap-2'>
                                             <span>Sign In</span>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link href="/" className='d-flex align-items-center w-100 gap-2'>
+                                        <Link href="/Login" className='d-flex align-items-center w-100 gap-2'>
                                             <span>Sign Up</span>
                                         </Link>
                                     </div>

@@ -7,10 +7,10 @@
 
 #heroSection>div>div {
     padding-top: 80px;
-    padding-bottom: 160px;
+    padding-bottom: 200px;
 }
 
-#heroSection>div>div>div>div>h1 {
+#heroSection>div>div>div>div>div>h1 {
     font-weight: 500;
     font-size: 55px;
     color: #030719;
@@ -19,14 +19,14 @@
     width: 100%;
 }
 
-#heroSection>div>div>div>div>h2 {
+#heroSection>div>div>div>div>div>h2 {
     font-weight: 500;
     font-size: 30px;
     line-height: 58px;
     color: #030719;
 }
 
-#heroSection>div>div>div>div>p {
+#heroSection>div>div>div>div>div>p {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -81,11 +81,20 @@
     #heroSection>div h2,
     #heroSection>div p,
     #heroSection>div a {
-        color: #FFFFFF;
+        color: #FFFFFF !important;
     }
 }
 
 @media only screen and (max-width:768px) {
+    #heroSection>div p {
+        line-height: 25px !important;
+        font-size: 16px !important;
+    }
+
+    #heroSection>div a {
+        font-size: 14px !important;
+    }
+
     #section02>div>div {
         border-radius: 20px;
         padding: 40px 30px;

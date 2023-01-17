@@ -6,6 +6,12 @@ import Link from "next/link"
 import "react-datepicker/dist/react-datepicker.css";
 
 import RightArrow from "../assets/img/right-arrow.png"
+import section02Img01 from "../assets/img/SmartGuid2/section02Img01.png"
+import section02Img02 from "../assets/img/SmartGuid2/section02Img02.png"
+import section02Img03 from "../assets/img/SmartGuid2/section02Img03.png"
+import section02Img04 from "../assets/img/SmartGuid2/section02Img04.png"
+import section02Img05 from "../assets/img/SmartGuid2/section02Img05.png"
+import section02Img06 from "../assets/img/SmartGuid2/section02Img06.png"
 import section03Img from "../assets/img/SmartGuid2/section03Img.png"
 import section04Img from "../assets/img/SmartGuid2/section04Img.png"
 
@@ -21,24 +27,89 @@ export default function SmartGuid2() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection} className='py-5'>
-                    <div className='container'>
-                        <div className='row row-cols-lg-2 gap-5'>
-                            <div>
-                                <h1>Smart guide</h1>
+                <section id={styles.heroSection} >
+                    <div>
+                        <div className='container'>
+                            <div className='row row-cols-lg-2 gap-5'>
+                                <div>
+                                    <h1>Smart guide</h1>
+                                </div>
+                                <div></div>
                             </div>
-                            <div></div>
                         </div>
                     </div>
                 </section>
                 <section id={styles.section02}>
                     <div className="container">
                         <div className="wrapper">
-                            <div className='text-center mb-4'>
+                            <div className='text-center mb-5'>
                                 <h2>How VEHDE works</h2>
                                 <p>
                                     VEHDE works in six (6) major steps, carefully designed to enhance people’s productivity by improving their accessibility to mobility.
                                 </p>
+                            </div>
+                            <div className="row row-cols-lg-3 row-cols-1 flex-lg-row flex-column align-items-center mt-5">
+                                <div className="col d-flex flex-column align-items-lg-end align-items-center gap-5">
+                                    <div className="d-flex align-items-center gap-3">
+                                        <div>
+                                            <h4>1. VEHDE approves listed cars</h4>
+                                            <p>VEHDE reviews and approves cars listed by hosts.</p>
+                                        </div>
+                                        <div>
+                                            <Image src={section02Img01} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="d-flex align-items-center gap-3 justify-content-lg-end justify-content-center">
+                                        <div>
+                                            <h4>2. A renter reserves a car</h4>
+                                            <p>VEHDE reviews and approves cars listed by hosts.</p>
+                                        </div>
+                                        <div>
+                                            <Image src={section02Img02} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="d-flex align-items-center gap-3">
+                                        <div>
+                                            <h4>3. VEHDE approves requested car</h4>
+                                            <p>VEHDE reviews and approves cars listed by hosts.</p>
+                                        </div>
+                                        <div>
+                                            <Image src={section02Img03} alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col text-center">
+                                    <h2 className='d-lg-block d-none'>VEHDE</h2>
+                                </div>
+                                <div className="col d-flex flex-lg-column flex-column-reverse align-items-lg-start align-items-center gap-5 mt-lg-0 mt-5">
+                                    <div className="d-flex flex-lg-row-reverse flex-row align-items-center gap-3">
+                                        <div>
+                                            <h4>6. Renter earns VEHDE points</h4>
+                                            <p>VEHDE reviews and approves cars listed by hosts.</p>
+                                        </div>
+                                        <div>
+                                            <Image src={section02Img04} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="d-flex flex-lg-row-reverse flex-row align-items-center gap-3 justify-content-lg-end justify-content-center">
+                                        <div>
+                                            <h4>5. Renter returns the car</h4>
+                                            <p>VEHDE reviews and approves cars listed by hosts.</p>
+                                        </div>
+                                        <div>
+                                            <Image src={section02Img05} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="d-flex flex-lg-row-reverse flex-row align-items-center gap-3">
+                                        <div>
+                                            <h4>4. Renter receives the reserved car</h4>
+                                            <p>VEHDE reviews and approves cars listed by hosts.</p>
+                                        </div>
+                                        <div>
+                                            <Image src={section02Img06} alt="" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -82,7 +153,7 @@ export default function SmartGuid2() {
                                             <input type="checkbox" name="corporateOrganizations" id="Corporate-organizations" />
                                             <label htmlFor="Corporate-organizations">Corporate organizations</label>
                                         </div>
-                                        <div className="col d-flex align-items-center gap-2">
+                                        <div className="col d-flex align-items-center gap-2 mb-md-0 mb-3">
                                             <input type="checkbox" name="individuals" id="Individuals" />
                                             <label htmlFor="Individuals">Individuals</label>
                                         </div>
@@ -91,14 +162,17 @@ export default function SmartGuid2() {
                                             <label htmlFor="Manufacturers">Manufacturers</label>
                                         </div>
                                     </div>
-                                    <div className="d-flex align-items-center gap-3">
+                                    <div className="d-flex align-items-center flex-lg-row flex-column gap-3">
                                         <Link href="#" className='my-btn'>Rent a Car</Link>
                                         <Link href="#" className='my-btn-outline'>Apply to host</Link>
                                     </div>
                                 </div>
-                                <div className="col p-5">
+                                <div className="col p-lg-5 p-3">
                                     <div className='text-center'>
-                                        <Image src={section04Img} alt="" className='img-fluid' />
+                                        <label htmlFor="file" style={{ cursor: "pointer" }}>
+                                            <Image src={section04Img} alt="" className='img-fluid' />
+                                            <input type="file" name="file" id="file" hidden />
+                                        </label>
                                         <button className='my-btn mx-auto mt-4 mb-2'>Submit Work</button>
                                         <p>
                                             General Information Request Tool

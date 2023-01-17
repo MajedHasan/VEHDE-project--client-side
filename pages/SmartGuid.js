@@ -33,25 +33,27 @@ const SmartGuid = () => {
             </Head>
             <MainLayout>
                 <section id={styles.heroSection}>
-                    <div className="container">
-                        <div className="wrapper">
-                            <div className="row align-items-center">
-                                <div className="col-lg-5 mb-lg-0 mb-5">
-                                    <h1>Smart guide</h1>
-                                    <h2>Unique benefits with VEHDE</h2>
-                                    <p>
-                                        You, too, should have access to cost-effective rental cars without the liabilities that are associated with conventional cars’ ownership arrangements.
-                                    </p>
-                                    <h4>
-                                        Before you buy/lease/rent a car, or book your next ride, TRY VEHDE!
-                                    </h4>
-                                    <div className="d-flex flex-lg-row flex-column gap-3">
-                                        <Link href="#" className='my-btn'>Rent a Car</Link>
-                                        <Link href="#" className='my-btn-outline'>Apply to host</Link>
+                    <div>
+                        <div className="container">
+                            <div className="wrapper">
+                                <div className="row align-items-center">
+                                    <div className="col-lg-5 mb-lg-0 mb-5">
+                                        <h1>Smart guide</h1>
+                                        <h2>Unique benefits with VEHDE</h2>
+                                        <p>
+                                            You, too, should have access to cost-effective rental cars without the liabilities that are associated with conventional cars’ ownership arrangements.
+                                        </p>
+                                        <h4>
+                                            Before you buy/lease/rent a car, or book your next ride, TRY VEHDE!
+                                        </h4>
+                                        <div className="d-flex flex-xl-row flex-column gap-3">
+                                            <Link href="#" className='my-btn'>Rent a Car</Link>
+                                            <Link href="#" className='my-btn-outline'>Apply to host</Link>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-7 text-center">
-                                    {/* <Image src={HeroSectionImg} alt="Patent Vaccination Program Image" className='img-fluid' /> */}
+                                    <div className="col-lg-7 text-center">
+                                        {/* <Image src={HeroSectionImg} alt="Patent Vaccination Program Image" className='img-fluid' /> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +66,7 @@ const SmartGuid = () => {
                                 spaceBetween={30}
                                 centeredSlides={false}
                                 autoplay={{
-                                    delay: 10500,
+                                    delay: 3000,
                                     disableOnInteraction: false,
                                 }}
                                 navigation={true}

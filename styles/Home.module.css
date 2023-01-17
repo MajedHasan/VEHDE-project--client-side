@@ -356,16 +356,20 @@
 
 @media only screen and (max-width:991px) {
   .section06ButtonContainer {
-    display: none;
+    /* display: none; */
   }
 
-  .section06ButtonContainer:hover {
+  .section06ButtonContainer {
     max-width: 100%;
     overflow: hidden;
   }
 
   .section06ButtonContainer:hover {
     overflow: visible;
+  }
+
+  .section06ButtonContainer:not(:hover) {
+    overflow: hidden;
   }
 
   /* Button Boxes */
@@ -375,94 +379,168 @@
   }
 
   .section06ButtonWrapper02 {
-    top: 24.7%;
-    left: 22.1%;
+    top: 24.4%;
+    left: 22.5%;
   }
 
   .section06ButtonWrapper03 {
-    top: 37.1%;
+    top: 37.5%;
     left: 10%;
   }
 
   .section06ButtonWrapper04 {
-    top: 36.4%;
+    top: 37.5%;
     left: 28%;
   }
 
   .section06ButtonWrapper05 {
-    top: 38.7%;
+    top: 40.8%;
     left: 21%;
   }
 
   .section06ButtonWrapper06 {
-    top: 51%;
-    left: 26%;
+    top: 54%;
+    left: 26.2%;
   }
 
   .section06ButtonWrapper07 {
-    top: 67%;
+    top: 71%;
     left: 40%;
   }
 
   .section06ButtonWrapper08 {
-    top: 30%;
-    left: 68.2%;
+    top: 35%;
+    left: 68.6%;
   }
 
   .section06ButtonWrapper09 {
-    top: 58.7%;
+    top: 64.7%;
     left: 72%;
   }
 
   /* xxx Button Boxes xxx */
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:767px) {
 
   .section06ButtonWrapper {
     width: 10px;
     height: 10px;
   }
 
+  .section06ButtonWrapper>button {
+    width: 8px;
+    height: 8px;
+  }
+
   /* Button Boxes */
+  .section06ButtonWrapper01 {
+    top: 15.5%;
+    left: 47.3%;
+  }
+
   .section06ButtonWrapper02 {
-    top: 25%;
+    top: 22%;
     left: 22.5%;
   }
 
   .section06ButtonWrapper03 {
-    top: 37.8%;
-    left: 10.4%;
+    top: 34.8%;
+    left: 10.2%;
   }
 
   .section06ButtonWrapper04 {
-    top: 37.4%;
+    top: 34.4%;
     left: 27.8%;
   }
 
   .section06ButtonWrapper05 {
-    top: 40.5%;
-    left: 20.6%;
+    top: 37.5%;
+    left: 20.7%;
   }
 
   .section06ButtonWrapper06 {
-    top: 53%;
-    left: 26.2%;
+    top: 50%;
+    left: 26.1%;
   }
 
   .section06ButtonWrapper07 {
-    top: 69%;
-    left: 40.3%;
+    top: 66%;
+    left: 40.2%;
   }
 
   .section06ButtonWrapper08 {
-    top: 32.8%;
+    top: 29.8%;
     left: 68.5%;
   }
 
   .section06ButtonWrapper09 {
-    top: 62%;
+    top: 59%;
     left: 72%;
+  }
+
+  /* xxx Button Boxes xxx */
+}
+
+@media only screen and (max-width:549px) {
+
+  .section06img {
+    max-width: 300px;
+  }
+
+  .section06ButtonContainer {
+    max-width: 300px;
+  }
+
+  .section06ButtonWrapper>button {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Button Boxes */
+  .section06ButtonWrapper01 {
+    top: 11.5%;
+    left: 46.5%;
+  }
+
+  .section06ButtonWrapper02 {
+    top: 15%;
+    left: 21.5%;
+  }
+
+  .section06ButtonWrapper03 {
+    top: 24.8%;
+    left: 9.2%;
+  }
+
+  .section06ButtonWrapper04 {
+    top: 22.4%;
+    left: 26.8%;
+  }
+
+  .section06ButtonWrapper05 {
+    top: 22.5%;
+    left: 19.7%;
+  }
+
+  .section06ButtonWrapper06 {
+    top: 33%;
+    left: 25.1%;
+  }
+
+  .section06ButtonWrapper07 {
+    top: 46%;
+    left: 39.5%;
+  }
+
+  .section06ButtonWrapper08 {
+    top: 7.4%;
+    left: 67.5%;
+  }
+
+  .section06ButtonWrapper09 {
+    top: 34%;
+    left: 71%;
   }
 
   /* xxx Button Boxes xxx */

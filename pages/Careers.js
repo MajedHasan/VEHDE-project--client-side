@@ -21,13 +21,15 @@ export default function Careers() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection} className='py-5'>
-                    <div className='container'>
-                        <div className='row row-cols-lg-2 gap-5'>
-                            <div>
-                                <h1>Careers at VEHDE</h1>
+                <section id={styles.heroSection}>
+                    <div>
+                        <div className='container'>
+                            <div className='row row-cols-lg-2 gap-5'>
+                                <div>
+                                    <h1>Careers at VEHDE</h1>
+                                </div>
+                                <div></div>
                             </div>
-                            <div></div>
                         </div>
                     </div>
                 </section>

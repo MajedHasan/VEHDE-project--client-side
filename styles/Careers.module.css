@@ -3,6 +3,10 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+#heroSection>div {
+    padding-top: 100px;
     padding-bottom: 150px !important;
 }
 
@@ -168,6 +172,11 @@
     #heroSection h1 {
         font-size: 40px;
         max-width: none;
+        color: #FFFFFF;
+    }
+
+    #heroSection>div {
+        background: rgba(0, 0, 0, 0.25);
     }
 
     #reserveCarSection h2 {

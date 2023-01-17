@@ -3,12 +3,15 @@ import React from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import styles from "../styles/Login.module.css"
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Password = () => {
+    const router = useRouter()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         alert("Form Submited")
+        router.push("/Authorization")
     }
 
     return (
@@ -31,7 +34,7 @@ const Password = () => {
                                             <label htmlFor="">VEHDE Password</label>
                                             <input type="text" placeholder='Enter your password' />
                                         </div>
-                                        <button className='my-btn' type='button'>Next</button>
+                                        <button className='my-btn' type='submit'>Next</button>
                                     </form>
                                     <div className="mt-3 text-center">
                                         <p>Text code to (***)-***-1984</p>
