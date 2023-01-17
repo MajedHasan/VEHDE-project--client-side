@@ -31,13 +31,13 @@ const Header = () => {
                                     <Link className="nav-link active" aria-current="page" href="/AboutUs">About Us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/SmartGuid">Smart Guide</a>
+                                    <Link className="nav-link" href="/SmartGuid">Smart Guide</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Renter</a>
+                                    <Link className="nav-link" href="#">Renter</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Host</a>
+                                    <Link className="nav-link" href="#">Host</Link>
                                 </li>
                             </ul>
                         </div>
