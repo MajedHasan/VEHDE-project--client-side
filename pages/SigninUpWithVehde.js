@@ -18,7 +18,7 @@ const SigninUpWithVehde = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div className="container">
                         <div className="wrapper">
                             <div className="row align-items-center">
@@ -56,7 +56,7 @@ const SigninUpWithVehde = () => {
                                         <h3>Renter</h3>
                                         <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
                                         <div className="d-flex mt-4">
-                                            <Link href="#" className='my-btn'>rent a car</Link>
+                                            <Link href="#" className='my-btn'>&nbsp;&nbsp; Rent a car &nbsp;&nbsp;</Link>
                                         </div>
                                     </div>
                                 </div>

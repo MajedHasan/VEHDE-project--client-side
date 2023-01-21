@@ -19,7 +19,7 @@ const Safety = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div className="container">
                         <div className="wrapper">
                             <div className="row align-items-center">
@@ -38,7 +38,7 @@ const Safety = () => {
                     <div className="container">
                         <div className="wrapper">
                             <h2 className='text-center'>Mask and Safety</h2>
-                            <div className="row row-cols-md-3 row-cols-1 align-items-center">
+                            <div className="row row-cols-lg-3 row-cols-1 align-items-center">
                                 <div className="col p-3">
                                     <div className="text-center">
                                         <Image src={Section08Img01} alt="Car in hand" />
@@ -51,7 +51,7 @@ const Safety = () => {
                                         <Image src={Section08Img02} alt="Car in hand" />
                                         <h3>Mask & Social Safety</h3>
                                         <p>With your support, when you observe safety procedures, every day, we protect our great asset –Health.</p>
-                                        <Link href="MaskSocialSafety">Learn more about mask and social safety</Link>
+                                        <Link href="MaskSocialSafety" className='d-block' style={{ paddingBottom: "15px" }}>Learn more about mask and social safety</Link>
                                     </div>
                                 </div>
                                 <div className="col p-3">

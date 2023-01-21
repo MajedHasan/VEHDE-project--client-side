@@ -21,7 +21,7 @@ export default function Careers() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div>
                         <div className='container'>
                             <div className='row row-cols-lg-2 gap-5'>
@@ -79,7 +79,7 @@ export default function Careers() {
                             <div className="accordion" id="accordionExample">
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="accordion-button text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Team Lead, Real Time Analytics at VEHDE
                                         </button>
                                     </h2>
@@ -99,7 +99,7 @@ export default function Careers() {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                             Team Lead, Real Time Analytics at VEHDE
                                         </button>
                                     </h2>
@@ -119,7 +119,7 @@ export default function Careers() {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                             Data Scientist, Predictive Modeling at VEHDE
                                         </button>
                                     </h2>

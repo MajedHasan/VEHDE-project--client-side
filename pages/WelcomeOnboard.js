@@ -18,7 +18,7 @@ const WelcomeOnboard = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div>
                         <div className="container">
                             <div className="wrapper">
@@ -28,7 +28,7 @@ const WelcomeOnboard = () => {
                                         <h2>Welcome onboard, to VEHDE!</h2>
                                         <p>We bring you the greatest flexibility in the ever-growing carsharing sector of the transportation industry. Whether it is for your daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
                                         <div className='d-flex'>
-                                            <Link href="#" className='my-btn'>Brows available cars</Link>
+                                            <Link href="#" className='my-btn'>Browse available cars</Link>
                                         </div>
                                     </div>
                                     <div className="col-lg-7 text-center">
@@ -54,7 +54,7 @@ const WelcomeOnboard = () => {
                                     <Image src={Section02Img02} alt="Car in background Building" className='img-fluid' />
                                     <h3>Have a car to list as host?</h3>
                                     <div className='d-flex justify-content-center'>
-                                        <Link href="#" className='my-btn'>rent a car</Link>
+                                        <Link href="#" className='my-btn'> &nbsp;&nbsp; Rent a car &nbsp;&nbsp; </Link>
                                     </div>
                                 </div>
                             </div>

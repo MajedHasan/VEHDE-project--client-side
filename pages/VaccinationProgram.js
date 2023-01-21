@@ -20,7 +20,7 @@ const VaccinationProgram = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div className="container">
                         <div className="wrapper">
                             <div className="row align-items-center">
@@ -44,7 +44,7 @@ const VaccinationProgram = () => {
                                 People who are fully vaccinated can resume many activities they did before the pandemic. However, people should wear a mask indoors in public if they are in an area of substantial or high transmission.
                             </p>
                             <div className='d-flex justify-content-center gap-3 align-items-center'>
-                                <Link href="#">Learn more about COVID-19 vaccines</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fvaccines%2Fkeythingstoknow.html">Learn more about COVID-19 vaccines</a> <Image src={RightArrow} alt="Right Arrow" />
                             </div>
                             <div className="row row-cols-lg-2 row-cols-1 mt-5 align-items-center">
                                 <div className="col text-lg-start text-center">
@@ -55,7 +55,7 @@ const VaccinationProgram = () => {
                                         <h3>Frequently asked questions about COVID-19 vaccination</h3>
                                         <p>How can I get a new COVID-19 vaccination card? If you need a new vaccination card, contact the vaccination provider site where you received your vaccine. Your provider should give you a new card with up-to-date information about the vaccinations you have received.</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Find answers to other questions about COVID-19 vaccinations</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html" className='me-3'>Find answers to other questions about COVID-19 vaccinations</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                 </div>
@@ -66,14 +66,14 @@ const VaccinationProgram = () => {
                                         <h3>U.S. COVID-19 vaccine product information</h3>
                                         <p>Find a suite of information and materials that are needed for each specific COVID-19 vaccine that cover administration, storage and handling, safety, and reporting.</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Learn more about U.S. COVID-19 vaccine product information</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/vaccines/covid-19/info-by-product/index.html" className='me-3'>Learn more about U.S. COVID-19 vaccine product information</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                     <div>
                                         <h3>COVID-19 vaccine booster shots</h3>
                                         <p>You may choose which COVID-19 vaccine you receive as a booster shot. Some people may prefer the vaccine type that they originally received, and others may prefer to get a different booster. CDC’s recommendations now allow for this type of mix and match dosing for booster shots.</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Learn more about guidance for wearing mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/stay-up-to-date.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fvaccines%2Fbooster-shot.html" className='me-3'>Learn more about COVID-19 booster shot</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                 </div>

@@ -14,7 +14,7 @@ import Section03Img01 from "../assets/img/home-page/section-03-img-01.png"
 import Section03Img02 from "../assets/img/home-page/section-03-img-02.png"
 import Section03ArrowIcon from "../assets/img/home-page/section-03-arrow-icon.png"
 import Section04Img from "../assets/img/home-page/section-04-img.png"
-import Section05Img01 from "../assets/img/home-page/section-05-img-01.png"
+import Section05Img01 from "../assets/img/signin-up-with-vehde/section-02-img-01.png"
 import Section05Img02 from "../assets/img/home-page/section-05-img-02.png"
 import Section06Img from "../assets/img/home-page/section-06-img.png"
 import Section06RedArrow from "../assets/img/home-page/section-06-red-arrow.png"
@@ -51,14 +51,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <section id={styles.heroSection} className='py-5'>
+        <section id={styles.heroSection} className='py-5 heroSection'>
           <div className='container'>
             <div className='row row-cols-lg-2 gap-5'>
               <div>
                 <h1>Explore the VEHDE’s world of car sharing innovation</h1>
                 <div className='d-flex gap-3 flex-sm-row flex-column align-items-center mt-5'>
                   <button className='my-btn'>Apply To Host</button>
-                  <button className='my-btn-outline'>Rent A Car</button>
+                  <button className='my-btn-outline'>&nbsp;&nbsp; Rent A Car &nbsp;&nbsp;</button>
                 </div>
               </div>
               <div></div>
@@ -125,7 +125,7 @@ export default function Home() {
               <div className="col">
                 <h2>Collaborative strategy for flexible mobility</h2>
                 <p>Right from your doorstep you can optimize your travel experience through our carefully designed collaboration that supports flexibility in your daily mobility.</p>
-                <div className='d-flex align-items-center gap-2'>
+                <div className='d-flex align-items-center gap-2 d-none'>
                   <a href="#">See how our collaborative strategy works</a>
                   <span><Image src={Section03ArrowIcon} alt="Arrow Icon" /></span>
                 </div>
@@ -168,7 +168,7 @@ export default function Home() {
                 <div className="col text-lg-start text-center">
                   <h3>Renter</h3>
                   <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
-                  <button className='my-btn mx-lg-1 mx-auto'>Rent A Car</button>
+                  <button className='my-btn mx-lg-1 mx-auto'> &nbsp; Rent A Car &nbsp; </button>
                 </div>
                 <div className="col text-lg-end text-center">
                   <Image src={Section05Img02} alt='Car with round fuel pipe' className='img-fluid' />
@@ -349,7 +349,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="d-flex justify-content-center">
-                <button className="my-btn" style={{ maxWidth: "fit-content" }}>Show all destinations</button>
+                <button className="my-btn" style={{ maxWidth: "fit-content" }}>Reserve car for selected destination</button>
               </div>
             </div>
           </div>
@@ -412,24 +412,24 @@ export default function Home() {
           <div className="container">
             <div className="wrapper">
               <h2 className='text-center'>Mask and Safety</h2>
-              <div className="row row-cols-md-3 row-cols-1 align-items-center">
+              <div className="row row-cols-lg-3 row-cols-1 align-items-center">
                 <div className="col p-3">
-                  <div className="text-center">
+                  <div className="text-center d-flex flex-column align-items-center justify-content-between">
                     <Image src={Section08Img01} alt="Car in hand" />
                     <h3>Your safety, our no 1 priority.</h3>
                     <p>We are fully committed to your safety, even as our innovative strategies help enhance your accessibility to mobility of greater value to your productivity.</p>
                   </div>
                 </div>
                 <div className="col p-3">
-                  <div className="text-center">
+                  <div className="text-center d-flex flex-column align-items-center justify-content-between">
                     <Image src={Section08Img02} alt="Car in hand" />
                     <h3>Mask & Social Safety</h3>
                     <p>With your support, when you observe safety procedures, every day, we protect our great asset –Health.</p>
-                    <Link href="MaskSocialSafety">Learn more about mask and social safety</Link>
+                    <Link href="MaskSocialSafety" className='d-block' style={{ paddingBottom: "15px" }}>Learn more about mask and social safety</Link>
                   </div>
                 </div>
                 <div className="col p-3">
-                  <div className="text-center">
+                  <div className="text-center d-flex flex-column align-items-center justify-content-between">
                     <Image src={Section08Img03} alt="Car in hand" />
                     <h3>COVID-19 Vaccine</h3>
                     <p>Let’s crunch the virus! Our commitment to vaccination moves us closer to full recovery in our various communities.</p>

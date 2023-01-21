@@ -22,7 +22,7 @@ const MaskSocialSafety = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div className="container">
                         <div className="wrapper">
                             <div className="row row-cols-md-2 row-cols-1 align-items-center">
@@ -54,14 +54,14 @@ const MaskSocialSafety = () => {
                                         <h3>Wearing a mask</h3>
                                         <p>Wearing a mask in the right way should improve its effectiveness. First, wash your hands. Put the mask on your face. Put the loops behind your ears. The mask must cover your nose</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Learn more about wearing a mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/coronavirus/2019-ncov/easy-to-read/diy-cloth-face-coverings.html" className='me-3'>Learn more about wearing a mask</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                     <div className="mb-4">
                                         <h3>Who should wear a mask?</h3>
                                         <p>In areas with high numbers of COVID-19 cases, consider wearing a mask in crowded outdoor settings and for activities with close contact with others who are not fully vaccinated.</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Learn more about people that should wear mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html" className='me-3'>Learn more about people that should wear mask</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const MaskSocialSafety = () => {
                                         <h3>Types of masks and respirators</h3>
                                         <p>CDC provides relevant information on different types of masks and respirators you can use to protect yourself and others from getting and spreading COVID-19.</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Learn more about types of masks and respirators</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/types-of-masks.html" className='me-3'>Learn more about types of masks and respirators</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ const MaskSocialSafety = () => {
                                         <h3>Guidance for wearing masks</h3>
                                         <p>A mask is NOT a substitute for social distancing. Masks should still be worn in addition to staying at least 6 feet apart, especially when indoors around people who don’t live in your household.</p>
                                         <div className="d-flex align-items-center">
-                                            <Link href="#" className='me-3'>Learn more about guidance for wearing mask</Link> <Image src={RightArrow} alt="Right Arrow" />
+                                            <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fprevent-getting-sick%2Fcloth-face-cover-guidance.html" className='me-3'>Learn more about guidance for wearing mask</a> <Image src={RightArrow} alt="Right Arrow" />
                                         </div>
                                     </div>
                                 </div>

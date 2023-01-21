@@ -14,7 +14,7 @@ const AboutUs = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div>
                         <div className="container">
                             <div className="wrapper">

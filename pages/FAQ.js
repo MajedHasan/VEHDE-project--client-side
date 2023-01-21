@@ -13,7 +13,7 @@ const FAQ = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                <section id={styles.heroSection}>
+                <section id={styles.heroSection} className="heroSection">
                     <div className="container">
                         <div className="wrapper">
                             <div className="row align-items-center">
@@ -33,7 +33,7 @@ const FAQ = () => {
                             <div className="accordion" id="accordionExample">
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="accordion-button text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Can I cancel my car rental reservation before the scheduled rental pick-up date?
                                         </button>
                                     </h2>
@@ -45,7 +45,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                             Can I cancel and return rental car back to host before the scheduled drop-off date?
                                         </button>
                                     </h2>
@@ -57,7 +57,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                             Can I cancel and return rental car back to host before the scheduled drop-off date?
                                         </button>
                                     </h2>
@@ -69,7 +69,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                             What if renter fails to return rental car to host as scheduled in the drop-off?
                                         </button>
                                     </h2>
@@ -81,7 +81,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                             What if rental car develops mechanical fault before the scheduled drop-off date?
                                         </button>
                                     </h2>
@@ -93,7 +93,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                                             What if renter has auto accident with the rental car before the scheduled drop-off date?
                                         </button>
                                     </h2>
@@ -105,7 +105,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingSeven">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                             Is there earliest date I can reserve a car?
                                         </button>
                                     </h2>
@@ -117,7 +117,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingEight">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
                                             Is there latest date I can reserve a car?
                                         </button>
                                     </h2>
@@ -129,7 +129,7 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingNine">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
                                             Can I return rental car back to host after delivery before the scheduled drop-off date?
                                         </button>
                                     </h2>

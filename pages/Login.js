@@ -37,7 +37,7 @@ const Login = () => {
                                         <button className='my-btn' type='submit'>Next</button>
                                     </form>
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <Link href="#">New to VEHDE? <span>Sign up</span></Link>
+                                        <Link href="/SigninUpWithVehde">New to VEHDE? <span>Sign up</span></Link>
                                     </div>
                                 </div>
                             </div>
