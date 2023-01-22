@@ -3,13 +3,17 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding-bottom: 150px !important;
+  padding-bottom: 130px !important;
 }
 
 #heroSection h1 {
-  font-size: 55px;
+  font-size: 50px;
   color: #030719;
   max-width: 415px;
+}
+
+#heroSection h1 span {
+  color: #DE4F4D;
 }
 
 #heroSection .my-btn-outline {
@@ -30,7 +34,7 @@
 
 .reserveCarSectionWrapper h2 {
   font-weight: 500;
-  font-size: 45px;
+  font-size: 40px;
   margin-bottom: 25px;
   color: #030719;
   letter-spacing: 1.5px;

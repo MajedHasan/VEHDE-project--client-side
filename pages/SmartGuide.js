@@ -146,8 +146,8 @@ export default function SmartGuide() {
                                     <h2>Flexibility that supports you and your business</h2>
                                     <div className="row row-cols-md-2 row-cols-1 my-5">
                                         <div className="col d-flex align-items-center gap-2 mb-3">
-                                            <input type="checkbox" name="manufacturers" id="Manufacturers" defaultChecked />
-                                            <label htmlFor="Manufacturers">Manufacturers</label>
+                                            <input type="checkbox" name="manufacturers" id="rental-companies" defaultChecked />
+                                            <label htmlFor="Manufacturers">Rental companies</label>
                                         </div>
                                         <div className="col d-flex align-items-center gap-2 mb-3">
                                             <input type="checkbox" name="corporateOrganizations" id="Corporate-organizations" />
@@ -163,8 +163,8 @@ export default function SmartGuide() {
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center flex-lg-row flex-column gap-3">
-                                        <Link href="#" className='my-btn'>&nbsp;&nbsp; Rent a Car &nbsp;&nbsp;</Link>
-                                        <Link href="#" className='my-btn-outline'>Apply to host</Link>
+                                        <Link href="#" className='my-btn'>&nbsp;&nbsp; Rent A Car &nbsp;&nbsp;</Link>
+                                        <Link href="#" className='my-btn-outline'>Apply To Host</Link>
                                     </div>
                                 </div>
                                 <div className="col p-lg-5 p-3">

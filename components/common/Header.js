@@ -40,7 +40,7 @@ const Header = () => {
                         <div className="container">
                             <div className="wrapper row row-cols-sm-2 row-cols-1 align-items-center justify-content-between">
                                 <div>
-                                    <h2>We are currently <span>offering 1-day free rental for first-time user.</span></h2>
+                                    <h2 className='text-sm-start text-center'>We are currently <span>offering FREE 1-day rental for first-time user.</span></h2>
                                 </div>
                                 <div className='d-flex align-items-center justify-content-sm-end justify-content-center'>
                                     <Link href="#" className='my-btn'>Browse available cars</Link>

@@ -45,7 +45,7 @@ const SigninUpWithVehde = () => {
                                         <h3>Host</h3>
                                         <p>Whether you are an individual or a car rental company, you can become a host by listing your car to rent. <span>Stay ahead! List your car today.</span></p>
                                         <div className="d-flex mt-4">
-                                            <Link href="#" className='my-btn'>Apply to host</Link>
+                                            <Link href="#" className='my-btn'>Apply To Host</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@ const SigninUpWithVehde = () => {
                                         <h3>Renter</h3>
                                         <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
                                         <div className="d-flex mt-4">
-                                            <Link href="#" className='my-btn'>&nbsp;&nbsp; Rent a car &nbsp;&nbsp;</Link>
+                                            <Link href="#" className='my-btn'>&nbsp;&nbsp; Rent A Car &nbsp;&nbsp;</Link>
                                         </div>
                                     </div>
                                 </div>

@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import styles from '../styles/Careers.module.css'
-import MainLayout from "../components/layout/MainLayout"
+import styles from '../../styles/Careers.module.css'
+import MainLayout from "../../components/layout/MainLayout"
 import Image from 'next/image'
 import Link from "next/link"
 import "react-datepicker/dist/react-datepicker.css";
 
-import SearchIcon from "../assets/img/search-icon.png"
-import LocationIcon from "../assets/img/location-icon.png"
-import RightArrow from "../assets/img/right-arrow.png"
+import SearchIcon from "../../assets/img/search-icon.png"
+import LocationIcon from "../../assets/img/location-icon.png"
+import RightArrow from "../../assets/img/right-arrow.png"
 
 
 export default function Careers() {
