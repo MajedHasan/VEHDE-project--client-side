@@ -80,19 +80,19 @@ export default function Careers() {
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Team Lead, Real Time Analytics at VEHDE
+                                            Team Lead, Real Time Analytics
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <p>
-                                                <Link href="#">Long Beach, CA</Link>
+                                                <Link href="/Careers/1">Long Beach, CA</Link>
                                             </p>
                                             <p>
-                                                As the Team Lead you will be responsible for the supervision of the Real-Time team at VEHDE. This position will maintain the internal policies and procedures, support operations and Real Time Analytics, analysts in identifying trends, providing input on metric improvements, including forecast versus actual.
+                                                As the Team Lead you will be responsible for the supervision of the Real-Time team at VEHDE. This position will maintain the internal policies and procedures, support operations and Real Time Analytics, or RTA, analysts in identifying trends, providing input on metric improvements, including forecast versus actuals.
                                             </p>
                                             <div className="d-flex gap-3 align-items-center">
-                                                <Link href="#">Learn more about this position</Link><Image src={RightArrow} alt="Right Arrow" />
+                                                <Link href="/Careers/1">Learn more about this position</Link><Image src={RightArrow} alt="Right Arrow" />
                                             </div>
                                         </div>
                                     </div>
@@ -100,19 +100,19 @@ export default function Careers() {
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                            Team Lead, Real Time Analytics at VEHDE
+                                            Director, Policy Communications
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <p>
-                                                <Link href="#">Long Beach, CA</Link>
+                                                <Link href="/Careers/2">Long Beach, CA</Link>
                                             </p>
                                             <p>
-                                                As the Team Lead you will be responsible for the supervision of the Real-Time team at VEHDE. This position will maintain the internal policies and procedures, support operations and Real Time Analytics, analysts in identifying trends, providing input on metric improvements, including forecast versus actual.
+                                                VEHDE is looking for a Director of Policy Communications to join our fast-paced Communications team.  The primary focus of the role will be on regulatory matters, including policies related to drivers, but will include a variety of other initiatives as well. This role will develop and lead the execution of proactive strategies and programs to reach our driver community, as well as national and local media, and government officials.  The successful candidate will be an entrepreneurial and resourceful self-starter, comfortable working in an ambiguous and fast-changing environment.
                                             </p>
                                             <div className="d-flex gap-3 align-items-center">
-                                                <Link href="#">Learn more about this position</Link><Image src={RightArrow} alt="Right Arrow" />
+                                                <Link href="/Careers/2">Learn more about this position</Link><Image src={RightArrow} alt="Right Arrow" />
                                             </div>
                                         </div>
                                     </div>
@@ -120,19 +120,19 @@ export default function Careers() {
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingThree">
                                         <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                            Data Scientist, Predictive Modeling at VEHDE
+                                            Data Scientist, Predictive Modeling
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <p>
-                                                <Link href="#">Long Beach, CA</Link>
+                                                <Link href="/Careers/3">Long Beach, CA</Link>
                                             </p>
                                             <p>
-                                                As the Team Lead you will be responsible for the supervision of the Real-Time team at VEHDE. This position will maintain the internal policies and procedures, support operations and Real Time Analytics, analysts in identifying trends, providing input on metric improvements, including forecast versus actual.
+                                                Data Science is at the heart of VEHDE’s products and decision-making. As a member of the Science team, you will work in a dynamic environment, where we embrace moving quickly to build the world’s best transportation. Data Scientists take on a variety of problems ranging from shaping critical business decisions to building algorithms that power our internal and external products. We’re looking for passionate, driven Data Scientists to take on some of the most interesting and impactful problems in ridesharing.
                                             </p>
                                             <div className="d-flex gap-3 align-items-center">
-                                                <Link href="#">Learn more about this position</Link><Image src={RightArrow} alt="Right Arrow" />
+                                                <Link href="/Careers/3">Learn more about this position</Link><Image src={RightArrow} alt="Right Arrow" />
                                             </div>
                                         </div>
                                     </div>

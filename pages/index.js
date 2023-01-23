@@ -55,7 +55,7 @@ export default function Home() {
                     <div className='container'>
                         <div className='row row-cols-lg-2 gap-5'>
                             <div>
-                                <h1>Explore the VEHDE’s world of car sharing innovation</h1>
+                                <h1><span>Explore</span> the <span>creativity</span> of car sharing <span>innovation</span></h1>
                                 <div className='d-flex gap-3 flex-sm-row flex-column align-items-center mt-5'>
                                     <button className='my-btn'>Apply To Host</button>
                                     <button className='my-btn-outline'>&nbsp;&nbsp; Rent A Car &nbsp;&nbsp;</button>

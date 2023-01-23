@@ -24,12 +24,14 @@ const Header = () => {
     useEffect(() => {
         if (route == "/") {
             setIsHomePage(true)
+            setTimeout(() => {
+                setIsHomePage(false)
+            }, 3000);
         }
         else {
             setIsHomePage(false)
         }
     }, [])
-    console.log(isHomePage, router, route)
 
 
     return (

@@ -43,10 +43,20 @@
 
 .reserveCarSectionWrapper>div {
     background: #EFEFEF;
-    border-radius: 46.0371px;
-    padding: 8px 10px;
+    border-radius: 15px;
+    padding: 22px 15px;
+    margin-bottom: 20px;
 }
 
+.reserveCarSectionWrapper>h4 {
+    font-size: 22px;
+    color: #DE4F4D;
+}
+
+.reserveCarSectionWrapper>p {
+    font-size: 14px;
+    color: #030719;
+}
 
 @media only screen and (max-width: 768px) {
     #heroSection h1 {
