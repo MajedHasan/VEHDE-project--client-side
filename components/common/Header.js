@@ -9,50 +9,15 @@ import ShuttleIcon from "../../assets/img/shuttle-icon.png"
 import BagIcon from "../../assets/img/bag-icon.png"
 import HelpIcon from "../../assets/img/help-icon.png"
 
-import { useRouter } from "next/router"
-
 
 const Header = () => {
 
     const [openMenuItem, setOpenMenuItem] = useState(false)
     const [openProfileItem, setOpenProfileItem] = useState(false)
-    const [isHomePage, setIsHomePage] = useState(false)
-
-    const router = useRouter()
-    const route = router.route
-
-    useEffect(() => {
-        if (route == "/") {
-            setIsHomePage(true)
-            setTimeout(() => {
-                setIsHomePage(false)
-            }, 3000);
-        }
-        else {
-            setIsHomePage(false)
-        }
-    }, [])
 
 
     return (
         <>
-            {
-                isHomePage && <>
-                    <section id="sticky-offer-bar">
-                        <div className="container">
-                            <div className="wrapper row row-cols-sm-2 row-cols-1 align-items-center justify-content-between">
-                                <div>
-                                    <h2 className='text-sm-start text-center'>We are currently <span>offering FREE 1-day rental for first-time user.</span></h2>
-                                </div>
-                                <div className='d-flex align-items-center justify-content-sm-end justify-content-center'>
-                                    <Link href="#" className='my-btn'>Browse available cars</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </>
-            }
-
             <header id='header' className='bg-light'>
                 <div className='container'>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
