@@ -190,6 +190,15 @@
   font-size: 45px;
 }
 
+#section06>div>div>p {
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+  font-weight: 400;
+  font-size: 16px;
+  color: #717171;
+}
+
 .section06ButtonContainer {
   max-width: 900px;
   width: 100%;
@@ -556,10 +565,323 @@
 
 /* xxx Button Boxes xxx */
 
+/* =========== Map Box Popup =========== */
+.mapBoxPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  overflow: scroll;
+}
+
+.mapBoxPopup>div {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.mapBoxPopup>div>div>div>h2 {
+  font-size: 16px;
+}
+
+.mapBoxPopup>div>div>div>h4 {
+  font-size: 10px;
+  color: #DE4F4D;
+}
+
+.mapBoxPopup>div>div>div>p {
+  font-size: 10px;
+  color: #717171;
+}
+
+.mapBoxPopup>div>button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.mapBoxPopup>div>button>i {
+  color: #DE4F4D;
+  font-size: 20px;
+}
+
+.mobileMapButtons {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mobileMapButtons>button {
+  width: 7px;
+  height: 7px;
+  background: #DE4F4D;
+  border-radius: 50%;
+  position: absolute;
+  outline: none;
+  border: none;
+}
+
+.mobileMapButton01 {
+  top: 3.3%;
+  left: 8.9%;
+}
+
+.mobileMapButton02 {
+  top: 3.3%;
+  left: 14.1%;
+}
+
+.mobileMapButton03 {
+  top: 3.3%;
+  left: 23%;
+}
+
+.mobileMapButton04 {
+  top: 13%;
+  left: 8.9%;
+}
+
+.mobileMapButton05 {
+  top: 13%;
+  left: 19.5%;
+}
+
+.mobileMapButton06 {
+  top: 13%;
+  left: 30%;
+}
+
+.mobileMapButton07 {
+  top: 13%;
+  left: 42.4%;
+}
+
+.mobileMapButton08 {
+  top: 13%;
+  left: 55%;
+}
+
+.mobileMapButton09 {
+  top: 13%;
+  left: 62%;
+}
+
+.mobileMapButton10 {
+  top: 23%;
+  left: 14%;
+}
+
+.mobileMapButton11 {
+  top: 23%;
+  left: 30%;
+}
+
+.mobileMapButton12 {
+  top: 20%;
+  left: 47.8%;
+}
+
+.mobileMapButton13 {
+  top: 23%;
+  left: 53%;
+}
+
+.mobileMapButton14 {
+  top: 23%;
+  left: 67.3%;
+}
+
+.mobileMapButton15 {
+  top: 29.5%;
+  left: 9%;
+}
+
+.mobileMapButton16 {
+  top: 29.5%;
+  left: 23%;
+}
+
+.mobileMapButton17 {
+  top: 29.5%;
+  left: 35.5%;
+}
+
+.mobileMapButton18 {
+  top: 29.5%;
+  left: 46%;
+}
+
+.mobileMapButton19 {
+  top: 29.5%;
+  left: 55%;
+}
+
+.mobileMapButton20 {
+  top: 29.5%;
+  left: 65.5%;
+}
+
+.mobileMapButton21 {
+  top: 29.5%;
+  left: 85%;
+}
+
+.mobileMapButton22 {
+  top: 46%;
+  left: 10.5%;
+}
+
+.mobileMapButton23 {
+  top: 46%;
+  left: 23%;
+}
+
+.mobileMapButton24 {
+  top: 49%;
+  left: 28.2%;
+}
+
+.mobileMapButton25 {
+  top: 46%;
+  left: 37.2%;
+}
+
+.mobileMapButton26 {
+  top: 46%;
+  left: 46%;
+}
+
+.mobileMapButton27 {
+  top: 46%;
+  left: 60.2%;
+}
+
+.mobileMapButton28 {
+  top: 46%;
+  left: 74.5%;
+}
+
+.mobileMapButton29 {
+  top: 46%;
+  left: 85%;
+}
+
+.mobileMapButton30 {
+  top: 56%;
+  left: 5.3%;
+}
+
+.mobileMapButton31 {
+  top: 56%;
+  left: 21%;
+}
+
+.mobileMapButton32 {
+  top: 55.6%;
+  left: 37.3%;
+}
+
+.mobileMapButton33 {
+  top: 59%;
+  left: 51.5%;
+}
+
+.mobileMapButton34 {
+  top: 59%;
+  left: 69%;
+}
+
+.mobileMapButton35 {
+  top: 69%;
+  left: 14%;
+}
+
+.mobileMapButton36 {
+  top: 72.5%;
+  left: 26.6%;
+}
+
+.mobileMapButton37 {
+  top: 75.4%;
+  left: 37.2%;
+}
+
+.mobileMapButton38 {
+  top: 69%;
+  left: 46%;
+}
+
+.mobileMapButton39 {
+  top: 69%;
+  left: 56.6%;
+}
+
+.mobileMapButton40 {
+  top: 69%;
+  left: 67.3%;
+}
+
+.mobileMapButton41 {
+  top: 69%;
+  left: 76%;
+}
+
+.mobileMapButton42 {
+  top: 85.4%;
+  left: 32%;
+}
+
+.mobileMapButton43 {
+  top: 92%;
+  left: 40.7%;
+}
+
+.mobileMapButton44 {
+  top: 85.4%;
+  left: 47.8%;
+}
+
+.mobileMapButton45 {
+  top: 85.3%;
+  left: 56.6%;
+}
+
+.mobileMapButton46 {
+  top: 85.3%;
+  left: 67.3%;
+}
+
+.mobileMapButton47 {
+  top: 92%;
+  left: 41%;
+}
+
+.mobileMapButton48 {
+  top: 92%;
+  left: 72.5%;
+}
 
 @media only screen and (max-width:1040px) and (min-width:991px) {
   .section06ButtonContainer {
     /* overflow: hidden; */
+  }
+}
+
+@media only screen and (max-width:549px) {
+  .mobileMapButtons>button {
+    width: 5.5px;
+    height: 5.5px;
   }
 }
 

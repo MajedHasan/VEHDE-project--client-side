@@ -43,6 +43,14 @@ export default function Home() {
     const [dropOffDate, setDropOffDate] = useState(new Date())
     const [showMobileMap, setShowMobileMap] = useState(null)
 
+    const handleOpenMobileMapPopup = (id) => {
+        setShowMobileMap(id)
+    }
+
+    const handleCloseMobileMapPopup = () => {
+        setShowMobileMap(null)
+    }
+
 
     const destinationsArr = [
         {
@@ -475,6 +483,7 @@ export default function Home() {
                     <div className="container">
                         <div className="wrapper">
                             <h2 className="text-center">VEHDE your way to top destinations in the United States</h2>
+                            <p className='text-center'>Select a destination and reserve car for your vacation</p>
                             <div className="image-map-wrapper my-5 text-center position-relative">
                                 <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} />
                                 <div className={`${styles.section06ButtonContainer} d-lg-block d-none`}>
@@ -1103,7 +1112,79 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-lg-none d-block"></div>
+                                <div className="d-lg-none d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
+                                    {
+                                        showMobileMap != null && (
+                                            <div className={styles.mapBoxPopup}>
+                                                <div>
+                                                    <button>
+                                                        <i className='fa fa-times' onClick={handleCloseMobileMapPopup}></i>
+                                                    </button>
+                                                    <div className='row align-items-center'>
+                                                        <div className="col-7 text-start">
+                                                            <h2>{destinationsArr[showMobileMap]?.name}</h2>
+                                                            <h4>{destinationsArr[showMobileMap]?.location}</h4>
+                                                            <p>{destinationsArr[showMobileMap]?.desctiption}</p>
+                                                        </div>
+                                                        <div className="col-5">
+                                                            <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                    <div className={styles.mobileMapButtons}>
+                                        <button className={styles.mobileMapButton01} onClick={() => handleOpenMobileMapPopup(0)}></button>
+                                        <button className={styles.mobileMapButton02} onClick={() => handleOpenMobileMapPopup(1)}></button>
+                                        <button className={styles.mobileMapButton03} onClick={() => handleOpenMobileMapPopup(2)}></button>
+                                        <button className={styles.mobileMapButton04} onClick={() => handleOpenMobileMapPopup(3)}></button>
+                                        <button className={styles.mobileMapButton05} onClick={() => handleOpenMobileMapPopup(4)}></button>
+                                        <button className={styles.mobileMapButton06} onClick={() => handleOpenMobileMapPopup(5)}></button>
+                                        <button className={styles.mobileMapButton07} onClick={() => handleOpenMobileMapPopup(6)}></button>
+                                        <button className={styles.mobileMapButton08} onClick={() => handleOpenMobileMapPopup(7)}></button>
+                                        <button className={styles.mobileMapButton09} onClick={() => handleOpenMobileMapPopup(8)}></button>
+                                        <button className={styles.mobileMapButton10} onClick={() => handleOpenMobileMapPopup(9)}></button>
+                                        <button className={styles.mobileMapButton11} onClick={() => handleOpenMobileMapPopup(10)}></button>
+                                        <button className={styles.mobileMapButton12} onClick={() => handleOpenMobileMapPopup(11)}></button>
+                                        <button className={styles.mobileMapButton13} onClick={() => handleOpenMobileMapPopup(12)}></button>
+                                        <button className={styles.mobileMapButton14} onClick={() => handleOpenMobileMapPopup(13)}></button>
+                                        <button className={styles.mobileMapButton15} onClick={() => handleOpenMobileMapPopup(14)}></button>
+                                        <button className={styles.mobileMapButton16} onClick={() => handleOpenMobileMapPopup(15)}></button>
+                                        <button className={styles.mobileMapButton17} onClick={() => handleOpenMobileMapPopup(16)}></button>
+                                        <button className={styles.mobileMapButton18} onClick={() => handleOpenMobileMapPopup(17)}></button>
+                                        <button className={styles.mobileMapButton19} onClick={() => handleOpenMobileMapPopup(18)}></button>
+                                        <button className={styles.mobileMapButton20} onClick={() => handleOpenMobileMapPopup(19)}></button>
+                                        <button className={styles.mobileMapButton21} onClick={() => handleOpenMobileMapPopup(20)}></button>
+                                        <button className={styles.mobileMapButton22} onClick={() => handleOpenMobileMapPopup(21)}></button>
+                                        <button className={styles.mobileMapButton23} onClick={() => handleOpenMobileMapPopup(22)}></button>
+                                        <button className={styles.mobileMapButton24} onClick={() => handleOpenMobileMapPopup(23)}></button>
+                                        <button className={styles.mobileMapButton25} onClick={() => handleOpenMobileMapPopup(24)}></button>
+                                        <button className={styles.mobileMapButton26} onClick={() => handleOpenMobileMapPopup(25)}></button>
+                                        <button className={styles.mobileMapButton27} onClick={() => handleOpenMobileMapPopup(26)}></button>
+                                        <button className={styles.mobileMapButton28} onClick={() => handleOpenMobileMapPopup(27)}></button>
+                                        <button className={styles.mobileMapButton29} onClick={() => handleOpenMobileMapPopup(28)}></button>
+                                        <button className={styles.mobileMapButton30} onClick={() => handleOpenMobileMapPopup(29)}></button>
+                                        <button className={styles.mobileMapButton31} onClick={() => handleOpenMobileMapPopup(30)}></button>
+                                        <button className={styles.mobileMapButton32} onClick={() => handleOpenMobileMapPopup(31)}></button>
+                                        <button className={styles.mobileMapButton33} onClick={() => handleOpenMobileMapPopup(32)}></button>
+                                        <button className={styles.mobileMapButton34} onClick={() => handleOpenMobileMapPopup(33)}></button>
+                                        <button className={styles.mobileMapButton35} onClick={() => handleOpenMobileMapPopup(34)}></button>
+                                        <button className={styles.mobileMapButton36} onClick={() => handleOpenMobileMapPopup(35)}></button>
+                                        <button className={styles.mobileMapButton37} onClick={() => handleOpenMobileMapPopup(36)}></button>
+                                        <button className={styles.mobileMapButton38} onClick={() => handleOpenMobileMapPopup(37)}></button>
+                                        <button className={styles.mobileMapButton39} onClick={() => handleOpenMobileMapPopup(38)}></button>
+                                        <button className={styles.mobileMapButton40} onClick={() => handleOpenMobileMapPopup(39)}></button>
+                                        <button className={styles.mobileMapButton41} onClick={() => handleOpenMobileMapPopup(40)}></button>
+                                        <button className={styles.mobileMapButton42} onClick={() => handleOpenMobileMapPopup(41)}></button>
+                                        <button className={styles.mobileMapButton43} onClick={() => handleOpenMobileMapPopup(42)}></button>
+                                        <button className={styles.mobileMapButton44} onClick={() => handleOpenMobileMapPopup(43)}></button>
+                                        <button className={styles.mobileMapButton45} onClick={() => handleOpenMobileMapPopup(44)}></button>
+                                        <button className={styles.mobileMapButton46} onClick={() => handleOpenMobileMapPopup(45)}></button>
+                                        <button className={styles.mobileMapButton47} onClick={() => handleOpenMobileMapPopup(46)}></button>
+                                        <button className={styles.mobileMapButton48} onClick={() => handleOpenMobileMapPopup(47)}></button>
+                                    </div>
+                                </div>
                             </div>
                             <div className="d-flex justify-content-center">
                                 <button className="my-btn" style={{ maxWidth: "fit-content" }}>Reserve car for selected destination</button>
