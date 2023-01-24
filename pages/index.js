@@ -502,7 +502,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper02}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[1].name}</h2>
                                                 <h3>{destinationsArr[1].location}</h3>
@@ -515,7 +515,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper03}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[2].name}</h2>
                                                 <h3>{destinationsArr[2].location}</h3>
@@ -528,7 +528,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper04}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[3].name}</h2>
                                                 <h3>{destinationsArr[3].location}</h3>
@@ -541,7 +541,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper05}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[4].name}</h2>
                                                 <h3>{destinationsArr[4].location}</h3>
@@ -554,7 +554,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper06}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[5].name}</h2>
                                                 <h3>{destinationsArr[5].location}</h3>
@@ -567,7 +567,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper07}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[6].name}</h2>
                                                 <h3>{destinationsArr[6].location}</h3>
@@ -580,7 +580,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper08}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[7].name}</h2>
                                                 <h3>{destinationsArr[7].location}</h3>
@@ -593,7 +593,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper09}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[8].name}</h2>
                                                 <h3>{destinationsArr[8].location}</h3>
@@ -606,7 +606,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper10}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[9].name}</h2>
                                                 <h3>{destinationsArr[9].location}</h3>
@@ -619,7 +619,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper11}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[10].name}</h2>
                                                 <h3>{destinationsArr[10].location}</h3>
@@ -632,7 +632,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper12}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[11].name}</h2>
                                                 <h3>{destinationsArr[11].location}</h3>
@@ -645,7 +645,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper13}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[12].name}</h2>
                                                 <h3>{destinationsArr[12].location}</h3>
@@ -658,7 +658,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper14}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[13].name}</h2>
                                                 <h3>{destinationsArr[13].location}</h3>
@@ -671,7 +671,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper15}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[14].name}</h2>
                                                 <h3>{destinationsArr[14].location}</h3>
@@ -684,7 +684,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper16}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[15].name}</h2>
                                                 <h3>{destinationsArr[15].location}</h3>
@@ -697,7 +697,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper17}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[16].name}</h2>
                                                 <h3>{destinationsArr[16].location}</h3>
@@ -710,7 +710,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper18}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[17].name}</h2>
                                                 <h3>{destinationsArr[17].location}</h3>
@@ -723,7 +723,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper19}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[18].name}</h2>
                                                 <h3>{destinationsArr[18].location}</h3>
@@ -736,7 +736,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper20}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[19].name}</h2>
                                                 <h3>{destinationsArr[19].location}</h3>
@@ -749,7 +749,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper21}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[20].name}</h2>
                                                 <h3>{destinationsArr[20].location}</h3>
@@ -762,7 +762,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper22}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[21].name}</h2>
                                                 <h3>{destinationsArr[21].location}</h3>
@@ -775,7 +775,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper23}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[22].name}</h2>
                                                 <h3>{destinationsArr[22].location}</h3>
@@ -788,7 +788,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper24}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[23].name}</h2>
                                                 <h3>{destinationsArr[23].location}</h3>
@@ -801,7 +801,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper25}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[24].name}</h2>
                                                 <h3>{destinationsArr[24].location}</h3>
@@ -814,7 +814,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper26}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[25].name}</h2>
                                                 <h3>{destinationsArr[25].location}</h3>
@@ -827,7 +827,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper27}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[26].name}</h2>
                                                 <h3>{destinationsArr[26].location}</h3>
@@ -840,7 +840,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper28}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[27].name}</h2>
                                                 <h3>{destinationsArr[27].location}</h3>
@@ -853,7 +853,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper29}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[28].name}</h2>
                                                 <h3>{destinationsArr[28].location}</h3>
@@ -866,7 +866,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper30}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[29].name}</h2>
                                                 <h3>{destinationsArr[29].location}</h3>
@@ -879,7 +879,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper31}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[30].name}</h2>
                                                 <h3>{destinationsArr[30].location}</h3>
@@ -892,7 +892,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper32}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[31].name}</h2>
                                                 <h3>{destinationsArr[31].location}</h3>
@@ -905,7 +905,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper33}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[32].name}</h2>
                                                 <h3>{destinationsArr[32].location}</h3>
@@ -918,7 +918,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper34}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[33].name}</h2>
                                                 <h3>{destinationsArr[33].location}</h3>
@@ -931,7 +931,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper35}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[34].name}</h2>
                                                 <h3>{destinationsArr[34].location}</h3>
@@ -944,7 +944,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper36}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[35].name}</h2>
                                                 <h3>{destinationsArr[35].location}</h3>
@@ -957,7 +957,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper37}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[36].name}</h2>
                                                 <h3>{destinationsArr[36].location}</h3>
@@ -970,7 +970,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper38}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[37].name}</h2>
                                                 <h3>{destinationsArr[37].location}</h3>
@@ -983,7 +983,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper39}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[38].name}</h2>
                                                 <h3>{destinationsArr[38].location}</h3>
@@ -996,7 +996,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper40}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[39].name}</h2>
                                                 <h3>{destinationsArr[39].location}</h3>
@@ -1009,7 +1009,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper41}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[40].name}</h2>
                                                 <h3>{destinationsArr[40].location}</h3>
@@ -1022,7 +1022,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper42}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[41].name}</h2>
                                                 <h3>{destinationsArr[41].location}</h3>
@@ -1035,7 +1035,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper43}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[42].name}</h2>
                                                 <h3>{destinationsArr[42].location}</h3>
@@ -1048,7 +1048,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper44}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[43].name}</h2>
                                                 <h3>{destinationsArr[43].location}</h3>
@@ -1061,7 +1061,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper45}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[44].name}</h2>
                                                 <h3>{destinationsArr[44].location}</h3>
@@ -1074,7 +1074,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper46}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[45].name}</h2>
                                                 <h3>{destinationsArr[45].location}</h3>
@@ -1087,7 +1087,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper47}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[46].name}</h2>
                                                 <h3>{destinationsArr[46].location}</h3>
@@ -1100,7 +1100,7 @@ export default function Home() {
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper48}`}>
                                         <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-center ${styles.section06BoxWrapper}`}>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[47].name}</h2>
                                                 <h3>{destinationsArr[47].location}</h3>
