@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import MainLayout from "../components/layout/MainLayout"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from "next/link"
 import DatePicker from "react-datepicker"
@@ -35,6 +35,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
     const [pickUpDate, setPickUpDate] = useState(new Date())
     const [dropOffDate, setDropOffDate] = useState(new Date())
     const [showMobileMap, setShowMobileMap] = useState(null)
+    const [selectLocation, setSelectLocation] = useState(null)
 
     const handleOpenMobileMapPopup = (id) => {
         setShowMobileMap(id)
@@ -51,296 +53,348 @@ export default function Home() {
         setShowMobileMap(null)
     }
 
+    useEffect(() => {
+        console.log(selectLocation)
+    }, [selectLocation])
+
 
     const destinationsArr = [
         {
             _id: 1,
             name: "Big Bend National Park",
             location: "Texas",
-            desctiption: "Big Bend National Park includes the entire Chisos mountain range and a large swath of the Chihuahuan Desert. The Ross Maxwell Scenic Drive leads to the ruins of Sam Nail Ranch."
+            desctiption: "Big Bend National Park includes the entire Chisos mountain range and a large swath of the Chihuahuan Desert. The Ross Maxwell Scenic Drive leads to the ruins of Sam Nail Ranch.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 2,
             name: "Grand Canyon National Park",
             location: "Arizona",
             desctiption: "The Grand Canyon fills me with awe. It is beyond comparison—beyond description; absolutely unparalleled through-out the wide world.",
-            quotation: "- President Theodore Roosevelt"
+            quotation: "- President Theodore Roosevelt",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 3,
             name: "Mount Rushmore",
             location: "South Dakota",
             desctiption: "Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 4,
             name: "Whitewater Falls",
             location: "North Carolina and South Carolina",
             desctiption: "Experience the uniqueness of a series of waterfalls and cascades on the Whitewater River in North Carolina and South Carolina. Over the 3.5 mi course of the river between the two falls.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 5,
             name: "Kennedy Space Center",
             location: "Florida",
             desctiption: "Cape Canaveral, located on the coast of Florida, boasts a lot of space-related attractions. One of the best is the Kennedy Space Center, which has been the launch site for every US human space flight.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 6,
             name: "Bryce Canyon National Park",
             location: "Utah",
             desctiption: "Located in Southern Utah, Bryce Canyon National Park is a breathtaking display of rock formations. Technically, Bryce Canyon isn’t a canyon, but a series of natural amphitheaters.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 7,
             name: "Yosemite National Park",
             location: "California",
             desctiption: "In the Sierra Nevada Mountains of California, there is Yosemite National Park. This extraordinary destination is known the world over for its amazing scenery. Within this single park, visitors can peer off spectacular granite cliffs.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 8,
             name: "Denali National Park",
             location: "Alaska",
             desctiption: "The Denali National Park and Preserve is in Interior Alaska and contains Mount McKinley, the highest mountain in North America. The word “Denali” means “the high one” in the native Athabaskan language.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 9,
             name: "Kilauea",
             location: "Hawaii",
             desctiption: "Kilauea is the most recent of a series of volcanoes that have created the Hawaiian Archipelago. It is a very low, flat shield volcano, vastly different in profile from the high, sharply sloping peaks of stratovolcanoes. ",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 10,
             name: "Yellowstone",
             location: "Wyoming",
             desctiption: "Yellowstone National Park was the world’s first national park, set aside in 1872 to preserve the vast number of geysers, hot springs, and other thermal areas, as well as to protect the incredible wildlife and rugged beauty of the area.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 11,
             name: "Acadia",
             location: "Maine",
             desctiption: "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. ",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 12,
             name: "Voyageurs National Park",
             location: "Minnesota",
             desctiption: "With 218,055 acres, Voyageurs National Park is an adventure wonderland all year long full of exposed rock ridges, cliffs, wetlands, forests, streams and lakes. ",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 13,
             name: "Arches National Park",
             location: "Utah",
             desctiption: "Discover a landscape of contrasting colors, land forms, and textures unlike any other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 14,
             name: "Mesa Verde National Park",
             location: "Colorado",
             desctiption: "For over 700 years, the Ancestral Pueblo people built thriving communities on the mesas and in the cliffs of Mesa Verde. Today, the park protects the rich cultural heritage of 26 Pueblos and Tribes.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 15,
             name: "Shenandoah National Park",
             location: "Virginia",
             desctiption: "Just 75 miles from the bustle of Washington, D.C., Shenandoah National Park is a land bursting with cascading waterfalls, spectacular vistas, fields of wildflowers, and quiet wooded hollows.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 16,
             name: "Olympic National Park",
             location: "Washington",
             desctiption: "With its incredible range of precipitation and elevation, diversity is the hallmark of Olympic National Park. Encompassing nearly a million acres, the park protects a vast wilderness, thousands of years of human history, and several distinctly different ecosystems.",
+            img: require("../assets/img/home-page/map-img/washington.jpeg")
         },
         {
             _id: 17,
             name: "Navy Pier in Chicago",
             location: "Illinois",
             desctiption: "Extending over the waters of Lake Michigan is Navy Pier, an enormous pier in the heart of Chicago’s coastal Streeterville neighborhood. Within the pier, there are countless attractions suited to the whole family.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 18,
             name: "Great Smoky Mountains",
             location: "Tennessee and North Carolina",
             desctiption: "The park is the most visited in the entire country, thanks in large part to its enormous size and its incredible scenery. Visitors can hike through old growth forest, spot hundreds of species of birds and check out the two visitor centers.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 19,
             name: "Carlsbad Caverns",
             location: "New Mexico",
             desctiption: "As the name suggests, Carlsbad Caverns is a collection of over 115 caves. Located in southern New Mexico, these caverns are carved from limestone, and it is possible for visitors to descend more than 900 feet (275 meters) below the surface.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 20,
             name: "French Quarter in New Orleans",
             location: "Louisiana",
             desctiption: "New Orleans, Louisiana, is made up of several unique districts, but none is so famous as the French Quarter. Also known as the Vieux Carre, the French Quarter truly explores the rich French influences.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 21,
             name: "Las Vegas Strip",
             location: "Nevada",
             desctiption: "The gambling mecca of the world, Las Vegas is situated amid the southern Nevada desert landscape. Casinos can be found throughout Las Vegas, but the strip, a stretch of Las Vegas Boulevard South, contains the most of them.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 22,
             name: "White House and the National Mall",
             location: "Washington D.C.",
             desctiption: "The White House in Washington DC is the official residence and office of the President of the United States. It was built between 1792 and 1800 and first used by President John Adams.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 23,
             name: "Walt Disney World",
             location: "Florida",
             desctiption: "Orlando, Florida, is a hub of amusement parks, but none is so popular as Walt Disney World. Many travelers don’t realize that Walt Disney World is made up of several distinct theme parks, including the Magic Kingdom and Water Park.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 24,
             name: "Glacier National Park",
             location: "Montana",
             desctiption: "A showcase of melting glaciers, alpine meadows, carved valleys, and spectacular lakes. With over 700 miles of trails, Glacier is a paradise for adventurous visitors seeking wilderness steeped in human history.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 25,
             name: "U.S. Space & Rocket Center",
             location: "Alabama",
             desctiption: "Get a lesson in American space travel at Alabama's U.S. Space & Rocket Center in Huntsville. A Smithsonian affiliate, the center has one of the world's largest collections of rockets and space memorabilia, as well as Space Camp.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 26,
             name: "Hot Springs National Park",
             location: "Arkansas",
             desctiption: "The nation's oldest national park, even older than Yellowstone, Hot Springs National Park preserves 47 thermal springs with 4,000-year-old water flowing from Hot Springs Mountain.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 27,
             name: "Mystic Aquarium",
             location: "Connecticut",
             desctiption: "All ages can enjoy Mystic, a charming seaport village considered one of the top things to do in Connecticut. This quintessential destination offers a range of tourist attractions, including the Mystic Aquarium",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 28,
             name: "Golden Gate Bridge",
             location: "California",
             desctiption: "The Golden Gate Bridge, which has connected San Francisco to Marin County since 1937, is one of the country's most recognized landmarks. It took four years to build this nearly 2-mile-long bridge.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 29,
             name: "Sea Shipwreck Museum",
             location: "Delaware",
             desctiption: "Dreaming of lost treasure and the vast riches from countless shipwrecks that may lie below the sea? Explore your fantasies at the DiscoverSea Shipwreck Museum in Delaware, which offers an impressive collection of recovered shipwreck artifacts.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 30,
             name: "World of Coca-Cola",
             location: "Georgia",
             desctiption: "Located across from Centennial Olympic Park in Atlanta, this museum pays tribute to one of the world's favorite soft drinks. At this tourist attraction, you can sample more than 100 types of soda from around the world.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 31,
             name: "Kirkham Hot Springs",
             location: "Idaho",
             desctiption: "A popular activity in the state of Idaho is to visit one of its many hot springs. Visitors can soak in these geothermal pools, and one of the best known is Kirkham Hot Springs, just north of Lowman.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 32,
             name: "Indianapolis Motor Speedway",
             location: "Indiana",
             desctiption: "Lay your eyes on the world-famous Indianapolis Motor Speedway track, home of the Indianapolis 500 auto race and designated a National Historic Landmark.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 33,
             name: "Kentucky Horse Park",
             location: "Kentucky",
             desctiption: "In the thoroughbred country of Kentucky, visit the 1,200-acre Kentucky Horse Park, a perfect stop for horse lovers. Here in Lexington, known to many as the Horse Capital of the World, you'll learn all about the history of our relationship with horses.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 34,
             name: "National Aquarium",
             location: "Maryland",
             desctiption: `Tucked into the Inner Harbor of Baltimore is the National Aquarium, home to award-winning exhibits and more than 20,000 aquatic animals. Immerse yourself in the interactive "Living Seashore" exhibit.`,
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 35,
             name: "Freedom Trail",
             location: "Massachusetts",
             desctiption: "See many of Boston's most historic sites along its 2.5-mile Freedom Trail. This attraction features 16 museums, churches, historical markers and even a ship that tell the story of our country from the American Revolution forward.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 36,
             name: "Mackinac Island",
             location: "Michigan",
             desctiption: "Slip back into days gone by with a trip to quaint and historic Mackinac Island in Michigan. On this island, you'll find no cars or chain hotels – only charming inns, bed and breakfasts, and historic hotels.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 37,
             name: "Gateway Arch",
             location: "Missouri",
             desctiption: "Measuring 630 feet high and 630 feet wide, the stainless-steel structure is the tallest man-made monument in the U.S. It stands as a symbol of America's westward expansion.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 38,
             name: "Chimney Rock National Historic Site",
             location: "Nebraska",
             desctiption: "One of the most famous sites along the American West's Oregon Trail, Chimney Rock stands at more than 4,000 feet tall and once indicated to 1800s travelers headed west.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 39,
             name: "Mount Washington Cog Railway",
             location: "New Hampshire",
             desctiption: "The first mountain-climbing cog railway in the world, which also happens to be the second steepest. In this unusual form of transportation, you'll make your way through three climate zones in less than an hour.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 40,
             name: "Statue of Liberty",
             location: "New York",
             desctiption: "It's hard to imagine a better symbol of America than the Statue of Liberty, gifted by France to celebrate 100 years of the U.S. Declaration of Independence.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 41,
             name: "Wright Brothers National Memorial",
             location: "North Carolina",
             desctiption: "Learn more about the origins of flight at this memorial to Wilbur and Orville Wright, who famously achieved flight here in 1903. Here can see a full-scale replica of the Wright Flyer and camp buildings.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 42,
             name: "Theodore Roosevelt National Park",
             location: "North Dakota",
             desctiption: "Discover the vast wilderness that once enchanted President Theodore Roosevelt. In the Badlands area of North Dakota, this national park beckons you with wild horses and bison, scenic drives, and hiking trails.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 43,
             name: "First Americans Museum",
             location: "Oklahoma",
             desctiption: "Showcasing the collective histories of 39 First American Nations, this museum celebrates the cultural traditions, histories, diversities, and contributions of the First Americans.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 44,
             name: "Mount Hood",
             location: "Oregon",
             desctiption: "An iconic sight on Portland's skyline and Oregon's tallest mountain, the larger-than-life Mount Hood is the region's prime skiing area even in summer; it's also home to forests, waterfalls, the Clackamas River.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 45,
             name: "Liberty Bell",
             location: "Pennsylvania",
             desctiption: `Located just north of Independence Hall inside the Liberty Bell Center, the Liberty Bell is a universal symbol of American democracy and freedom. The visitors can view this Philadelphia relic's world-renowned inscription: "Proclaim LIBERTY.`,
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 46,
             name: "Fort Sumter National Monument",
             location: "South Carolina",
             desctiption: "See where the first shots of the Civil War were fired on April 12, 1861, at Fort Sumter National Monument in historic Charleston. The fort was occupied by the Confederate States Army for nearly four years.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 47,
             name: "Country Music Hall of Fame and Museum",
             location: "Tennessee",
             desctiption: "Country music fans will want to head to the Country Music Hall of Fame and Museum in Nashville to explore this genre of music and its historical roots. Inside you'll find more than 2.5 million artifacts.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
         {
             _id: 48,
             name: "Space Needle",
             location: "Washington",
             desctiption: "When you think of Seattle, chances are the Space Needle immediately springs to mind. Designed for the space-themed 1962 World's Fair, the futuristic structure was renovated in 2018 to include the Skyrisers.",
+            img: require("../assets/img/home-page/map-img/texas.jpeg")
         },
     ]
 
@@ -488,202 +542,7 @@ export default function Home() {
                                 <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} />
                                 <div className={`${styles.section06ButtonContainer} d-lg-block d-none`}>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper01}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[0].name}</h2>
-                                                <h3>{destinationsArr[0].location}</h3>
-                                                <p>{destinationsArr[0].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper02}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[1].name}</h2>
-                                                <h3>{destinationsArr[1].location}</h3>
-                                                <p>{destinationsArr[1].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper03}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[2].name}</h2>
-                                                <h3>{destinationsArr[2].location}</h3>
-                                                <p>{destinationsArr[2].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper04}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[3].name}</h2>
-                                                <h3>{destinationsArr[3].location}</h3>
-                                                <p>{destinationsArr[3].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper05}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[4].name}</h2>
-                                                <h3>{destinationsArr[4].location}</h3>
-                                                <p>{destinationsArr[4].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper06}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[5].name}</h2>
-                                                <h3>{destinationsArr[5].location}</h3>
-                                                <p>{destinationsArr[5].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper07}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[6].name}</h2>
-                                                <h3>{destinationsArr[6].location}</h3>
-                                                <p>{destinationsArr[6].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper08}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[7].name}</h2>
-                                                <h3>{destinationsArr[7].location}</h3>
-                                                <p>{destinationsArr[7].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper09}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[8].name}</h2>
-                                                <h3>{destinationsArr[8].location}</h3>
-                                                <p>{destinationsArr[8].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper10}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[9].name}</h2>
-                                                <h3>{destinationsArr[9].location}</h3>
-                                                <p>{destinationsArr[9].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper11}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[10].name}</h2>
-                                                <h3>{destinationsArr[10].location}</h3>
-                                                <p>{destinationsArr[10].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper12}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[11].name}</h2>
-                                                <h3>{destinationsArr[11].location}</h3>
-                                                <p>{destinationsArr[11].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper13}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[12].name}</h2>
-                                                <h3>{destinationsArr[12].location}</h3>
-                                                <p>{destinationsArr[12].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper14}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[13].name}</h2>
-                                                <h3>{destinationsArr[13].location}</h3>
-                                                <p>{destinationsArr[13].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper15}`}>
-                                        <button className={styles.section06Button}></button>
-                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
-                                            <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[14].name}</h2>
-                                                <h3>{destinationsArr[14].location}</h3>
-                                                <p>{destinationsArr[14].desctiption}</p>
-                                            </div>
-                                            <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper16}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[15]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[15]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[15].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[15].name}</h2>
@@ -691,12 +550,207 @@ export default function Home() {
                                                 <p>{destinationsArr[15].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[15]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper02}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[1]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[1]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[1].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[1].name}</h2>
+                                                <h3>{destinationsArr[1].location}</h3>
+                                                <p>{destinationsArr[1].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[1]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper03}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[2]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[2]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[2].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[2].name}</h2>
+                                                <h3>{destinationsArr[2].location}</h3>
+                                                <p>{destinationsArr[2].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[2]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper04}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[3]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[3]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[3].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[3].name}</h2>
+                                                <h3>{destinationsArr[3].location}</h3>
+                                                <p>{destinationsArr[3].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[3]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper05}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[4]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[4]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[4].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[4].name}</h2>
+                                                <h3>{destinationsArr[4].location}</h3>
+                                                <p>{destinationsArr[4].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[4]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper06}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[5]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[5]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[5].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[5].name}</h2>
+                                                <h3>{destinationsArr[5].location}</h3>
+                                                <p>{destinationsArr[5].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[5]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper07}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[6]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[6]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[6].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[6].name}</h2>
+                                                <h3>{destinationsArr[6].location}</h3>
+                                                <p>{destinationsArr[6].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[6]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper08}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[7]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[7]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[7].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[7].name}</h2>
+                                                <h3>{destinationsArr[7].location}</h3>
+                                                <p>{destinationsArr[7].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[7]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper09}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[8]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[8]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[8].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[8].name}</h2>
+                                                <h3>{destinationsArr[8].location}</h3>
+                                                <p>{destinationsArr[8].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[8]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper10}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[9]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[9]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[9].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[9].name}</h2>
+                                                <h3>{destinationsArr[9].location}</h3>
+                                                <p>{destinationsArr[9].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[9]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper11}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[10]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[10]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[10].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[10].name}</h2>
+                                                <h3>{destinationsArr[10].location}</h3>
+                                                <p>{destinationsArr[10].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[10]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper12}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[11]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[11]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[11].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[11].name}</h2>
+                                                <h3>{destinationsArr[11].location}</h3>
+                                                <p>{destinationsArr[11].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[11]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper13}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[12]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[12]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[12].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[12].name}</h2>
+                                                <h3>{destinationsArr[12].location}</h3>
+                                                <p>{destinationsArr[12].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[12]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper14}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[13]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[13]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[13].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[13].name}</h2>
+                                                <h3>{destinationsArr[13].location}</h3>
+                                                <p>{destinationsArr[13].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[13]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper15}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[14]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[14]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[14].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[14].name}</h2>
+                                                <h3>{destinationsArr[14].location}</h3>
+                                                <p>{destinationsArr[14].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[14]?.img} alt="" className='img-fluid' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper16}`}>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[15]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[15]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[15].location)}></button>
+                                        <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
+                                            <div className='col-7 text-start'>
+                                                <h2>{destinationsArr[15].name}</h2>
+                                                <h3>{destinationsArr[15].location}</h3>
+                                                <p>{destinationsArr[15].desctiption}</p>
+                                            </div>
+                                            <div className='col-5'>
+                                                <Image src={destinationsArr[15]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper17}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[16]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[16]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[16].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[16].name}</h2>
@@ -704,12 +758,12 @@ export default function Home() {
                                                 <p>{destinationsArr[16].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[16]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper18}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[17]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[17]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[17].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[17].name}</h2>
@@ -717,12 +771,12 @@ export default function Home() {
                                                 <p>{destinationsArr[17].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[17]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper19}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[18]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[18]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[18].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[18].name}</h2>
@@ -730,12 +784,12 @@ export default function Home() {
                                                 <p>{destinationsArr[18].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[18]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper20}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[19]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[19]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[19].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[19].name}</h2>
@@ -743,12 +797,12 @@ export default function Home() {
                                                 <p>{destinationsArr[19].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[19]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper21}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[20]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[20]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[20].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[20].name}</h2>
@@ -756,12 +810,12 @@ export default function Home() {
                                                 <p>{destinationsArr[20].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[20]} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper22}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[21]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[21]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[21].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[21].name}</h2>
@@ -769,12 +823,12 @@ export default function Home() {
                                                 <p>{destinationsArr[21].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[21]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper23}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[22]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[22]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[22].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[22].name}</h2>
@@ -782,12 +836,12 @@ export default function Home() {
                                                 <p>{destinationsArr[22].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[22]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper24}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[23]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[23]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[23].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[23].name}</h2>
@@ -795,12 +849,12 @@ export default function Home() {
                                                 <p>{destinationsArr[23].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[23]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper25}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[24]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[24]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[24].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[24].name}</h2>
@@ -808,12 +862,12 @@ export default function Home() {
                                                 <p>{destinationsArr[24].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[24]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper26}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[25]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[25]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[25].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[25].name}</h2>
@@ -821,12 +875,12 @@ export default function Home() {
                                                 <p>{destinationsArr[25].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[25]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper27}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[26]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[26]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[26].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[26].name}</h2>
@@ -834,12 +888,12 @@ export default function Home() {
                                                 <p>{destinationsArr[26].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[26]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper28}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[27]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[27]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[27].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[27].name}</h2>
@@ -847,12 +901,12 @@ export default function Home() {
                                                 <p>{destinationsArr[27].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[27]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper29}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[28]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[28]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[28].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[28].name}</h2>
@@ -860,12 +914,12 @@ export default function Home() {
                                                 <p>{destinationsArr[28].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[28]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper30}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[29]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[29]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[29].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[29].name}</h2>
@@ -873,12 +927,12 @@ export default function Home() {
                                                 <p>{destinationsArr[29].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[29]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper31}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[30]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[30]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[30].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[30].name}</h2>
@@ -886,12 +940,12 @@ export default function Home() {
                                                 <p>{destinationsArr[30].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[30]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper32}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[31]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[31]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[31].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[31].name}</h2>
@@ -899,12 +953,12 @@ export default function Home() {
                                                 <p>{destinationsArr[31].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[31]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper33}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[32]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[32]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[32].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[32].name}</h2>
@@ -912,12 +966,12 @@ export default function Home() {
                                                 <p>{destinationsArr[32].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[32]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper34}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[33]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[33]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[33].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[33].name}</h2>
@@ -925,25 +979,25 @@ export default function Home() {
                                                 <p>{destinationsArr[33].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[33]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper35}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[1]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[1]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[1].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[34].name}</h2>
-                                                <h3>{destinationsArr[34].location}</h3>
-                                                <p>{destinationsArr[34].desctiption}</p>
+                                                <h2>{destinationsArr[1].name}</h2>
+                                                <h3>{destinationsArr[1].location}</h3>
+                                                <p>{destinationsArr[1].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[1]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper36}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[36]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[36]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[36].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[35].name}</h2>
@@ -951,12 +1005,12 @@ export default function Home() {
                                                 <p>{destinationsArr[35].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[36]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper37}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[36]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[36]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[36].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[36].name}</h2>
@@ -964,12 +1018,12 @@ export default function Home() {
                                                 <p>{destinationsArr[36].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[36]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper38}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[37]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[37]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[37].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[37].name}</h2>
@@ -977,12 +1031,12 @@ export default function Home() {
                                                 <p>{destinationsArr[37].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[37]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper39}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[38]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[38]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[38].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[38].name}</h2>
@@ -990,12 +1044,12 @@ export default function Home() {
                                                 <p>{destinationsArr[38].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[38]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper40}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[39]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[39]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[39].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[39].name}</h2>
@@ -1003,25 +1057,25 @@ export default function Home() {
                                                 <p>{destinationsArr[39].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[39]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper41}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[0]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[0]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[0].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
-                                                <h2>{destinationsArr[40].name}</h2>
-                                                <h3>{destinationsArr[40].location}</h3>
-                                                <p>{destinationsArr[40].desctiption}</p>
+                                                <h2>{destinationsArr[0].name}</h2>
+                                                <h3>{destinationsArr[0].location}</h3>
+                                                <p>{destinationsArr[0].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[0]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper42}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[41]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[41]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[41].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[41].name}</h2>
@@ -1029,12 +1083,12 @@ export default function Home() {
                                                 <p>{destinationsArr[41].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[41]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper43}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[42]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[42]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[42].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[42].name}</h2>
@@ -1042,12 +1096,12 @@ export default function Home() {
                                                 <p>{destinationsArr[42].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[42]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper44}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[43]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[43]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[43].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[43].name}</h2>
@@ -1055,12 +1109,12 @@ export default function Home() {
                                                 <p>{destinationsArr[43].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[43]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper45}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[44]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[44]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[44].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[44].name}</h2>
@@ -1068,12 +1122,12 @@ export default function Home() {
                                                 <p>{destinationsArr[44].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[44]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper46}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[45]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[45]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[45].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[45].name}</h2>
@@ -1081,12 +1135,12 @@ export default function Home() {
                                                 <p>{destinationsArr[45].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[45]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper47}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[46]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[46]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[46].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[46].name}</h2>
@@ -1094,12 +1148,12 @@ export default function Home() {
                                                 <p>{destinationsArr[46].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[46]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper48}`}>
-                                        <button className={styles.section06Button}></button>
+                                        <button className={styles.section06Button} style={{ transform: `${selectLocation == destinationsArr[47]?.location ? "scale(1.3)" : ""}`, background: `${selectLocation == destinationsArr[47]?.location ? "black" : "#dd4f4d"}` }} onClick={() => setSelectLocation(destinationsArr[47].location)}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
                                                 <h2>{destinationsArr[47].name}</h2>
@@ -1107,7 +1161,7 @@ export default function Home() {
                                                 <p>{destinationsArr[47].desctiption}</p>
                                             </div>
                                             <div className='col-5'>
-                                                <Image src={Section06ButtonBoxImg01} alt="" className='img-fluid' />
+                                                <Image src={destinationsArr[47]?.img} alt="" className='img-fluid' />
                                             </div>
                                         </div>
                                     </div>
@@ -1187,7 +1241,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="d-flex justify-content-center">
-                                <button className="my-btn" style={{ maxWidth: "fit-content" }}>Reserve car for selected destination</button>
+                                <Link className="my-btn" href="#" style={{ maxWidth: "fit-content", opacity: `${selectLocation == null ? "0.5" : "1"}`, pointerEvents: `${selectLocation == null ? "none" : "auto"}` }} >Reserve car for selected destination</Link>
                             </div>
                         </div>
                     </div>
