@@ -117,7 +117,6 @@ export default function Careers() {
 
     useEffect(() => {
         const selectedJob = jobArr.find(job => job._id == jobId)
-        console.log(selectedJob, jobId)
         setJob(selectedJob)
     }, [jobId])
 
@@ -129,64 +128,65 @@ export default function Careers() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <MainLayout>
-                <section id={styles.heroSection} className="heroSection">
-                    <div>
-                        <div className='container'>
-                            <div className='row row-cols-lg-2 gap-5'>
-                                <div>
-                                    <h1>Careers at VEHDE</h1>
-                                </div>
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id={styles.reserveCarSection}>
+            <section id={styles.heroSection} className="heroSection">
+                <div>
                     <div className='container'>
-                        <div className={styles.reserveCarSectionWrapper}>
-                            <h2 className='text-center mb-4'>{job?.title}</h2>
-                            <h4>{job?.location}</h4>
-                            <p>{job?.description}</p>
+                        <div className='row row-cols-lg-2 gap-5'>
                             <div>
-                                <h4>Responsibilities:</h4>
-                                <ul>
-                                    {
-                                        job.responsibilities?.map(responsibility => (
-                                            <li>{responsibility}</li>
-                                        ))
-                                    }
-                                </ul>
+                                <h1><Link href="/Careers">Careers at VEHDE</Link></h1>
                             </div>
-                            <div>
-                                <h4>Experience:</h4>
-                                <ul>
-                                    {
-                                        job.experience?.map(exp => (
-                                            <li>{exp}</li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                            {
-                                job?.bnefits && (
-                                    <div>
-                                        <h4>Benefits:</h4>
-                                        <ul>
-                                            {
-                                                job.bnefits?.map(benifit => (
-                                                    <li>{benifit}</li>
-                                                ))
-                                            }
-                                        </ul>
-                                    </div>
-                                )
-                            }
-                            <p>{job?.description2}</p>
+                            <div></div>
                         </div>
                     </div>
-                </section>
-            </MainLayout>
+                </div>
+            </section>
+            <section id={styles.reserveCarSection}>
+                <div className='container'>
+                    <div className={styles.reserveCarSectionWrapper}>
+                        <div className="flex">
+                            <Link href="/Careers"><i className='fa fa-arrow-left'></i> Go back to careers</Link>
+                        </div>
+                        <h2 className='text-center mb-4'>{job?.title}</h2>
+                        <h4>{job?.location}</h4>
+                        <p>{job?.description}</p>
+                        <div>
+                            <h4>Responsibilities:</h4>
+                            <ul>
+                                {
+                                    job?.responsibilities?.map(responsibility => (
+                                        <li>{responsibility}</li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Experience:</h4>
+                            <ul>
+                                {
+                                    job?.experience?.map(exp => (
+                                        <li>{exp}</li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                        {
+                            job?.bnefits && (
+                                <div>
+                                    <h4>Benefits:</h4>
+                                    <ul>
+                                        {
+                                            job?.bnefits?.map(benifit => (
+                                                <li>{benifit}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            )
+                        }
+                        <p>{job?.description2}</p>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

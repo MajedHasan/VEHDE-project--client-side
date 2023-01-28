@@ -359,8 +359,8 @@ export default function Home() {
                             <div>
                                 <h1><span>Explore</span> the <span>creativity</span> of car sharing <span>innovation</span></h1>
                                 <div className='d-flex gap-3 flex-sm-row flex-column align-items-center mt-5'>
-                                    <button className='my-btn'>Apply To Host</button>
-                                    <button className='my-btn-outline'>&nbsp;&nbsp; Rent A Car &nbsp;&nbsp;</button>
+                                    <button className='my-btn'>Apply to host</button>
+                                    <button className='my-btn-outline'>&nbsp;&nbsp; Rent a car &nbsp;&nbsp;</button>
                                 </div>
                             </div>
                             <div></div>

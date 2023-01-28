@@ -191,11 +191,11 @@
 }
 
 #section06>div>div>p {
-  max-width: 450px;
+  max-width: 480px;
   width: 100%;
   margin: auto;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   color: #717171;
 }
 

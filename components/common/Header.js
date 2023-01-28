@@ -8,12 +8,15 @@ import User from "../../assets/img/user.png"
 import ShuttleIcon from "../../assets/img/shuttle-icon.png"
 import BagIcon from "../../assets/img/bag-icon.png"
 import HelpIcon from "../../assets/img/help-icon.png"
+import { useRouter } from 'next/router'
 
 
 const Header = () => {
 
     const [openMenuItem, setOpenMenuItem] = useState(false)
     const [openProfileItem, setOpenProfileItem] = useState(false)
+    const router = useRouter()
+    const curretRoute = router.pathname
 
 
     return (
@@ -31,10 +34,10 @@ const Header = () => {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                                     <li className="nav-item">
-                                        <Link className="nav-link active" aria-current="page" href="/AboutUs">About Us</Link>
+                                        <Link className={`nav-link ${curretRoute === "/AboutUs" && "active"}`} aria-current="page" href="/AboutUs">About us</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="/SmartGuide">Smart Guide</Link>
+                                        <Link className={`nav-link ${curretRoute === "/SmartGuide" && "active"}`} href="/SmartGuide">Smart guide</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" href="#">Renter</Link>

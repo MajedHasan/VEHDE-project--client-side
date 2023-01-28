@@ -85,7 +85,7 @@ export default function SmartGuide() {
                                     <div className="d-flex flex-row-reverse align-items-center gap-3 justify-content-lg-start justify-content-end">
                                         <div className='text-start'>
                                             <h4>6. Renter earns VEHDE points</h4>
-                                            <p>For each car rental, ongoing or completed, renter and host earn VEHDE points. At 100 points, renter/host becomes a VEHDIAN. As a VEHDIAN, among others, renter/host is rewarded with at least 1-day free rental, or cash equivalent.</p>
+                                            <p>For each completed car rental, renters and hosts earn VEHDE scores. VEHDE scores can be converted to rental or cash equivalent.</p>
                                         </div>
                                         <div>
                                             <Image src={section02Img04} alt="" />
