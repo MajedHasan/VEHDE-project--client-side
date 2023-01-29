@@ -541,7 +541,7 @@ export default function Home() {
                             <p className='text-center'>Select a destination and reserve car for your vacation</p>
                             <div className="image-map-wrapper my-5 text-center position-relative">
                                 <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} />
-                                <div className={`${styles.section06ButtonContainer} d-lg-block d-none`}>
+                                <div className={`${styles.section06ButtonContainer} d-xl-block d-none`}>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper01}`}>
                                         <button className={styles.section06Button} style={{ transform: `${selectMapBoxName == destinationsArr[7]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[7]?.name ? "black" : "#dd4f4d"}` }} onClick={() => {
                                             setSelectLocation(destinationsArr[7].location)
@@ -1311,7 +1311,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-lg-none d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
+                                <div className="d-xl-none d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
                                     {
                                         showMobileMap != null && (
                                             <div className={styles.mapBoxPopup}>
