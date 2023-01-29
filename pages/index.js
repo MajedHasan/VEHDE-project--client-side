@@ -541,7 +541,7 @@ export default function Home() {
                             <p className='text-center'>Select a destination and reserve car for your vacation</p>
                             <div className="image-map-wrapper my-5 text-center position-relative">
                                 <Image src={Section06Img} alt="USA Map with red circle" className={`img-fluid ${styles.section06img}`} />
-                                <div className={`${styles.section06ButtonContainer} d-xl-block d-none`}>
+                                <div className={`${styles.section06ButtonContainer}`}>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper01}`}>
                                         <button className={styles.section06Button} style={{ transform: `${selectMapBoxName == destinationsArr[7]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[7]?.name ? "black" : "#dd4f4d"}` }} onClick={() => {
                                             setSelectLocation(destinationsArr[7].location)
@@ -1311,7 +1311,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-xl-none d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
+                                <div className={styles.mobileMapButtonsWrapper} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
                                     {
                                         showMobileMap != null && (
                                             <div className={styles.mapBoxPopup}>
@@ -1334,54 +1334,246 @@ export default function Home() {
                                         )
                                     }
                                     <div className={styles.mobileMapButtons}>
-                                        <button className={styles.mobileMapButton01} onClick={() => handleOpenMobileMapPopup(0)}></button>
-                                        <button className={styles.mobileMapButton02} onClick={() => handleOpenMobileMapPopup(1)}></button>
-                                        <button className={styles.mobileMapButton03} onClick={() => handleOpenMobileMapPopup(2)}></button>
-                                        <button className={styles.mobileMapButton04} onClick={() => handleOpenMobileMapPopup(3)}></button>
-                                        <button className={styles.mobileMapButton05} onClick={() => handleOpenMobileMapPopup(4)}></button>
-                                        <button className={styles.mobileMapButton06} onClick={() => handleOpenMobileMapPopup(5)}></button>
-                                        <button className={styles.mobileMapButton07} onClick={() => handleOpenMobileMapPopup(6)}></button>
-                                        <button className={styles.mobileMapButton08} onClick={() => handleOpenMobileMapPopup(7)}></button>
-                                        <button className={styles.mobileMapButton09} onClick={() => handleOpenMobileMapPopup(8)}></button>
-                                        <button className={styles.mobileMapButton10} onClick={() => handleOpenMobileMapPopup(9)}></button>
-                                        <button className={styles.mobileMapButton11} onClick={() => handleOpenMobileMapPopup(10)}></button>
-                                        <button className={styles.mobileMapButton12} onClick={() => handleOpenMobileMapPopup(11)}></button>
-                                        <button className={styles.mobileMapButton13} onClick={() => handleOpenMobileMapPopup(12)}></button>
-                                        <button className={styles.mobileMapButton14} onClick={() => handleOpenMobileMapPopup(13)}></button>
-                                        <button className={styles.mobileMapButton15} onClick={() => handleOpenMobileMapPopup(14)}></button>
-                                        <button className={styles.mobileMapButton16} onClick={() => handleOpenMobileMapPopup(15)}></button>
-                                        <button className={styles.mobileMapButton17} onClick={() => handleOpenMobileMapPopup(16)}></button>
-                                        <button className={styles.mobileMapButton18} onClick={() => handleOpenMobileMapPopup(17)}></button>
-                                        <button className={styles.mobileMapButton19} onClick={() => handleOpenMobileMapPopup(18)}></button>
-                                        <button className={styles.mobileMapButton20} onClick={() => handleOpenMobileMapPopup(19)}></button>
-                                        <button className={styles.mobileMapButton21} onClick={() => handleOpenMobileMapPopup(20)}></button>
-                                        <button className={styles.mobileMapButton22} onClick={() => handleOpenMobileMapPopup(21)}></button>
-                                        <button className={styles.mobileMapButton23} onClick={() => handleOpenMobileMapPopup(22)}></button>
-                                        <button className={styles.mobileMapButton24} onClick={() => handleOpenMobileMapPopup(23)}></button>
-                                        <button className={styles.mobileMapButton25} onClick={() => handleOpenMobileMapPopup(24)}></button>
-                                        <button className={styles.mobileMapButton26} onClick={() => handleOpenMobileMapPopup(25)}></button>
-                                        <button className={styles.mobileMapButton27} onClick={() => handleOpenMobileMapPopup(26)}></button>
-                                        <button className={styles.mobileMapButton28} onClick={() => handleOpenMobileMapPopup(27)}></button>
-                                        <button className={styles.mobileMapButton29} onClick={() => handleOpenMobileMapPopup(28)}></button>
-                                        <button className={styles.mobileMapButton30} onClick={() => handleOpenMobileMapPopup(29)}></button>
-                                        <button className={styles.mobileMapButton31} onClick={() => handleOpenMobileMapPopup(30)}></button>
-                                        <button className={styles.mobileMapButton32} onClick={() => handleOpenMobileMapPopup(31)}></button>
-                                        <button className={styles.mobileMapButton33} onClick={() => handleOpenMobileMapPopup(32)}></button>
-                                        <button className={styles.mobileMapButton34} onClick={() => handleOpenMobileMapPopup(33)}></button>
-                                        <button className={styles.mobileMapButton35} onClick={() => handleOpenMobileMapPopup(34)}></button>
-                                        <button className={styles.mobileMapButton36} onClick={() => handleOpenMobileMapPopup(35)}></button>
-                                        <button className={styles.mobileMapButton37} onClick={() => handleOpenMobileMapPopup(36)}></button>
-                                        <button className={styles.mobileMapButton38} onClick={() => handleOpenMobileMapPopup(37)}></button>
-                                        <button className={styles.mobileMapButton39} onClick={() => handleOpenMobileMapPopup(38)}></button>
-                                        <button className={styles.mobileMapButton40} onClick={() => handleOpenMobileMapPopup(39)}></button>
-                                        <button className={styles.mobileMapButton41} onClick={() => handleOpenMobileMapPopup(40)}></button>
-                                        <button className={styles.mobileMapButton42} onClick={() => handleOpenMobileMapPopup(41)}></button>
-                                        <button className={styles.mobileMapButton43} onClick={() => handleOpenMobileMapPopup(42)}></button>
-                                        <button className={styles.mobileMapButton44} onClick={() => handleOpenMobileMapPopup(43)}></button>
-                                        <button className={styles.mobileMapButton45} onClick={() => handleOpenMobileMapPopup(44)}></button>
-                                        <button className={styles.mobileMapButton46} onClick={() => handleOpenMobileMapPopup(45)}></button>
-                                        <button className={styles.mobileMapButton47} onClick={() => handleOpenMobileMapPopup(46)}></button>
-                                        <button className={styles.mobileMapButton48} onClick={() => handleOpenMobileMapPopup(47)}></button>
+                                        <button className={styles.mobileMapButton01} onClick={() => {
+                                            handleOpenMobileMapPopup(0)
+                                            setSelectLocation(destinationsArr[0].location)
+                                            setSelectMapBoxName(destinationsArr[0]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[0]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[0]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton02} onClick={() => {
+                                            handleOpenMobileMapPopup(1)
+                                            setSelectLocation(destinationsArr[1].location)
+                                            setSelectMapBoxName(destinationsArr[1]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[1]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[1]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton03} onClick={() => {
+                                            handleOpenMobileMapPopup(2)
+                                            setSelectLocation(destinationsArr[2].location)
+                                            setSelectMapBoxName(destinationsArr[2]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[2]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[2]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton04} onClick={() => {
+                                            handleOpenMobileMapPopup(3)
+                                            setSelectLocation(destinationsArr[3].location)
+                                            setSelectMapBoxName(destinationsArr[3]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[3]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[3]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton05} onClick={() => {
+                                            handleOpenMobileMapPopup(4)
+                                            setSelectLocation(destinationsArr[4].location)
+                                            setSelectMapBoxName(destinationsArr[4]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[4]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[4]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton06} onClick={() => {
+                                            handleOpenMobileMapPopup(5)
+                                            setSelectLocation(destinationsArr[5].location)
+                                            setSelectMapBoxName(destinationsArr[5]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[5]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[5]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton07} onClick={() => {
+                                            handleOpenMobileMapPopup(6)
+                                            setSelectLocation(destinationsArr[6].location)
+                                            setSelectMapBoxName(destinationsArr[6]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[6]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[6]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton08} onClick={() => {
+                                            handleOpenMobileMapPopup(7)
+                                            setSelectLocation(destinationsArr[7].location)
+                                            setSelectMapBoxName(destinationsArr[7]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[7]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[7]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton09} onClick={() => {
+                                            handleOpenMobileMapPopup(8)
+                                            setSelectLocation(destinationsArr[8].location)
+                                            setSelectMapBoxName(destinationsArr[8]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[8]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[8]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton10} onClick={() => {
+                                            handleOpenMobileMapPopup(9)
+                                            setSelectLocation(destinationsArr[9].location)
+                                            setSelectMapBoxName(destinationsArr[9]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[9]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[9]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton11} onClick={() => {
+                                            handleOpenMobileMapPopup(10)
+                                            setSelectLocation(destinationsArr[10].location)
+                                            setSelectMapBoxName(destinationsArr[10]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[10]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[10]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton12} onClick={() => {
+                                            handleOpenMobileMapPopup(11)
+                                            setSelectLocation(destinationsArr[11].location)
+                                            setSelectMapBoxName(destinationsArr[11]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[11]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[11]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton13} onClick={() => {
+                                            handleOpenMobileMapPopup(12)
+                                            setSelectLocation(destinationsArr[12].location)
+                                            setSelectMapBoxName(destinationsArr[12]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[12]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[12]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton14} onClick={() => {
+                                            handleOpenMobileMapPopup(13)
+                                            setSelectLocation(destinationsArr[13].location)
+                                            setSelectMapBoxName(destinationsArr[13]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[13]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[13]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton15} onClick={() => {
+                                            handleOpenMobileMapPopup(14)
+                                            setSelectLocation(destinationsArr[14].location)
+                                            setSelectMapBoxName(destinationsArr[14]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[14]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[14]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton16} onClick={() => {
+                                            handleOpenMobileMapPopup(15)
+                                            setSelectLocation(destinationsArr[15].location)
+                                            setSelectMapBoxName(destinationsArr[15]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[15]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[15]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton17} onClick={() => {
+                                            handleOpenMobileMapPopup(16)
+                                            setSelectLocation(destinationsArr[16].location)
+                                            setSelectMapBoxName(destinationsArr[16]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[16]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[16]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton18} onClick={() => {
+                                            handleOpenMobileMapPopup(17)
+                                            setSelectLocation(destinationsArr[17].location)
+                                            setSelectMapBoxName(destinationsArr[17]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[17]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[17]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton19} onClick={() => {
+                                            handleOpenMobileMapPopup(18)
+                                            setSelectLocation(destinationsArr[18].location)
+                                            setSelectMapBoxName(destinationsArr[18]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[18]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[18]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton20} onClick={() => {
+                                            handleOpenMobileMapPopup(19)
+                                            setSelectLocation(destinationsArr[19].location)
+                                            setSelectMapBoxName(destinationsArr[19]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[19]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[19]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton21} onClick={() => {
+                                            handleOpenMobileMapPopup(20)
+                                            setSelectLocation(destinationsArr[20].location)
+                                            setSelectMapBoxName(destinationsArr[20]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[20]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[20]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton22} onClick={() => {
+                                            handleOpenMobileMapPopup(21)
+                                            setSelectLocation(destinationsArr[21].location)
+                                            setSelectMapBoxName(destinationsArr[21]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[21]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[21]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton23} onClick={() => {
+                                            handleOpenMobileMapPopup(22)
+                                            setSelectLocation(destinationsArr[22].location)
+                                            setSelectMapBoxName(destinationsArr[22]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[22]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[22]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton24} onClick={() => {
+                                            handleOpenMobileMapPopup(23)
+                                            setSelectLocation(destinationsArr[23].location)
+                                            setSelectMapBoxName(destinationsArr[23]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[23]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[23]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton25} onClick={() => {
+                                            handleOpenMobileMapPopup(24)
+                                            setSelectLocation(destinationsArr[24].location)
+                                            setSelectMapBoxName(destinationsArr[24]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[24]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[24]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton26} onClick={() => {
+                                            handleOpenMobileMapPopup(25)
+                                            setSelectLocation(destinationsArr[25].location)
+                                            setSelectMapBoxName(destinationsArr[25]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[25]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[25]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton27} onClick={() => {
+                                            handleOpenMobileMapPopup(26)
+                                            setSelectLocation(destinationsArr[26].location)
+                                            setSelectMapBoxName(destinationsArr[26]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[26]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[26]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton28} onClick={() => {
+                                            handleOpenMobileMapPopup(27)
+                                            setSelectLocation(destinationsArr[27].location)
+                                            setSelectMapBoxName(destinationsArr[27]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[27]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[27]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton29} onClick={() => {
+                                            handleOpenMobileMapPopup(28)
+                                            setSelectLocation(destinationsArr[28].location)
+                                            setSelectMapBoxName(destinationsArr[28]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[28]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[28]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton30} onClick={() => {
+                                            handleOpenMobileMapPopup(29)
+                                            setSelectLocation(destinationsArr[29].location)
+                                            setSelectMapBoxName(destinationsArr[29]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[29]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[29]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton31} onClick={() => {
+                                            handleOpenMobileMapPopup(30)
+                                            setSelectLocation(destinationsArr[30].location)
+                                            setSelectMapBoxName(destinationsArr[30]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[30]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[30]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton32} onClick={() => {
+                                            handleOpenMobileMapPopup(31)
+                                            setSelectLocation(destinationsArr[31].location)
+                                            setSelectMapBoxName(destinationsArr[31]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[31]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[31]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton33} onClick={() => {
+                                            handleOpenMobileMapPopup(32)
+                                            setSelectLocation(destinationsArr[32].location)
+                                            setSelectMapBoxName(destinationsArr[32]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[32]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[32]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton34} onClick={() => {
+                                            handleOpenMobileMapPopup(33)
+                                            setSelectLocation(destinationsArr[33].location)
+                                            setSelectMapBoxName(destinationsArr[33]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[33]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[33]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton35} onClick={() => {
+                                            handleOpenMobileMapPopup(34)
+                                            setSelectLocation(destinationsArr[34].location)
+                                            setSelectMapBoxName(destinationsArr[34]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[34]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[34]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton36} onClick={() => {
+                                            handleOpenMobileMapPopup(35)
+                                            setSelectLocation(destinationsArr[35].location)
+                                            setSelectMapBoxName(destinationsArr[35]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[35]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[35]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton37} onClick={() => {
+                                            handleOpenMobileMapPopup(36)
+                                            setSelectLocation(destinationsArr[36].location)
+                                            setSelectMapBoxName(destinationsArr[36]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[36]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[36]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton38} onClick={() => {
+                                            handleOpenMobileMapPopup(37)
+                                            setSelectLocation(destinationsArr[37].location)
+                                            setSelectMapBoxName(destinationsArr[37]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[37]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[37]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton39} onClick={() => {
+                                            handleOpenMobileMapPopup(38)
+                                            setSelectLocation(destinationsArr[38].location)
+                                            setSelectMapBoxName(destinationsArr[38]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[38]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[38]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton40} onClick={() => {
+                                            handleOpenMobileMapPopup(39)
+                                            setSelectLocation(destinationsArr[39].location)
+                                            setSelectMapBoxName(destinationsArr[39]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[39]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[39]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton41} onClick={() => {
+                                            handleOpenMobileMapPopup(40)
+                                            setSelectLocation(destinationsArr[40].location)
+                                            setSelectMapBoxName(destinationsArr[40]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[40]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[40]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton42} onClick={() => {
+                                            handleOpenMobileMapPopup(41)
+                                            setSelectLocation(destinationsArr[41].location)
+                                            setSelectMapBoxName(destinationsArr[41]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[41]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[41]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton43} onClick={() => {
+                                            handleOpenMobileMapPopup(42)
+                                            setSelectLocation(destinationsArr[42].location)
+                                            setSelectMapBoxName(destinationsArr[42]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[42]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[42]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton44} onClick={() => {
+                                            handleOpenMobileMapPopup(43)
+                                            setSelectLocation(destinationsArr[43].location)
+                                            setSelectMapBoxName(destinationsArr[43]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[43]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[43]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton45} onClick={() => {
+                                            handleOpenMobileMapPopup(44)
+                                            setSelectLocation(destinationsArr[44].location)
+                                            setSelectMapBoxName(destinationsArr[44]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[44]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[44]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton46} onClick={() => {
+                                            handleOpenMobileMapPopup(45)
+                                            setSelectLocation(destinationsArr[45].location)
+                                            setSelectMapBoxName(destinationsArr[45]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[45]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[45]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton47} onClick={() => {
+                                            handleOpenMobileMapPopup(46)
+                                            setSelectLocation(destinationsArr[46].location)
+                                            setSelectMapBoxName(destinationsArr[46]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[46]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[46]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                        <button className={styles.mobileMapButton48} onClick={() => {
+                                            handleOpenMobileMapPopup(47)
+                                            setSelectLocation(destinationsArr[47].location)
+                                            setSelectMapBoxName(destinationsArr[47]?.name)
+                                        }} style={{ transform: `${selectMapBoxName == destinationsArr[47]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[47]?.name ? "black" : "#dd4f4d"}` }}></button>
                                     </div>
                                 </div>
                             </div>

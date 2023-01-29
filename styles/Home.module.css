@@ -641,244 +641,510 @@
   border: none;
 }
 
+.section06ButtonContainer {
+  display: none;
+  overflow: hidden;
+}
+
+.section06ButtonContainer:hover {
+  overflow: inherit;
+}
+
+.mobileMapButtonsWrapper {
+  display: block;
+}
+
+@media only screen and (min-width:1200px) {
+  .section06ButtonContainer {
+    display: block;
+  }
+
+  .mobileMapButtonsWrapper {
+    display: none;
+  }
+}
+
+
 .mobileMapButton01 {
-  top: 3.3%;
-  left: 8.9%;
+  top: 75.3%;
+  left: 30.2%;
 }
 
 .mobileMapButton02 {
-  top: 3.3%;
-  left: 14.1%;
+  top: 72.2%;
+  left: 19.3%;
 }
 
 .mobileMapButton03 {
-  top: 3.3%;
-  left: 23%;
+  top: 23%;
+  left: 44.5%;
 }
 
 .mobileMapButton04 {
-  top: 13%;
-  left: 8.9%;
+  top: 68.8%;
+  left: 74.3%;
 }
 
 .mobileMapButton05 {
-  top: 13%;
-  left: 19.5%;
+  top: 91.7%;
+  left: 72.4%;
 }
 
 .mobileMapButton06 {
-  top: 13%;
-  left: 30%;
+  top: 46%;
+  left: 19.5%;
 }
 
 .mobileMapButton07 {
-  top: 13%;
-  left: 42.4%;
+  top: 62.3%;
+  left: 7%;
 }
 
 .mobileMapButton08 {
-  top: 13%;
-  left: 55%;
+  top: 0%;
+  left: 7%;
 }
 
 .mobileMapButton09 {
-  top: 13%;
-  left: 62%;
-}
-
-.mobileMapButton10 {
-  top: 23%;
-  left: 14%;
-}
-
-.mobileMapButton11 {
-  top: 23%;
-  left: 30%;
-}
-
-.mobileMapButton12 {
-  top: 20%;
-  left: 47.8%;
-}
-
-.mobileMapButton13 {
-  top: 23%;
-  left: 53%;
-}
-
-.mobileMapButton14 {
-  top: 23%;
-  left: 67.3%;
-}
-
-.mobileMapButton15 {
-  top: 29.5%;
-  left: 9%;
-}
-
-.mobileMapButton16 {
-  top: 29.5%;
-  left: 23%;
-}
-
-.mobileMapButton17 {
-  top: 29.5%;
-  left: 35.5%;
-}
-
-.mobileMapButton18 {
-  top: 29.5%;
-  left: 46%;
-}
-
-.mobileMapButton19 {
-  top: 29.5%;
-  left: 55%;
-}
-
-.mobileMapButton20 {
-  top: 29.5%;
-  left: 65.5%;
-}
-
-.mobileMapButton21 {
-  top: 29.5%;
-  left: 85%;
-}
-
-.mobileMapButton22 {
-  top: 46%;
+  top: 72.3%;
   left: 10.5%;
 }
 
-.mobileMapButton23 {
-  top: 46%;
-  left: 23%;
-}
-
-.mobileMapButton24 {
-  top: 49%;
+.mobileMapButton10 {
+  top: 29.4%;
   left: 28.2%;
 }
 
-.mobileMapButton25 {
+.mobileMapButton11 {
+  top: 26.2%;
+  left: 92%;
+}
+
+.mobileMapButton12 {
+  top: 16.5%;
+  left: 48%;
+}
+
+.mobileMapButton13 {
   top: 46%;
-  left: 37.2%;
+  left: 17.5%;
+}
+
+.mobileMapButton14 {
+  top: 46%;
+  left: 26.5%;
+}
+
+.mobileMapButton15 {
+  top: 62.3%;
+  left: 79.6%;
+}
+
+.mobileMapButton16 {
+  top: 52.3%;
+  left: 83%;
+}
+
+.mobileMapButton17 {
+  top: 39.2%;
+  left: 65.4%;
+}
+
+.mobileMapButton18 {
+  top: 65.4%;
+  left: 70.7%;
+}
+
+.mobileMapButton19 {
+  top: 62.3%;
+  left: 26.4%;
+}
+
+.mobileMapButton20 {
+  top: 82%;
+  left: 51.3%;
+}
+
+.mobileMapButton21 {
+  top: 46.1%;
+  left: 12.3%;
+}
+
+.mobileMapButton22 {
+  top: 49.1%;
+  left: 79.6%;
+}
+
+.mobileMapButton23 {
+  top: 91.8%;
+  left: 68.8%;
+}
+
+.mobileMapButton24 {
+  top: 9.8%;
+  left: 24.5%;
+}
+
+.mobileMapButton25 {
+  top: 78.8%;
+  left: 62%;
 }
 
 .mobileMapButton26 {
-  top: 46%;
-  left: 46%;
+  top: 72.3%;
+  left: 56.4%;
 }
 
 .mobileMapButton27 {
-  top: 46%;
-  left: 60.2%;
+  top: 36.1%;
+  left: 90.2%;
 }
 
 .mobileMapButton28 {
-  top: 46%;
-  left: 74.5%;
+  top: 49.4%;
+  left: 3.7%;
 }
 
 .mobileMapButton29 {
-  top: 46%;
+  top: 45.8%;
   left: 85%;
 }
 
 .mobileMapButton30 {
-  top: 56%;
-  left: 5.3%;
+  top: 75.3%;
+  left: 70.6%;
 }
 
 .mobileMapButton31 {
-  top: 56%;
+  top: 23%;
   left: 21%;
 }
 
 .mobileMapButton32 {
-  top: 55.6%;
-  left: 37.3%;
+  top: 49.1%;
+  left: 74.2%;
 }
 
 .mobileMapButton33 {
-  top: 59%;
-  left: 51.5%;
+  top: 62.2%;
+  left: 65.3%;
 }
 
 .mobileMapButton34 {
-  top: 59%;
-  left: 69%;
+  top: 45.8%;
+  left: 81.2%;
 }
 
 .mobileMapButton35 {
-  top: 69%;
-  left: 14%;
+  top: 32.6%;
+  left: 90.1%;
 }
 
 .mobileMapButton36 {
-  top: 72.5%;
-  left: 26.6%;
+  top: 36%;
+  left: 75.9%;
 }
 
 .mobileMapButton37 {
-  top: 75.4%;
-  left: 37.2%;
+  top: 59%;
+  left: 60%;
 }
 
 .mobileMapButton38 {
-  top: 69%;
-  left: 46%;
+  top: 46%;
+  left: 49.6%;
 }
 
 .mobileMapButton39 {
-  top: 69%;
-  left: 56.6%;
+  top: 32.6%;
+  left: 92%;
 }
 
 .mobileMapButton40 {
-  top: 69%;
-  left: 67.3%;
+  top: 42.6%;
+  left: 86.8%;
 }
 
 .mobileMapButton41 {
-  top: 69%;
-  left: 76%;
+  top: 65.5%;
+  left: 77.8%;
 }
 
 .mobileMapButton42 {
-  top: 85.4%;
-  left: 32%;
+  top: 9.8%;
+  left: 35.3%;
 }
 
 .mobileMapButton43 {
-  top: 92%;
-  left: 40.7%;
+  top: 69%;
+  left: 46.2%;
 }
 
 .mobileMapButton44 {
-  top: 85.4%;
-  left: 47.8%;
+  top: 26.4%;
+  left: 8.8%;
 }
 
 .mobileMapButton45 {
-  top: 85.3%;
-  left: 56.6%;
+  top: 42.6%;
+  left: 83.3%;
 }
 
 .mobileMapButton46 {
-  top: 85.3%;
-  left: 67.3%;
+  top: 72%;
+  left: 72.5%;
 }
 
 .mobileMapButton47 {
-  top: 92%;
-  left: 41%;
+  top: 65.4%;
+  left: 67%;
 }
 
 .mobileMapButton48 {
-  top: 92%;
-  left: 72.5%;
+  top: 6.8%;
+  left: 10.5%;
+}
+
+@media only screen and (min-width:992px) {
+  .mobileMapButton01 {
+    top: 75.4%;
+    left: 30.8%;
+  }
+
+  .mobileMapButton02 {
+    top: 72.4%;
+    left: 19%;
+  }
+
+  .mobileMapButton03 {
+    top: 23%;
+    left: 44.5%;
+  }
+
+  .mobileMapButton04 {
+    top: 69%;
+    left: 73.5%;
+  }
+
+  .mobileMapButton05 {
+    top: 92%;
+    left: 71.7%;
+  }
+
+  .mobileMapButton06 {
+    top: 46%;
+    left: 19%;
+  }
+
+  .mobileMapButton07 {
+    top: 62.3%;
+    left: 7%;
+  }
+
+  .mobileMapButton08 {
+    top: 0%;
+    left: 7%;
+  }
+
+  .mobileMapButton09 {
+    top: 72.3%;
+    left: 10.5%;
+  }
+
+  .mobileMapButton10 {
+    top: 29.7%;
+    left: 29.2%;
+  }
+
+  .mobileMapButton11 {
+    top: 26.4%;
+    left: 92.2%;
+  }
+
+  .mobileMapButton12 {
+    top: 16.5%;
+    left: 48%;
+  }
+
+  .mobileMapButton13 {
+    top: 46%;
+    left: 17.3%;
+  }
+
+  .mobileMapButton14 {
+    top: 46%;
+    left: 25.8%;
+  }
+
+  .mobileMapButton15 {
+    top: 62.4%;
+    left: 78.6%;
+  }
+
+  .mobileMapButton16 {
+    top: 52.5%;
+    left: 82%;
+  }
+
+  .mobileMapButton17 {
+    top: 39.5%;
+    left: 65%;
+  }
+
+  .mobileMapButton18 {
+    top: 65.6%;
+    left: 70.1%;
+  }
+
+  .mobileMapButton19 {
+    top: 62.5%;
+    left: 25.8%;
+  }
+
+  .mobileMapButton20 {
+    top: 82%;
+    left: 51.3%;
+  }
+
+  .mobileMapButton21 {
+    top: 46.1%;
+    left: 12.3%;
+  }
+
+  .mobileMapButton22 {
+    top: 49.4%;
+    left: 80.2%;
+  }
+
+  .mobileMapButton23 {
+    top: 92%;
+    left: 68.3%;
+  }
+
+  .mobileMapButton24 {
+    top: 10%;
+    left: 24.1%;
+  }
+
+  .mobileMapButton25 {
+    top: 79%;
+    left: 61.5%;
+  }
+
+  .mobileMapButton26 {
+    top: 72.3%;
+    left: 56.4%;
+  }
+
+  .mobileMapButton27 {
+    top: 36.3%;
+    left: 90.5%;
+  }
+
+  .mobileMapButton28 {
+    top: 49.4%;
+    left: 3.7%;
+  }
+
+  .mobileMapButton29 {
+    top: 46%;
+    left: 85.4%;
+  }
+
+  .mobileMapButton30 {
+    top: 75.5%;
+    left: 70%;
+  }
+
+  .mobileMapButton31 {
+    top: 23%;
+    left: 20.7%;
+  }
+
+  .mobileMapButton32 {
+    top: 49.3%;
+    left: 73.4%;
+  }
+
+  .mobileMapButton33 {
+    top: 62.4%;
+    left: 65%;
+  }
+
+  .mobileMapButton34 {
+    top: 46%;
+    left: 82%;
+  }
+
+  .mobileMapButton35 {
+    top: 33%;
+    left: 90.5%;
+  }
+
+  .mobileMapButton36 {
+    top: 36.2%;
+    left: 75.2%;
+  }
+
+  .mobileMapButton37 {
+    top: 59.2%;
+    left: 59.8%;
+  }
+
+  .mobileMapButton38 {
+    top: 46%;
+    left: 49.6%;
+  }
+
+  .mobileMapButton39 {
+    top: 33%;
+    left: 92.2%;
+  }
+
+  .mobileMapButton40 {
+    top: 42.8%;
+    left: 87.1%;
+  }
+
+  .mobileMapButton41 {
+    top: 65.7%;
+    left: 76.8%;
+  }
+
+  .mobileMapButton42 {
+    top: 10%;
+    left: 34.3%;
+  }
+
+  .mobileMapButton43 {
+    top: 69%;
+    left: 46.2%;
+  }
+
+  .mobileMapButton44 {
+    top: 26.4%;
+    left: 8.8%;
+  }
+
+  .mobileMapButton45 {
+    top: 42.8%;
+    left: 83.7%;
+  }
+
+  .mobileMapButton46 {
+    top: 72.3%;
+    left: 71.8%;
+  }
+
+  .mobileMapButton47 {
+    top: 65.6%;
+    left: 66.6%;
+  }
+
+  .mobileMapButton48 {
+    top: 6.8%;
+    left: 10.5%;
+  }
 }
 
 @media only screen and (max-width:1040px) and (min-width:991px) {
