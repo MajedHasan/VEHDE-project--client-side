@@ -54,10 +54,6 @@ export default function Home() {
         setShowMobileMap(null)
     }
 
-    useEffect(() => {
-        console.log(selectLocation)
-    }, [selectLocation])
-
 
     const destinationsArr = [
         {
