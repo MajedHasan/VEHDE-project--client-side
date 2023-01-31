@@ -497,195 +497,291 @@ const VaccinationProgram = () => {
                                     <button className={styles.dot01} onClick={() => {
                                         setSelectLocation(destinationsArr[0]?.location)
                                         setSelectMapBoxName(destinationsArr[0]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[0]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[0]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot02} onClick={() => {
+                                    }}>
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[0]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[0]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot02} onClick={() => {
                                         setSelectLocation(destinationsArr[1]?.location)
                                         setSelectMapBoxName(destinationsArr[1]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[1]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[1]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot03} onClick={() => {
+                                    }}>
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[1]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[1]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot03} onClick={() => {
                                         setSelectLocation(destinationsArr[2]?.location)
                                         setSelectMapBoxName(destinationsArr[2]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[2]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[2]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot04} onClick={() => {
+                                    }}>
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[2]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[2]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot04} onClick={() => {
                                         setSelectLocation(destinationsArr[3]?.location)
                                         setSelectMapBoxName(destinationsArr[3]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[3]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[3]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot05} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[3]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[3]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot05} onClick={() => {
                                         setSelectLocation(destinationsArr[4]?.location)
                                         setSelectMapBoxName(destinationsArr[4]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[4]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[4]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot06} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[4]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[4]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot06} onClick={() => {
                                         setSelectLocation(destinationsArr[5]?.location)
                                         setSelectMapBoxName(destinationsArr[5]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[5]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[5]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot07} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[5]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[5]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot07} onClick={() => {
                                         setSelectLocation(destinationsArr[6]?.location)
                                         setSelectMapBoxName(destinationsArr[6]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[6]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[6]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot08} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[6]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[6]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot08} onClick={() => {
                                         setSelectLocation(destinationsArr[7]?.location)
                                         setSelectMapBoxName(destinationsArr[7]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[7]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[7]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot09} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[7]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[7]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot09} onClick={() => {
                                         setSelectLocation(destinationsArr[8]?.location)
                                         setSelectMapBoxName(destinationsArr[8]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[8]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[8]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot10} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[8]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[8]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot10} onClick={() => {
                                         setSelectLocation(destinationsArr[9]?.location)
                                         setSelectMapBoxName(destinationsArr[9]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[9]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[9]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot11} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[9]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[9]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot11} onClick={() => {
                                         setSelectLocation(destinationsArr[10]?.location)
                                         setSelectMapBoxName(destinationsArr[10]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[10]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[10]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot12} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[10]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[10]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot12} onClick={() => {
                                         setSelectLocation(destinationsArr[11]?.location)
                                         setSelectMapBoxName(destinationsArr[11]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[11]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[11]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot13} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[11]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[11]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot13} onClick={() => {
                                         setSelectLocation(destinationsArr[12]?.location)
                                         setSelectMapBoxName(destinationsArr[12]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[12]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[12]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot14} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[12]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[12]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot14} onClick={() => {
                                         setSelectLocation(destinationsArr[13]?.location)
                                         setSelectMapBoxName(destinationsArr[13]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[13]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[13]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot15} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[13]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[13]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot15} onClick={() => {
                                         setSelectLocation(destinationsArr[14]?.location)
                                         setSelectMapBoxName(destinationsArr[14]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[14]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[14]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot16} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[14]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[14]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot16} onClick={() => {
                                         setSelectLocation(destinationsArr[15]?.location)
                                         setSelectMapBoxName(destinationsArr[15]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[15]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[15]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot17} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[15]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[15]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot17} onClick={() => {
                                         setSelectLocation(destinationsArr[16]?.location)
                                         setSelectMapBoxName(destinationsArr[16]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[16]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[16]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot18} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[16]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[16]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot18} onClick={() => {
                                         setSelectLocation(destinationsArr[17]?.location)
                                         setSelectMapBoxName(destinationsArr[17]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[17]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[17]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot19} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[17]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[17]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot19} onClick={() => {
                                         setSelectLocation(destinationsArr[18]?.location)
                                         setSelectMapBoxName(destinationsArr[18]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[18]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[18]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot20} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[18]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[18]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot20} onClick={() => {
                                         setSelectLocation(destinationsArr[19]?.location)
                                         setSelectMapBoxName(destinationsArr[19]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[19]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[19]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot21} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[19]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[19]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot21} onClick={() => {
                                         setSelectLocation(destinationsArr[20]?.location)
                                         setSelectMapBoxName(destinationsArr[20]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[20]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[20]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot22} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[20]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[20]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot22} onClick={() => {
                                         setSelectLocation(destinationsArr[21]?.location)
                                         setSelectMapBoxName(destinationsArr[21]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[21]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[21]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot23} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[21]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[21]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot23} onClick={() => {
                                         setSelectLocation(destinationsArr[22]?.location)
                                         setSelectMapBoxName(destinationsArr[22]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[22]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[22]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot24} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[22]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[22]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot24} onClick={() => {
                                         setSelectLocation(destinationsArr[23]?.location)
                                         setSelectMapBoxName(destinationsArr[23]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[23]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[23]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot25} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[23]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[23]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot25} onClick={() => {
                                         setSelectLocation(destinationsArr[24]?.location)
                                         setSelectMapBoxName(destinationsArr[24]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[24]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[24]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot26} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[24]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[24]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot26} onClick={() => {
                                         setSelectLocation(destinationsArr[25]?.location)
                                         setSelectMapBoxName(destinationsArr[25]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[25]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[25]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot27} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[25]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[25]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot27} onClick={() => {
                                         setSelectLocation(destinationsArr[26]?.location)
                                         setSelectMapBoxName(destinationsArr[26]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[26]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[26]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot28} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[26]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[26]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot28} onClick={() => {
                                         setSelectLocation(destinationsArr[27]?.location)
                                         setSelectMapBoxName(destinationsArr[27]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[27]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[27]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot29} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[27]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[27]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot29} onClick={() => {
                                         setSelectLocation(destinationsArr[28]?.location)
                                         setSelectMapBoxName(destinationsArr[28]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[28]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[28]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot30} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[28]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[28]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot30} onClick={() => {
                                         setSelectLocation(destinationsArr[29]?.location)
                                         setSelectMapBoxName(destinationsArr[29]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[29]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[29]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot31} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[29]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[29]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot31} onClick={() => {
                                         setSelectLocation(destinationsArr[30]?.location)
                                         setSelectMapBoxName(destinationsArr[30]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[30]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[30]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot32} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[30]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[30]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot32} onClick={() => {
                                         setSelectLocation(destinationsArr[31]?.location)
                                         setSelectMapBoxName(destinationsArr[31]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[31]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[31]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot33} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[31]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[31]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot33} onClick={() => {
                                         setSelectLocation(destinationsArr[32]?.location)
                                         setSelectMapBoxName(destinationsArr[32]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[32]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[32]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot34} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[32]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[32]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot34} onClick={() => {
                                         setSelectLocation(destinationsArr[33]?.location)
                                         setSelectMapBoxName(destinationsArr[33]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[33]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[33]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot35} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[33]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[33]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot35} onClick={() => {
                                         setSelectLocation(destinationsArr[34]?.location)
                                         setSelectMapBoxName(destinationsArr[34]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[34]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[34]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot36} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[34]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[34]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot36} onClick={() => {
                                         setSelectLocation(destinationsArr[35]?.location)
                                         setSelectMapBoxName(destinationsArr[35]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[35]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[35]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot37} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[35]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[35]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot37} onClick={() => {
                                         setSelectLocation(destinationsArr[36]?.location)
                                         setSelectMapBoxName(destinationsArr[36]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[36]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[36]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot38} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[36]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[36]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot38} onClick={() => {
                                         setSelectLocation(destinationsArr[37]?.location)
                                         setSelectMapBoxName(destinationsArr[37]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[37]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[37]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot39} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[37]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[37]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot39} onClick={() => {
                                         setSelectLocation(destinationsArr[38]?.location)
                                         setSelectMapBoxName(destinationsArr[38]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[38]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[38]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot40} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[38]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[38]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot40} onClick={() => {
                                         setSelectLocation(destinationsArr[39]?.location)
                                         setSelectMapBoxName(destinationsArr[39]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[39]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[39]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot41} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[39]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[39]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot41} onClick={() => {
                                         setSelectLocation(destinationsArr[40]?.location)
                                         setSelectMapBoxName(destinationsArr[40]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[40]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[40]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot42} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[40]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[40]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot42} onClick={() => {
                                         setSelectLocation(destinationsArr[41]?.location)
                                         setSelectMapBoxName(destinationsArr[41]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[41]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[41]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot43} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[41]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[41]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot43} onClick={() => {
                                         setSelectLocation(destinationsArr[42]?.location)
                                         setSelectMapBoxName(destinationsArr[42]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[42]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[42]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot44} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[42]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[42]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot44} onClick={() => {
                                         setSelectLocation(destinationsArr[43]?.location)
                                         setSelectMapBoxName(destinationsArr[43]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[43]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[43]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot45} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[43]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[43]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot45} onClick={() => {
                                         setSelectLocation(destinationsArr[44]?.location)
                                         setSelectMapBoxName(destinationsArr[44]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[44]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[44]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot46} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[44]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[44]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot46} onClick={() => {
                                         setSelectLocation(destinationsArr[45]?.location)
                                         setSelectMapBoxName(destinationsArr[45]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[45]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[45]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot47} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[45]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[45]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot47} onClick={() => {
                                         setSelectLocation(destinationsArr[46]?.location)
                                         setSelectMapBoxName(destinationsArr[46]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[46]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[46]?.name ? "black" : "#dd4f4d"}` }}></button>
-                                    <button href='youtube.com' target="_blank" className={styles.dot48} onClick={() => {
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[46]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[46]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
+                                    <button className={styles.dot48} onClick={() => {
                                         setSelectLocation(destinationsArr[47]?.location)
                                         setSelectMapBoxName(destinationsArr[47]?.name)
-                                    }} style={{ transform: `${selectMapBoxName == destinationsArr[47]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[47]?.name ? "black" : "#dd4f4d"}` }}></button>
+                                    }} >
+                                        <i class="fa fa-location-dot" style={{ transform: `${selectMapBoxName == destinationsArr[47]?.name ? "scale(1.3)" : ""}`, color: `${selectMapBoxName == destinationsArr[47]?.name ? "black" : "#dd4f4d"}` }}></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>

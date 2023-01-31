@@ -169,12 +169,16 @@
 .mapButtons>button {
     height: 14px;
     width: 14px;
-    background: #dd4f4d;
+    background: transparent;
     outline: none;
     border: none;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
+}
+
+.mapButtons>button>i {
+    font-size: 22px;
 }
 
 .dot01 {
