@@ -1179,9 +1179,9 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className={`${styles.section06ButtonWrapper} ${styles.section06ButtonWrapper41}`}>
-                                        <button className={styles.section06Button} style={{ transform: `${selectMapBoxName == destinationsArr[40]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[40]?.name ? "black" : "#dd4f4d"}` }} onClick={() => {
-                                            setSelectLocation(destinationsArr[40].location)
-                                            setSelectMapBoxName(destinationsArr[40]?.name)
+                                        <button className={styles.section06Button} style={{ transform: `${selectMapBoxName == destinationsArr[0]?.name ? "scale(1.3)" : ""}`, background: `${selectMapBoxName == destinationsArr[0]?.name ? "black" : "#dd4f4d"}` }} onClick={() => {
+                                            setSelectLocation(destinationsArr[0].location)
+                                            setSelectMapBoxName(destinationsArr[0]?.name)
                                         }}></button>
                                         <div className={`row align-items-stretch ${styles.section06BoxWrapper}`}>
                                             <div className='col-7 text-start'>
