@@ -24,7 +24,7 @@ const WelcomeOnboard = () => {
                             <div className="wrapper">
                                 <div className="row align-items-center">
                                     <div className="col-lg-5 mb-lg-0 mb-5">
-                                        <h1>Get started</h1>
+                                        <h1>Get Started</h1>
                                         <h2>Welcome onboard, to VEHDE!</h2>
                                         <p>We bring you the greatest flexibility in the ever-growing carsharing sector of the transportation industry. Whether it is for your daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
                                         <div className='d-flex'>

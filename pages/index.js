@@ -514,14 +514,14 @@ export default function Home() {
                                 <div className="col text-lg-start text-center">
                                     <h3>Host</h3>
                                     <p>Whether you are an individual or a car rental company, you can become a host by listing your car to rent. Stay ahead! List your car today.</p>
-                                    <button className='my-btn mx-lg-1 mx-auto'>Apply To Host</button>
+                                    <button className='my-btn mx-lg-1 mx-auto'>Apply to host</button>
                                 </div>
                             </div>
                             <div className="row row-cols-lg-2 flex-lg-row flex-column-reverse align-items-center mt-5 justify-content-between">
                                 <div className="col text-lg-start text-center">
                                     <h3>Renter</h3>
                                     <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
-                                    <button className='my-btn mx-lg-1 mx-auto'> &nbsp; Rent A Car &nbsp; </button>
+                                    <button className='my-btn mx-lg-1 mx-auto'> &nbsp; Rent a car &nbsp; </button>
                                 </div>
                                 <div className="col text-lg-end text-center">
                                     <Image src={Section05Img02} alt='Car with round fuel pipe' className='img-fluid' />

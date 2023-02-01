@@ -84,7 +84,7 @@ export default function SmartGuide() {
                                 <div className="col d-flex flex-lg-column flex-column-reverse align-items-lg-start align-items-center gap-5 mt-lg-0 mt-5">
                                     <div className="d-flex flex-row-reverse align-items-center gap-3 justify-content-lg-start justify-content-end">
                                         <div className='text-start'>
-                                            <h4>6. Renter earns VEHDE points</h4>
+                                            <h4>6. Renter earns VEHDE points &nbsp; &nbsp; &nbsp; &nbsp;</h4>
                                             <p>For each completed car rental, renters and hosts earn VEHDE scores. VEHDE scores can be converted to rental or cash equivalent.</p>
                                         </div>
                                         <div>

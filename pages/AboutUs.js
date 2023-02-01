@@ -20,7 +20,7 @@ const AboutUs = () => {
                             <div className="wrapper">
                                 <div className="row align-items-center">
                                     <div className="col-lg-5 mb-lg-0 mb-5">
-                                        <h1>About us</h1>
+                                        <h1>About Us</h1>
                                         <p className='mb-4'>
                                             VEHDE, a car sharing-rental company, established based on our extensive experience in the transportation industry, aims to assist individuals and companies by escalating their accessibility to
                                             high-quality and cost-effective car rental services.

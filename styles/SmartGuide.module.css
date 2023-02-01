@@ -98,6 +98,7 @@
     transition: all 0.3s ease;
     margin-bottom: 0;
     display: none;
+    padding-left: 0;
 }
 
 #section02>div>div>div:nth-child(2)>div>div:hover>div:nth-child(1) p {
