@@ -33,67 +33,67 @@ const FAQ = () => {
                             <div className="accordion" id="accordionExample">
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="accordion-button text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{ textTransform: "inherit" }}>
                                             Can I cancel my car rental reservation before the scheduled rental pick-up date?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            Yes. However, instead of cancelling car reservation, renter may explore the option of rental modification. Please refer to VEHDE’s policy regarding rental cancellation and rental modification.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style={{ textTransform: "inherit" }}>
                                             Can I cancel and return rental car back to host before the scheduled drop-off date?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            Yes. Instead of cancelling car rental outrightly, renter may explore the option of rental modification. Please refer to VEHDE’s policy regarding rental cancellation and rental modification.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style={{ textTransform: "inherit" }}>
                                             Can I cancel and return rental car back to host before the scheduled drop-off date?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            Renter may modify existing car rental schedules if anticipates that car might not be returned to host as scheduled. Please refer to VEHDE’s policy regarding rental modification.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style={{ textTransform: "inherit" }}>
                                             What if renter fails to return rental car to host as scheduled in the drop-off?
                                         </button>
                                     </h2>
                                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            Host shall report “Renter No Show” if renter fails to drop-off car to host as scheduled. There are penalties for late car drop-off. Please refer to VEHDE’s policies regarding car pick-up and drop-off.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style={{ textTransform: "inherit" }}>
                                             What if rental car develops mechanical fault before the scheduled drop-off date?
                                         </button>
                                     </h2>
                                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headheadingFiveingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            Renter shall, if car develops mechanical fault before renter the scheduled drop-off date, within 24 hours, report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account. In the drop-down menu for snow ticket, select “rental interruption” and our customer service department will contact you. Please read VEHDE’s terms and conditions for further information regarding general renter’s obligations.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" style={{ textTransform: "inherit" }}>
                                             What if renter has auto accident with the rental car before the scheduled drop-off date?
                                         </button>
                                     </h2>
@@ -105,37 +105,37 @@ const FAQ = () => {
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingSeven">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven" style={{ textTransform: "inherit" }}>
                                             Is there earliest date I can reserve a car?
                                         </button>
                                     </h2>
                                     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            No. Renter can request to reserve any car if the car is available for the desired rental period.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingEight">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight" style={{ textTransform: "inherit" }}>
                                             Is there latest date I can reserve a car?
                                         </button>
                                     </h2>
                                     <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            No. However, for a guaranteed regular rental fee, each renter is expected to request to reserve a car no later than 72 hours before the desired rental start date.
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`accordion-item ${styles.AccordionItem}`}>
                                     <h2 class="accordion-header" id="headingNine">
-                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                        <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine" style={{ textTransform: "inherit" }}>
                                             Can I return rental car back to host after delivery before the scheduled drop-off date?
                                         </button>
                                     </h2>
                                     <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Renter is expected to follow the standard auto incident reporting guideline, in accordance with the applicable local laws, and in relation to auto accidents reporting procedures. Also, renter shall report “rental interruption” through an incident reporting option, “Snow Ticket” in the VEHDE account.
+                                            Yes, you can! However, you will only be able to claim 50% of the rental fees for the remaining rental duration as a refund.
                                         </div>
                                     </div>
                                 </div>
