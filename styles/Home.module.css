@@ -11,12 +11,12 @@
 }
 
 #heroSection h1 {
-  font-size: 47px;
+  font-size: 44px;
   color: #030719;
-  max-width: 420px;
-  /* padding: 20px; */
+  max-width: 396px;
+  padding: 15px;
   border-radius: 5px;
-  /* background: #EFEFEF; */
+  background: #EFEFEF;
   font-weight: 600;
 }
 
