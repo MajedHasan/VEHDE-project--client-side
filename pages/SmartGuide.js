@@ -143,7 +143,7 @@ export default function SmartGuide() {
                         <div className="wrapper">
                             <div className="row row-cols-lg-2 row-cols-1 align-items-center">
                                 <div className="col">
-                                    <h2>Flexibility that supports you and your business</h2>
+                                    <h2 style={{ fontWeight: 700 }}>Flexibility that supports you and your business</h2>
                                     <div className="row row-cols-md-2 row-cols-1 my-5">
                                         <div className="col d-flex align-items-center gap-2 mb-3">
                                             <input type="checkbox" name="manufacturers" id="rental-companies" defaultChecked />

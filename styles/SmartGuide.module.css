@@ -14,6 +14,7 @@
     font-size: 55px;
     color: #030719;
     max-width: 415px;
+    font-weight: 700;
 }
 
 #heroSection>div>div {
@@ -35,8 +36,8 @@
 }
 
 #section02>div>div>div>h2 {
-    font-weight: 500;
-    font-size: 45px;
+    font-weight: 700;
+    font-size: 40px;
     line-height: 56px;
 }
 
@@ -127,8 +128,8 @@
 
 
 #section03>div>div>div>div>h2 {
-    font-weight: 500;
-    font-size: 45px;
+    font-weight: 700;
+    font-size: 40px;
     line-height: 56px;
 }
 
