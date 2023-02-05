@@ -439,13 +439,21 @@ export default function Home() {
                                         </div>
                                         <div className="d-flex gap-2 align-items-center">
                                             <Image src={CalendarIcon} alt="Calendar Icon" />
-                                            <DatePicker
-                                                selected={pickUpDate}
-                                                onChange={(date) => setPickUpDate(date)}
-                                                timeInputLabel="Time:"
-                                                dateFormat="MM/dd/yyyy h:mm aa"
-                                                showTimeInput
-                                            />
+                                            <div className="d-flex align-items-center gap-1">
+                                                <DatePicker
+                                                    style={{ maxWidth: "80px", width: "100%" }}
+                                                    selected={pickUpDate}
+                                                    onChange={(date) => setPickUpDate(date)}
+                                                    timeInputLabel="Time:"
+                                                    dateFormat="MM/dd/yyyy"
+                                                // showTimeInput
+                                                />
+                                                {/* <i class="fa fa-angle-down"></i> */}
+                                            </div>
+                                            {/* <div className="d-flex align-items-center gap-2">
+                                                <input type="text" placeholder='11:50' />
+                                                <i class="fa fa-angle-down"></i>
+                                            </div> */}
                                         </div>
                                     </div>
                                     <div className="col-xl-2 col-lg-3 mb-lg-0 mb-3">
@@ -459,8 +467,8 @@ export default function Home() {
                                                 startDate={pickUpDate}
                                                 onChange={(date) => setDropOffDate(date)}
                                                 timeInputLabel="Time:"
-                                                dateFormat="MM/dd/yyyy h:mm aa"
-                                                showTimeInput
+                                                dateFormat="MM/dd/yyyy"
+                                            // showTimeInput
                                             />
                                         </div>
                                     </div>
@@ -520,7 +528,7 @@ export default function Home() {
                             <div className="row row-cols-lg-2 flex-lg-row flex-column-reverse align-items-center mt-5 justify-content-between">
                                 <div className="col text-lg-start text-center">
                                     <h3>Renter</h3>
-                                    <p>Whether it is for daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
+                                    <p>For daily business activities, holiday leisure, or weekend trips, VEHDE is committed to improving people’s accessibility to a variety of cars in way more convenient arrangements.</p>
                                     <button className='my-btn mx-lg-1 mx-auto'> &nbsp; Rent a car &nbsp; </button>
                                 </div>
                                 <div className="col text-lg-end text-center">
