@@ -79,8 +79,7 @@
 
     #heroSection>div h1,
     #heroSection>div h2,
-    #heroSection>div p,
-    #heroSection>div a {
+    #heroSection>div p {
         color: #FFFFFF !important;
     }
 }
