@@ -352,6 +352,10 @@ a:hover {
   text-align: center;
 }
 
+.react-datepicker__input-container input {
+  max-width: 75px;
+}
+
 
 /* ============================= Smart Guid Page Swiper Slider ============================= */
 .SmartGuidSection02 span.swiper-pagination-bullet-active {

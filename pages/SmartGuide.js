@@ -122,7 +122,7 @@ export default function SmartGuide() {
                                     <Image src={section03Img} alt="" className='img-fluid' />
                                 </div>
                                 <div className="col">
-                                    <h2>What sets up apart</h2>
+                                    <h2>What sets us apart</h2>
                                     <p>At VEHDE, we treat your payment for car’s rentals as an investment. That is why we are here to serve you better, in a way more productive manner.</p>
                                     <p>
                                         We developed our strategy based on our extensive experience in the transportation industry, and this is because we understand how sustainability continues to define the future of the transportation industry
