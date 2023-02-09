@@ -1,0 +1,235 @@
+#heroSection {
+    background: url(../../assets/img/Host/heroBanner.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#heroSection>div {
+    padding-bottom: 50px;
+}
+
+#heroSection>div>div>div {
+    padding: 40px 0;
+}
+
+#heroSection h1 {
+    font-size: 50px;
+    color: #030719;
+    max-width: 430px;
+    font-weight: 600;
+}
+
+#heroSection p {
+    margin: 20px 0;
+    max-width: 420px;
+    width: 100%;
+    font-weight: 300;
+}
+
+#heroSection h4 {
+    font-size: 20px;
+}
+
+#heroSection button {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width:991px) {
+    #heroSection>div {
+        background: rgba(0, 0, 0, 0.40);
+    }
+
+    #heroSection h1 {
+        color: #FFFFFF;
+    }
+
+    #heroSection p,
+    #heroSection h4 {
+        color: #FFFFFF;
+    }
+}
+
+
+#section02 {
+    margin-top: -80px;
+}
+
+#section02>div>div {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 50px;
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+}
+
+#section02>div>div>h2 {
+    font-size: 40px;
+    color: #030719;
+    font-weight: 600;
+}
+
+#section02>div>div>h3 {
+    font-size: 32px;
+    color: #DE4F4D;
+    font-weight: 500;
+}
+
+.formWrapper {
+    padding: 0 10px 10px 10px;
+    background: #EFEFEF;
+    border-radius: 29px;
+    margin-top: 30px;
+}
+
+.formWrapper>div:nth-child(1) label {
+    text-align: center;
+    color: #DE4F4D;
+    font-size: 22px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.inputGroup {
+    background: #FFFFFF;
+    padding: 5px 30px;
+    border-radius: 40px;
+}
+
+.inputGroup label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #898989;
+}
+
+.inputGroup input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: #030719;
+    font-weight: 500;
+}
+
+.inputGroup input::placeholder {
+    color: #030719;
+}
+
+.inactiveTab {
+    background: #FFFFFF;
+    position: relative;
+}
+
+.inactiveRightTab {
+    border-bottom-left-radius: 25px;
+    color: #030719;
+}
+
+.inactiveLeftTab {
+    border-bottom-right-radius: 25px;
+}
+
+@media only screen and (max-width:549px) {
+
+    #section02>div>div {
+        padding: 20px;
+    }
+
+    .formWrapper>div:nth-child(1) label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+
+
+#section03 {
+    max-width: 1140px;
+    width: 100%;
+    margin: 70px auto;
+}
+
+#section03 h2 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+#section03 img {
+    max-width: 350px;
+    width: 100%;
+}
+
+#section03 h3 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#section03 p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #717171;
+}
+
+
+
+
+
+#section08 {
+    margin: 70px 0;
+}
+
+#section08 h2 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+#section08 img {
+    margin-bottom: 20px;
+}
+
+#section08 h3 {
+    font-weight: 700;
+    font-size: 25px;
+    max-width: 215px;
+    margin: auto;
+}
+
+#section08 p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #717171;
+    max-width: 320px;
+    margin: auto;
+}
+
+#section08 a {
+    font-weight: 500;
+    font-size: 15px;
+    color: #DE4F4D;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #section08 h2 {
+        font-size: 32px;
+    }
+
+    #section08 h3 {
+        font-size: 22px;
+        max-width: inherit;
+    }
+
+    #section08 p {
+        font-size: 14px;
+        max-width: inherit;
+    }
+
+    #section08 a {
+        font-size: 12px;
+    }
+}
