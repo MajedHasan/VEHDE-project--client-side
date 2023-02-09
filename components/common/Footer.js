@@ -77,8 +77,8 @@ const Footer = () => {
                         <div className='col-md-2 mt-md-0 mt-5'>
                             <h3>Services</h3>
                             <ul>
-                                <li><Link href="#">Renter</Link></li>
-                                <li><Link href="#">Host</Link></li>
+                                <li><Link href="/Renter">Renter</Link></li>
+                                <li><Link href="/Host">Host</Link></li>
                             </ul>
                         </div>
                         <div className='col-md-2 mt-md-0 mt-5'>
