@@ -125,12 +125,95 @@
 
 .inactiveRightTab {
     border-bottom-left-radius: 25px;
-    color: #030719;
+    color: #030719 !important;
 }
 
 .inactiveLeftTab {
     border-bottom-right-radius: 25px;
+    color: #030719 !important;
 }
+
+.activeLeftTab,
+.activeRightTab {
+    position: relative;
+}
+
+.activeLeftTab::before,
+.activeRightTab::before,
+.activeLeftTab::after,
+.activeRightTab::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 80px;
+    height: 50px;
+    z-index: 99;
+}
+
+.activeRightTab::before,
+.activeRightTab::after {
+    right: auto !important;
+    left: 0;
+}
+
+.activeLeftTab::after {
+    background: #efefef;
+    border-top-right-radius: 25px;
+}
+
+.activeLeftTab::before,
+.activeRightTab::before {
+    background: #ffffff;
+}
+
+.activeRightTab::after {
+    background: #efefef;
+    border-top-left-radius: 25px;
+}
+
+.activeIndividual,
+.activeRentalCompany {
+    position: relative;
+}
+
+.activeIndividual::before,
+.activeIndividual::after,
+.activeRentalCompany::before,
+.activeRentalCompany::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -11px;
+    width: 100px;
+    height: 80px;
+    z-index: 99;
+}
+
+.activeIndividual::before {
+    background: #ffffff;
+}
+
+.activeIndividual::after {
+    background: #efefef;
+    border-top-right-radius: 30px;
+}
+
+.activeRentalCompany::before,
+.activeRentalCompany::after {
+    right: auto !important;
+    left: -11px;
+}
+
+.activeRentalCompany::before {
+    background: #ffffff;
+}
+
+.activeRentalCompany::after {
+    background: #efefef;
+    border-top-left-radius: 30px;
+}
+
 
 @media only screen and (max-width:549px) {
 

@@ -52,19 +52,19 @@ const index = () => {
                             <h3 className="text-center">Let’s get started</h3>
                             <form className={styles.formWrapper}>
                                 <div className="row row-cols-2 align-items-center">
-                                    <label htmlFor="individual" className={`${isIndividual ? "" : `${styles.inactiveTab} ${styles.inactiveLeftTab}`}`} onClick={() => setIsIndividual(true)}>
-                                        Individual
+                                    <label htmlFor="individual" className={`${isIndividual ? styles.activeLeftTab : `${styles.inactiveTab} ${styles.inactiveLeftTab}`}`} onClick={() => setIsIndividual(true)}>
+                                        <span style={{ position: "relative", zIndex: 999 }}>Individual</span>
                                     </label>
                                     <input type="radio" name="hostType" id="individual" value="individual" hidden />
-                                    <label htmlFor="renderCompany" className={`${isIndividual ? `${styles.inactiveTab} ${styles.inactiveRightTab}` : ""}`} onClick={() => setIsIndividual(false)}>
-                                        Render Company
+                                    <label htmlFor="renderCompany" className={`${isIndividual ? `${styles.inactiveTab} ${styles.inactiveRightTab}` : styles.activeRightTab}`} onClick={() => setIsIndividual(false)}>
+                                        <span style={{ position: "relative", zIndex: 999 }}>Rental company</span>
                                     </label>
                                     <input type="radio" name="hostType" id="renderCompany" value="render company" hidden />
                                 </div>
-                                <div>
+                                <div className={isIndividual ? styles.activeIndividual : styles.activeRentalCompany}>
                                     {
                                         isIndividual ? <>
-                                            <div className="row row-cols-1 row-cols-md-2 p-2 mt-4">
+                                            <div className="row row-cols-1 row-cols-md-2 p-2 mt-4" style={{ position: "relative", zIndex: "999" }}>
                                                 <div className="pe-md-2 mb-3 mb-md-0">
                                                     <div className={`d-flex flex-column ${styles.inputGroup}`}>
                                                         <label htmlFor="">First name</label>
@@ -79,7 +79,7 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </> : <>
-                                            <div className="row row-cols-1 row-cols-md-2 p-2 mt-4">
+                                            <div className="row row-cols-1 row-cols-md-2 p-2 mt-4" style={{ position: "relative", zIndex: "999" }}>
                                                 <div className="pe-md-2  mb-3 mb-md-0">
                                                     <div className={`d-flex flex-column ${styles.inputGroup}`}>
                                                         <label htmlFor="">Registered name</label>
@@ -93,7 +93,7 @@ const index = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="row row-cols-1 row-cols-md-2 p-2">
+                                            <div className="row row-cols-1 row-cols-md-2 p-2" style={{ position: "relative", zIndex: "999" }}>
                                                 <div className="pe-md-2  mb-3 mb-md-0">
                                                     <div className={`d-flex flex-column ${styles.inputGroup}`}>
                                                         <label htmlFor="">Representative</label>
@@ -109,7 +109,7 @@ const index = () => {
                                             </div>
                                         </>
                                     }
-                                    <div className="row row-cols-1 row-cols-md-1 p-2">
+                                    <div className="row row-cols-1 row-cols-md-1 p-2" style={{ position: "relative", zIndex: "999" }}>
                                         <div>
                                             <div className={`d-flex flex-column ${styles.inputGroup}`}>
                                                 <label htmlFor="">Email</label>
@@ -178,8 +178,9 @@ const index = () => {
                         </div>
                         <div className="row row-cols-1 row-cols-md-2 align-items-center  mb-md-0 mb-4">
                             <div className="order-md-1 order-2">
-                                <h3>Free car listing</h3>
-                                <p>It is incredibly free to list your vehicle to rent with VEHDE. With our rapidly growing customers across the United States, you have increased accessibility to potential renters.</p>
+                                <h3>Flexible schedules</h3>
+                                <p>All registered hosts enjoy the flexibility
+                                    to set their time availability.</p>
                             </div>
                             <div className="text-center order-md-2 order-1">
                                 <Image src={Section03Img02} className="img-fluid" />
@@ -190,8 +191,8 @@ const index = () => {
                                 <Image src={Section03Img03} className="img-fluid" />
                             </div>
                             <div>
-                                <h3>Free car listing</h3>
-                                <p>It is incredibly free to list your vehicle to rent with VEHDE. With our rapidly growing customers across the United States, you have increased accessibility to potential renters.</p>
+                                <h3>Extra earnings with VEHDE score</h3>
+                                <p>The more you host, the higher your VEHDE Score. Your VEHDE Score can easily be converted to additional payments, rental, or VEHDE gift cards.</p>
                             </div>
                         </div>
                     </div>
