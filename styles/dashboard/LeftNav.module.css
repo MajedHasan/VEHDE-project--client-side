@@ -1,0 +1,28 @@
+.leftNavWrapper {
+    background: #F8F8F8;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menuItems>a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: "10px";
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.menuItemActive {
+    background: #000000;
+}
