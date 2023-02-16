@@ -1,6 +1,6 @@
 .leftNavWrapper {
     background: #F8F8F8;
-    width: 200px;
+    width: 230px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,6 +8,7 @@
     /* align-items: center; */
     padding: 20px 10px;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -65,7 +66,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 12px 5px 30px;
+    padding: 5px 12px 5px 20px;
     border-radius: 7px;
 }
 
@@ -79,4 +80,40 @@
 
 .activeSubMenu {
     background: #FFFFFF;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .leftNavWrapper {
+        width: 0px;
+        display: none;
+    }
+
+    .logo {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .menuItems>a>img {
+        width: 20px;
+    }
+
+    .subMenu>a>img {
+        width: 15px;
+    }
+
+    .activeMobileMenu {
+        width: 65px;
+        display: flex;
+        padding: 10px 5px;
+    }
+
+    .menuItems>a {
+        padding: 4px 7px;
+    }
+
+    .activeMobileMenu span {
+        display: none;
+    }
 }

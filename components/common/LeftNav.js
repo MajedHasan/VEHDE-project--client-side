@@ -18,9 +18,9 @@ import Archive from "../../assets/img/dashboard/archive.svg"
 import Trash from "../../assets/img/dashboard/trash.svg"
 
 
-const LeftNav = () => {
+const LeftNav = ({ mobileMenu }) => {
 
-    const pathname = "CarListing".toLowerCase()
+    const pathname = "Messages".toLowerCase()
     const [showMessageSubMenu, setShowMessageSubMenu] = useState(false)
     const [page, setPage] = useState("")
     const [subMenu, setSubMenu] = useState("")
@@ -74,7 +74,7 @@ const LeftNav = () => {
     }, [pathname])
 
     return (
-        <div className={styles.leftNavWrapper}>
+        <div className={`${styles.leftNavWrapper} ${mobileMenu ? styles.activeMobileMenu : ""}`}>
             <div>
                 <Link href="/dashboard/CarListing" className={styles.logo}>VEHDE</Link>
             </div>
