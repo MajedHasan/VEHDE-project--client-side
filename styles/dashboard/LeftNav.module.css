@@ -46,9 +46,37 @@
 }
 
 .menuItemActive>img {
-    filter: invert(0) !important;
+    filter: invert(1) !important;
 }
 
 .menuItemActive>span {
     color: #FFFFFF !important;
+}
+
+/* Sub Menu */
+.subMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.subMenu>a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px 5px 30px;
+    border-radius: 7px;
+}
+
+.subMenu>a>img {
+    width: 20px;
+}
+
+.subMenu>a>span {
+    font-size: 13px;
+}
+
+.activeSubMenu {
+    background: #FFFFFF;
 }

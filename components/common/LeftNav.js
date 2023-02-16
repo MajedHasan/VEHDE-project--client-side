@@ -11,38 +11,66 @@ import VEHDEPass from "../../assets/img/dashboard/VEHDEPass.svg"
 import Payment from "../../assets/img/dashboard/payment.svg"
 import VEHDEScore from "../../assets/img/dashboard/VEHDEScore.svg"
 import SnowTicket from "../../assets/img/dashboard/SnowTicket.svg"
+import Inbox from "../../assets/img/dashboard/inbox.svg"
+import Draft from "../../assets/img/dashboard/draft.svg"
+import Sent from "../../assets/img/dashboard/sent.svg"
+import Archive from "../../assets/img/dashboard/archive.svg"
+import Trash from "../../assets/img/dashboard/trash.svg"
 
 
 const LeftNav = () => {
 
-    const pathname = ""
-    const [page, setPage] = useState("Car Listing")
+    const pathname = "CarListing".toLowerCase()
+    const [showMessageSubMenu, setShowMessageSubMenu] = useState(false)
+    const [page, setPage] = useState("")
+    const [subMenu, setSubMenu] = useState("")
 
     useEffect(() => {
-        if (pathname.includes("CarListing")) {
+        if (pathname.includes("carlisting")) {
             setPage("Car Listing")
         }
-        else if (pathname.includes("MyHost")) {
+        else if (pathname.includes("myhost")) {
             setPage("My Host")
         }
-        else if (pathname.includes("Messages")) {
+        else if (pathname.includes("messages")) {
             setPage("Messages")
+            setShowMessageSubMenu(true)
+            if (pathname.includes("inbox")) {
+                setSubMenu("Inbox")
+            }
+            else if (pathname.includes("draft")) {
+                setSubMenu("Draft")
+            }
+            else if (pathname.includes("sent")) {
+                setSubMenu("Sent")
+            }
+            else if (pathname.includes("archive")) {
+                setSubMenu("Archive")
+            }
+            else if (pathname.includes("trash")) {
+                setSubMenu("Trash")
+            }
         }
-        else if (pathname.includes("Availability")) {
+        else if (pathname.includes("availability")) {
             setPage("Availability")
         }
-        else if (pathname.includes("VEHDEPass")) {
+        else if (pathname.includes("vehdepass")) {
             setPage("VEHDEPass")
         }
-        else if (pathname.includes("Payment")) {
+        else if (pathname.includes("payment")) {
             setPage("Payment")
         }
-        else if (pathname.includes("VEHDEScore")) {
+        else if (pathname.includes("vehdescore")) {
             setPage("VEHDE Score")
         }
-        else if (pathname.includes("SnowTicket")) {
+        else if (pathname.includes("snowticket")) {
             setPage("Snow Ticket")
         }
+
+
+        // if (!pathname.includes("Messages")) {
+        //     setShowMessageSubMenu(false)
+        // }
     }, [pathname])
 
     return (
@@ -52,7 +80,7 @@ const LeftNav = () => {
             </div>
             <div className={`${styles.menuItems}`}>
                 <Link href="/dashboard/CarListing" className={`${page === "Car Listing" && styles.menuItemActive}`}>
-                    <Image src={CarListing} />
+                    <Image src={CarListing} style={{ filter: `invert(${page === "Car Listing" ? "1" : "0"}) !important` }} />
                     <span>Car Listing</span>
                 </Link>
                 <Link href="/dashboard/MyHost" className={`${page === "My Host" && styles.menuItemActive}`}>
@@ -62,8 +90,32 @@ const LeftNav = () => {
                 <Link href="/dashboard/Messages" className={`${page === "Messages" && styles.menuItemActive}`}>
                     <Image src={Messages} />
                     <span>Messages</span>
-                    <i className='fa fa-chevron-right' style={{ fontSize: "12px" }}></i>
+                    {showMessageSubMenu ? <i className='fa fa-chevron-down' style={{ fontSize: "12px", color: "#DE4F4D" }}></i> : <i className='fa fa-chevron-right' style={{ fontSize: "12px" }}></i>}
                 </Link>
+                {
+                    showMessageSubMenu && <div className={styles.subMenu}>
+                        <Link href="/dashboard/Message/Inbox" className={`${subMenu === "Inbox" && styles.activeSubMenu}`}>
+                            <Image src={Inbox} />
+                            <span>Inbox</span>
+                        </Link>
+                        <Link href="/dashboard/Message/Draft" className={`${subMenu === "Draft" && styles.activeSubMenu}`}>
+                            <Image src={Draft} />
+                            <span>Draft</span>
+                        </Link>
+                        <Link href="/dashboard/Message/Sent" className={`${subMenu === "Sent" && styles.activeSubMenu}`}>
+                            <Image src={Sent} />
+                            <span>Sent</span>
+                        </Link>
+                        <Link href="/dashboard/Message/Archive" className={`${subMenu === "Archive" && styles.activeSubMenu}`}>
+                            <Image src={Archive} />
+                            <span>Archive</span>
+                        </Link>
+                        <Link href="/dashboard/Message/Trash" className={`${subMenu === "Trash" && styles.activeSubMenu}`}>
+                            <Image src={Trash} />
+                            <span>Trash</span>
+                        </Link>
+                    </div>
+                }
                 <Link href="/dashboard/Availability" className={`${page === "Availability" && styles.menuItemActive}`}>
                     <Image src={Availability} />
                     <span>Availability</span>
