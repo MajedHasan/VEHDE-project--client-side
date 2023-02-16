@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import styles from "../../styles/dashboard/LeftNav.module.css"
 
 import CarListing from "../../assets/img/dashboard/carListing.svg"
@@ -20,7 +21,8 @@ import Trash from "../../assets/img/dashboard/trash.svg"
 
 const LeftNav = ({ mobileMenu }) => {
 
-    const pathname = "Messages".toLowerCase()
+    const router = useRouter().route
+    const pathname = router.toLowerCase()
     const [showMessageSubMenu, setShowMessageSubMenu] = useState(false)
     const [page, setPage] = useState("")
     const [subMenu, setSubMenu] = useState("")
