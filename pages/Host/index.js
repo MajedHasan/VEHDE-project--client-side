@@ -39,7 +39,7 @@ const index = () => {
                                     <p>you can list your car for rent with VEHDE, gaining access to our rapidly growing range of customers across the United States.</p>
                                     <h4>Stay ahead!</h4>
                                     <h4>List your car today, as a host.</h4>
-                                    <button className='my-btn'>Apply to host</button>
+                                    <Link href={`Host#signup`} className='my-btn' style={{ width: "fit-content" }}>Apply to host</Link>
                                 </div>
                                 <div></div>
                             </div>
@@ -47,7 +47,7 @@ const index = () => {
                     </div>
                 </section>
                 <section id={styles.section02}>
-                    <div className="container">
+                    <div className="container" id="signup">
                         <div>
                             <h2 className="text-center">Signing up to host</h2>
                             <h3 className="text-center">Let’s get started</h3>
@@ -158,7 +158,7 @@ const index = () => {
                                         <button className="my-btn" style={{ width: "100%" }}>Next</button>
                                     </div>
                                     <div className="p-2 mt-1 mb-2 text-center">
-                                        <p className="mb-0" style={{ color: "#898989" }}>Already have an account with VEHDE <Link href="" style={{ color: "#DE4F4D" }}>Sign in</Link></p>
+                                        <p className="mb-0" style={{ color: "#898989" }}>Already have an account with VEHDE <Link href="/Login" style={{ color: "#DE4F4D" }}>Sign in</Link></p>
                                     </div>
                                 </div>
                             </form>
@@ -233,7 +233,7 @@ const index = () => {
                 {modal &&
                     <div style={{ position: "fixed", top: "0px", left: "0px", width: "100%", minHeight: "100vh", height: "fit-content", background: "rgba(0, 0, 0, 0.5)", zIndex: "999999", display: "flex", justifyContent: "center", alignItems: "center", overflow: "scroll" }}>
                         <div style={{ padding: "25px", background: "#FFFFFF", borderRadius: "15px", maxWidth: "750px", width: "100%", margin: "10px", marginTop: "30px", maxHeight: "90vh", overflow: "scroll", position: "relative" }}>
-                            <button style={{ background: "#DE4F4D", width: "50px", height: "50px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "none", color: "white", position: "absolute", top: "5px", right: "5px" }} onClick={() => setModal(null)}>
+                            <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "none", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
                                 <span style={{ fontSize: "30px" }}>&times;</span>
                             </button>
                             <div>

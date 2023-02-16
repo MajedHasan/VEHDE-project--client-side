@@ -40,10 +40,10 @@ const Header = () => {
                                         <Link className={`nav-link ${curretRoute === "/SmartGuide" && "active"}`} href="/SmartGuide">Smart Guide</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="/Renter">Renter</Link>
+                                        <Link className={`nav-link ${curretRoute === "/Renter" && "active"}`} href="/Renter">Renter</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="/Host">Host</Link>
+                                        <Link className={`nav-link ${curretRoute === "/Host" && "active"}`} href="/Host">Host</Link>
                                     </li>
                                 </ul>
                             </div>
