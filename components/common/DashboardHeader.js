@@ -38,7 +38,7 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu }) => {
                 <i className="fa fa-chevron-down" onClick={() => setShowMenu(!showMenu)}></i>
                 {
                     showMenu && <div>
-                        <h4>I am available to host</h4>
+                        <h4>I am {available ? "available" : "unavailable"} to host</h4>
                         <input type="checkbox" id="available" hidden checked={available} onChange={(e) => setAvailable(!available)} />
                         <label htmlFor="available">
                             <span>On</span>
