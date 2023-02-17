@@ -172,9 +172,10 @@
 }
 
 @media only screen and (max-width:991px) {
+
     .wrapper {
-        padding: 8px 15px;
-        max-height: 85vh;
+        padding: 25px 15px;
+        max-height: 75vh;
     }
 
     .wrapper>h2 {
