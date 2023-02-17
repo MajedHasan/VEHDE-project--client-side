@@ -236,4 +236,8 @@
         width: 200px;
         padding: 12px 22px;
     }
+
+    #header>div:nth-child(3)>div:nth-child(4) h4 {
+        font-size: 13px;
+    }
 }
