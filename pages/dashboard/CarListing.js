@@ -4,6 +4,9 @@ import styles from "../../styles/dashboard/CarListing.module.css"
 
 
 const CarListing = () => {
+
+    const [modal, setModal] = useState(null)
+
     return (
         <>
             <DashboardLayout>
@@ -106,6 +109,15 @@ const CarListing = () => {
                     </div>
                 </div>
             </DashboardLayout>
+            {modal &&
+                <div style={{ position: "fixed", top: "0px", left: "0px", width: "100%", minHeight: "100vh", height: "fit-content", background: "rgba(0, 0, 0, 0.5)", zIndex: "999999", display: "flex", justifyContent: "center", alignItems: "center", overflow: "scroll" }}>
+                    <div style={{ padding: "25px", background: "#FFFFFF", borderRadius: "15px", maxWidth: "750px", width: "100%", margin: "10px", marginTop: "30px", maxHeight: "85vh", overflow: "scroll", position: "relative" }}>
+                        <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "none", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
+                            <span style={{ fontSize: "30px" }}>&times;</span>
+                        </button>
+                    </div>
+                </div>
+            }
         </>
     )
 }
