@@ -13,6 +13,10 @@ import Section03Img03 from "../../assets/img/Host/section-03-img-03.png"
 import Section08Img01 from "../../assets/img/home-page/section-08-img-01.png"
 import Section08Img02 from "../../assets/img/home-page/section-08-img-02.png"
 import Section08Img03 from "../../assets/img/home-page/section-08-img-03.png"
+
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
+
 import { useState } from "react"
 
 
@@ -20,6 +24,7 @@ const index = () => {
 
     const [isIndividual, setIsIndividual] = useState(true)
     const [modal, setModal] = useState(null)
+    const [availability, setAvailability] = useState([{ id: 1, startDate1: "", startTime1: "", endDate1: "", endTime1: "" }])
 
     return (
         <>
@@ -136,12 +141,12 @@ const index = () => {
                                         <div className="pe-md-2">
                                             <div className="row row-cols-1 row-cols-md-2">
                                                 <div className="pe-md-2">
-                                                    <button type="button" style={{ background: "#232636", color: "#FFFFFF", padding: "12px 5px", borderRadius: "25px", border: "none", width: "100%" }} className="mb-2 mb-md-0" onClick={() => setModal({})}>
+                                                    <button type="button" style={{ background: "#232636", color: "#FFFFFF", padding: "12px 5px", borderRadius: "25px", border: "none", width: "100%" }} className="mb-2 mb-md-0" onClick={() => setModal("Driver's license")}>
                                                         Driver’s license
                                                     </button>
                                                 </div>
                                                 <div className="ps-md-2">
-                                                    <button type="button" style={{ background: "#FFFFFF", color: "#030719", padding: "12px 5px", borderRadius: "25px", border: "none", width: "100%" }}>
+                                                    <button type="button" style={{ background: "#FFFFFF", color: "#030719", padding: "12px 5px", borderRadius: "25px", border: "none", width: "100%" }} onClick={() => setModal("Availability")}>
                                                         Availability
                                                     </button>
                                                 </div>
@@ -236,92 +241,257 @@ const index = () => {
                             <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "none", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
                                 <span style={{ fontSize: "30px" }}>&times;</span>
                             </button>
-                            <div>
-                                <h2 className="text-center">Driver’s license: <a href="" style={{ color: "#DE4F4D", textDecoration: "underline" }}>upload DL</a> <br /> or enter info manually</h2>
-                                <p style={{ fontSize: "14px", textAlign: "center", color: "#717171", maxWidth: "450px", margin: "auto" }}>Renter sees your first name ONLY after the renter’s reservation for your car is confirmed; the rest remains private.</p>
-                                <div className="row row-cols-1 row-cols-md-2 p-2 mt-4">
-                                    <div className="pe-md-2 mb-3 mb-md-0">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">First name</label>
-                                            <input type="text" placeholder="Enter your first name" className="" />
+                            {
+                                modal === "Driver's license" &&
+                                <div>
+                                    <h2 className="text-center">Driver’s license: <a href="" style={{ color: "#DE4F4D", textDecoration: "underline" }}>upload DL</a> <br /> or enter info manually</h2>
+                                    <p style={{ fontSize: "14px", textAlign: "center", color: "#717171", maxWidth: "450px", margin: "auto" }}>Renter sees your first name ONLY after the renter’s reservation for your car is confirmed; the rest remains private.</p>
+                                    <div className="row row-cols-1 row-cols-md-2 p-2 mt-4">
+                                        <div className="pe-md-2 mb-3 mb-md-0">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">First name</label>
+                                                <input type="text" placeholder="Enter your first name" className="" />
+                                            </div>
+                                        </div>
+                                        <div className="pe-md-2">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">Last name</label>
+                                                <input type="text" placeholder="Enter your last name" className="" />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="pe-md-2">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">Last name</label>
-                                            <input type="text" placeholder="Enter your last name" className="" />
+                                    <div className="row row-cols-1 row-cols-md-2 p-2 mt-1">
+                                        <div className="pe-md-2 mb-3 mb-md-0">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">Country</label>
+                                                <input type="text" placeholder="United States of America" className="" />
+                                            </div>
                                         </div>
+                                        <div className="pe-md-2">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">State</label>
+                                                <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
+                                                    <option value="">Add your state name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row row-cols-1 p-2 mt-1">
+                                        <div className="mb-3 mb-md-0">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">First name</label>
+                                                <input type="text" placeholder="Enter your first name" className="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row row-cols-1 row-cols-md-3 p-2 mt-1">
+                                        <div className="pe-md-2 mb-3 mb-md-0">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">Expiration date</label>
+                                                <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
+                                                    <option value="">January</option>
+                                                    <option value="">February</option>
+                                                    <option value="">March</option>
+                                                    <option value="">April</option>
+                                                    <option value="">May</option>
+                                                    <option value="">June</option>
+                                                    <option value="">July</option>
+                                                    <option value="">August</option>
+                                                    <option value="">Septembor</option>
+                                                    <option value="">Octobor</option>
+                                                    <option value="">November</option>
+                                                    <option value="">December</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="pe-md-2 mb-3 mb-md-0">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">Day</label>
+                                                <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
+                                                    <option value="">01</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="pe-md-2 mb-3 mb-md-0">
+                                            <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
+                                                <label htmlFor="">Year</label>
+                                                <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
+                                                    <option value="">2023</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="p-2 mt-1 d-flex align-items-center">
+                                        <input type="checkbox" className="me-3 ms-4" />
+                                        <span style={{ color: "#898989", fontSize: "12px" }}>I agree to VEHDE’s Terms of Use and acknowledge that I have read the Privacy Notice.</span>
+                                    </div>
+                                    <div className="mt-2">
+                                        <button className="my-btn w-100">Save and continue</button>
                                     </div>
                                 </div>
-                                <div className="row row-cols-1 row-cols-md-2 p-2 mt-1">
-                                    <div className="pe-md-2 mb-3 mb-md-0">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">Country</label>
-                                            <input type="text" placeholder="United States of America" className="" />
-                                        </div>
+                            }
+                            {
+                                modal === "Availability" && <div className={styles.availabilityModal}>
+                                    <h2>Please indicate up to 3 available times for your car. You will be able to turn on or off your availability at any time.</h2>
+                                    <div>
+                                        <span>Schedule</span>
+                                        <span>Time availability</span>
+                                        <span>Delete & Add</span>
                                     </div>
-                                    <div className="pe-md-2">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">State</label>
-                                            <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
-                                                <option value="">Add your state name</option>
-                                            </select>
+                                    <div>
+                                        <div>
+                                            <div>01</div>
+                                            <div>
+                                                <div>
+                                                    <label htmlFor="">Start date</label>
+                                                    <div>
+                                                        <i className="fa fa-calendar-alt"></i>
+                                                        <DatePicker
+                                                            style={{ width: "75px" }}
+                                                            selected={new Date()}
+                                                            startDate={availability[0].startDate1}
+                                                            onChange={(date) => setAvailability([...availability, { startDate1: date }])}
+                                                            timeInputLabel="Time:"
+                                                            dateFormat="MM/dd/yyyy"
+                                                        // showTimeInput
+                                                        />
+                                                        <select name="" id="">
+                                                            <option value="">09.00 AM</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="">Start date</label>
+                                                    <div>
+                                                        <i className="fa fa-calendar-alt"></i>
+                                                        <DatePicker
+                                                            style={{ width: "75px" }}
+                                                            selected={new Date()}
+                                                            startDate={availability[0].endDate1}
+                                                            onChange={(date) => setAvailability([...availability, { endDate1: date }])}
+                                                            timeInputLabel="Time:"
+                                                            dateFormat="MM/dd/yyyy"
+                                                        // showTimeInput
+                                                        />
+                                                        <select name="" id="">
+                                                            <option value="">09.00 AM</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                {
+                                                    availability.length > 1 && <i className="fa fa-trash-alt" onClick={() => setAvailability([...availability.filter(schedule => schedule?.id !== 2)])}></i>
+                                                }
+                                                {
+                                                    availability.length === 1 && <i className="fa fa-plus" onClick={() => setAvailability([...availability, { id: 2, startDate2: "", startTime2: "", endDate2: "", endTime2: "" }])}></i>
+                                                }
+                                            </div>
                                         </div>
+                                        {
+                                            availability.length > 1 && <div>
+                                                <div>02</div>
+                                                <div>
+                                                    <div>
+                                                        <label htmlFor="">Start date</label>
+                                                        <div>
+                                                            <i className="fa fa-calendar-alt"></i>
+                                                            <DatePicker
+                                                                style={{ width: "75px" }}
+                                                                selected={new Date()}
+                                                                startDate={availability[0].startDate1}
+                                                                onChange={(date) => setAvailability([...availability, { startDate1: date }])}
+                                                                timeInputLabel="Time:"
+                                                                dateFormat="MM/dd/yyyy"
+                                                            // showTimeInput
+                                                            />
+                                                            <select name="" id="">
+                                                                <option value="">09.00 AM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <label htmlFor="">Start date</label>
+                                                        <div>
+                                                            <i className="fa fa-calendar-alt"></i>
+                                                            <DatePicker
+                                                                style={{ width: "75px" }}
+                                                                selected={new Date()}
+                                                                startDate={availability[0].endDate1}
+                                                                onChange={(date) => setAvailability([...availability, { endDate1: date }])}
+                                                                timeInputLabel="Time:"
+                                                                dateFormat="MM/dd/yyyy"
+                                                            // showTimeInput
+                                                            />
+                                                            <select name="" id="">
+                                                                <option value="">09.00 AM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    {
+                                                        availability.length > 2 && <i className="fa fa-trash-alt" onClick={() => setAvailability([...availability.filter(schedule => schedule?.id !== 3)])}></i>
+                                                    }
+                                                    {
+                                                        availability.length === 2 && <i className="fa fa-plus" onClick={() => setAvailability([...availability, { id: 3, startDate3: "", startTime3: "", endDate3: "", endTime3: "" }])}></i>
+                                                    }
+                                                </div>
+                                            </div>
+                                        }
+                                        {
+                                            availability.length > 2 && <div>
+                                                <div>03</div>
+                                                <div>
+                                                    <div>
+                                                        <label htmlFor="">Start date</label>
+                                                        <div>
+                                                            <i className="fa fa-calendar-alt"></i>
+                                                            <DatePicker
+                                                                style={{ width: "75px" }}
+                                                                selected={new Date()}
+                                                                startDate={availability[0]?.startDate3}
+                                                                onChange={(date) => setAvailability([...availability, { startDate3: date }])}
+                                                                timeInputLabel="Time:"
+                                                                dateFormat="MM/dd/yyyy"
+                                                            // showTimeInput
+                                                            />
+                                                            <select name="" id="">
+                                                                <option value="">09.00 AM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <label htmlFor="">Start date</label>
+                                                        <div>
+                                                            <i className="fa fa-calendar-alt"></i>
+                                                            <DatePicker
+                                                                style={{ width: "75px" }}
+                                                                selected={new Date()}
+                                                                startDate={availability[0]?.endDate3}
+                                                                onChange={(date) => setAvailability([...availability, { endDate3: date }])}
+                                                                timeInputLabel="Time:"
+                                                                dateFormat="MM/dd/yyyy"
+                                                            // showTimeInput
+                                                            />
+                                                            <select name="" id="">
+                                                                <option value="">09.00 AM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div className="my-4">
+                                        <button className="w-100 my-btn mb-3">Save</button>
+                                        <button className="w-100 my-btn" style={{ background: "#EFEFEF", color: "black", border: "2px solid transparent" }}>Cancel</button>
                                     </div>
                                 </div>
-                                <div className="row row-cols-1 p-2 mt-1">
-                                    <div className="mb-3 mb-md-0">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">First name</label>
-                                            <input type="text" placeholder="Enter your first name" className="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row row-cols-1 row-cols-md-3 p-2 mt-1">
-                                    <div className="pe-md-2 mb-3 mb-md-0">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">Expiration date</label>
-                                            <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
-                                                <option value="">January</option>
-                                                <option value="">February</option>
-                                                <option value="">March</option>
-                                                <option value="">April</option>
-                                                <option value="">May</option>
-                                                <option value="">June</option>
-                                                <option value="">July</option>
-                                                <option value="">August</option>
-                                                <option value="">Septembor</option>
-                                                <option value="">Octobor</option>
-                                                <option value="">November</option>
-                                                <option value="">December</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="pe-md-2 mb-3 mb-md-0">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">Day</label>
-                                            <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
-                                                <option value="">01</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="pe-md-2 mb-3 mb-md-0">
-                                        <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                            <label htmlFor="">Year</label>
-                                            <select name="" id="" className="bg-transparent" style={{ border: "none", outline: "none" }}>
-                                                <option value="">2023</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-2 mt-1 d-flex align-items-center">
-                                    <input type="checkbox" className="me-3 ms-4" />
-                                    <span style={{ color: "#898989", fontSize: "12px" }}>I agree to VEHDE’s Terms of Use and acknowledge that I have read the Privacy Notice.</span>
-                                </div>
-                                <div className="mt-2">
-                                    <button className="my-btn w-100">Save and continue</button>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 }
