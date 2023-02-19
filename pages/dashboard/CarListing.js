@@ -5,6 +5,7 @@ import styles from "../../styles/dashboard/CarListing.module.css"
 
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+import UploadCarPictures from "../../components/carPictures&Specification/UploadCarPictures";
 
 
 const CarListing = () => {
@@ -19,6 +20,8 @@ const CarListing = () => {
     const [endDate3, setEndDate3] = useState(new Date())
 
     const [startTime1, setStartTime1] = useState("")
+
+    const [uploadCarPictures, setUploadCarPictures] = useState(null)
 
     return (
         <>
@@ -111,7 +114,7 @@ const CarListing = () => {
                             <div className={styles.inputBox}>
                                 <textarea name="" id="" placeholder="A brief description about yourself. No more than 200 characters*"></textarea>
                             </div>
-                            <button className={styles.inputBox}>
+                            <button className={styles.inputBox} onClick={() => setUploadCarPictures({})}>
                                 <i class="fa-regular fa-image"></i>
                                 <span>My picture upload*</span>
                             </button>
@@ -132,9 +135,9 @@ const CarListing = () => {
                             modal !== null && <div className={styles.availabilityModal}>
                                 <h2>
                                     Schedule
-                                    {modal === "schedule1" && 1}
-                                    {modal === "schedule2" && 2}
-                                    {modal === "schedule3" && 3}
+                                    {modal === "schedule1" && " 1 "}
+                                    {modal === "schedule2" && " 2 "}
+                                    {modal === "schedule3" && " 3 "}
                                     Time availability
                                 </h2>
                                 <div>
@@ -306,6 +309,10 @@ const CarListing = () => {
                         }
                     </div>
                 </div>
+            }
+
+            {
+                uploadCarPictures && <UploadCarPictures setUploadCarPictures={setUploadCarPictures}></UploadCarPictures>
             }
         </>
     )
