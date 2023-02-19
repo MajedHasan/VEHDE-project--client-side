@@ -243,9 +243,9 @@ const index = () => {
                 </section>
                 {modal &&
                     <div style={{ position: "fixed", top: "0px", left: "0px", width: "100%", minHeight: "100vh", height: "fit-content", background: "rgba(0, 0, 0, 0.5)", zIndex: "999999", display: "flex", justifyContent: "center", alignItems: "center", overflow: "scroll" }}>
-                        <div style={{ padding: "25px", background: "#FFFFFF", borderRadius: "15px", maxWidth: "750px", width: "100%", margin: "10px", maxHeight: "87vh", overflow: "scroll", position: "relative" }}>
+                        <div style={{ padding: "28px", background: "#FFFFFF", borderRadius: "15px", maxWidth: "750px", width: "100%", margin: "10px", maxHeight: "87vh", overflow: "scroll", position: "relative" }}>
                             <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "none", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
-                                <span style={{ fontSize: "30px" }}>&times;</span>
+                                <i className="fa fa-times" style={{ fontSize: "25px" }}></i>
                             </button>
                             {
                                 modal === "Driver's license" &&
@@ -498,7 +498,7 @@ const index = () => {
                                             </div>
                                         }
                                     </div>
-                                    <div className="my-4">
+                                    <div className="mt-4">
                                         <button className="w-100 my-btn mb-3">Save</button>
                                         <button className="w-100 my-btn" style={{ background: "#EFEFEF", color: "black", border: "2px solid transparent" }}>Cancel</button>
                                     </div>
