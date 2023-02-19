@@ -24,7 +24,13 @@ const index = () => {
 
     const [isIndividual, setIsIndividual] = useState(true)
     const [modal, setModal] = useState(null)
-    const [availability, setAvailability] = useState([{ id: 1, startDate1: "", startTime1: "", endDate1: "", endTime1: "" }])
+    const [availability, setAvailability] = useState(1)
+    const [startDate1, setStartDate1] = useState(new Date())
+    const [endDate1, setEndDate1] = useState(new Date())
+    const [startDate2, setStartDate2] = useState(new Date())
+    const [endDate2, setEndDate2] = useState(new Date())
+    const [startDate3, setStartDate3] = useState(new Date())
+    const [endDate3, setEndDate3] = useState(new Date())
 
     return (
         <>
@@ -348,9 +354,10 @@ const index = () => {
                                                         <i className="fa fa-calendar-alt"></i>
                                                         <DatePicker
                                                             style={{ width: "75px" }}
-                                                            selected={new Date()}
-                                                            startDate={availability[0].startDate1}
-                                                            onChange={(date) => setAvailability([...availability, { startDate1: date }])}
+                                                            selected={startDate1}
+                                                            startDate={startDate1}
+                                                            onChange={(date) => setStartDate1(date)}
+                                                            // maxDate={endDate1}
                                                             timeInputLabel="Time:"
                                                             dateFormat="MM/dd/yyyy"
                                                         // showTimeInput
@@ -361,14 +368,15 @@ const index = () => {
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <label htmlFor="">Start date</label>
+                                                    <label htmlFor="">End date</label>
                                                     <div>
                                                         <i className="fa fa-calendar-alt"></i>
                                                         <DatePicker
                                                             style={{ width: "75px" }}
-                                                            selected={new Date()}
-                                                            startDate={availability[0].endDate1}
-                                                            onChange={(date) => setAvailability([...availability, { endDate1: date }])}
+                                                            selected={endDate1}
+                                                            startDate={endDate1}
+                                                            onChange={(date) => setEndDate1(date)}
+                                                            minDate={startDate1}
                                                             timeInputLabel="Time:"
                                                             dateFormat="MM/dd/yyyy"
                                                         // showTimeInput
@@ -381,15 +389,15 @@ const index = () => {
                                             </div>
                                             <div>
                                                 {
-                                                    availability.length > 1 && <i className="fa fa-trash-alt" onClick={() => setAvailability([...availability.filter(schedule => schedule?.id !== 2)])}></i>
+                                                    availability > 1 && <i className="fa fa-trash-alt" onClick={() => setAvailability(1)}></i>
                                                 }
                                                 {
-                                                    availability.length === 1 && <i className="fa fa-plus" onClick={() => setAvailability([...availability, { id: 2, startDate2: "", startTime2: "", endDate2: "", endTime2: "" }])}></i>
+                                                    availability === 1 && <i className="fa fa-plus" onClick={() => setAvailability(2)}></i>
                                                 }
                                             </div>
                                         </div>
                                         {
-                                            availability.length > 1 && <div>
+                                            availability > 1 && <div>
                                                 <div>02</div>
                                                 <div>
                                                     <div>
@@ -398,9 +406,10 @@ const index = () => {
                                                             <i className="fa fa-calendar-alt"></i>
                                                             <DatePicker
                                                                 style={{ width: "75px" }}
-                                                                selected={new Date()}
-                                                                startDate={availability[0].startDate1}
-                                                                onChange={(date) => setAvailability([...availability, { startDate1: date }])}
+                                                                selected={startDate2}
+                                                                startDate={startDate2}
+                                                                onChange={(date) => setStartDate2(date)}
+                                                                // maxDate={endDate1}
                                                                 timeInputLabel="Time:"
                                                                 dateFormat="MM/dd/yyyy"
                                                             // showTimeInput
@@ -411,14 +420,15 @@ const index = () => {
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <label htmlFor="">Start date</label>
+                                                        <label htmlFor="">End date</label>
                                                         <div>
                                                             <i className="fa fa-calendar-alt"></i>
                                                             <DatePicker
                                                                 style={{ width: "75px" }}
-                                                                selected={new Date()}
-                                                                startDate={availability[0].endDate1}
-                                                                onChange={(date) => setAvailability([...availability, { endDate1: date }])}
+                                                                selected={endDate2}
+                                                                startDate={endDate2}
+                                                                onChange={(date) => setEndDate2(date)}
+                                                                minDate={startDate2}
                                                                 timeInputLabel="Time:"
                                                                 dateFormat="MM/dd/yyyy"
                                                             // showTimeInput
@@ -431,16 +441,16 @@ const index = () => {
                                                 </div>
                                                 <div>
                                                     {
-                                                        availability.length > 2 && <i className="fa fa-trash-alt" onClick={() => setAvailability([...availability.filter(schedule => schedule?.id !== 3)])}></i>
+                                                        availability > 2 && <i className="fa fa-trash-alt" onClick={() => setAvailability(2)}></i>
                                                     }
                                                     {
-                                                        availability.length === 2 && <i className="fa fa-plus" onClick={() => setAvailability([...availability, { id: 3, startDate3: "", startTime3: "", endDate3: "", endTime3: "" }])}></i>
+                                                        availability === 2 && <i className="fa fa-plus" onClick={() => setAvailability(3)}></i>
                                                     }
                                                 </div>
                                             </div>
                                         }
                                         {
-                                            availability.length > 2 && <div>
+                                            availability > 2 && <div>
                                                 <div>03</div>
                                                 <div>
                                                     <div>
@@ -449,9 +459,10 @@ const index = () => {
                                                             <i className="fa fa-calendar-alt"></i>
                                                             <DatePicker
                                                                 style={{ width: "75px" }}
-                                                                selected={new Date()}
-                                                                startDate={availability[0]?.startDate3}
-                                                                onChange={(date) => setAvailability([...availability, { startDate3: date }])}
+                                                                selected={startDate3}
+                                                                startDate={startDate3}
+                                                                onChange={(date) => setStartDate3(date)}
+                                                                // maxDate={endDate1}
                                                                 timeInputLabel="Time:"
                                                                 dateFormat="MM/dd/yyyy"
                                                             // showTimeInput
@@ -462,14 +473,15 @@ const index = () => {
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <label htmlFor="">Start date</label>
+                                                        <label htmlFor="">End date</label>
                                                         <div>
                                                             <i className="fa fa-calendar-alt"></i>
                                                             <DatePicker
                                                                 style={{ width: "75px" }}
-                                                                selected={new Date()}
-                                                                startDate={availability[0]?.endDate3}
-                                                                onChange={(date) => setAvailability([...availability, { endDate3: date }])}
+                                                                selected={endDate3}
+                                                                startDate={endDate3}
+                                                                onChange={(date) => setEndDate3(date)}
+                                                                minDate={startDate3}
                                                                 timeInputLabel="Time:"
                                                                 dateFormat="MM/dd/yyyy"
                                                             // showTimeInput
@@ -481,7 +493,7 @@ const index = () => {
                                                     </div>
                                                 </div>
                                                 <div>
-
+                                                    <i className="fa fa-trash-alt" style={{ visibility: "hidden" }}></i>
                                                 </div>
                                             </div>
                                         }

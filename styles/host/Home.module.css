@@ -346,6 +346,10 @@
     padding-bottom: 15px;
 }
 
+.availabilityModal>div:nth-child(3)>div::-webkit-scrollbar {
+    width: 0;
+}
+
 .availabilityModal>div:nth-child(3)>div>div:nth-child(1) {
     font-weight: 600;
     font-size: 32px;
