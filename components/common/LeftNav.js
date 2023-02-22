@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useRouter } from "next/router"
 import styles from "../../styles/dashboard/LeftNav.module.css"
 
-import CarListing from "../../assets/img/dashboard/carListing.png"
+import CarListing from "../../assets/img/dashboard/carListing.svg"
 import MyHost from "../../assets/img/dashboard/myHost.svg"
 import Messages from "../../assets/img/dashboard/messages.svg"
 import Availability from "../../assets/img/dashboard/availability.svg"
