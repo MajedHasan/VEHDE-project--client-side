@@ -323,7 +323,7 @@ const CarListing = () => {
             {
                 modalLg && <ModalLg setModal={setModalLg} title="Host | Car pictures & specifications" subtitle="Please preview your car pictures.">
                     <CarDetailsPopupHeader />
-                    <div className="flex gap-3">
+                    <div className="d-flex gap-3 flex-md-row flex-column my-4">
                         <CarDetailsPopupPictures />
                         <CarDetailsPopupMap />
                     </div>

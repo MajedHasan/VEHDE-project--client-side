@@ -1,8 +1,10 @@
-import React from 'react'
+import styles from "../../styles/dashboard/carPictures&Specification/CarDetailsPopupMap.module.css"
 
 const CarDetailsPopupMap = () => {
     return (
-        <div>CarDetailsPopupMap</div>
+        <div className={styles.container}>
+            <iframe src="https://maps.google.com" frameborder="0" className={styles.map}></iframe>
+        </div>
     )
 }
 
