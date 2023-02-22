@@ -54,7 +54,7 @@ const CarDetailsPopupPictures = () => {
                 {
                     view === "3d View" && <>
                         <div className={styles.threeDView}>
-                            <Image src={ThreeDViewInterior} onClick={() => setSingleViewImg(ThreeDViewExterior)} alt="Ops" />
+                            <Image src={ThreeDViewExterior} onClick={() => setSingleViewImg(ThreeDViewExterior)} alt="Ops" />
                             <Image src={ThreeDViewInterior} onClick={() => setSingleViewImg(ThreeDViewInterior)} alt="" />
                         </div>
                     </>
