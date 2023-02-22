@@ -11,10 +11,23 @@ import ActiveThreeDViewIcon from "../../assets/img/dashboard/carPicturesDetails/
 import ThreeDViewExterior from "../../assets/img/dashboard/carPicturesDetails/3dViewExterior.png"
 import ThreeDViewInterior from "../../assets/img/dashboard/carPicturesDetails/3dViewInterior.png"
 
+import FlatViewLeftSideExterior from "../../assets/img/dashboard/carPicturesDetails/FlatViewLeftSideExterior.png"
+import FlatViewRearExterior from "../../assets/img/dashboard/carPicturesDetails/FlatViewRearExterior.png"
+import FlatViewDashboardInterior from "../../assets/img/dashboard/carPicturesDetails/FlatViewDashboardInterior.png"
+import FlatViewRightSideInterior from "../../assets/img/dashboard/carPicturesDetails/FlatViewRightSideInterior.png"
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+
 
 const CarDetailsPopupPictures = () => {
 
-    const [view, setView] = useState("3d View")
+    const [view, setView] = useState("Flat View")
     const [ThreeDView, setThreeDView] = useState("Exterior")
     const [singleViewImg, setSingleViewImg] = useState(null)
 
@@ -44,6 +57,54 @@ const CarDetailsPopupPictures = () => {
                             <Image src={ThreeDViewInterior} onClick={() => setSingleViewImg(ThreeDViewExterior)} alt="Ops" />
                             <Image src={ThreeDViewInterior} onClick={() => setSingleViewImg(ThreeDViewInterior)} alt="" />
                         </div>
+                    </>
+                }
+                {
+                    view === "Flat View" && <>
+                        <Swiper
+                            navigation={true}
+                            modules={[Navigation]}
+                            className={`mySwiper ${styles.sliderWrapper}`}
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 40,
+                                },
+                                991: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 50,
+                                },
+                            }}
+                        >
+                            <SwiperSlide>
+                                <Image src={FlatViewLeftSideExterior} alt="" onClick={() => setSingleViewImg(FlatViewLeftSideExterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewRearExterior} alt="" onClick={() => setSingleViewImg(FlatViewRearExterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewDashboardInterior} alt="" onClick={() => setSingleViewImg(FlatViewDashboardInterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewRightSideInterior} alt="" onClick={() => setSingleViewImg(FlatViewRightSideInterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewLeftSideExterior} alt="" onClick={() => setSingleViewImg(FlatViewLeftSideExterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewRearExterior} alt="" onClick={() => setSingleViewImg(FlatViewRearExterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewDashboardInterior} alt="" onClick={() => setSingleViewImg(FlatViewDashboardInterior)} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={FlatViewRightSideInterior} alt="" onClick={() => setSingleViewImg(FlatViewRightSideInterior)} />
+                            </SwiperSlide>
+                        </Swiper>
                     </>
                 }
             </div>

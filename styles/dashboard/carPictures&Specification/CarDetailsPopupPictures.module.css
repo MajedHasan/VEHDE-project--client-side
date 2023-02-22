@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-height: 480px;
+    min-height: 400px;
 }
 
 .viewButtons {
@@ -79,4 +79,41 @@
     height: 100%;
     object-fit: cover;
     min-height: 125px;
+}
+
+
+
+@media only screen and (max-width:991px) {
+    .container {
+        flex: 1;
+    }
+
+    .threeDView img {
+        height: auto;
+        min-height: auto;
+    }
+}
+
+
+/* Slider */
+.sliderWrapper {
+    max-width: 630px;
+}
+
+.sliderWrapper img {
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.sliderWrapper>div:nth-child(2),
+.sliderWrapper>div:nth-child(3) {
+    color: white;
+}
+
+@media only screen and (max-width:549px) {
+
+    .sliderWrapper>div:nth-child(2),
+    .sliderWrapper>div:nth-child(3) {
+        color: black;
+    }
 }
