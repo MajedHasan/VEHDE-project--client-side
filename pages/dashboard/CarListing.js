@@ -6,6 +6,11 @@ import styles from "../../styles/dashboard/CarListing.module.css"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import UploadCarPictures from "../../components/carPictures&Specification/UploadCarPictures";
+import ModalLg from "../../components/common/ModalLg";
+import CarDetailsPopupHeader from "../../components/carPictures&Specification/CarDetailsPopupHeader";
+import CarDetailsPopupPictures from "../../components/carPictures&Specification/CarDetailsPopupPictures"
+import CarDetailsPopupMap from "../../components/carPictures&Specification/CarDetailsPopupMap"
+import CarDetailsPopupOverview from "../../components/carPictures&Specification/CarDetailsPopupOverview"
 
 
 const CarListing = () => {
@@ -20,8 +25,8 @@ const CarListing = () => {
     const [endDate3, setEndDate3] = useState(new Date())
 
     const [startTime1, setStartTime1] = useState("")
-
     const [uploadCarPictures, setUploadCarPictures] = useState(null)
+    const [modalLg, setModalLg] = useState(null)
 
     return (
         <>
@@ -312,7 +317,22 @@ const CarListing = () => {
             }
 
             {
-                uploadCarPictures && <UploadCarPictures setUploadCarPictures={setUploadCarPictures}></UploadCarPictures>
+                uploadCarPictures && <UploadCarPictures setUploadCarPictures={setUploadCarPictures} setModalLg={setModalLg}></UploadCarPictures>
+            }
+
+            {
+                modalLg && <ModalLg setModal={setModalLg} title="Host | Car pictures & specifications" subtitle="Please preview your car pictures.">
+                    <CarDetailsPopupHeader />
+                    <div className="flex gap-3">
+                        <CarDetailsPopupPictures />
+                        <CarDetailsPopupMap />
+                    </div>
+                    <CarDetailsPopupOverview />
+                    <div className="d-flex justify-content-center items-center gap-3 flex-md-row flex-column">
+                        <button className="my-btn">Confirm car pictures</button>
+                        <button className="my-btn" style={{ background: "#EFEFEF", color: "#030719", border: "2px solid #EFEFEF" }}>Edit car pictures</button>
+                    </div>
+                </ModalLg>
             }
         </>
     )

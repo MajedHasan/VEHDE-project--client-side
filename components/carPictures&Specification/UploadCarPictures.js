@@ -10,7 +10,7 @@ import { toast } from 'react-toastify'
 
 
 
-const UploadCarPictures = ({ setUploadCarPictures }) => {
+const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
 
     const [FrontViewExterior, setFrontViewExterior] = useState(null)
     const [DashboardInterior, setDashboardInterior] = useState(null)
@@ -291,7 +291,7 @@ const UploadCarPictures = ({ setUploadCarPictures }) => {
                             </label>
                         </div>
                         <div>
-                            <button className="my-btn mx-auto">Preview car pictures</button>
+                            <button className="my-btn mx-auto" onClick={() => setModalLg({})}>Preview car pictures</button>
                         </div>
                     </div>
 
