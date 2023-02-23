@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import VideoIcon from "../../assets/img/dashboard/video-icon.png"
 import uploadCarDemo from "../../assets/img/dashboard/uploadCarDemo.png"
-import CameraIcon from "../../assets/img/dashboard/CameraIcon.png"
+// import CameraIcon from "../../assets/img/dashboard/CameraIcon.png"
 import { toast } from 'react-toastify'
 
 
@@ -89,7 +89,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="FrontViewExterior">
                                     {
                                         FrontViewExterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Front view (Exterior)</span>
                                         </>
                                             : <>
@@ -101,7 +101,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="DashboardInterior">
                                     {
                                         DashboardInterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Dashboard (Interior)</span>
                                         </>
                                             : <>
@@ -113,7 +113,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="RightSideViewExterior">
                                     {
                                         RightSideViewExterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Right Side View (Exterior)</span>
                                         </>
                                             : <>
@@ -125,7 +125,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="RightSideViewInterior">
                                     {
                                         RightSideViewInterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Right Side View (Interior)</span>
                                         </>
                                             : <>
@@ -137,7 +137,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="LeftSideViewExterior">
                                     {
                                         LeftSideViewExterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Left Side View (Exterior)</span>
                                         </>
                                             : <>
@@ -149,7 +149,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="LeftSideViewInterior">
                                     {
                                         LeftSideViewInterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Left Side View (Interior)</span>
                                         </>
                                             : <>
@@ -161,7 +161,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="RearViewInterior">
                                     {
                                         RearViewInterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Rear View (Interior)</span>
                                         </>
                                             : <>
@@ -173,7 +173,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                                 <label htmlFor="RearViewExterior">
                                     {
                                         RearViewExterior === null ? <>
-                                            <Image src={CameraIcon} />
+                                            {/* <Image src={CameraIcon} /> */}
                                             <span>Rear View (Exterior)</span>
                                         </>
                                             : <>
@@ -188,7 +188,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="FrontViewExterior">
                                 {
                                     FrontViewExterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Front view (Exterior)</span>
                                     </>
                                         : <>
@@ -201,7 +201,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="DashboardInterior">
                                 {
                                     DashboardInterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Dashboard (Interior)</span>
                                     </>
                                         : <>
@@ -214,7 +214,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="RightSideViewExterior">
                                 {
                                     RightSideViewExterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Right Side View (Exterior)</span>
                                     </>
                                         : <>
@@ -227,7 +227,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="RightSideViewInterior">
                                 {
                                     RightSideViewInterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Right Side View (Interior)</span>
                                     </>
                                         : <>
@@ -240,7 +240,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="LeftSideViewExterior">
                                 {
                                     LeftSideViewExterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Left Side View (Exterior)</span>
                                     </>
                                         : <>
@@ -253,7 +253,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="LeftSideViewInterior">
                                 {
                                     LeftSideViewInterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Left Side View (Interior)</span>
                                     </>
                                         : <>
@@ -266,7 +266,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="RearViewInterior">
                                 {
                                     RearViewInterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Rear View (Interior)</span>
                                     </>
                                         : <>
@@ -279,7 +279,7 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
                             <label htmlFor="RearViewExterior">
                                 {
                                     RearViewExterior === null ? <>
-                                        <Image src={CameraIcon} />
+                                        {/* <Image src={CameraIcon} /> */}
                                         <span>Rear View (Exterior)</span>
                                     </>
                                         : <>
