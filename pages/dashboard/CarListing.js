@@ -11,6 +11,8 @@ import CarDetailsPopupHeader from "../../components/carPictures&Specification/Ca
 import CarDetailsPopupPictures from "../../components/carPictures&Specification/CarDetailsPopupPictures"
 import CarDetailsPopupMap from "../../components/carPictures&Specification/CarDetailsPopupMap"
 import CarDetailsPopupOverview from "../../components/carPictures&Specification/CarDetailsPopupOverview"
+import ModalMd from "../../components/common/ModalMd";
+import CarDetailsOverviewPopup from "../../components/carPictures&Specification/CarDetailsOverviewPopup";
 
 
 const CarListing = () => {
@@ -27,6 +29,7 @@ const CarListing = () => {
     const [startTime1, setStartTime1] = useState("")
     const [uploadCarPictures, setUploadCarPictures] = useState(null)
     const [modalLg, setModalLg] = useState(null)
+    const [carDetailPopupOverview, setCarDetailPopupOverview] = useState(null)
 
     return (
         <>
@@ -327,12 +330,19 @@ const CarListing = () => {
                         <CarDetailsPopupPictures />
                         <CarDetailsPopupMap />
                     </div>
-                    <CarDetailsPopupOverview />
+                    <CarDetailsPopupOverview setCarDetailPopupOverview={setCarDetailPopupOverview} />
                     <div className="d-flex justify-content-center items-center gap-3 flex-md-row flex-column">
                         <button className="my-btn">Confirm car pictures</button>
                         <button className="my-btn" style={{ background: "#EFEFEF", color: "#030719", border: "2px solid #EFEFEF" }}>Edit car pictures</button>
                     </div>
                 </ModalLg>
+            }
+            {
+                carDetailPopupOverview && <>
+                    <ModalMd title={`Host Category: Individual`} setModal={setCarDetailPopupOverview}>
+                        <CarDetailsOverviewPopup />
+                    </ModalMd>
+                </>
             }
         </>
     )

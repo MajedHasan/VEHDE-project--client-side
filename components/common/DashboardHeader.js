@@ -45,11 +45,11 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu }) => {
                             <span>Off</span>
                         </label>
                         <div>
-                            <Link href="">
+                            <Link href="/dashboard/HelpCenter">
                                 <Image src={HelpImg} />
                                 <span>Help Center</span>
                             </Link>
-                            <Link href="">
+                            <Link href="/dashboard/profile">
                                 <Image src={UserImg} />
                                 <span>My Profile</span>
                             </Link>

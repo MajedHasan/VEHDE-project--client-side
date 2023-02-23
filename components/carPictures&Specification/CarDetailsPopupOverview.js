@@ -4,7 +4,7 @@ import styles from "../../styles/dashboard/carPictures&Specification/CarDetailsP
 import CarDetailsDetailsOverview from "../../assets/img/dashboard/carPicturesDetails/carPicturesDetailsOverview.png"
 import Image from "next/image"
 
-const CarDetailsPopupOverview = () => {
+const CarDetailsPopupOverview = ({ setCarDetailPopupOverview }) => {
 
     const [activeDiscount, setActiveDiscount] = useState("5% OR 7%")
 
@@ -55,7 +55,7 @@ const CarDetailsPopupOverview = () => {
                 </div>
             </div>
             <div>
-                <button>Overview</button>
+                <button onClick={() => setCarDetailPopupOverview({})}>Overview</button>
             </div>
         </div>
     )
