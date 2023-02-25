@@ -117,6 +117,7 @@
     color: #DE4F4D;
     display: block;
     text-decoration-line: underline;
+    cursor: pointer;
 }
 
 .tableWrapper>table>tbody>tr>td:nth-child(2)>div>p {
@@ -321,4 +322,98 @@
     border-radius: 9999px;
     background: #7DE86C;
     color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+/* Payment Schedule Modal */
+.paymentScheduleModal {
+    text-align: center;
+}
+
+.paymentScheduleModal>h2 {
+    color: #030719;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.paymentScheduleModal>p {
+    color: #898989;
+    font-weight: 400;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.paymentScheduleModal>p>a {
+    color: #DE4F4D;
+}
+
+.paymentScheduleModal>div {
+    padding: 12px;
+    background: #F8F8F8;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+.paymentScheduleModal>div>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.paymentScheduleModal>div>div>span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #030719;
+}
+
+.paymentScheduleModal>div>table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.paymentScheduleModal>div>table>thead>th {
+    text-align: center;
+    background: #FFFFFF;
+    color: #030719;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.paymentScheduleModal>div>table>tbody>tr>td {
+    text-align: center;
+    color: #030719;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+/* Rental Data Popup */
+.rentalDataList {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:991px) {
+    .rentalDataList {
+        flex-direction: column;
+    }
 }

@@ -3,10 +3,18 @@ import styles from "../../styles/dashboard/Rental/RentalDataList.module.css"
 import CarImg from "../../assets/img/dashboard/MyHost/Rental/car.png"
 import Image from "next/image"
 import { useState } from "react"
+import ModalMd from "../../components/common/ModalMd"
+import ModalLg from "../common/ModalLg"
+import CarDetailsPopupHeader from "../carPictures&Specification/CarDetailsPopupHeader"
+import CarDetailsPopupPictures from "../carPictures&Specification/CarDetailsPopupPictures"
+import CarDetailsPopupMap from "../carPictures&Specification/CarDetailsPopupMap"
+import RentalDataPopupHeader from "./RentalDataPopupHeader"
 
 const RentalDataList = () => {
 
     const [showSingle, setShowSingle] = useState(null)
+    const [showModalSm, setShowModalSm] = useState(null)
+    const [showModalLg, setShowModalLg] = useState(null)
 
     return (
         <>
@@ -38,7 +46,7 @@ const RentalDataList = () => {
                                             <div>
                                                 <h3>Toyota Venza
                                                     LE 2022
-                                                    <span>See details</span>
+                                                    <span onClick={() => setShowModalLg(1)}>See details</span>
                                                 </h3>
                                                 <p>Car Tag:
                                                     <a href="">(TY) 78613 -39053</a>
@@ -278,7 +286,7 @@ const RentalDataList = () => {
                                                 <h4>25 hosting
                                                     (rental) days</h4>
                                                 <button>
-                                                    <span>*Scheduled payments:</span>
+                                                    <span onClick={() => setShowModalSm(1)}>*Scheduled payments:</span>
                                                     <a href="">$2,493.75</a>
                                                 </button>
                                                 <button>
@@ -319,6 +327,60 @@ const RentalDataList = () => {
                     </div>
                 }
             </div>
+            {
+                showModalSm && <>
+                    <ModalMd setModal={setShowModalSm}>
+                        <div className={styles.paymentScheduleModal}>
+                            <h2>Payment schedule</h2>
+                            <div>
+                                <div>
+                                    <span>Duration</span>
+                                    <span>Scheduled</span>
+                                    <span>Paid</span>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <th>DD</th>
+                                        <th>$</th>
+                                        <th>MM/DD/YY</th>
+                                        <th>$</th>
+                                        <th>MM/DD/YY</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td >11</td>
+                                            <td >1,097.25</td>
+                                            <td>5/14/2022</td>
+                                            <td>------</td>
+                                            <td>------</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>1,396.50</td>
+                                            <td>5/3/2022</td>
+                                            <td>------</td>
+                                            <td>------</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>For further details, please check the VEHDE Host <a href="">Payment Policy</a></p>
+                        </div>
+                    </ModalMd>
+                </>
+            }
+            {
+                showModalLg && <>
+                    <ModalLg setModal={setShowModalLg}>
+                        <RentalDataPopupHeader />
+                        <CarDetailsPopupHeader />
+                        <div className={styles.rentalDataList}>
+                            <CarDetailsPopupPictures />
+                            <CarDetailsPopupMap />
+                        </div>
+                    </ModalLg>
+                </>
+            }
         </>
     )
 }
