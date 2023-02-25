@@ -3,7 +3,7 @@ import styles from "../../styles/dashboard/carPictures&Specification/CarDetailsP
 import Image from "next/image"
 import { useState } from "react"
 
-// import SingleView from "../../assets/img/dashboard/carPicturesDetails/SingleView.png"
+import SingleView from "../../assets/img/dashboard/carPicturesDetails/SingleView.png"
 import FlatView from "../../assets/img/dashboard/carPicturesDetails/FlatViewIcon.svg"
 import ActiveFlatView from "../../assets/img/dashboard/carPicturesDetails/ActiveFlatViewIcon.svg"
 import ThreeDViewIcon from "../../assets/img/dashboard/carPicturesDetails/3dViewIcon.svg"
@@ -48,8 +48,8 @@ const CarDetailsPopupPictures = () => {
                         <span>3d View</span>
                     </button>
                 </div>
-                {/* <Image src={singleViewImg ? singleViewImg : SingleView} alt="" /> */}
-                <Image src={singleViewImg ? singleViewImg : ""} alt="" />
+                <Image src={singleViewImg ? singleViewImg : SingleView} alt="" />
+                {/* <Image src={singleViewImg ? singleViewImg : ""} alt="" /> */}
             </div>
             <div className={styles.gallery}>
                 {

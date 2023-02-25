@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DashboardLayout from "../../components/layout/DashboardLayout"
 import styles from "../../styles/dashboard/MyHost.module.css"
 
@@ -14,9 +14,21 @@ import RentalsIcon from "../../assets/img/dashboard/MyHost/Rentals.png"
 import EarningIcon from "../../assets/img/dashboard/MyHost/Earning.png"
 import Link from 'next/link'
 
+import ModalLg from "../../components/common/ModalLg"
+import RentalEmptyData from '../../components/Rental/RentalEmptyData'
+import RentalDataList from '../../components/Rental/RentalDataList'
+
+
 const MyHost = () => {
 
     const [setupPaymentMethod, setSetupPaymentMethod] = useState(null)
+    const [modalLg, setModalLg] = useState(null)
+    const [modalLgData, setModalLgData] = useState("empty")
+
+    useEffect(() => {
+        const isFirstTimeHost = localStorage.getItem("isFirstTimeHost")
+        isFirstTimeHost === "true" ? setSetupPaymentMethod("normal") : setSetupPaymentMethod(null)
+    }, [])
 
     return (
         <DashboardLayout>
@@ -83,7 +95,10 @@ const MyHost = () => {
                             <h1>Thank You</h1>
                             <h4>Please proceed to your personalized inbox to track the status of your application and view customized host’s information from VEHDE.</h4>
                             <div>
-                                <button className='my-btn w-100' onClick={() => setSetupPaymentMethod("normal")}>Proceed to my inbox</button>
+                                <button className='my-btn w-100' onClick={() => {
+                                    setSetupPaymentMethod("normal")
+                                    localStorage.setItem("isFirstTimeHost", true)
+                                }}>Proceed to my inbox</button>
                             </div>
                         </div>
                     </>
@@ -104,16 +119,30 @@ const MyHost = () => {
                                     <Image src={MyProfileIcon} alt='' />
                                     <span>My Profile</span>
                                 </Link>
-                                <Link href="">
+                                <div onClick={() => setModalLg("rental")}>
                                     <Image src={RentalsIcon} alt='' />
                                     <span>Rentals</span>
-                                </Link>
+                                </div>
                                 <Link href="">
                                     <Image src={EarningIcon} alt='' />
                                     <span>Earning</span>
                                 </Link>
                             </div>
                         </div>
+                    </>
+                }
+                {
+                    modalLg === "rental" && <>
+                        <ModalLg setModal={setModalLg}>
+                            <div className={styles.rentalDataWrapper}>
+                                {
+                                    modalLgData === "empty" && <RentalEmptyData setModalLgData={setModalLgData} />
+                                }
+                                {
+                                    modalLgData === "list" && <RentalDataList />
+                                }
+                            </div>
+                        </ModalLg>
                     </>
                 }
             </div>
