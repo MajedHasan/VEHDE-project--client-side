@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import VideoIcon from "../../assets/img/dashboard/video-icon.png"
 import uploadCarDemo from "../../assets/img/dashboard/uploadCarDemo.png"
-import CameraIcon from "../../assets/img/dashboard/CameraIcon.png"
+import CameraIcon from "../../assets/img/dashboard/CameraIcon2.png"
 import { toast } from 'react-toastify'
 
 

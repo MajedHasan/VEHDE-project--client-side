@@ -3,7 +3,7 @@ import styles from "../../styles/dashboard/carPictures&Specification/CarDetailsP
 import Image from "next/image"
 import { useState } from "react"
 
-import SingleView from "../../assets/img/dashboard/carPicturesDetails/SingleView.png"
+import SingleView from "../../assets/img/dashboard/carPicturesDetails/3dViewExterior.png"
 import FlatView from "../../assets/img/dashboard/carPicturesDetails/FlatViewIcon.svg"
 import ActiveFlatView from "../../assets/img/dashboard/carPicturesDetails/ActiveFlatViewIcon.svg"
 import ThreeDViewIcon from "../../assets/img/dashboard/carPicturesDetails/3dViewIcon.svg"
