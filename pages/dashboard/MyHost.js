@@ -123,7 +123,7 @@ const MyHost = () => {
                                     <Image src={RentalsIcon} alt='' />
                                     <span>Rentals</span>
                                 </div>
-                                <Link href="">
+                                <Link href="/dashboard/Payment">
                                     <Image src={EarningIcon} alt='' />
                                     <span>Earning</span>
                                 </Link>

@@ -1,0 +1,33 @@
+.container {
+    max-width: 550px;
+    width: 100%;
+}
+
+.container>h2 {
+    color: #030719;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.container>p {
+    color: #030719;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.container>p>span,
+.container>p>a {
+    color: #DE4F4D;
+    font-weight: 500;
+}
+
+.container>button {
+    background: #030719;
+    color: #F8F8F8;
+    outline: none;
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 30px;
+    font-weight: 500;
+    font-size: 14px;
+}
