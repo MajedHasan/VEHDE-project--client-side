@@ -1,6 +1,6 @@
 import styles from "../../styles/dashboard/DashboardBannerLeftContent.module.css"
 
-const DashboardBannerLeftContent = ({ page, setViewScore, setCashOut }) => {
+const DashboardBannerLeftContent = ({ page, setViewScore, setCashOut, setSubmitNewTicket }) => {
     return (
         <div className={styles.container}>
             {
@@ -35,6 +35,14 @@ const DashboardBannerLeftContent = ({ page, setViewScore, setCashOut }) => {
                         <button className="my-btn" onClick={() => setViewScore({})}>&nbsp;&nbsp; View VEHDE Score History &nbsp;&nbsp;</button>
                         <button className={styles.buttonBlack} onClick={() => setCashOut({})}>Cash Out Earned VEHDE Score</button>
                     </div>
+                </>
+            }
+            {
+                page === "SnowTicket" && <>
+                    <h2>Snow Ticket</h2>
+                    <p>This section of your personalized account allows you
+                        to track your Service Now (Snow) Tickets submitted to VEHDE.</p>
+                    <button className={styles.buttonBlack} onClick={() => setSubmitNewTicket({})}>Submit New Snow Ticket</button>
                 </>
             }
         </div>
