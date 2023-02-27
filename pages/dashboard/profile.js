@@ -20,10 +20,10 @@ const profile = () => {
                         <p>Please review and update your profile information where applicable.</p>
                     </div>
                     <div>
-                        <div>
+                        <Link href="/dashboard/Payment/PaymentMethod">
                             <Image src={PaymentMethod} alt='' />
                             <span>Payment method</span>
-                        </div>
+                        </Link>
                         <Link href="">
                             <Image src={RentalRates} alt='' />
                             <span>Rental rates</span>

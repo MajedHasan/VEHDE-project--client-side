@@ -1,6 +1,6 @@
 import styles from "../../styles/dashboard/DashboardBannerLeftContent.module.css"
 
-const DashboardBannerLeftContent = ({ page }) => {
+const DashboardBannerLeftContent = ({ page, setViewScore, setCashOut }) => {
     return (
         <div className={styles.container}>
             {
@@ -15,7 +15,7 @@ const DashboardBannerLeftContent = ({ page }) => {
                 page === "payment" && <>
                     <h2>Payment Method</h2>
                     <p>Active payment method is the one approved by VEHDE and you are currently using to make or receive payments. To change your active payment method, please select another approved method, and switch its status to Active. Please allow up to 24hrs for VEHDE to confirm your change of preferred payment method.</p>
-                    <button className={styles.button}>Add New Payment Method</button>
+                    <button className={styles.buttonBlack}>Add New Payment Method</button>
                 </>
             }
             {
@@ -24,7 +24,17 @@ const DashboardBannerLeftContent = ({ page }) => {
                     <p>Please review your time availability to host. You can add up to 3 times for each listed car. You are free to turn on or off your availability at any time. This information enables you to receive renter’s reservations for your car.</p>
                     <p>Please <span>download VEHDE host app</span> for real-time interactions
                         with VEHDE and renters.</p>
-                    <button className={styles.button}>Download host app</button>
+                    <button className={styles.buttonBlack}>Download host app</button>
+                </>
+            }
+            {
+                page === "VEHDEScore" && <>
+                    <h2>VEHDE Score</h2>
+                    <p>You may convert your VEHDE Score to car rental, VEHDE gift card, or dollar equivalent.</p>
+                    <div className={styles.buttonContainer}>
+                        <button className="my-btn" onClick={() => setViewScore({})}>&nbsp;&nbsp; View VEHDE Score History &nbsp;&nbsp;</button>
+                        <button className={styles.buttonBlack} onClick={() => setCashOut({})}>Cash Out Earned VEHDE Score</button>
+                    </div>
                 </>
             }
         </div>

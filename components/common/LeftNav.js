@@ -89,30 +89,30 @@ const LeftNav = ({ mobileMenu }) => {
                     <Image src={MyHost} />
                     <span>My Host</span>
                 </Link>
-                <Link href="/dashboard/Messages" className={`${page === "Messages" && styles.menuItemActive}`}>
+                <Link href="/dashboard/Messages/Inbox" className={`${page === "Messages" && styles.menuItemActive}`}>
                     <Image src={Messages} />
                     <span>Messages</span>
                     {showMessageSubMenu ? <i className='fa fa-chevron-down' style={{ fontSize: "12px", color: "#DE4F4D" }}></i> : <i className='fa fa-chevron-right' style={{ fontSize: "12px" }}></i>}
                 </Link>
                 {
                     showMessageSubMenu && <div className={styles.subMenu}>
-                        <Link href="/dashboard/Message/Inbox" className={`${subMenu === "Inbox" && styles.activeSubMenu}`}>
+                        <Link href="/dashboard/Messages/Inbox" className={`${subMenu === "Inbox" && styles.activeSubMenu}`}>
                             <Image src={Inbox} />
                             <span>Inbox</span>
                         </Link>
-                        <Link href="/dashboard/Message/Draft" className={`${subMenu === "Draft" && styles.activeSubMenu}`}>
+                        <Link href="/dashboard/Messages/Draft" className={`${subMenu === "Draft" && styles.activeSubMenu}`}>
                             <Image src={Draft} />
                             <span>Draft</span>
                         </Link>
-                        <Link href="/dashboard/Message/Sent" className={`${subMenu === "Sent" && styles.activeSubMenu}`}>
+                        <Link href="/dashboard/Messages/Sent" className={`${subMenu === "Sent" && styles.activeSubMenu}`}>
                             <Image src={Sent} />
                             <span>Sent</span>
                         </Link>
-                        <Link href="/dashboard/Message/Archive" className={`${subMenu === "Archive" && styles.activeSubMenu}`}>
+                        <Link href="/dashboard/Messages/Archive" className={`${subMenu === "Archive" && styles.activeSubMenu}`}>
                             <Image src={Archive} />
                             <span>Archive</span>
                         </Link>
-                        <Link href="/dashboard/Message/Trash" className={`${subMenu === "Trash" && styles.activeSubMenu}`}>
+                        <Link href="/dashboard/Messages/Trash" className={`${subMenu === "Trash" && styles.activeSubMenu}`}>
                             <Image src={Trash} />
                             <span>Trash</span>
                         </Link>

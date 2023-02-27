@@ -1,22 +1,27 @@
 .container {
     background: #F8F8F8;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     padding: 12px 20px;
     border-radius: 12px;
     width: 100%;
+    overflow-x: scroll;
 }
 
-.container>h2 {
+.container>div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.container>div>h2 {
     text-align: center;
     color: #030719;
     font-weight: 500;
     font-size: 28px;
 }
 
-.container>div {
+.container>div>div {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background: #F8F8F8;
@@ -26,37 +31,37 @@
     cursor: pointer;
 }
 
-.container>div:hover {
+.container>div>div:hover {
     background: #FFFFFF;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
     border: 1px solid transparent;
 }
 
-.container>div:nth-child(2) {
+.container>div>div:nth-child(2) {
     background: #FFFFFF;
     box-shadow: 0px 2px 5px transparent;
 }
 
-.container>div:nth-child(2) {
+.container>div>div:nth-child(2) {
     background: #FFFFFF;
     border: 1px solid transparent;
     cursor: auto;
 }
 
-.container>div:nth-child(2)>span,
-.container>div:nth-child(2)>span {
+.container>div>div:nth-child(2)>span,
+.container>div>div:nth-child(2)>span {
     color: #000000 !important;
     font-weight: 500 !important;
     font-size: 16px !important;
 }
 
-.container>div>span {
+.container>div>div>span {
     color: #000000;
     font-weight: 400;
     font-size: 15px;
 }
 
-.container>div>span:last-child {
+.container>div>div>span:last-child {
     color: #000000;
     font-weight: 500;
     font-size: 15px;
@@ -64,4 +69,12 @@
 
 .totalPrice>span:first-child {
     grid-column: span 4/5;
+}
+
+
+@media only screen and (max-width:991px) {
+    .container>div {
+        min-width: 850px;
+        width: 100%;
+    }
 }
