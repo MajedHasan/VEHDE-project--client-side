@@ -69,10 +69,12 @@ const UploadCarPictures = ({ setUploadCarPictures, setModalLg }) => {
     return (
         <>
             <div className={styles.modalContainer}>
-                <div className={styles.modalBoxWrapper}>
+                <div style={{ position: "relative", maxWidth: "1024px", width: "100%" }}>
                     <button className={styles.modalCloseBtn} onClick={() => setUploadCarPictures(null)}>
                         <i className="fa fa-times" style={{ fontSize: "25px" }}></i>
                     </button>
+                </div>
+                <div className={styles.modalBoxWrapper}>
                     <div >
                         <h2 className={styles.heading}>Host | Car pictures & specifications</h2>
                         <p className={styles.subHeading}>Please upload your car’s pictures below</p>

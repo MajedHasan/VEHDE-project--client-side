@@ -16,7 +16,7 @@ const Availability = () => {
         <>
             <DashboardLayout>
                 <div className={styles.container}>
-                    <DashboardBanner leftContent={<DashboardBannerLeftContent page="availability" />} rightContent={<DashboardBannerRightContent page="VEHDEPass" />} />
+                    <DashboardBanner leftContent={<DashboardBannerLeftContent page="availability" />} rightContent={<DashboardBannerRightContent page="availability" />} />
                     <div className={styles.tableContainer}>
                         <table>
                             <thead>

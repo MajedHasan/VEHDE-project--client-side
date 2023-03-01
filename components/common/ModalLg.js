@@ -5,10 +5,12 @@ import styles from "../../styles/dashboard/ModalLg.module.css"
 const ModalLg = ({ children, setModal, title, subtitle }) => {
     return (
         <div className={styles.modalContainer}>
-            <div className={styles.modalBoxWrapper}>
+            <div style={{ position: "relative", maxWidth: "1024px", width: "100%" }}>
                 <button className={styles.modalCloseBtn} onClick={() => setModal(null)}>
                     <i className="fa fa-times" style={{ fontSize: "25px" }}></i>
                 </button>
+            </div>
+            <div className={styles.modalBoxWrapper}>
                 <div >
                     {title && <h2 className={styles.heading}>{title}</h2>}
                     {subtitle && <p className={styles.subHeading}>{subtitle}</p>}

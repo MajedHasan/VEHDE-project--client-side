@@ -11,6 +11,8 @@
     justify-content: center;
     align-items: center;
     overflow: scroll;
+    flex-direction: column;
+    padding: 8px;
 }
 
 .modalBoxWrapper {
@@ -27,6 +29,10 @@
 }
 
 .modalCloseBtn {
+    box-sizing: "border-box";
+    top: 15px;
+    right: -8px;
+    z-index: 9999;
     background: #DE4F4D;
     width: 40px;
     height: 40px;
@@ -37,8 +43,6 @@
     border: none;
     color: white;
     position: absolute;
-    top: 0px;
-    right: 0px;
     border: 5px solid rgba(0, 0, 0, 0.8);
 }
 

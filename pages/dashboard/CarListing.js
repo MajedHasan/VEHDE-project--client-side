@@ -35,7 +35,7 @@ const CarListing = () => {
         <>
             <DashboardLayout>
                 <div className={styles.wrapper}>
-                    <h2>Please complete the information below for listing your car to host with VEHDE.</h2>
+                    <h2>Please complete the information below for listing your car to hosting with VEHDE.</h2>
                     <div className={styles.formWrapper}>
                         <div className="mb-3">
                             <div className={styles.inputBox}>
@@ -134,11 +134,13 @@ const CarListing = () => {
                 </div>
             </DashboardLayout>
             {modal &&
-                <div style={{ position: "fixed", top: "0px", left: "0px", width: "100%", minHeight: "100vh", height: "fit-content", background: "rgba(0, 0, 0, 0.5)", zIndex: "999999", display: "flex", justifyContent: "center", alignItems: "center", overflow: "scroll" }}>
-                    <div style={{ padding: "25px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "750px", width: "100%", margin: "10px", marginTop: "30px", maxHeight: "85vh", overflow: "scroll", position: "relative" }}>
-                        <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "5px solid rgba(0, 0, 0, 0.8)", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
+                <div style={{ position: "fixed", top: "0px", left: "0px", width: "100%", minHeight: "100vh", height: "fit-content", background: "rgba(0, 0, 0, 0.5)", zIndex: "999999", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", overflow: "scroll", padding: "8px" }}>
+                    <div style={{ position: "relative", maxWidth: "750px", width: "100%" }}>
+                        <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "5px solid rgba(0, 0, 0, 0.8)", boxSizing: "border-box", color: "white", position: "absolute", top: "15px", right: "-8px", zIndex: "9999" }} onClick={() => setModal(null)}>
                             <i className="fa fa-times" style={{ fontSize: "25px" }}></i>
                         </button>
+                    </div>
+                    <div style={{ padding: "25px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "750px", width: "100%", margin: "10px", marginTop: "30px", maxHeight: "85vh", overflow: "scroll", position: "relative" }}>
                         {
                             modal !== null && <div className={styles.availabilityModal}>
                                 <h2>
