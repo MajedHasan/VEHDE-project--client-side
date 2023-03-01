@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import styles from "../../styles/dashboard/LeftNav.module.css"
 
 import CarListing from "../../assets/img/dashboard/carListing.svg"
+import CarListing2 from "../../assets/img/dashboard/carListing2.svg"
 import MyHost from "../../assets/img/dashboard/myHost.svg"
 import Messages from "../../assets/img/dashboard/messages.svg"
 import Availability from "../../assets/img/dashboard/availability.svg"
@@ -82,7 +83,7 @@ const LeftNav = ({ mobileMenu }) => {
             </div>
             <div className={`${styles.menuItems}`}>
                 <Link href="/dashboard/CarListing" className={`${page === "Car Listing" && styles.menuItemActive}`}>
-                    <Image src={CarListing} />
+                    <Image src={CarListing2} />
                     <span>Car Listing</span>
                 </Link>
                 <Link href="/dashboard/MyHost" className={`${page === "My Host" && styles.menuItemActive}`}>

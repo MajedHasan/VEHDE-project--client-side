@@ -24,23 +24,32 @@ const SnowTicket = () => {
                         <div>
                             <div>
                                 <h2>Overview</h2>
-                                <div>
+                                <div className={styles.circleBox}>
                                     <p>10/10</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+                                        <circle cx="75" cy="75" r="68" stroke-linecap="round" />
+                                    </svg>
                                 </div>
                                 <h3>Snow Tickets</h3>
                             </div>
                             <div >
                                 <h2>Pending</h2>
-                                <div onClick={() => setModalScreen("pending")}>
+                                <div className={`${styles.circleBox} ${styles.circleBox2}`} onClick={() => setModalScreen("pending")}>
                                     <p>2/10</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+                                        <circle cx="75" cy="75" r="68" stroke-linecap="round" />
+                                    </svg>
                                 </div>
                                 <h3>Snow Tickets</h3>
                             </div>
                             <div >
                                 <h2>Resolved</h2>
-                                <div onClick={() => setModalScreen("resolved")}>
+                                <div className={`${styles.circleBox} ${styles.circleBox8}`} onClick={() => setModalScreen("resolved")}>
                                     <i class="fa-solid fa-check"></i>
                                     <p>8/10</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+                                        <circle cx="75" cy="75" r="68" stroke-linecap="round" />
+                                    </svg>
                                 </div>
                                 <h3>Snow Tickets</h3>
                             </div>

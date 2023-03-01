@@ -4,13 +4,13 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 .infoContainer>div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     gap: 15px;
 }
@@ -30,9 +30,10 @@
     margin-top: 10px;
 }
 
-.infoContainer>div>div>div {
-    max-width: 125px;
-    max-height: 125px;
+/* .infoContainer>div>div>div, */
+.circleBox {
+    max-width: 140px;
+    max-height: 140px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -42,10 +43,66 @@
     color: #DE4F4D;
     font-weight: 700;
     font-size: 32px;
-    border: 10px solid #DE4F4D;
+    border: 3px solid #000000;
     border-radius: 9999px;
     margin: auto;
     cursor: pointer;
+    position: relative;
+}
+
+.circleBox>svg {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.circleBox>svg>circle {
+    fill: none;
+    stroke: #DE4F4D;
+    stroke-width: 10px;
+    stroke-dasharray: 425;
+}
+
+.circleBox1>svg>circle {
+    stroke-dashoffset: calc(425 - 42.5);
+}
+
+.circleBox2>svg>circle {
+    stroke-dashoffset: calc(425 - 85);
+}
+
+.circleBox3>svg>circle {
+    stroke-dashoffset: calc(425 - 127.5);
+}
+
+.circleBox4>svg>circle {
+    stroke-dashoffset: calc(425 - 170);
+}
+
+.circleBox5>svg>circle {
+    stroke-dashoffset: calc(425 - 212.5);
+}
+
+.circleBox6>svg>circle {
+    stroke-dashoffset: calc(425 - 255);
+}
+
+.circleBox7>svg>circle {
+    stroke-dashoffset: calc(425 - 297.5);
+}
+
+.circleBox8>svg>circle {
+    stroke-dashoffset: calc(425 - 340);
+}
+
+.circleBox9>svg>circle {
+    stroke-dashoffset: calc(425 - 382.5);
+}
+
+.circleBox10>svg>circle {
+    stroke-dashoffset: calc(425 - 425);
 }
 
 .infoContainer>div>div>div>p {
@@ -58,7 +115,12 @@
 @media only screen and (max-width:768px) {
     .infoContainer>div {
         grid-template-columns: repeat(1, 1fr);
-        gap: 80px;
+        gap: 50px;
+    }
+
+    .circleBox {
+        min-width: 140px;
+        min-height: 140px;
     }
 }
 
