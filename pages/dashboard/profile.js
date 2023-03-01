@@ -9,13 +9,26 @@ import Password from "../../assets/img/dashboard/Profile/Password.png"
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 const profile = () => {
+
+    const router = useRouter()
+    const handleGoBack = () => {
+        router.back()
+    }
+
     return (
         <DashboardLayout>
             <div className={styles.container}>
                 <div className={styles.wrapper}>
                     <div>
+                        <h5 style={{ fontSize: "12px", cursor: "pointer", display: "flex", alignItems: "center", gap: "5px" }}
+                            onClick={handleGoBack}
+                        >
+                            <i className='fa fa-arrow-left'></i>
+                            <span>Back</span>
+                        </h5>
                         <h2>My profile</h2>
                         <p>Please review and update your profile information where applicable.</p>
                     </div>

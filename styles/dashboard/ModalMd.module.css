@@ -16,7 +16,7 @@
 .modalBoxWrapper {
     padding: 25px;
     background: #FFFFFF;
-    border-radius: 15px;
+    border-radius: 20px;
     max-width: 549px;
     width: 100%;
     margin: 10px;
@@ -39,6 +39,7 @@
     position: absolute;
     top: 0px;
     right: 0px;
+    border: 5px solid rgba(0, 0, 0, 0.8);
 }
 
 .heading {

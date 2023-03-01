@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import DashboardBanner from '../../../components/common/DashboardBanner'
 import DashboardBannerLeftContent from '../../../components/common/DashboardBannerLeftContent'
 import DashboardBannerRightContent from '../../../components/common/DashboardBannerRightContent'
@@ -7,10 +8,18 @@ import styles from "../../../styles/dashboard/payment/PaymentMethod.module.css"
 
 
 const PaymentMethod = () => {
+
+    const router = useRouter()
+
+    const handleGoBack = () => {
+        router.back()
+    }
+
     return (
         <>
             <DashboardLayout>
                 <div className={`px-3 px-md-4 ${styles.container}`}>
+                    <h2 style={{ fontSize: "15px", cursor: "pointer", display: "flex", alignItems: "center", gap: "5px" }} onClick={handleGoBack}><i className='fa fa-arrow-left'></i> <span style={{ fontSize: "12px" }}>Back</span></h2>
                     <DashboardBanner leftContent={<DashboardBannerLeftContent page="payment" />} rightContent={<DashboardBannerRightContent page="payment" />} />
                     <div className={styles.tableContainer}>
                         <table>

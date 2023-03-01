@@ -4,6 +4,7 @@ import TrashImg from "../../assets/img/dashboard/Messages/trash.png"
 import ReplyImg from "../../assets/img/dashboard/Messages/reply.png"
 import MoreImg from "../../assets/img/dashboard/Messages/more.png"
 import Image from "next/image"
+import Link from "next/link"
 
 const MessagesOpen = () => {
     return (
@@ -30,7 +31,7 @@ const MessagesOpen = () => {
                     <h3>What to do next:</h3>
                     <p>
                         Please make sure you switch on your availability to host so that
-                        renters can reserve your listed car. Please submit <span>Snow Ticket</span> if
+                        renters can reserve your listed car. Please submit <Link href="/dashboard/SnowTicket">Snow Ticket</Link> if
                         you have any questions or concerns.
                     </p>
                 </div>

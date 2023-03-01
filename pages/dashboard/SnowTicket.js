@@ -13,6 +13,7 @@ const SnowTicket = () => {
 
     const [submitNewTicket, setSubmitNewTicket] = useState(null)
     const [modalScreen, setModalScreen] = useState(null)
+    const [isViewOnly, setIsViewOnly] = useState(false)
 
     return (
         <>
@@ -68,7 +69,7 @@ const SnowTicket = () => {
                                         <p>CA769245</p>
                                         <div>
                                             <p>I need access to my VEHDE account</p>
-                                            <span onClick={() => setModalScreen("detail")}>Details here</span>
+                                            <span onClick={() => { setModalScreen("detail"); setIsViewOnly(false) }}>Details here</span>
                                         </div>
                                         <p>1/14/22</p>
                                         <p>Assigned to Tier 1.1</p>
@@ -82,7 +83,7 @@ const SnowTicket = () => {
                                         <p>CA769245</p>
                                         <div>
                                             <p>I need access to my VEHDE account</p>
-                                            <span onClick={() => setModalScreen("detail")}>Details here</span>
+                                            <span onClick={() => { setModalScreen("detail"); setIsViewOnly(false) }}>Details here</span>
                                         </div>
                                         <p>1/14/22</p>
                                         <p>Assigned to Tier 1.1</p>
@@ -113,7 +114,7 @@ const SnowTicket = () => {
                                         <p>CA769245</p>
                                         <div>
                                             <p>I need access to my VEHDE account</p>
-                                            <span>Details here</span>
+                                            <span onClick={() => { setModalScreen("detail"); setIsViewOnly(true) }}>Details here</span>
                                         </div>
                                         <p>1/14/22</p>
                                         <p>Assigned to Tier 1.1</p>
@@ -125,7 +126,7 @@ const SnowTicket = () => {
                                         <p>CA769245</p>
                                         <div>
                                             <p>I need access to my VEHDE account</p>
-                                            <span>Details here</span>
+                                            <span onClick={() => { setModalScreen("detail"); setIsViewOnly(true) }}>Details here</span>
                                         </div>
                                         <p>1/14/22</p>
                                         <p>Assigned to Tier 1.1</p>
@@ -180,13 +181,15 @@ const SnowTicket = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <textarea name="" placeholder='Type reply here'></textarea>
-                                <div>
-                                    <button className="my-btn">Reply</button>
-                                    <button>Thank you! Ticket resolved</button>
+                            {
+                                isViewOnly !== true && <div>
+                                    <textarea name="" placeholder='Type reply here'></textarea>
+                                    <div>
+                                        <button className="my-btn">Reply</button>
+                                        <button>Thank you! Ticket resolved</button>
+                                    </div>
                                 </div>
-                            </div>
+                            }
                         </div>
                     }
                 </ModalMd>

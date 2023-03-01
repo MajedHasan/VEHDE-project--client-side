@@ -1,3 +1,4 @@
+import Link from "next/link"
 import styles from "../../styles/dashboard/DashboardBannerLeftContent.module.css"
 
 const DashboardBannerLeftContent = ({ page, setViewScore, setCashOut, setSubmitNewTicket }) => {
@@ -8,7 +9,7 @@ const DashboardBannerLeftContent = ({ page, setViewScore, setCashOut, setSubmitN
                     <h2>VEHDEPass</h2>
                     <p>VEHDEPass reduces rental’s costs by <span>4.65%</span> for any car listed by hosts participating in VEHDEPass advantage. Thus, VEHDEPass creates additional incentive for renters to reserve your listed car. Renters must also be a VEHDEPass member to be eligible for the <span>4.65%</span> rental discount.</p>
                     <p>VEHDEPass subscription is free for host and can be cancelled any time. </p>
-                    <p>Please check <span>VEHDEPass</span> for more information.</p>
+                    <p>Please check <Link href="">VEHDEPass</Link> for more information.</p>
                 </>
             }
             {

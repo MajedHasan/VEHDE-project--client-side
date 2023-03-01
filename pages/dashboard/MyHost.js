@@ -45,21 +45,21 @@ const MyHost = () => {
                         </div>
                         <div className={styles.paymentGetway}>
                             <div>
-                                <input type="checkbox" id='bank' hidden />
+                                <input type="radio" name='paymentMethod' id='bank' hidden />
                                 <label htmlFor="bank">
                                     <Image src={BankIcon} alt="" />
                                     <span>Bank account</span>
                                 </label>
                             </div>
                             <div>
-                                <input type="checkbox" id='creditCard' hidden />
+                                <input type="radio" name='paymentMethod' id='creditCard' hidden />
                                 <label htmlFor="creditCard">
                                     <Image src={CreditCardIcon} alt="" />
                                     <span>Credit and debit cards</span>
                                 </label>
                             </div>
                             <div>
-                                <input type="checkbox" id='paypal' hidden />
+                                <input type="radio" name='paymentMethod' id='paypal' hidden />
                                 <label htmlFor="paypal">
                                     <Image src={PaypalIcon} alt="" />
                                     <span>PayPal</span>

@@ -50,7 +50,7 @@ const index = () => {
                                     <p>you can list your car for rent with VEHDE, gaining access to our rapidly growing range of customers across the United States.</p>
                                     <h4>Stay ahead!</h4>
                                     <h4>List your car today, as a host.</h4>
-                                    <Link href={`Host#signup`} className='my-btn' style={{ width: "fit-content" }}>Apply to host</Link>
+                                    <Link href={`/Host#signup`} className='my-btn' id="signup" style={{ width: "fit-content" }}>Apply to host</Link>
                                 </div>
                                 <div></div>
                             </div>
@@ -58,7 +58,7 @@ const index = () => {
                     </div>
                 </section>
                 <section id={styles.section02}>
-                    <div className="container" id="signup">
+                    <div className="container">
                         <div>
                             <h2 className="text-center">Signing up to host</h2>
                             <h3 className="text-center">Let’s get started</h3>
@@ -243,14 +243,17 @@ const index = () => {
                 </section>
                 {modal &&
                     <div style={{ position: "fixed", top: "0px", left: "0px", width: "100%", minHeight: "100vh", height: "fit-content", background: "rgba(0, 0, 0, 0.5)", zIndex: "999999", display: "flex", justifyContent: "center", alignItems: "center", overflow: "scroll" }}>
-                        <div style={{ padding: "28px", background: "#FFFFFF", borderRadius: "15px", maxWidth: "750px", width: "100%", margin: "10px", maxHeight: "87vh", overflow: "scroll", position: "relative" }}>
-                            <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "none", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
+                        <div style={{ padding: "28px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "750px", width: "100%", margin: "10px", maxHeight: "87vh", overflow: "scroll", position: "relative" }}>
+                            <button style={{ background: "#DE4F4D", width: "40px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", border: "5px solid rgba(0, 0, 0, 0.8)", color: "white", position: "absolute", top: "0px", right: "0px" }} onClick={() => setModal(null)}>
                                 <i className="fa fa-times" style={{ fontSize: "25px" }}></i>
                             </button>
                             {
                                 modal === "Driver's license" &&
                                 <div>
-                                    <h2 className="text-center">Driver’s license: <a href="" style={{ color: "#DE4F4D", textDecoration: "underline" }}>upload DL</a> <br /> or enter info manually</h2>
+                                    <h2 className="text-center" style={{ fontWeight: "600" }}>Driver’s license:
+                                        <label htmlFor="" style={{ color: "#DE4F4D", textDecoration: "underline", cursor: "pointer", fontWeight: "700" }}>upload DL</label>
+                                        <br /> or enter info manually
+                                    </h2>
                                     <p style={{ fontSize: "14px", textAlign: "center", color: "#717171", maxWidth: "450px", margin: "auto" }}>Renter sees your first name ONLY after the renter’s reservation for your car is confirmed; the rest remains private.</p>
                                     <div className="row row-cols-1 row-cols-md-2 p-2 mt-4">
                                         <div className="pe-md-2 mb-3 mb-md-0">
@@ -270,7 +273,7 @@ const index = () => {
                                         <div className="pe-md-2 mb-3 mb-md-0">
                                             <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
                                                 <label htmlFor="">Country</label>
-                                                <input type="text" placeholder="United States of America" className="" />
+                                                <input type="text" placeholder="United States of America &#128274;" className="" />
                                             </div>
                                         </div>
                                         <div className="pe-md-2">
@@ -285,8 +288,8 @@ const index = () => {
                                     <div className="row row-cols-1 p-2 mt-1">
                                         <div className="mb-3 mb-md-0">
                                             <div className={`d-flex flex-column ${styles.inputGroup}`} style={{ background: "#EFEFEF" }}>
-                                                <label htmlFor="">First name</label>
-                                                <input type="text" placeholder="Enter your first name" className="" />
+                                                <label htmlFor="">License number</label>
+                                                <input type="text" placeholder="Enter your license number" className="" />
                                             </div>
                                         </div>
                                     </div>

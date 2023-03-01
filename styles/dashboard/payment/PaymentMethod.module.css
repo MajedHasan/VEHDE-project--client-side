@@ -71,6 +71,7 @@
 .blackIcon {
     color: #030719;
     font-size: 20px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:991px) {

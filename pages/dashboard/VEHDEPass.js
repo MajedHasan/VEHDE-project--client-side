@@ -54,7 +54,7 @@ const VEHDEPass = () => {
                                     <h1>My host with VEHDE</h1>
                                     <p>Your VEHDEPass membership is currently inactive.
                                         Please activate your VEHDEPass by switching the toggle below.</p>
-                                    <h4>I am currently NOT a VEHDEPass member</h4>
+                                    <h4>I am currently {membershipActive === false && "NOT"} a VEHDEPass member</h4>
                                     <input type="checkbox" id="membership" hidden checked={membershipActive} onChange={(e) => setMembershipActive(!membershipActive)} />
                                     <label htmlFor="membership">
                                         <span>On</span>

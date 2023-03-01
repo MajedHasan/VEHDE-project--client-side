@@ -91,6 +91,7 @@ const VEHDEScore = () => {
                             {
                                 cashOut !== "success" && <div className={styles.modalMd}>
                                     <h5>VEHDE Score Balance</h5>
+                                    <h4 className={styles.amountCircle}>100</h4>
                                     <Image src={CashOutImg} alt="" />
                                     <div>
                                         <h2>VEHDE Score | History</h2>

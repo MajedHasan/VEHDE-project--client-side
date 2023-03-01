@@ -194,6 +194,20 @@
     min-width: 350px;
 }
 
+.amountCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DE4F4D;
+    color: #FFFFFF;
+    margin: 5px auto;
+    font-weight: 500;
+    font-size: 15px;
+}
+
 @media only screen and (max-width:991px) {
     .infoWrapper>div>div>h2 {
         font-size: 16px;
