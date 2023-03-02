@@ -35,7 +35,7 @@ const CarListing = () => {
         <>
             <DashboardLayout>
                 <div className={styles.wrapper}>
-                    <h2>Please complete the information below for listing your car to hosting with VEHDE.</h2>
+                    <h2>Please complete the information below for listing your car to host with VEHDE.</h2>
                     <div className={styles.formWrapper}>
                         <div className="mb-3">
                             <div className={styles.inputBox}>
