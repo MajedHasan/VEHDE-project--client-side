@@ -29,6 +29,7 @@
     padding: 8px 30px;
     border-radius: 12px;
     cursor: pointer;
+    gap: 8px;
 }
 
 .container>div>div:hover {
