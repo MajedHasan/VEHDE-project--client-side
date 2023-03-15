@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from "../../styles/common/LocationPickupDropOffBox.module.css"
+import styles from "../../styles/common/LocationPickupDropOffbox.module.css"
 
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
