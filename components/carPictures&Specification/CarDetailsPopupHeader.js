@@ -3,16 +3,18 @@ import styles from "../../styles/dashboard/carPictures&Specification/CarDetailsP
 import CarPictureDetailsHeader from "../../assets/img/dashboard/carPicturesDetails/carPicturesDetailsHeader.png"
 import Image from "next/image"
 
-const CarDetailsPopupHeader = () => {
+const CarDetailsPopupHeader = ({ hideButton }) => {
     return (
         <div className={styles.container}>
             <div>
                 <h1 className={styles.heading}>TOYOTA VENZA LE 2022</h1>
-                <div className={styles.metaInfo}>
-                    <span>All-Wheel Drive</span>
-                    <span>Automatic w/OD</span>
-                    <span>Automatic w/OD</span>
-                </div>
+                {
+                    !hideButton && <div className={styles.metaInfo}>
+                        <span>All-Wheel Drive</span>
+                        <span>Automatic w/OD</span>
+                        <span>Automatic w/OD</span>
+                    </div>
+                }
                 <h1 className={styles.price}>$105 <span className={styles.priceType}>/PER DAY</span></h1>
                 <div className={styles.info}>
                     <h2>HYBRID</h2>
