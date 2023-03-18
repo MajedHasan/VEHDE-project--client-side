@@ -12,7 +12,7 @@ import LocationPickupDropOffBox from "../common/LocationPickupDropOffBox"
 import { useRouter } from "next/router"
 
 
-const AboutHostPopup = () => {
+const AboutHostPopup = ({ payNowUrl }) => {
 
     const router = useRouter()
 
@@ -80,7 +80,7 @@ const AboutHostPopup = () => {
                 </div>
                 <LocationPickupDropOffBox showSm={true}></LocationPickupDropOffBox>
                 <div>
-                    <button onClick={() => router.push(`./123456/review`)}>
+                    <button onClick={() => router.push(payNowUrl ? payNowUrl : `./123456/review`)}>
                         $360
                         <span>Pay Now</span>
                     </button>

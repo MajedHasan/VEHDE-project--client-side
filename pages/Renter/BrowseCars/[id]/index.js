@@ -10,14 +10,21 @@ import CarDetailsOverviewPopup from "../../../../components/carPictures&Specific
 
 import LpgCarImg from "../../../../assets/img/Renter/LpgCarImg.png"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ModalMd from "../../../../components/common/ModalMd"
 import AboutHostPopup from "../../../../components/Rental/AboutHostPopup"
+import { useRouter } from "next/router"
 
 
 const BrowseCars = () => {
 
     const [overview, setOverview] = useState(null)
+    const router = useRouter()
+    const [payType, setPayType] = useState(null)
+
+    useEffect(() => {
+        setPayType(router.query.pay)
+    }, [])
 
 
     return (
@@ -25,6 +32,9 @@ const BrowseCars = () => {
             <MainLayout>
                 <main className={styles.main}>
                     <div className="container">
+                        <div>
+                            <i className="fa fa-chevron-left" style={{ cursor: "pointer" }} onClick={() => router.back()}></i>
+                        </div>
                         <div className={styles.searchFilterBox}>
                             <LocationPickupDropOffBox />
                         </div>
@@ -57,14 +67,26 @@ const BrowseCars = () => {
                             </div>
                         </div>
                         <div className={styles.buttonBox}>
-                            <button className={styles.blackBtn}>
-                                $302
-                                <span>Pay Now</span>
-                            </button>
-                            <button className={styles.primaryBtn}>
-                                $315
-                                <span>Pay Later</span>
-                            </button>
+                            {
+                                payType !== "now" && <>
+                                    <button className={styles.blackBtn} onClick={() => router.push(`./123456/review`)}>
+                                        $302
+                                        <span>Pay Now</span>
+                                    </button>
+                                    <button className={styles.primaryBtn} onClick={() => router.push(`./123456/review`)}>
+                                        $315
+                                        <span>Pay Later</span>
+                                    </button>
+                                </>
+                            }
+                            {
+                                payType === "now" && <>
+                                    <button className={styles.primaryBtn} onClick={() => router.push(`./123456/review`)}>
+                                        $315
+                                        <span>Pay Now</span>
+                                    </button>
+                                </>
+                            }
                         </div>
                     </div>
                 </main>

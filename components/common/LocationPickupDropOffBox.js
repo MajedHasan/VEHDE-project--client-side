@@ -26,7 +26,7 @@ const LocationPickupDropOffBox = ({ showSm }) => {
                         <div>
                             <label htmlFor="">Location</label>
                         </div>
-                        <div className="d-flex gap-2 align-items-center">
+                        <div className="d-flex gap-1 align-items-center">
                             <Image src={MapIcon} alt="Map Icon" />
                             <input type="text" placeholder='Address' />
                         </div>
@@ -49,7 +49,7 @@ const LocationPickupDropOffBox = ({ showSm }) => {
                                     />
                                     <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
                                 </div>
-                                <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "13px", fontWeight: 500, marginLeft: "15px", maxHeight: "200px", color: "#000000" }}>
+                                <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", maxHeight: "200px", color: "#000000" }}>
                                     <option value="12:00 PM">12:00 PM</option>
                                     <option value="12:00 PM">12:30 PM</option>
                                     <option value="12:00 PM">01:00 PM</option>
@@ -125,7 +125,7 @@ const LocationPickupDropOffBox = ({ showSm }) => {
                                 />
                                 <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
                             </div>
-                            <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "13px", fontWeight: 500, marginLeft: "15px", color: "#000000" }}>
+                            <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", color: "#000000" }}>
                                 <option value="12:00 PM">12:00 PM</option>
                                 <option value="12:00 PM">12:30 PM</option>
                                 <option value="12:00 PM">01:00 PM</option>

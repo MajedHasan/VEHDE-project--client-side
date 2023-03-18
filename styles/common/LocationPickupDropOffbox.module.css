@@ -10,15 +10,20 @@
 
 .container>div>div label {
     font-weight: 500;
-    font-size: 12px;
-    line-height: 11px;
+    font-size: 11px;
+    line-height: 5px;
     color: #898989;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.container>div>div input {
+.container>div>div>img {
+    width: 5px;
+}
+
+.container>div>div input,
+.container>div>div select {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 11px;
     background: transparent;
     outline: none;
     border: none;

@@ -2,6 +2,7 @@ import MainLayout from "../../../components/layout/MainLayout"
 import MaskAndSafetySection from "../../../components/common/MaskAndSafetySection"
 
 import styles from "../../../styles/renter/BrowseCars.module.css"
+import SingleBrowseCarStyles from "../../../styles/renter/SingleCarDetails.module.css"
 import LocationPickupDropOffBox from "../../../components/common/LocationPickupDropOffBox"
 import { useEffect, useState } from "react"
 
@@ -26,6 +27,9 @@ import Image from "next/image"
 import CarDetailsPopupPictures from "../../../components/carPictures&Specification/CarDetailsPopupPictures"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import ModalMd from "../../../components/common/ModalMd"
+import CarDetailsOverviewPopup from "../../../components/carPictures&Specification/CarDetailsOverviewPopup"
+import AboutHostPopup from "../../../components/Rental/AboutHostPopup"
 
 
 const BrowseCars = () => {
@@ -45,6 +49,9 @@ const BrowseCars = () => {
 
     const [showMakeOption, setShowMakeOption] = useState(false)
 
+    const [overview, setOverview] = useState(null)
+    const [detail, setDetail] = useState(null)
+
 
     const handleChangeOptimizer = () => {
         setIsOptimizerOn(!isOptimizerOn)
@@ -54,9 +61,9 @@ const BrowseCars = () => {
 
     return (
         <>
-            <MainLayout>
+            <MainLayout stopHeaderSticky={true}>
                 <main className={styles.main}>
-                    <div className="container">
+                    <div className="container pb-5 mb-5">
                         <div>
                             <div className={styles.searchFilterBox}>
                                 <LocationPickupDropOffBox />
@@ -407,133 +414,10 @@ const BrowseCars = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <button>$2,219 Pay Now</button>
-                                            <button>$2,316 Pay Later</button>
-                                            <button>Overview</button>
-                                            <button onClick={() => router.push(`./BrowseCars/123456`)}>Detail</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <div>
-                                                    <Image src={ChevroletLogo} alt="" />
-                                                </div>
-                                                <div>
-                                                    <h4>Chevrolet</h4>
-                                                    <h4>Equinox 2021</h4>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h2>$106</h2>
-                                                <p><span>PER</span> <span>DAY</span></p>
-                                            </div>
-                                        </div>
-                                        <CarDetailsPopupPictures></CarDetailsPopupPictures>
-                                        <div>
-                                            <div>
-                                                <span>
-                                                    Discount <Image src={DiscountImg} alt="" />
-                                                </span>
-                                                <span><span>5%</span> 1-week</span>
-                                            </div>
-                                            <Image src={LpgCarImg} alt="" />
-                                            <div>
-                                                <h3>21/23</h3>
-                                                <p>Est. MPG</p>
-                                            </div>
-                                            <div>
-                                                <h3>5</h3>
-                                                <p>Seats</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>$2,219 Pay Now</button>
-                                            <button>$2,316 Pay Later</button>
-                                            <button>Overview</button>
-                                            <button>Detail</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <div>
-                                                    <Image src={ChevroletLogo} alt="" />
-                                                </div>
-                                                <div>
-                                                    <h4>Chevrolet</h4>
-                                                    <h4>Equinox 2021</h4>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h2>$106</h2>
-                                                <p><span>PER</span> <span>DAY</span></p>
-                                            </div>
-                                        </div>
-                                        <CarDetailsPopupPictures></CarDetailsPopupPictures>
-                                        <div>
-                                            <div>
-                                                <span>
-                                                    Discount <Image src={DiscountImg} alt="" />
-                                                </span>
-                                                <span><span>5%</span> 1-week</span>
-                                            </div>
-                                            <Image src={LpgCarImg} alt="" />
-                                            <div>
-                                                <h3>21/23</h3>
-                                                <p>Est. MPG</p>
-                                            </div>
-                                            <div>
-                                                <h3>5</h3>
-                                                <p>Seats</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>$2,219 Pay Now</button>
-                                            <button>$2,316 Pay Later</button>
-                                            <button>Overview</button>
-                                            <button>Detail</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <div>
-                                                    <Image src={ChevroletLogo} alt="" />
-                                                </div>
-                                                <div>
-                                                    <h4>Chevrolet</h4>
-                                                    <h4>Equinox 2021</h4>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h2>$106</h2>
-                                                <p><span>PER</span> <span>DAY</span></p>
-                                            </div>
-                                        </div>
-                                        <CarDetailsPopupPictures></CarDetailsPopupPictures>
-                                        <div>
-                                            <div>
-                                                <span>
-                                                    Discount <Image src={DiscountImg} alt="" />
-                                                </span>
-                                                <span><span>5%</span> 1-week</span>
-                                            </div>
-                                            <Image src={LpgCarImg} alt="" />
-                                            <div>
-                                                <h3>21/23</h3>
-                                                <p>Est. MPG</p>
-                                            </div>
-                                            <div>
-                                                <h3>5</h3>
-                                                <p>Seats</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>$2,219 Pay Now</button>
-                                            <button>$2,316 Pay Later</button>
-                                            <button>Overview</button>
-                                            <button>Detail</button>
+                                            <button onClick={() => router.push(`./BrowseCars/123456?pay=now`)}>$2,219 Pay Now</button>
+                                            <button onClick={() => router.push(`./BrowseCars/123456?pay=later`)}>$2,316 Pay Later</button>
+                                            <button onClick={() => setOverview({})}>Overview</button>
+                                            <button onClick={() => setDetail({})}>Detail</button>
                                         </div>
                                     </div>
                                 </div>
@@ -554,6 +438,18 @@ const BrowseCars = () => {
                 </main>
                 <MaskAndSafetySection></MaskAndSafetySection>
             </MainLayout>
+            {
+                overview !== null && <ModalMd setModal={setOverview}>
+                    <h2 className={styles.popupHeader}>Host Category: <span>Individual</span></h2>
+                    <CarDetailsOverviewPopup></CarDetailsOverviewPopup>
+                </ModalMd>
+            }
+            {
+                detail !== null && <ModalMd setModal={setDetail}>
+                    <h2 className={styles.popupHeader}>About Host</h2>
+                    <AboutHostPopup payNowUrl={`./BrowseCars/123456/review`}></AboutHostPopup>
+                </ModalMd>
+            }
         </>
     )
 }

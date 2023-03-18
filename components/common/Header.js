@@ -11,7 +11,7 @@ import HelpIcon from "../../assets/img/help-icon.png"
 import { useRouter } from 'next/router'
 
 
-const Header = () => {
+const Header = ({ stopHeaderSticky }) => {
 
     const [openMenuItem, setOpenMenuItem] = useState(false)
     const [openProfileItem, setOpenProfileItem] = useState(false)
@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <>
-            <header id='header' className='bg-light'>
+            <header id='header' className='bg-light' style={{ position: stopHeaderSticky ? "initial" : "sticky" }}>
                 <div className='container'>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <div className="container-fluid">
