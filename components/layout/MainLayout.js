@@ -2,12 +2,14 @@ import React from 'react'
 import Header from '../common/Header'
 import Footer from '../common/Footer'
 
-const MainLayout = ({ children, stopHeaderSticky }) => {
+const MainLayout = ({ children, stopHeaderSticky, hideFooter, fullWidth }) => {
     return (
         <>
-            <Header stopHeaderSticky={stopHeaderSticky}></Header>
+            <Header stopHeaderSticky={stopHeaderSticky} fullWidth={fullWidth}></Header>
             {children}
-            <Footer></Footer>
+            {
+                !hideFooter && <Footer></Footer>
+            }
         </>
     )
 }

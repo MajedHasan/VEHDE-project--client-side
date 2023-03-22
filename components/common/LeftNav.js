@@ -20,7 +20,7 @@ import Archive from "../../assets/img/dashboard/archive.svg"
 import Trash from "../../assets/img/dashboard/trash.svg"
 
 
-const LeftNav = ({ mobileMenu }) => {
+const LeftNav = ({ mobileMenu, userRole }) => {
 
     const router = useRouter().route
     const pathname = router.toLowerCase()
@@ -34,6 +34,9 @@ const LeftNav = ({ mobileMenu }) => {
         }
         else if (pathname.includes("myhost")) {
             setPage("My Host")
+        }
+        else if (pathname.includes("myrental")) {
+            setPage("My Rental")
         }
         else if (pathname.includes("messages")) {
             setPage("Messages")
@@ -81,65 +84,124 @@ const LeftNav = ({ mobileMenu }) => {
             <div>
                 <Link href="/dashboard/CarListing" className={styles.logo}>VEHDE</Link>
             </div>
-            <div className={`${styles.menuItems}`}>
-                <Link href="/dashboard/CarListing" className={`${page === "Car Listing" && styles.menuItemActive}`}>
-                    <Image src={CarListing2} />
-                    <span>Car Listing</span>
-                </Link>
-                <Link href="/dashboard/MyHost" className={`${page === "My Host" && styles.menuItemActive}`}>
-                    <Image src={MyHost} />
-                    <span>My Host</span>
-                </Link>
-                <Link href="/dashboard/Messages/Inbox" className={`${page === "Messages" && styles.menuItemActive}`}>
-                    <Image src={Messages} />
-                    <span>Messages</span>
-                    {showMessageSubMenu ? <i className='fa fa-chevron-down' style={{ fontSize: "12px", color: "#DE4F4D" }}></i> : <i className='fa fa-chevron-right' style={{ fontSize: "12px" }}></i>}
-                </Link>
-                {
-                    showMessageSubMenu && <div className={styles.subMenu}>
-                        <Link href="/dashboard/Messages/Inbox" className={`${subMenu === "Inbox" && styles.activeSubMenu}`}>
-                            <Image src={Inbox} />
-                            <span>Inbox</span>
+            {
+                userRole === "host" && <>
+                    <div className={`${styles.menuItems}`}>
+                        <Link href="/dashboard/CarListing" className={`${page === "Car Listing" && styles.menuItemActive}`}>
+                            <Image src={CarListing2} />
+                            <span>Car Listing</span>
                         </Link>
-                        <Link href="/dashboard/Messages/Draft" className={`${subMenu === "Draft" && styles.activeSubMenu}`}>
-                            <Image src={Draft} />
-                            <span>Draft</span>
+                        <Link href="/dashboard/MyHost" className={`${page === "My Host" && styles.menuItemActive}`}>
+                            <Image src={MyHost} />
+                            <span>My Host</span>
                         </Link>
-                        <Link href="/dashboard/Messages/Sent" className={`${subMenu === "Sent" && styles.activeSubMenu}`}>
-                            <Image src={Sent} />
-                            <span>Sent</span>
+                        <Link href="/dashboard/Messages/Inbox" className={`${page === "Messages" && styles.menuItemActive}`}>
+                            <Image src={Messages} />
+                            <span>Messages</span>
+                            {showMessageSubMenu ? <i className='fa fa-chevron-down' style={{ fontSize: "12px", color: "#DE4F4D" }}></i> : <i className='fa fa-chevron-right' style={{ fontSize: "12px" }}></i>}
                         </Link>
-                        <Link href="/dashboard/Messages/Archive" className={`${subMenu === "Archive" && styles.activeSubMenu}`}>
-                            <Image src={Archive} />
-                            <span>Archive</span>
+                        {
+                            showMessageSubMenu && <div className={styles.subMenu}>
+                                <Link href="/dashboard/Messages/Inbox" className={`${subMenu === "Inbox" && styles.activeSubMenu}`}>
+                                    <Image src={Inbox} />
+                                    <span>Inbox</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Draft" className={`${subMenu === "Draft" && styles.activeSubMenu}`}>
+                                    <Image src={Draft} />
+                                    <span>Draft</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Sent" className={`${subMenu === "Sent" && styles.activeSubMenu}`}>
+                                    <Image src={Sent} />
+                                    <span>Sent</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Archive" className={`${subMenu === "Archive" && styles.activeSubMenu}`}>
+                                    <Image src={Archive} />
+                                    <span>Archive</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Trash" className={`${subMenu === "Trash" && styles.activeSubMenu}`}>
+                                    <Image src={Trash} />
+                                    <span>Trash</span>
+                                </Link>
+                            </div>
+                        }
+                        <Link href="/dashboard/Availability" className={`${page === "Availability" && styles.menuItemActive}`}>
+                            <Image src={Availability} />
+                            <span>Availability</span>
                         </Link>
-                        <Link href="/dashboard/Messages/Trash" className={`${subMenu === "Trash" && styles.activeSubMenu}`}>
-                            <Image src={Trash} />
-                            <span>Trash</span>
+                        <Link href="/dashboard/VEHDEPass" className={`${page === "VEHDEPass" && styles.menuItemActive}`}>
+                            <Image src={VEHDEPass} />
+                            <span>VEHDEPass</span>
+                        </Link>
+                        <Link href="/dashboard/Payment" className={`${page === "Payment" && styles.menuItemActive}`}>
+                            <Image src={Payment} />
+                            <span>Payment</span>
+                        </Link>
+                        <Link href="/dashboard/VEHDEScore" className={`${page === "VEHDE Score" && styles.menuItemActive}`}>
+                            <Image src={VEHDEScore} />
+                            <span>VEHDE Score</span>
+                        </Link>
+                        <Link href="/dashboard/SnowTicket" className={`${page === "Snow Ticket" && styles.menuItemActive}`}>
+                            <Image src={SnowTicket} />
+                            <span>Snow Ticket</span>
                         </Link>
                     </div>
-                }
-                <Link href="/dashboard/Availability" className={`${page === "Availability" && styles.menuItemActive}`}>
-                    <Image src={Availability} />
-                    <span>Availability</span>
-                </Link>
-                <Link href="/dashboard/VEHDEPass" className={`${page === "VEHDEPass" && styles.menuItemActive}`}>
-                    <Image src={VEHDEPass} />
-                    <span>VEHDEPass</span>
-                </Link>
-                <Link href="/dashboard/Payment" className={`${page === "Payment" && styles.menuItemActive}`}>
-                    <Image src={Payment} />
-                    <span>Payment</span>
-                </Link>
-                <Link href="/dashboard/VEHDEScore" className={`${page === "VEHDE Score" && styles.menuItemActive}`}>
-                    <Image src={VEHDEScore} />
-                    <span>VEHDE Score</span>
-                </Link>
-                <Link href="/dashboard/SnowTicket" className={`${page === "Snow Ticket" && styles.menuItemActive}`}>
-                    <Image src={SnowTicket} />
-                    <span>Snow Ticket</span>
-                </Link>
-            </div>
+                </>
+            }
+            {
+                userRole === "renter" && <>
+                    <div className={`${styles.menuItems}`}>
+                        <Link href="/dashboard/MyRental" className={`${page === "My Rental" && styles.menuItemActive}`}>
+                            <Image src={CarListing2} />
+                            <span>My Rental</span>
+                        </Link>
+                        <Link href="/dashboard/Messages/Inbox" className={`${page === "Messages" && styles.menuItemActive}`}>
+                            <Image src={Messages} />
+                            <span>Messages</span>
+                            {showMessageSubMenu ? <i className='fa fa-chevron-down' style={{ fontSize: "12px", color: "#DE4F4D" }}></i> : <i className='fa fa-chevron-right' style={{ fontSize: "12px" }}></i>}
+                        </Link>
+                        {
+                            showMessageSubMenu && <div className={styles.subMenu}>
+                                <Link href="/dashboard/Messages/Inbox" className={`${subMenu === "Inbox" && styles.activeSubMenu}`}>
+                                    <Image src={Inbox} />
+                                    <span>Inbox</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Draft" className={`${subMenu === "Draft" && styles.activeSubMenu}`}>
+                                    <Image src={Draft} />
+                                    <span>Draft</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Sent" className={`${subMenu === "Sent" && styles.activeSubMenu}`}>
+                                    <Image src={Sent} />
+                                    <span>Sent</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Archive" className={`${subMenu === "Archive" && styles.activeSubMenu}`}>
+                                    <Image src={Archive} />
+                                    <span>Archive</span>
+                                </Link>
+                                <Link href="/dashboard/Messages/Trash" className={`${subMenu === "Trash" && styles.activeSubMenu}`}>
+                                    <Image src={Trash} />
+                                    <span>Trash</span>
+                                </Link>
+                            </div>
+                        }
+                        <Link href="/dashboard/VEHDEPass" className={`${page === "VEHDEPass" && styles.menuItemActive}`}>
+                            <Image src={VEHDEPass} />
+                            <span>VEHDEPass</span>
+                        </Link>
+                        <Link href="/dashboard/Payment" className={`${page === "Payment" && styles.menuItemActive}`}>
+                            <Image src={Payment} />
+                            <span>Payment</span>
+                        </Link>
+                        <Link href="/dashboard/VEHDEScore" className={`${page === "VEHDE Score" && styles.menuItemActive}`}>
+                            <Image src={VEHDEScore} />
+                            <span>VEHDE Score</span>
+                        </Link>
+                        <Link href="/dashboard/SnowTicket" className={`${page === "Snow Ticket" && styles.menuItemActive}`}>
+                            <Image src={SnowTicket} />
+                            <span>Snow Ticket</span>
+                        </Link>
+                    </div>
+                </>
+            }
             <div></div>
         </div>
     )

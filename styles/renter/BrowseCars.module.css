@@ -7,7 +7,8 @@
     display: grid;
     grid-template-columns: 70% 30%;
     gap: 25px;
-    max-width: 1440px;
+    max-width: 100%;
+    min-height: 92vh;
 }
 
 .searchFilterBox {
@@ -410,7 +411,7 @@
     padding: 10px 8px;
     border-radius: 10px;
     height: 100%;
-    max-height: 600px;
+    max-height: 58vh;
     overflow-y: scroll;
     /* background: #fafafa; */
     margin-top: 10px;
@@ -436,7 +437,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
 }
 
 .quickViewListWrapper>a>div:nth-child(1) {
@@ -561,7 +562,7 @@
 .boardViewListWrapper {
     grid-template-columns: repeat(1, 1fr);
     overflow-x: hidden;
-    max-height: 2000px;
+    /* max-height: 2000px; */
     row-gap: 60px;
 }
 
@@ -569,7 +570,7 @@
     background: #F4F4F4;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
 }
 
 .boardViewListWrapper>div>div:nth-child(1) {
@@ -711,9 +712,25 @@
 
 
 
+@media only screen and (max-width:1440px) {
+    .main>div {
+        min-height: 87vh;
+    }
+}
+
+@media only screen and (max-width:1150px) {
+    .quickViewListWrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media only screen and (max-width:991px) {
     .main>div {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .quickViewListWrapper {
+        max-height: 100vh;
     }
 
     .quickViewListWrapper,

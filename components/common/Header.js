@@ -11,7 +11,7 @@ import HelpIcon from "../../assets/img/help-icon.png"
 import { useRouter } from 'next/router'
 
 
-const Header = ({ stopHeaderSticky }) => {
+const Header = ({ stopHeaderSticky, fullWidth }) => {
 
     const [openMenuItem, setOpenMenuItem] = useState(false)
     const [openProfileItem, setOpenProfileItem] = useState(false)
@@ -22,7 +22,7 @@ const Header = ({ stopHeaderSticky }) => {
     return (
         <>
             <header id='header' className='bg-light' style={{ position: stopHeaderSticky ? "initial" : "sticky" }}>
-                <div className='container'>
+                <div className={fullWidth ? "container-fluid" : "container"}>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <div className="container-fluid">
                             {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

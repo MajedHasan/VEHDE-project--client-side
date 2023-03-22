@@ -7,7 +7,7 @@ import Automatic from "../../assets/img/dashboard/carPicturesDetails/Automatic.p
 import Image from "next/image"
 
 
-const RentalDataPopupHeader = () => {
+const RentalDataPopupHeader = ({ hideHighlight }) => {
     return (
         <>
             <div className={styles.header}>
@@ -46,56 +46,58 @@ const RentalDataPopupHeader = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.highlight}>
-                <div>
+            {
+                !hideHighlight && <div className={styles.highlight}>
                     <div>
-                        <Image src={FourDoor} alt="" />
-                        <span>4 door</span>
-                    </div>
-                    <div>
-                        <Image src={FiveSeats} alt="" />
-                        <span>5 Seats</span>
-                    </div>
-                    <div>
-                        <Image src={MPG} alt="" />
-                        <span>22-33 mpg</span>
-                    </div>
-                    <div>
-                        <Image src={Automatic} alt="" />
-                        <span>Automatic</span>
-                    </div>
-                </div>
-                <div>
-                    <div className={styles.highlightTimeBox}>
                         <div>
-                            <label htmlFor="">Pick-up</label>
+                            <Image src={FourDoor} alt="" />
+                            <span>4 door</span>
+                        </div>
+                        <div>
+                            <Image src={FiveSeats} alt="" />
+                            <span>5 Seats</span>
+                        </div>
+                        <div>
+                            <Image src={MPG} alt="" />
+                            <span>22-33 mpg</span>
+                        </div>
+                        <div>
+                            <Image src={Automatic} alt="" />
+                            <span>Automatic</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={styles.highlightTimeBox}>
                             <div>
-                                <span>3/15/2022</span>
-                                <span>/</span>
-                                <span>00:45 PM</span>
+                                <label htmlFor="">Pick-up</label>
+                                <div>
+                                    <span>3/15/2022</span>
+                                    <span>/</span>
+                                    <span>00:45 PM</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>2500 Lakeside Dr Austin,</h3>
+                                <span>TX 78613</span>
                             </div>
                         </div>
-                        <div>
-                            <h3>2500 Lakeside Dr Austin,</h3>
-                            <span>TX 78613</span>
-                        </div>
-                    </div>
-                    <div className={styles.highlightTimeBox}>
-                        <div>
-                            <label htmlFor="">Drop-off</label>
+                        <div className={styles.highlightTimeBox}>
                             <div>
-                                <span>4/10/2022</span>
-                                <span>/</span>
-                                <span>10:45 AM</span>
+                                <label htmlFor="">Drop-off</label>
+                                <div>
+                                    <span>4/10/2022</span>
+                                    <span>/</span>
+                                    <span>10:45 AM</span>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <h3>2500 Lakeside Dr Austin,</h3>
-                            <span>TX 78613</span>
+                            <div>
+                                <h3>2500 Lakeside Dr Austin,</h3>
+                                <span>TX 78613</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         </>
     )
 }

@@ -61,9 +61,9 @@ const BrowseCars = () => {
 
     return (
         <>
-            <MainLayout stopHeaderSticky={true}>
+            <MainLayout stopHeaderSticky={true} hideFooter={true} fullWidth={true}>
                 <main className={styles.main}>
-                    <div className="container pb-5 mb-5">
+                    <div className="container">
                         <div>
                             <div className={styles.searchFilterBox}>
                                 <LocationPickupDropOffBox />
@@ -422,9 +422,9 @@ const BrowseCars = () => {
                                     </div>
                                 </div>
                             }
-                            <div className="mt-4">
+                            {/* <div className="mt-4">
                                 <button className="my-btn mx-auto">Show More</button>
-                            </div>
+                            </div> */}
                         </div>
                         <div className={styles.mapWrapper}>
                             <div>
@@ -436,7 +436,7 @@ const BrowseCars = () => {
                         </div>
                     </div>
                 </main>
-                <MaskAndSafetySection></MaskAndSafetySection>
+                {/* <MaskAndSafetySection></MaskAndSafetySection> */}
             </MainLayout>
             {
                 overview !== null && <ModalMd setModal={setOverview}>

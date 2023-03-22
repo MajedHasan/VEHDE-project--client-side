@@ -118,22 +118,29 @@
     gap: 12px;
 }
 
-#header>div:nth-child(3)>div:nth-child(4)>div>a {
+#header>div:nth-child(3)>div:nth-child(4)>div>a,
+#header>div:nth-child(3)>div:nth-child(4)>div>button {
     display: flex;
     gap: 10px;
     align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
 }
 
-#header>div:nth-child(3)>div:nth-child(4)>div>a:hover {
+#header>div:nth-child(3)>div:nth-child(4)>div>a:hover,
+#header>div:nth-child(3)>div:nth-child(4)>div>button:hover {
     opacity: 0.7;
 }
 
-#header>div:nth-child(3)>div:nth-child(4)>div>a>img {
+#header>div:nth-child(3)>div:nth-child(4)>div>a>img,
+#header>div:nth-child(3)>div:nth-child(4)>div>button>img {
     width: 20px;
     height: auto;
 }
 
-#header>div:nth-child(3)>div:nth-child(4)>div>a>span {
+#header>div:nth-child(3)>div:nth-child(4)>div>a>span,
+#header>div:nth-child(3)>div:nth-child(4)>div>button>span {
     font-size: 14px;
 }
 
@@ -181,9 +188,83 @@
     cursor: pointer;
 }
 
+
+
+
+
+
+/* ======================== Profile Modal ======================== */
+.profileModal {}
+
+.profileModal>h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.profileModal>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.profileModal>div>div,
+.profileModal>div>a {
+    background: #EFEFEF;
+    border-radius: 20px;
+    padding: 25px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.profileModal>div>div:hover,
+.profileModal>div>a:hover {
+    background: #DE4F4D;
+    color: #FFFFFF;
+}
+
+.profileModal>div>a>img {
+    max-width: 70px;
+    height: auto;
+}
+
+.profileModal>div>a:hover>img {
+    filter: invert(1);
+}
+
+.profileModal>div>a>h4 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.profileModal>div>a:nth-child(3)>img {
+    filter: invert(1);
+}
+
+.profileModal>div>a:nth-child(3):hover>img {
+    filter: invert(0);
+}
+
+/* ==================xxx=== Profile Modal ===xxx================== */
+
+
+
+
+
+
 @media only screen and (max-width:991px) {
     #toggleMenuBtn {
         display: block;
+    }
+
+    .profileModal>div {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -239,5 +320,9 @@
 
     #header>div:nth-child(3)>div:nth-child(4) h4 {
         font-size: 13px;
+    }
+
+    .profileModal>div {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
