@@ -19,6 +19,7 @@ const Reservation = () => {
     const [showModalSm, setShowModalSm] = useState(null)
     const [showModalLg, setShowModalLg] = useState(null)
     const [modificationModal, setModificationModal] = useState(null)
+    const [showCancellationModal, setShowCancellationModal] = useState(null)
 
     return (
         <>
@@ -273,7 +274,7 @@ const Reservation = () => {
                                         <td>
                                             <Image src={CarImg} alt="" />
                                             {
-                                                showSingle === 2 && <div className={styles.cancelRentalBtn}>
+                                                showSingle === 2 && <div className={styles.cancelRentalBtn} onClick={() => setShowCancellationModal(true)}>
                                                     <span>Cancel rental</span>
                                                     <i className="fa fa-chevron-down"></i>
                                                 </div>
@@ -479,6 +480,59 @@ const Reservation = () => {
                                 <p><span>5% discount</span> for at least <span>7-day reservation</span> applies to this rental</p>
                             </div>
                             <CarDetailsPopupPictures />
+                        </div>
+                    </ModalLg>
+                </>
+            }
+            {
+                showCancellationModal && <>
+                    <ModalLg setModal={setShowCancellationModal}>
+                        <div className={styles.cancellationModal}>
+                            <h2>
+                                Cancellation of active rental for
+                                Toyota Venza LE 2022 (RSRVE Code ATX-001-3088)</h2>
+                            <p>
+                                We are sad that this rental is being cancelled. Instead of cancelling your rental,
+                                you may submit Heat Ticket for us to try resolve any rental issue you may have.
+                            </p>
+                            <div>
+                                <div>
+                                    <input type="text" placeholder="Cancel Car Rental" readOnly />
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Please select one of the reasons for cancellation of your renta</h3>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">Reason for car rental cancellation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Car drop-off date and location:</h3>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">Car Drop-off Date</option>
+                                    </select>
+                                </div>
+                                <p>
+                                    NOTE: Drop-off date cannot be later than 24 hours after cancellation. Car must be
+                                    delivered to host as scheduled to avoid late drop-off penalty fees.
+                                </p>
+                            </div>
+                            <div>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">Car Drop-off location</option>
+                                    </select>
+                                </div>
+                                <p>
+                                    NOTE: Drop-off location is same as the one specified by the renter during reservation.
+                                </p>
+                            </div>
+                            <div>
+                                <button className="my-btn mx-auto">Cancel car rental</button>
+                            </div>
                         </div>
                     </ModalLg>
                 </>

@@ -591,6 +591,125 @@
     flex: 1;
 }
 
+
+
+
+
+
+
+
+
+/* =================== Cancellation Modal =================== */
+.cancellationModal {
+    text-align: center;
+}
+
+.cancellationModal>h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #030719;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.cancellationModal>p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #717171;
+    max-width: 700px;
+    width: 100%;
+    margin: 10px auto;
+    line-height: 1.2;
+}
+
+.cancellationModal>p>span {
+    color: #DE4F4D;
+}
+
+.cancellationModal>div:nth-child(3) {
+    background: #DE4F4D;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.cancellationModal>div:nth-child(3)>div {
+    background: #FFFFFF;
+    padding: 15px 25px;
+    border-radius: 99px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+
+.cancellationModal>div:nth-child(3)>div>input {
+    color: #717171;
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
+
+.cancellationModal>div:nth-child(3)>div>input::placeholder {
+    color: #717171;
+}
+
+.cancellationModal>div:nth-child(4) {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.cancellationModal>div:nth-child(4)>h3,
+.cancellationModal>div:nth-child(5)>h3 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.cancellationModal>div:nth-child(4)>div,
+.cancellationModal>div:nth-child(5)>div,
+.cancellationModal>div:nth-child(6)>div {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    background: #F1F1F1;
+    border-radius: 999px;
+    padding: 15px 35px;
+}
+
+.cancellationModal>div:nth-child(4)>div select,
+.cancellationModal>div:nth-child(5)>div select,
+.cancellationModal>div:nth-child(6)>div select {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #717171;
+    font-size: 14px;
+}
+
+.cancellationModal>div:nth-child(5) p,
+.cancellationModal>div:nth-child(6) p {
+    color: #717171;
+    font-size: 13px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    line-height: 1;
+}
+
+/* =============xxx=== Cancellation Modal ===xxx============= */
+
+
+
+
+
+
+
+
 @media only screen and (max-width:991px) {
     .rentalDataList {
         flex-direction: column;
