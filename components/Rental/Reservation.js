@@ -13,7 +13,7 @@ import Link from "next/link"
 import MainBox from "./Review/MainBox"
 
 
-const Reservation = () => {
+const Reservation = ({ setModifyModal }) => {
 
     const [showSingle, setShowSingle] = useState(null)
     const [showModalSm, setShowModalSm] = useState(null)
@@ -375,7 +375,7 @@ const Reservation = () => {
                         <h2>RSRVE Code <span>ATX-001-3099</span></h2>
                         <p>This is a 25-day reservation for <span>Toyota Venza LE 2022</span></p>
                         <div>
-                            <button className="my-btn">
+                            <button className="my-btn" onClick={() => setModifyModal(1)}>
                                 {
                                     modificationModal === 1 && "Modify Reservation"
                                 }
@@ -383,7 +383,7 @@ const Reservation = () => {
                                     modificationModal === 2 && "Modify Rental"
                                 }
                             </button>
-                            <button>
+                            <button onClick={() => setModificationModal(null)}>
                                 {
                                     modificationModal === 1 && "Cancel Reservation"
                                 }
