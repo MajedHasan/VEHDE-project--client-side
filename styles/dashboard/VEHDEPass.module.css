@@ -212,3 +212,50 @@
     color: #DE4F4D;
     font-weight: 600;
 }
+
+
+
+
+
+
+
+
+
+/* =========================================== Renter Part =========================================== */
+.renterContainer {}
+
+.renterContainer>p>span {
+    color: #030719;
+    font-weight: 500;
+}
+
+.renterGreateNewsText {
+    color: #DE4F4D;
+}
+
+.renterScreenBanner {
+    background: #030719;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.renterScreenBanner>h2 {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.renterScreenBanner>p {
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.renterScreenBanner>p>span {
+    font-weight: 500;
+    color: #DE4F4D;
+}
+
+/* =====================================xxx=== Renter Part ===xxx===================================== */

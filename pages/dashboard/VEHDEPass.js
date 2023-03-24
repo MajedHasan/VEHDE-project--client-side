@@ -16,8 +16,9 @@ import Image from 'next/image'
 const VEHDEPass = () => {
 
     const [screen, setScreen] = useState(null)
-    const [membershipActive, setMembershipActive] = useState(false)
+    const [membershipActive, setMembershipActive] = useState(null)
     const [modalMd, setModalMd] = useState(null)
+    const [userRole, setUserRole] = useState("renter")
 
     useEffect(() => {
         setModalMd({})
@@ -47,7 +48,7 @@ const VEHDEPass = () => {
             <DashboardLayout>
                 <div className={styles.container}>
                     {
-                        screen === null && <>
+                        screen === null && userRole === "host" && <>
                             <DashboardBanner leftContent={<DashboardBannerLeftContent page="VEHDEPass" />} rightContent={<DashboardBannerRightContent page="VEHDEPass" />}></DashboardBanner>
                             <div className={styles.mainContent}>
                                 <div>
@@ -64,6 +65,55 @@ const VEHDEPass = () => {
                                 {
                                     membershipActive && <div className={styles.flashScreen}>
                                         <h2>Great news!</h2>
+                                        <p>Your VEHDEPass membership is currently active.</p>
+                                    </div>
+                                }
+                            </div>
+                        </>
+                    }
+                    {
+                        screen === null && userRole === "renter" && <>
+                            <div className={styles.renterScreenBanner}>
+                                <h2>VEHDEPass</h2>
+                                <p>VEHDEPass membership reduces your rental costs by 4.65% for any car listed by hosts participating
+                                    in VEHDEPass advantage.</p>
+                                <p>
+                                    VEHDEPass subscription fee is <span>$14.75/month</span>. You can cancel your subscription at any time.
+                                </p>
+                                <p>Please check VEHDEPass for more information.</p>
+                            </div>
+                            <div className={styles.mainContent}>
+                                <div className={styles.renterContainer}>
+                                    <h1>Renter | VEHDEPass</h1>
+                                    {membershipActive === null && <h2 className={styles.renterGreateNewsText}>Great news!</h2>}
+                                    {
+                                        membershipActive === null && <>
+                                            <p>
+                                                Your rental car, <span>Toyota Venza 2022</span> with
+                                                <span>RSRVE Code RSVE ATX-001-3056</span>, is VEHDEPass advantage eligible.
+                                                VEHDEPass membership reduces your current rental costs by $56.25.</p>
+                                            <p>
+                                                Your VEHDEPass membership is currently inactive.
+                                                Please activate your VEHDEPass by switching the toggle below.
+                                            </p>
+                                        </>
+                                    }
+                                    {
+                                        membershipActive === false && <p>
+                                            Your VEHDEPass membership is currently inactive.
+                                            Please activate your VEHDEPass by switching the toggle below.
+                                        </p>
+                                    }
+                                    <h4>I am currently {membershipActive === false || membershipActive === null && "NOT"} interested in VEHDEPass</h4>
+                                    <input type="checkbox" id="membership" hidden checked={membershipActive} onChange={(e) => setMembershipActive(!membershipActive)} />
+                                    <label htmlFor="membership">
+                                        <span>On</span>
+                                        <span>Off</span>
+                                    </label>
+                                </div>
+                                {
+                                    membershipActive && <div className={styles.flashScreen} style={{ gap: "0" }}>
+                                        <h2 className={styles.renterGreateNewsText} >Great news!</h2>
                                         <p>Your VEHDEPass membership is currently active.</p>
                                     </div>
                                 }
