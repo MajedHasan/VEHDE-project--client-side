@@ -230,6 +230,7 @@
     color: #DE4F4D;
     display: block;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .tableWrapper>table>tbody>tr>td:nth-child(9)>div {
@@ -702,6 +703,161 @@
 }
 
 /* =============xxx=== Cancellation Modal ===xxx============= */
+
+
+/* =================== Car Details Modal =================== */
+.carDetailsModal {
+    text-align: center;
+}
+
+.carDetailsModal>h2 {
+    color: #030719;
+    font-size: 22px;
+}
+
+.carDetailsModal>p {
+    font-size: 14px;
+    color: #717171;
+    font-weight: 400;
+}
+
+.carDetailsModal>p>span {
+    font-weight: 700;
+}
+
+.carDetailsModal>div {
+    padding: 30px 20px 20px 20px;
+    background: #F8F8F8;
+    border-radius: 20px;
+}
+
+.carDetailsModal>div>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    border-radius: 9px;
+    background: #FFFFFF;
+    text-align: left;
+}
+
+.carDetailsModal>div>div:nth-child(1)>span {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.carDetailsModal>div>div:nth-child(2)>span {
+    color: #000000;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.carDetailsModal>div>div:nth-child(2)>span:nth-child(4) {
+    color: #DE4F4D;
+}
+
+.carDetailsModal>div>a {
+    font-size: 14px;
+    color: #898989;
+}
+
+/* =============xxx=== Car Details Modal ===xxx============= */
+
+/* =================== Car Details Modal =================== */
+.costDetailsModal {
+    text-align: center;
+}
+
+.costDetailsModal>h2 {
+    color: #030719;
+    font-size: 22px;
+}
+
+.costDetailsModal>div:nth-child(2) {
+    background: #F8F8F8;
+    padding: 10px 20px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.costDetailsModal>div:nth-child(2)>div {
+    background: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.costDetailsModal>div:nth-child(2)>div>span {
+    color: #DE4F4D;
+}
+
+.costDetailsModal>div:nth-child(3),
+.costDetailsModal>div:nth-child(4) {
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    border-radius: 9px;
+    background: #F8F8F8;
+    text-align: left;
+}
+
+.costDetailsModal>div:nth-child(3)>div,
+.costDetailsModal>div:nth-child(4)>div {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+}
+
+.costDetailsModal>div:nth-child(3)>div>span,
+.costDetailsModal>div:nth-child(4)>div:first-child>span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #DE4F4D;
+    margin-bottom: 5px;
+}
+
+.costDetailsModal>div:nth-child(3)>div:first-child>span,
+.costDetailsModal>div:nth-child(3)>div:last-child>span,
+.costDetailsModal>div:nth-child(4)>div>span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.costDetailsModal>div:nth-child(4) {
+    background: #FFFFFF;
+}
+
+.costDetailsModal>div:nth-child(5) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.costDetailsModal>div:nth-child(5)>span {
+    color: #030719;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.costDetailsModal>a {
+    font-size: 14px;
+    color: #898989;
+}
+
+.costDetailsModal>a>span {
+    color: #DE4F4D;
+}
+
+/* =============xxx=== Car Details Modal ===xxx============= */
 
 
 

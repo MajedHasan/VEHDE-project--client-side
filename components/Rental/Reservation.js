@@ -20,6 +20,8 @@ const Reservation = ({ setModifyModal }) => {
     const [showModalLg, setShowModalLg] = useState(null)
     const [modificationModal, setModificationModal] = useState(null)
     const [showCancellationModal, setShowCancellationModal] = useState(null)
+    const [showCarDetails, setShowCarDetails] = useState(null)
+    const [showCostDetails, setShowCostDetails] = useState(null)
 
     return (
         <>
@@ -332,7 +334,7 @@ const Reservation = ({ setModifyModal }) => {
                                                 Car:
                                                 $105/day
                                             </span>
-                                            <span>Car details</span>
+                                            <span onClick={() => setShowCarDetails(true)}>Car details</span>
                                         </td>
                                         <td>
                                             <div>
@@ -349,7 +351,7 @@ const Reservation = ({ setModifyModal }) => {
                                                     <span>Remaining costs:</span>
                                                     <a href="">$2,493.75</a>
                                                 </button>
-                                                <span>Cost details</span>
+                                                <span onClick={() => setShowCostDetails(true)}>Cost details</span>
                                             </div>
                                         </td>
                                     </tr>
@@ -536,6 +538,87 @@ const Reservation = ({ setModifyModal }) => {
                         </div>
                     </ModalLg>
                 </>
+            }
+            {
+                showCarDetails && <ModalMd setModal={setShowCarDetails}>
+                    <div className={styles.carDetailsModal}>
+                        <h2>CAR DETAILS</h2>
+                        <p>You currently have 25 days of car rental
+                            scheduled for <span>Toyota Venza LE 2022</span></p>
+                        <div>
+                            <div>
+                                <span>From</span>
+                                <span>To</span>
+                                <span>Duration DD</span>
+                                <span>Rate</span>
+                            </div>
+                            <div>
+                                <span>4/19/22 10:45 AM</span>
+                                <span>5/14/22 10:45 AM</span>
+                                <span>25</span>
+                                <span>$105</span>
+                            </div>
+                            <Link href="/Renter/BrowseCars">Reserve another car here</Link>
+                        </div>
+                    </div>
+                </ModalMd>
+            }
+            {
+                showCostDetails && <ModalMd setModal={setShowCostDetails}>
+                    <div className={styles.costDetailsModal}>
+                        <h2>COST DETAILS</h2>
+                        <div>
+                            <div>
+                                RENTAL DURATION|
+                                <span> 25 days</span>
+                            </div>
+                            <div>
+                                RATE|
+                                <span> $105</span>
+                            </div>
+                            <div>
+                                REGULAR
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Base Cost</span>
+                                <span>$2,625.00</span>
+                            </div>
+                            <div>
+                                <span>Discount Host Agreed to Give Renter (5%)</span>
+                                <span>$131.25</span>
+                            </div>
+                            <div>
+                                <span>Delivery Fee from Renter</span>
+                                <span>$ -</span>
+                            </div>
+                            <div>
+                                <span>Gross Cost</span>
+                                <span>$2,493.75</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Taxes & Fees</span>
+                                <span>$791.77</span>
+                            </div>
+                            <div>
+                                <span>Service Fees (13.5%)</span>
+                                <span>$ 336.66</span>
+                            </div>
+                            <div>
+                                <span>Total Tax (18.25%)</span>
+                                <span>$ 455.11</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>ESTIMATED TOTAL COST</span>
+                            <span>$ 3,285.52</span>
+                        </div>
+                        <Link href="/Renter/BrowseCars">For further details, please check the <span>VEHDE Rental Payment Policy</span></Link>
+                    </div>
+                </ModalMd>
             }
         </>
     )
