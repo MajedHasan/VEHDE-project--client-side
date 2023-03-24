@@ -280,4 +280,295 @@
 }
 
 /* ======xx== Renter Table Container ==xx====== */
+
+
+
+/* ========== Renter Pay Fees And Add On Modal ========== */
+.payFeesAndAddOnModal {}
+
+.payFeesAndAddOnModal>h2 {
+    text-align: center;
+    color: #030719;
+    font-weight: 500;
+    font-size: 25px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.payFeesAndAddOnModal>p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    line-height: 1;
+    color: #717171;
+    margin-bottom: 15px;
+}
+
+.searchBox {
+    background: #EFEFEF;
+    border-radius: 99px;
+    padding: 12px 40px;
+    max-width: 700px;
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchBox>h3 {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.searchBox>select,
+.searchBox>input {
+    background: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 99px;
+    color: #030719;
+    font-size: 13px;
+    border: none;
+    outline: none;
+}
+
+.searchBox>input {
+    flex: 1;
+}
+
+.resultBox {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 28px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+    padding: 15px 20px;
+    border-left: 3px solid #DE4F4D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.resultBox>div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.resultBox>div:nth-child(2)>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.resultBox>div:nth-child(2)>div>span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.resultBox>div:nth-child(3) {
+    background: #EFEFEF;
+    padding: 10px 30px;
+    border-radius: 99px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.resultBox>div:nth-child(3)>div label {
+    font-size: 12px;
+    color: #898989;
+    font-weight: 500;
+}
+
+.resultBox>div:nth-child(3)>div input,
+.resultBox>div:nth-child(3)>div select {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.resultBox>div:nth-child(3)>div>div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.resultBox>div:nth-child(3)>div>div:nth-child(2) input,
+.resultBox>div:nth-child(3)>div>div:nth-child(2) input::placeholder {
+    color: #030719;
+    font-weight: 600;
+}
+
+.costBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.costBox>div {
+    background: #EFEFEF;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.costBox>div>h2 {
+    color: #030719;
+    font-size: 25px;
+    text-align: center;
+}
+
+.costBox>div>h2>span {
+    display: block;
+    color: #DE4F4D;
+}
+
+.costBox>div>div {
+    background: #FFFFFF;
+    padding: 22px 15px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.costBox>div>div>span:nth-child(odd) {
+    color: #000000;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.costBox>div>div>span:nth-child(even) {
+    color: #DE4F4D;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.buttonBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttonBox>button {
+    padding: 8px 30px;
+    border-radius: 99px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.buttonBox>button:nth-child(1) {
+    color: #FFFFFF;
+    background: #000000;
+}
+
+.buttonBox>button:nth-child(1)>span {
+    color: #DE4F4D;
+}
+
+.buttonBox>button:nth-child(2) {
+    color: #FFFFFF;
+    background: #DE4F4D;
+}
+
+/* ======xx== Renter Pay Fees And Add On Modal ==xx====== */
+
+
+
+
+
+
+.checkoutModal {}
+
+.checkoutModal>h2 {
+    color: #030719;
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto 5px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+.checkoutModal>div {
+    background: #EFEFEF;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.checkoutModal>div>h3 {
+    color: #030719;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+
+.checkoutModalInputBox {
+    background: #FFFFFF;
+    padding: 8px 30px;
+    border-radius: 99px;
+}
+
+.checkoutModalInputBox>label {
+    display: block;
+    font-size: 12px;
+    color: #898989;
+}
+
+.checkoutModalInputBox>input,
+.checkoutModalInputBox>select,
+.checkoutModalInputBox>input::placeholder {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.checkoutModalCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.checkoutModalCheckbox>label {
+    font-size: 12px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.checkoutModal>div>p {
+    color: #898989;
+    font-weight: 500;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.checkoutModal>div>p>span {
+    color: #DE4F4D;
+}
+
+/* ======xx== Renter Pay Fees And Add On Modal ==xx====== */
 /* ========================xxx=== Renter ===xxx======================== */
+
+@media only screen and (max-width:991px) {
+    .renterContainer {
+        padding-bottom: 100px;
+    }
+}
