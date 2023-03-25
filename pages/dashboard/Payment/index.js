@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DashboardLayout from '../../../components/layout/DashboardLayout'
 
 import OverviewIcon from "../../../assets/img/dashboard/Payment/Overview.png"
@@ -24,6 +24,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import MapIcon from "../../../assets/img/map-icon.png"
 import CalendarIcon from "../../../assets/img/calendar-icon.png"
 
+import RegularInsuranceImg from "../../../assets/img/dashboard/MyRenter/RegularInsurance.png"
+import VEHSAVEImg from "../../../assets/img/dashboard/MyRenter/VEHSAVE.png"
+
 
 
 export const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -43,6 +46,11 @@ const Payment = () => {
     const [userRole, serUserRole] = useState("renter")
     const [payFeesAndAddOnModal, setPayFeesAndAddOnModal] = useState(null)
     const [checkoutModal, setCheckoutModal] = useState(null)
+    const [payFeesModal, setPayFeesModal] = useState(null)
+
+    useEffect(() => {
+        console.log(payFeesAndAddOnModal)
+    }, [payFeesAndAddOnModal])
 
 
 
@@ -97,8 +105,8 @@ const Payment = () => {
                                 reservations, or “Add- On to pay for additional services like Protection (auto insurance) and
                                 VEHSAVE.”?</p>
                             <div>
-                                <button className='my-btn'>Pay Fees</button>
-                                <button>Add-On</button>
+                                <button className='my-btn' onClick={() => setPayFeesModal({})}>Pay Fees</button>
+                                <button onClick={() => setPayFeesAndAddOnModal("addOnSearch")}>Add-On</button>
                             </div>
                         </div>
                         <div className={styles.tableContainer}>
@@ -191,10 +199,10 @@ const Payment = () => {
                                     <select name="" id="">
                                         <option value="">RSRVE Code</option>
                                     </select>
-                                    <input type="text" placeholder='Enter the reserved car name' onChange={() => setPayFeesAndAddOnModal("searched")} />
+                                    <input type="text" placeholder='Enter the reserved car name' onChange={() => setPayFeesAndAddOnModal(payFeesAndAddOnModal === "addOnSearch" || payFeesAndAddOnModal === "addOn" ? "addOn" : "searched")} />
                                 </div>
                                 {
-                                    payFeesAndAddOnModal !== "view and find" && <>
+                                    payFeesAndAddOnModal !== "view and find" && payFeesAndAddOnModal !== "addOnSearch" && payFeesAndAddOnModal !== "addOn" && <>
                                         <div className={styles.resultBox}>
                                             <Image src={CarImg} alt="" />
                                             <div>
@@ -387,6 +395,254 @@ const Payment = () => {
                                         </div>
                                     </>
                                 }
+                                {
+                                    payFeesAndAddOnModal === "addOn" && <>
+                                        <div className={styles.resultBox}>
+                                            <Image src={CarImg} alt="" />
+                                            <div>
+                                                <div>
+                                                    <Image src={FourDoorImg} alt="" />
+                                                    <span>4 Door</span>
+                                                </div>
+                                                <div>
+                                                    <Image src={FiveSeatsImg} alt="" />
+                                                    <span>5 Seats</span>
+                                                </div>
+                                                <div>
+                                                    <Image src={MPGIMG} alt="" />
+                                                    <span>37-40 Mpg</span>
+                                                </div>
+                                                <div>
+                                                    <Image src={AutomaticImg} alt="" />
+                                                    <span>Automatic</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <label htmlFor="">Pick-up</label>
+                                                    <div>
+                                                        <Image src={CalendarIcon} alt="Calendar Icon" />
+                                                        <div className="d-flex gap-1 align-items-center">
+                                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
+                                                                <DatePicker
+                                                                    style={{ width: "75px" }}
+                                                                    selected={pickUpDate}
+                                                                    onChange={(date) => setPickUpDate(date)}
+                                                                    timeInputLabel="Time:"
+                                                                    dateFormat="MM/dd/yyyy"
+                                                                // showTimeInput
+                                                                />
+                                                                <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
+                                                            </div>
+                                                            <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", maxHeight: "200px", color: "#000000" }}>
+                                                                <option value="12:00 PM">12:00 PM</option>
+                                                                <option value="12:00 PM">12:30 PM</option>
+                                                                <option value="12:00 PM">01:00 PM</option>
+                                                                <option value="12:00 PM">01:30 PM</option>
+                                                                <option value="12:00 PM">02:00 PM</option>
+                                                                <option value="12:00 PM">02:30 PM</option>
+                                                                <option value="12:00 PM">03:00 PM</option>
+                                                                <option value="12:00 PM">03:30 PM</option>
+                                                                <option value="12:00 PM">04:00 PM</option>
+                                                                <option value="12:00 PM">04:30 PM</option>
+                                                                <option value="12:00 PM">05:00 PM</option>
+                                                                <option value="12:00 PM">05:30 PM</option>
+                                                                <option value="12:00 PM">06:00 PM</option>
+                                                                <option value="12:00 PM">06:30 PM</option>
+                                                                <option value="12:00 PM">07:00 PM</option>
+                                                                <option value="12:00 PM">07:30 PM</option>
+                                                                <option value="12:00 PM">08:00 PM</option>
+                                                                <option value="12:00 PM">08:30 PM</option>
+                                                                <option value="12:00 PM">09:00 PM</option>
+                                                                <option value="12:00 PM">09:30 PM</option>
+                                                                <option value="12:00 PM">10:00 PM</option>
+                                                                <option value="12:00 PM">10:30 PM</option>
+                                                                <option value="12:00 PM">11:00 PM</option>
+                                                                <option value="12:00 PM">11:30 PM</option>
+
+                                                                <option value="12:00 PM">12:00 AM</option>
+                                                                <option value="12:00 AM">12:30 AM</option>
+                                                                <option value="12:00 AM">01:00 AM</option>
+                                                                <option value="12:00 AM">01:30 AM</option>
+                                                                <option value="12:00 AM">02:00 AM</option>
+                                                                <option value="12:00 AM">02:30 AM</option>
+                                                                <option value="12:00 AM">03:00 AM</option>
+                                                                <option value="12:00 AM">03:30 AM</option>
+                                                                <option value="12:00 AM">04:00 AM</option>
+                                                                <option value="12:00 AM">04:30 AM</option>
+                                                                <option value="12:00 AM">05:00 AM</option>
+                                                                <option value="12:00 AM">05:30 AM</option>
+                                                                <option value="12:00 AM">06:00 AM</option>
+                                                                <option value="12:00 AM">06:30 AM</option>
+                                                                <option value="12:00 AM">07:00 AM</option>
+                                                                <option value="12:00 AM">07:30 AM</option>
+                                                                <option value="12:00 AM">08:00 AM</option>
+                                                                <option value="12:00 AM">08:30 AM</option>
+                                                                <option value="12:00 AM">09:00 AM</option>
+                                                                <option value="12:00 AM">09:30 AM</option>
+                                                                <option value="12:00 AM">10:00 AM</option>
+                                                                <option value="12:00 AM">10:30 AM</option>
+                                                                <option value="12:00 AM">11:00 AM</option>
+                                                                <option value="12:00 AM">11:30 AM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <Image src={MapIcon} /><input type="text" placeholder='2500 Lakeside Dr Austin, TX 78613' />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="">Drop-off</label>
+                                                    <div className="col-lg-4">
+                                                        <div className="d-flex gap-2 align-items-center">
+                                                            <Image src={CalendarIcon} alt="Calendar Icon" />
+                                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
+                                                                <DatePicker
+                                                                    style={{ width: "75px" }}
+                                                                    selected={dropOffDate}
+                                                                    startDate={pickUpDate}
+                                                                    onChange={(date) => setDropOffDate(date)}
+                                                                    timeInputLabel="Time:"
+                                                                    dateFormat="MM/dd/yyyy"
+                                                                // showTimeInput
+                                                                />
+                                                                <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
+                                                            </div>
+                                                            <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", color: "#000000" }}>
+                                                                <option value="12:00 PM">12:00 PM</option>
+                                                                <option value="12:00 PM">12:30 PM</option>
+                                                                <option value="12:00 PM">01:00 PM</option>
+                                                                <option value="12:00 PM">01:30 PM</option>
+                                                                <option value="12:00 PM">02:00 PM</option>
+                                                                <option value="12:00 PM">02:30 PM</option>
+                                                                <option value="12:00 PM">03:00 PM</option>
+                                                                <option value="12:00 PM">03:30 PM</option>
+                                                                <option value="12:00 PM">04:00 PM</option>
+                                                                <option value="12:00 PM">04:30 PM</option>
+                                                                <option value="12:00 PM">05:00 PM</option>
+                                                                <option value="12:00 PM">05:30 PM</option>
+                                                                <option value="12:00 PM">06:00 PM</option>
+                                                                <option value="12:00 PM">06:30 PM</option>
+                                                                <option value="12:00 PM">07:00 PM</option>
+                                                                <option value="12:00 PM">07:30 PM</option>
+                                                                <option value="12:00 PM">08:00 PM</option>
+                                                                <option value="12:00 PM">08:30 PM</option>
+                                                                <option value="12:00 PM">09:00 PM</option>
+                                                                <option value="12:00 PM">09:30 PM</option>
+                                                                <option value="12:00 PM">10:00 PM</option>
+                                                                <option value="12:00 PM">10:30 PM</option>
+                                                                <option value="12:00 PM">11:00 PM</option>
+                                                                <option value="12:00 PM">11:30 PM</option>
+
+                                                                <option value="12:00 PM">12:00 AM</option>
+                                                                <option value="12:00 AM">12:30 AM</option>
+                                                                <option value="12:00 AM">01:00 AM</option>
+                                                                <option value="12:00 AM">01:30 AM</option>
+                                                                <option value="12:00 AM">02:00 AM</option>
+                                                                <option value="12:00 AM">02:30 AM</option>
+                                                                <option value="12:00 AM">03:00 AM</option>
+                                                                <option value="12:00 AM">03:30 AM</option>
+                                                                <option value="12:00 AM">04:00 AM</option>
+                                                                <option value="12:00 AM">04:30 AM</option>
+                                                                <option value="12:00 AM">05:00 AM</option>
+                                                                <option value="12:00 AM">05:30 AM</option>
+                                                                <option value="12:00 AM">06:00 AM</option>
+                                                                <option value="12:00 AM">06:30 AM</option>
+                                                                <option value="12:00 AM">07:00 AM</option>
+                                                                <option value="12:00 AM">07:30 AM</option>
+                                                                <option value="12:00 AM">08:00 AM</option>
+                                                                <option value="12:00 AM">08:30 AM</option>
+                                                                <option value="12:00 AM">09:00 AM</option>
+                                                                <option value="12:00 AM">09:30 AM</option>
+                                                                <option value="12:00 AM">10:00 AM</option>
+                                                                <option value="12:00 AM">10:30 AM</option>
+                                                                <option value="12:00 AM">11:00 AM</option>
+                                                                <option value="12:00 AM">11:30 AM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <Image src={MapIcon} /><input type="text" placeholder='2500 Lakeside Dr Austin, TX 78613' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                }
+                                {
+                                    payFeesAndAddOnModal === "addOn" && <>
+                                        <div className={styles.addOnCostBox}>
+                                            <div>
+                                                <span>Add-On</span>
+                                                <span>$0</span>
+                                                <span>Estimated taxes & fees</span>
+                                                <span>$0</span>
+                                                <span>Estimated Total Costs</span>
+                                                <span>$0</span>
+                                            </div>
+                                        </div>
+                                        <div className={styles.addOnCheckBox}>
+                                            <div>
+                                                <span>10% Save</span>
+                                                <h3>Regular Insurance</h3>
+                                                <Image src={RegularInsuranceImg} alt="" />
+                                                <div>
+                                                    <input type="checkbox" name="" id="" />
+                                                    <span>$9.95/DAY</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span>10% Save</span>
+                                                <h3>VEHSAVE</h3>
+                                                <Image src={VEHSAVEImg} alt="" />
+                                                <div>
+                                                    <input type="checkbox" name="" id="" />
+                                                    <span>$9.95/DAY</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='text-center mt-4'>
+                                            <button className="my-btn mx-auto">Proceed to Checkout</button>
+                                        </div>
+                                    </>
+                                }
+                                {
+                                    payFeesAndAddOnModal === "addOnSearch" && <>
+                                        <div className={styles.addOnCostBox}>
+                                            <div>
+                                                <span>Add-On</span>
+                                                <span>$0</span>
+                                                <span>Estimated taxes & fees</span>
+                                                <span>$0</span>
+                                                <span>Estimated Total Costs</span>
+                                                <span>$0</span>
+                                            </div>
+                                        </div>
+                                        <div className={styles.addOnCheckBox}>
+                                            <div>
+                                                <span>10% Save</span>
+                                                <h3>Regular Insurance</h3>
+                                                <Image src={RegularInsuranceImg} alt="" />
+                                                <div>
+                                                    <input type="checkbox" name="" id="" />
+                                                    <span>$9.95/DAY</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span>10% Save</span>
+                                                <h3>VEHSAVE</h3>
+                                                <Image src={VEHSAVEImg} alt="" />
+                                                <div>
+                                                    <input type="checkbox" name="" id="" />
+                                                    <span>$9.95/DAY</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='text-center mt-4'>
+                                            <button className="my-btn mx-auto">Proceed to Checkout</button>
+                                        </div>
+                                    </>
+                                }
                             </div>
                         </ModalLg>
                     }
@@ -483,6 +739,70 @@ const Payment = () => {
                                     <p>I agree to VEHDE’s <span>Terms of Use</span> and acknowledge that I have read the <span>Privacy Notice</span>.</p>
                                 </div>
                                 <button className='my-btn mt-3 mx-auto' onClick={() => setCheckoutModal("paid")}>Pay Now</button>
+                            </div>
+                        </ModalLg>
+                    }
+                    {
+                        payFeesModal && <ModalLg setModal={setPayFeesModal}>
+                            <div className={styles.payFeesModal}>
+                                <h2>Fees and Payment Schedules</h2>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">RSRVE Code</option>
+                                            </select>
+                                            <span>ATX-001-3099</span>
+                                        </div>
+                                        <Image src={CarImg} alt="" />
+                                        <h4>2022 Toyota Venza</h4>
+                                        <button>RENTAL FEES</button>
+                                        <button>PENALTY FEES</button>
+                                    </div>
+                                    <div>
+                                        <h4>RENTAL COST DETAILS</h4>
+                                        <div> RENTAL DURATION| <span>25 days</span> </div>
+                                        <div>
+                                            <button>RATE| <span>$105</span></button>
+                                            <button>REGULAR</button>
+                                        </div>
+                                        <div>
+                                            <span>Base Cost</span>
+                                            <span>$2,625.00</span>
+                                            <span className={styles.redText}>Discount Host Agreed to Give Renter (5%)</span>
+                                            <span className={styles.redText}>$131.25</span>
+                                            <span>Delivery Fee from Renter</span>
+                                            <span>$ -</span>
+                                            <span>Gross Cost</span>
+                                            <span>$2,493.75</span>
+                                        </div>
+                                        <div>
+                                            <span className={styles.redText}>Taxes & Fees</span>
+                                            <span className={styles.redText}>$791.77</span>
+                                            <span>Service Fees (13.5%)</span>
+                                            <span>$336.66</span>
+                                            <span>Total Tax (18.25%)</span>
+                                            <span>$ 455.11</span>
+                                        </div>
+                                        <div>
+                                            <span>ESTIMATED TOTAL COST</span>
+                                            <span>$3,285.52</span>
+                                        </div>
+                                        <Link href="">For further details, please check the <span>VEHDE Rental Payment Policy</span></Link>
+                                    </div>
+                                    <div>
+                                        <h4>RENTAL PAYMENT DETAILS</h4>
+                                        <span>RENTAL DEPOSIT: $ 105.00</span>
+                                        <span className={styles.redText}>Deadline 4/17/2022 10:45 AM</span>
+                                        <span>OUTSTANDING: $ 3,180.52</span>
+                                        <span className={styles.redText}>Deadline 4/18/2022 10:45 PM</span>
+                                        <span className={styles.greenText}>Paid 3/10/2022 2:15 AM</span>
+                                    </div>
+                                </div>
+                                <div className={styles.buttons}>
+                                    <button onClick={() => { setCheckoutModal("checking"); setPayFeesModal(null) }}>Pay Fees</button>
+                                    <button onClick={() => setPayFeesAndAddOnModal("addOnSearch")}>Add-On</button>
+                                </div>
                             </div>
                         </ModalLg>
                     }

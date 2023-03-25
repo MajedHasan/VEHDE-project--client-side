@@ -489,6 +489,7 @@
 
 
 
+/* ========== Renter Checkout Modal ========== */
 .checkoutModal {}
 
 .checkoutModal>h2 {
@@ -564,10 +565,319 @@
     color: #DE4F4D;
 }
 
-/* ======xx== Renter Pay Fees And Add On Modal ==xx====== */
+/* ======xx== Renter Checkout Modal ==xx====== */
+
+
+
+
+
+
+/* ========== Renter Pay Fees Modal ========== */
+.payFeesModal {}
+
+.payFeesModal>h2 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.payFeesModal>div:nth-child(2) {
+    background: #EFEFEF;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 30% 45% 25%;
+    gap: 15px;
+}
+
+.payFeesModal>div:nth-child(2)>div {
+    background: #FFFFFF;
+    padding: 18px;
+    border-radius: 15px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>div>select {
+    background: #F8F8F8;
+    border-radius: 99px;
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>div>span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>img {
+    width: 100%;
+    height: auto;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>h4 {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>button {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 99px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>button:nth-child(4) {
+    background: #DE4F4D;
+    color: #FFFFFF;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(1)>button:nth-child(5) {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>h4 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(2),
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(3)>button {
+    background: #F8F8F8;
+    border-radius: 10px;
+    padding: 8px 15px;
+    width: fit-content;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    cursor: auto;
+    color: #000000;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>span,
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(3)>button>span {
+    color: #DE4F4D;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(4),
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(5),
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(6) {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 5px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(4) {
+    background: #F8F8F8;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(4)>span,
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(5)>span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.redText {
+    color: #DE4F4D;
+    background: transparent !important;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(6) {
+    margin: 15px 0;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>div:nth-child(6)>span {
+    color: #030719;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>a {
+    color: #898989;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(2)>a>span {
+    color: #DE4F4D;
+    line-height: 1;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(3)>h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.payFeesModal>div:nth-child(2)>div:nth-child(3)>span {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 10px 0;
+    background: #F8F8F8;
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+
+.greenText {
+    color: #61DE4D;
+    background: transparent !important;
+}
+
+.payFeesModal>div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payFeesModal>div:nth-child(3)>button {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+    width: fit-content;
+    padding: 12px 45px !important;
+    margin-bottom: 10px;
+    border-radius: 99px;
+}
+
+.payFeesModal>div:nth-child(3)>button:nth-child(1) {
+    background: #DE4F4D;
+    color: #FFFFFF;
+}
+
+.payFeesModal>div:nth-child(3)>button:nth-child(2) {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+/* ======xx== Renter Pay Fees Modal ==xx====== */
+
+
+
+
+
+
+/* ========== Renter Add On Modal ========== */
+.addOnCostBox {
+    background: #EFEFEF;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 35px 0;
+}
+
+.addOnCostBox>div {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 5px;
+    max-width: 400px;
+}
+
+.addOnCostBox>div>span {
+    color: #000000;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.addOnCostBox>div>span:nth-child(even) {
+    color: #DE4F4D;
+}
+
+.addOnCheckBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.addOnCheckBox>div {
+    background: #EFEFEF;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.addOnCheckBox>div>span {
+    display: block;
+    width: fit-content;
+    border-radius: 7px;
+    background: #DE4F4D;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-left: auto;
+    padding: 4px 12px;
+}
+
+.addOnCheckBox>div>h3 {
+    font-size: 28px;
+    color: #000000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.addOnCheckBox>div>img {
+    text-align: center;
+    width: 130px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.addOnCheckBox>div>div {
+    background: #000000;
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.addOnCheckBox>div>div>span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* ======xx== Renter Add On Modal ==xx====== */
 /* ========================xxx=== Renter ===xxx======================== */
 
 @media only screen and (max-width:991px) {
+
+    .payFeesModal>div:nth-child(2),
+    .addOnCheckBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .renterContainer {
         padding-bottom: 100px;
     }
