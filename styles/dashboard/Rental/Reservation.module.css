@@ -836,10 +836,11 @@
 }
 
 .costDetailsModal>div:nth-child(5) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 72% 28%;
     align-items: center;
     padding: 20px 30px;
+    text-align: left;
 }
 
 .costDetailsModal>div:nth-child(5)>span {

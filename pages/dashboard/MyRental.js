@@ -13,6 +13,7 @@ const MyRenter = () => {
     const [reservationModal, setReservationModal] = useState(null)
     const [discountModal, setDiscountModal] = useState(null)
     const [modifyModal, setModifyModal] = useState(null)
+    const [showCancellationModal, setShowCancellationModal] = useState(null)
 
     return (
         <>
@@ -35,7 +36,7 @@ const MyRenter = () => {
             </DashboardLayout>
             {
                 reservationModal !== null && <ModalLg setModal={setReservationModal}>
-                    <Reservation setModifyModal={setModifyModal} />
+                    <Reservation setModifyModal={setModifyModal} showCancellationModal={showCancellationModal} setShowCancellationModal={setShowCancellationModal} />
                 </ModalLg>
             }
             {
@@ -183,6 +184,7 @@ const MyRenter = () => {
             }
             {
                 modifyModal && <ModalLg setModal={setModifyModal}>
+                    <span onClick={() => setModifyModal(null)} style={{ cursor: "pointer" }}> <i className="fa fa-chevron-left"></i> </span>
                     <div className={styles.modifyModalWrapper}>
                         <h2>Modifying active rental for Toyota Venza LE 2022
                             (RSRVE Code ATX-001-3088)</h2>
@@ -190,9 +192,8 @@ const MyRenter = () => {
                             provide the required information.</p>
                         <div>
                             <div>
-                                <select name="" id="">
-                                    <option value="">Modify Car Rental</option>
-                                </select>
+                                <span>RSRVE Code</span>
+                                <input type="text" value={"ATX-001-3088"} readOnly />
                             </div>
                         </div>
                         <MainBox hideEstCost={true} hideList={true} hidePrice={true} hideageResidency={true} />

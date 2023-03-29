@@ -316,15 +316,29 @@
 
 .modifyModalWrapper>div:nth-child(3)>div {
     border-radius: 999px;
-    padding: 12px 30px;
     background: #FFFFFF;
     max-width: 400px;
     width: 100%;
     margin: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-right: 20px;
 }
 
-.modifyModalWrapper>div:nth-child(3)>div>select {
-    width: 100%;
+.modifyModalWrapper>div:nth-child(3)>div>span {
+    flex: 1;
+    text-align: right;
+    background: #b7b7b7;
+    padding: 12px 30px;
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+    font-size: 14px;
+}
+
+.modifyModalWrapper>div:nth-child(3)>div>input {
+    flex: 1;
+    width: fit-content;
     outline: none;
     border: none;
     font-size: 13px;
