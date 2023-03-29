@@ -342,6 +342,11 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                                         Renter confirmed drop-off. Waiting for host’s confirmation.
                                                     </button>
                                                 }
+                                                {
+                                                    showSingle === 1 && <button className={styles.warningInfoBtnInTable} onClick={() => setShowPaymentModal("cost")}>
+                                                        ATTENTION: Payment of rental deposit is required
+                                                    </button>
+                                                }
                                             </div>
                                         </td>
                                         <td>
@@ -462,7 +467,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                 showModalLg && <>
                     <ModalLg setModal={setShowModalLg} style={{ marginTop: "45px" }}>
                         <RentalDataPopupHeader hideHighlight={true} />
-                        <MainBox hideEstCost={true} hideList={true} hidePrice={true} hideageResidency={true} />
+                        <MainBox hideEstCost={true} hideList={true} hidePrice={true} hideageResidency={true} showAttention="warn" />
                         <div className={styles.rentalDataList}>
                             <div>
                                 <h3>Highlighted Features</h3>

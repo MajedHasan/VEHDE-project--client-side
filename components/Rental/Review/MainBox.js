@@ -15,7 +15,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 
-const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost }) => {
+const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAttention }) => {
 
     const [pickUpDate, setPickUpDate] = useState(new Date())
     const [pickUpDateTime, setPickUpDateTime] = useState("10:10 PM")
@@ -241,6 +241,22 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost }) => {
                         <h4>Estimated Total Costs</h4>
                         <span>$4,376</span>
                     </div>
+                }
+                {
+                    showAttention === "warn" && <>
+                        <div className={`${styles.attentionBox} ${styles.attentionBoxWarn}`}>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>ATTENTION: Payment of rental deposit is required</span>
+                        </div>
+                    </>
+                }
+                {
+                    showAttention === "error" && <>
+                        <div className={`${styles.attentionBox} ${styles.attentionBoxError}`}>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>ATTENTION: Payment of rental deposit is required</span>
+                        </div>
+                    </>
                 }
             </div>
             <div>

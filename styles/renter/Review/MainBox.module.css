@@ -210,6 +210,35 @@
 }
 
 
+.attentionBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: 99px;
+    margin: auto;
+}
+
+.attentionBox>i {
+    font-size: 13px;
+}
+
+.attentionBoxWarn {
+    background: #FFCD81;
+}
+
+.attentionBoxWarn>i {
+    color: #D17F04;
+}
+
+.attentionBoxWarn>span {
+    color: #D17F04;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
 
 
 
