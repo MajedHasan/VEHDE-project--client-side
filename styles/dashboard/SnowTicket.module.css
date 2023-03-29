@@ -337,6 +337,103 @@
     background: none;
 }
 
+
+
+
+
+
+/* ====================================== Submit New Ticket ====================================== */
+.submitNewTicket {}
+
+.submitNewTicket>h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #030719;
+}
+
+.submitNewTicket>h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.submitNewTicket>div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submitNewTicket>div:nth-child(4)>div:nth-child(1) {
+    background: #FFDBDB;
+    width: 40px;
+    height: 40px;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #030719;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.submitNewTicket>div:nth-child(4)>div:nth-child(2)>h4 {
+    color: #030719;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    line-height: 0.8;
+}
+
+.submitNewTicket>div:nth-child(4)>div:nth-child(2)>span {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.submitNewTicket>h4 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.submitNewTicket>div:nth-child(6),
+.submitNewTicket>div:nth-child(7) {
+    background: #F1F1F1;
+    padding: 10px 20px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+}
+
+.submitNewTicket>div:nth-child(6)>select,
+.submitNewTicket>div:nth-child(7)>textarea {
+    font-size: 14px;
+    font-weight: 400;
+    color: #717171;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background: transparent;
+    resize: none;
+    height: 100%;
+}
+
+.submitNewTicket>div:nth-child(7) {
+    border-radius: 15px;
+}
+
+.submitNewTicket>div:nth-child(7)>textarea {
+    min-height: 100px;
+}
+
+/* ================================xxx=== Submit New Ticket ===xxx================================ */
+
+
+
+
+
 @media only screen and (max-width:549px) {
     .detail>div:nth-child(3)>div {
         flex-direction: column;

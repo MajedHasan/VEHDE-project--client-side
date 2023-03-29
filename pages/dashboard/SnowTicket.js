@@ -203,6 +203,34 @@ const SnowTicket = () => {
                     }
                 </ModalMd>
             }
+            {
+                submitNewTicket && <ModalMd setModal={setSubmitNewTicket}>
+                    <div className={styles.submitNewTicket}>
+                        <h2>Snow Ticket | CA769245</h2>
+                        <h3>To: VEHDE</h3>
+                        <hr />
+                        <div>
+                            <div>
+                                JW
+                            </div>
+                            <div>
+                                <h4>Edwards Dane</h4>
+                                <span>Aug 15, 2022</span>
+                            </div>
+                        </div>
+                        <h4>Please report any rental related issues (e.g., interruption of rental) below</h4>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Issue to report</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea name="" id="" placeholder='If Others, please state the issue below.'></textarea>
+                        </div>
+                        <button className="w-100 my-btn" onClick={() => setSubmitNewTicket(null)}>Send</button>
+                    </div>
+                </ModalMd>
+            }
         </>
     )
 }
