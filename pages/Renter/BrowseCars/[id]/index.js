@@ -100,7 +100,7 @@ const BrowseCars = () => {
             }
             {
                 overview === "detail" && <ModalMd setModal={setOverview}>
-                    <h2 className={styles.popupHeader}>About Host</h2>
+                    <h2 className={styles.popupHeader}>Reservation Details</h2>
                     <AboutHostPopup></AboutHostPopup>
                 </ModalMd>
             }
