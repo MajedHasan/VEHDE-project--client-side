@@ -26,6 +26,7 @@ import CalendarIcon from "../../../assets/img/calendar-icon.png"
 
 import RegularInsuranceImg from "../../../assets/img/dashboard/MyRenter/RegularInsurance.png"
 import VEHSAVEImg from "../../../assets/img/dashboard/MyRenter/VEHSAVE.png"
+import RoadsideAssistanceImg from "../../../assets/img/dashboard/MyRenter/RoadsideAssistance.png"
 
 
 
@@ -128,7 +129,7 @@ const Payment = () => {
                                         </td>
                                         <td>
                                             <h5>Toyota Venza LE 2022</h5>
-                                            <span>See details</span>
+                                            <span onClick={() => setPayFeesAndAddOnModal("searched")}>See details</span>
                                         </td>
                                         <td>
                                             <Link href="">ATX-001-3099</Link>
@@ -138,7 +139,7 @@ const Payment = () => {
                                         </td>
                                         <td>Pending</td>
                                         <td>
-                                            <button className={styles.tableSuccessBtn}>YES: Rental Deposit</button>
+                                            <button className={styles.tableSuccessBtn} onClick={() => setCheckoutModal("checking")}>YES: Rental Deposit</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -147,7 +148,7 @@ const Payment = () => {
                                         </td>
                                         <td>
                                             <h5>Toyota Venza LE 2022</h5>
-                                            <span>See details</span>
+                                            <span onClick={() => setPayFeesAndAddOnModal("searched")}>See details</span>
                                         </td>
                                         <td>
                                             <Link href="">ATX-001-3099</Link>
@@ -166,7 +167,7 @@ const Payment = () => {
                                         </td>
                                         <td>
                                             <h5>Toyota Venza LE 2022</h5>
-                                            <span>See details</span>
+                                            <span onClick={() => setPayFeesAndAddOnModal("searched")}>See details</span>
                                         </td>
                                         <td>
                                             <Link href="">ATX-001-3099</Link>
@@ -191,15 +192,15 @@ const Payment = () => {
                         payFeesAndAddOnModal !== null && <ModalLg setModal={setPayFeesAndAddOnModal}>
                             <div className={styles.payFeesAndAddOnModal}>
                                 <h2>Rental payment for Edwards Dane
-                                    VEHDE ID: ED-R (TX) 155013-78703)</h2>
+                                    <br />VEHDE ID: ED-R (TX) 155013-78703)</h2>
                                 <p>Please select a reservation, from the list of your existing
                                     reservations, for which you want to pay for.</p>
                                 <div className={styles.searchBox}>
                                     <h3>Reservation</h3>
                                     <select name="" id="">
-                                        <option value="">RSRVE Code</option>
+                                        <option value="">ATX-001-3088</option>
                                     </select>
-                                    <input type="text" placeholder='Enter the reserved car name' onChange={() => setPayFeesAndAddOnModal(payFeesAndAddOnModal === "addOnSearch" || payFeesAndAddOnModal === "addOn" ? "addOn" : "searched")} />
+                                    <input type="text" placeholder='Enter the reserved car name' onChange={() => setPayFeesAndAddOnModal(payFeesAndAddOnModal === "addOnSearch" || payFeesAndAddOnModal === "addOn" ? "addOn" : "searched")} value={"2022 Toyota Venza"} />
                                 </div>
                                 {
                                     payFeesAndAddOnModal !== "view and find" && payFeesAndAddOnModal !== "addOnSearch" && payFeesAndAddOnModal !== "addOn" && <>
@@ -620,6 +621,12 @@ const Payment = () => {
                                         </div>
                                         <div className={styles.addOnCheckBox}>
                                             <div>
+                                                <span>
+                                                    <i className='fa fa-info'></i>
+                                                    <p>
+                                                        Get a well-deserved auto insurance that protects you against financial loss in the event of a collision/accident.
+                                                    </p>
+                                                </span>
                                                 <span>10% Save</span>
                                                 <h3>Regular Insurance</h3>
                                                 <Image src={RegularInsuranceImg} alt="" />
@@ -629,6 +636,27 @@ const Payment = () => {
                                                 </div>
                                             </div>
                                             <div>
+                                                <span>
+                                                    <i className='fa fa-info'></i>
+                                                    <p>
+                                                        Get a well-deserved auto insurance that protects you against financial loss in the event of a collision/accident.
+                                                    </p>
+                                                </span>
+                                                <span>10% Save</span>
+                                                <h3>Roadside assistance</h3>
+                                                <Image src={RoadsideAssistanceImg} alt="" />
+                                                <div>
+                                                    <input type="checkbox" name="" id="" />
+                                                    <span>$9.95/DAY</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    <i className='fa fa-info'></i>
+                                                    <p>
+                                                        VEHSAVE enables you to have a replacement for your rental car in case of any collision/accident that might interrupts continuous operational of your rental car.
+                                                    </p>
+                                                </span>
                                                 <span>10% Save</span>
                                                 <h3>VEHSAVE</h3>
                                                 <Image src={VEHSAVEImg} alt="" />
@@ -736,7 +764,7 @@ const Payment = () => {
                                         <input type="checkbox" name="" id="" />
                                         <label htmlFor="">Free cancellation with full refund before March 13, 2022, at 00:45 PM</label>
                                     </div>
-                                    <p>I agree to VEHDE’s <span>Terms of Use</span> and acknowledge that I have read the <span>Privacy Notice</span>.</p>
+                                    <p>I agree to VEHDE’s <Link href="">Terms of Use</Link> and acknowledge that I have read the <Link href="">Privacy Notice</Link>.</p>
                                 </div>
                                 <button className='my-btn mt-3 mx-auto' onClick={() => setCheckoutModal("paid")}>Pay Now</button>
                             </div>
@@ -801,7 +829,7 @@ const Payment = () => {
                                 </div>
                                 <div className={styles.buttons}>
                                     <button onClick={() => { setCheckoutModal("checking"); setPayFeesModal(null) }}>Pay Fees</button>
-                                    <button onClick={() => setPayFeesAndAddOnModal("addOnSearch")}>Add-On</button>
+                                    {/* <button onClick={() => { setPayFeesAndAddOnModal("addOnSearch"); setPayFeesModal(null) }}>Add-On</button> */}
                                 </div>
                             </div>
                         </ModalLg>
