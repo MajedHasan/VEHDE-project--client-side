@@ -27,6 +27,7 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
     const [showModalLg, setShowModalLg] = useState(false)
     const [showModalMd, setShowModalMd] = useState(false)
     const [editLicense, setEditLicense] = useState(false)
+    const [editContactInfo, setEditContactInfo] = useState(false)
 
     return (
         <>
@@ -214,6 +215,105 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
                                 <div className={styles.modalBtnBox}>
                                     <button className={styles.modalBtnSuccess} onClick={() => { setEditLicense(false); setShowModalLg(false) }}>OK</button>
                                     <button className={styles.modalBtnSuccessOutline} onClick={() => { setEditLicense(false); setShowModalLg(false) }}>Cancel</button>
+                                </div>
+                            </>}
+                    </div>
+                </ModalLg>
+            }
+            {
+                showModalLg === "contact" && <ModalLg setModal={setShowModalLg}>
+                    <div className={styles.modalLgBox}>
+                        <h2>Contact Information
+                            <span>JW-H (TX) 868746-78613</span>
+                        </h2>
+                        <h5>Status:
+                            <span> Active</span>
+                        </h5>
+                        <p>Your contact information is currently <span>complete</span> and <span>approved</span>. You can revise your information by selecting edit icon, make the changes, and select OK to save. Please allow up to 24 hours for your new information to be reviewed for approval.
+                            <br />
+                            <br />
+                            (NOTE: To change your name please submit a separate SNOW Ticket.)
+                            <span></span>
+                        </p>
+                        <div>
+                            <i className="fa fa-pencil" onClick={() => setEditContactInfo(true)}></i>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-6 col-12 pe-md-1 pe-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">First name</label>
+                                    <input type="text" value={"Jane 🔒"} readOnly />
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-12 ps-md-1 ps-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">Last name</label>
+                                    <input type="text" value={"Wesley 🔒"} readOnly />
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-12 pe-md-1 pe-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">Country</label>
+                                    <input type="text" value={"United States of America 🔒"} readOnly />
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-12 ps-md-1 ps-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">State</label>
+                                    <select name="" id="">
+                                        <option value="">Texas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="col-md-6 col-12 pe-md-1 pe-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">Email address</label>
+                                    <input type="text" placeholder="jane.Wesley@gmail.com" />
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-12 ps-md-1 ps-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">Mobile phone number</label>
+                                    <input type="text" placeholder="(737)-363-5736" />
+                                </div>
+                            </div>
+                            <div className="col-12 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">Street address</label>
+                                    <input type="text" placeholder="12050 Oak Trl" />
+                                </div>
+                            </div>
+
+                            <div className="col-md-6 col-12 pe-md-1 pe-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">City</label>
+                                    <input type="text" placeholder="Austin" />
+                                </div>
+                            </div>
+                            <div className="col-md-3 col-12 px-md-1 px-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">Zip</label>
+                                    <input type="text" placeholder="78613" />
+                                </div>
+                            </div>
+                            <div className="col-md-3 col-12 ps-md-1 ps-0 mb-2">
+                                <div className={styles.modalInputBox}>
+                                    <label htmlFor="">State</label>
+                                    <select name="" id="">
+                                        <option value="">Texas</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {
+                            editContactInfo && <><div className={styles.modalCheckbox}>
+                                <input type="checkbox" name="" id="" />
+                                <label htmlFor="">I agree to VEHDE's <Link href="">Terms of Use</Link> and acknowledge that i have read the <a href="">Privacy Notice.</a></label>
+                            </div>
+                                <div className={styles.modalBtnBox}>
+                                    <button className={styles.modalBtnSuccess} onClick={() => { setEditContactInfo(false); setShowModalLg(false) }}>OK</button>
+                                    <button className={styles.modalBtnSuccessOutline} onClick={() => { setEditContactInfo(false); setShowModalLg(false) }}>Cancel</button>
                                 </div>
                             </>}
                     </div>
