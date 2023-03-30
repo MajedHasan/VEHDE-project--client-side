@@ -10,6 +10,7 @@ import ModalMd from "../../components/common/ModalMd"
 import ActivateImg from "../../assets/img/dashboard/VEHDEPass/Activate.png"
 import DeactivateImg from "../../assets/img/dashboard/VEHDEPass/Deactivate.png"
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 
@@ -90,18 +91,18 @@ const VEHDEPass = () => {
                                         membershipActive === null && <>
                                             <p>
                                                 Your rental car, <span>Toyota Venza 2022</span> with
-                                                <span>RSRVE Code RSVE ATX-001-3056</span>, is VEHDEPass advantage eligible.
-                                                VEHDEPass membership reduces your current rental costs by $56.25.</p>
+                                                <span> RSRVE Code RSVE ATX-001-3056</span>, is <Link href="">VEHDEPass</Link> advantage eligible.
+                                                <Link href="">VEHDEPass</Link> membership reduces your current rental costs by $56.25.</p>
                                             <p>
-                                                Your VEHDEPass membership is currently inactive.
-                                                Please activate your VEHDEPass by switching the toggle below.
+                                                Your <Link href="">VEHDEPass</Link> membership is currently inactive.
+                                                Please activate your <Link href="">VEHDEPass</Link> by switching the toggle below.
                                             </p>
                                         </>
                                     }
                                     {
                                         membershipActive === false && <p>
-                                            Your VEHDEPass membership is currently inactive.
-                                            Please activate your VEHDEPass by switching the toggle below.
+                                            Your <Link href="">VEHDEPass</Link> membership is currently inactive.
+                                            Please activate your <Link href="">VEHDEPass</Link> by switching the toggle below.
                                         </p>
                                     }
                                     <h4>I am currently {membershipActive === false || membershipActive === null && "NOT"} interested in VEHDEPass</h4>
