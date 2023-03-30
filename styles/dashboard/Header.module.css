@@ -221,6 +221,7 @@
     text-align: center;
     justify-content: center;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .profileModal>div>div:hover,
@@ -229,29 +230,172 @@
     color: #FFFFFF;
 }
 
-.profileModal>div>a>img {
+.profileModal>div>a>img,
+.profileModal>div>div>img {
     max-width: 70px;
     height: auto;
 }
 
-.profileModal>div>a:hover>img {
+.profileModal>div>a:hover>img,
+.profileModal>div>div:hover>img {
     filter: invert(1);
 }
 
-.profileModal>div>a>h4 {
+.profileModal>div>a>h4,
+.profileModal>div>div>h4 {
     font-weight: 500;
     font-size: 15px;
 }
 
-.profileModal>div>a:nth-child(3)>img {
+.profileModal>div>a:nth-child(3)>img,
+.profileModal>div>div:nth-child(3)>img {
     filter: invert(1);
 }
 
-.profileModal>div>a:nth-child(3):hover>img {
+.profileModal>div>a:nth-child(3):hover>img,
+.profileModal>div>div:nth-child(3):hover>img {
     filter: invert(0);
 }
 
 /* ==================xxx=== Profile Modal ===xxx================== */
+
+
+
+
+
+
+
+
+/* ======================== License Box ======================== */
+.modalLgBox {}
+
+.modalLgBox>h2 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.modalLgBox>h2>span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modalLgBox>h5 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #6A6A6A;
+    margin-top: 25px;
+}
+
+.modalLgBox>h5>span {
+    color: #169643;
+}
+
+.modalLgBox>p:nth-child(3) {
+    line-height: 1.2;
+    color: #6A6A6A;
+    font-size: 14px;
+}
+
+.modalLgBox>p:nth-child(3)>span {
+    color: #DE4F4D;
+    font-weight: 600;
+}
+
+.modalLgBox>div:nth-child(4) {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.modalLgBox>div:nth-child(4)>i {
+    cursor: pointer;
+}
+
+.modalInputBox {
+    background: #EFEFEF;
+    padding: 5px 22px 0px 22px;
+    border-radius: 99px;
+}
+
+.modalInputBox>label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6A6A6A;
+}
+
+.modalInputBox>input,
+.modalInputBox>select {
+    padding: 4px 0 8px 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.modalInputBox>input::placeholder,
+.modalInputBox>select::placeholder {
+    color: #0d120d;
+}
+
+.modalCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.modalCheckbox>input {}
+
+.modalCheckbox>label {
+    color: #BCBCBC;
+    font-size: 14px;
+}
+
+.modalCheckbox>label>a {
+    color: #DE4F4D;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.modalBtnBox {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.modalBtnSuccess {
+    outline: none;
+    border: none;
+    padding: 5px 28px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #169643;
+}
+
+.modalBtnSuccessOutline {
+    outline: none;
+    border: 1.5px solid #169643;
+    padding: 5px 28px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6A6A6A;
+    background: transparent;
+}
+
+/* ==================xxx=== License Box ===xxx================== */
+
+
+
 
 
 
