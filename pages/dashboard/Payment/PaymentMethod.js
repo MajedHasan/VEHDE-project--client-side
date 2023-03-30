@@ -25,6 +25,7 @@ const PaymentMethod = () => {
                         <table>
                             <thead>
                                 <tr>
+                                    <th>Switch</th>
                                     <th>Payment method</th>
                                     <th>Account ID</th>
                                     <th>Date added</th>
@@ -36,6 +37,7 @@ const PaymentMethod = () => {
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td><button className={styles.inactiveBtn}>Switched</button></td>
                                     <td>Wells Fargo savings ending 10779</td>
                                     <td>WFAJ1550131</td>
                                     <td>10/30/2021</td>
@@ -45,6 +47,7 @@ const PaymentMethod = () => {
                                     <td><i className={`fa fa-lock ${styles.dangerIcon}`}></i></td>
                                 </tr>
                                 <tr>
+                                    <td><button className={styles.successBtn}>Switch</button></td>
                                     <td>National bank Current ending 00138.</td>
                                     <td>NBJ1550132</td>
                                     <td>11/05/2021</td>
@@ -53,10 +56,11 @@ const PaymentMethod = () => {
                                     <td>$0</td>
                                     <td>
                                         <i className={`fa fa-pencil me-3 ${styles.blackIcon}`}></i>
-                                        <i className={`fa fa-lock ${styles.dangerIcon}`}></i>
+                                        <i className={`fa fa-trash-alt ${styles.dangerIcon}`}></i>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td><button className={styles.inactiveBtn}>Switch</button></td>
                                     <td>PayPal account ending 00114</td>
                                     <td>PPJ1550142</td>
                                     <td>11/15/2021</td>
@@ -65,7 +69,7 @@ const PaymentMethod = () => {
                                     <td>$0</td>
                                     <td>
                                         <i className={`fa fa-pencil me-3 ${styles.blackIcon}`}></i>
-                                        <i className={`fa fa-lock ${styles.dangerIcon}`}></i>
+                                        <i className={`fa fa-trash-alt ${styles.dangerIcon}`}></i>
                                     </td>
                                 </tr>
                             </tbody>

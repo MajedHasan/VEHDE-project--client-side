@@ -61,6 +61,7 @@
 .inactiveBtn {
     background: #E0E0E0;
     color: #959595;
+    pointer-events: none;
 }
 
 .dangerIcon {
