@@ -465,7 +465,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
             }
             {
                 showModalLg && <>
-                    <ModalLg setModal={setShowModalLg} style={{ marginTop: "45px" }}>
+                    <ModalLg setModal={setShowModalLg} style={{ zIndex: 99999, paddingTop: "80px" }}>
                         <RentalDataPopupHeader hideHighlight={true} />
                         <MainBox hideEstCost={true} hideList={true} hidePrice={true} hideageResidency={true} showAttention="warn" />
                         <div className={styles.rentalDataList}>
@@ -511,7 +511,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
             }
             {
                 showCancellationModal && <>
-                    <ModalLg setModal={setShowCancellationModal}>
+                    <ModalLg setModal={setShowCancellationModal} style={{ zIndex: 9999 }}>
                         <div className={styles.cancellationModal}>
                             <h2>
                                 Cancellation of active rental for

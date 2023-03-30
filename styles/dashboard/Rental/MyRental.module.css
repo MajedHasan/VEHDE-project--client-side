@@ -287,13 +287,17 @@
 .modifyModalWrapper {}
 
 .modifyModalWrapper>h2 {
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     margin: auto;
     color: #030719;
     font-weight: 500;
     font-size: 22px;
     text-align: center;
+}
+
+.modifyModalWrapper>h2>span {
+    display: block;
 }
 
 .modifyModalWrapper>p {
@@ -305,7 +309,8 @@
     font-size: 14px;
     text-align: center;
     margin-top: 5px;
-    margin-bottom: 12px;
+    margin-bottom: 28px;
+    line-height: 1;
 }
 
 .modifyModalWrapper>div:nth-child(3) {
