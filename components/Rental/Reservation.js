@@ -117,7 +117,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                                 <h4>25 rental days</h4>
                                                 <button>
                                                     <span>*Total costs:</span>
-                                                    <a href="">$2,493.75</a>
+                                                    <a href="#">$2,493.75</a>
                                                 </button>
                                                 <span onClick={() => setShowSingle(1)}>Pay details</span>
                                             </div>
@@ -171,7 +171,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                                 <h4>5 rental days</h4>
                                                 <button>
                                                     <span>*Total costs:</span>
-                                                    <a href="">$2,493.75</a>
+                                                    <a href="#">$2,493.75</a>
                                                 </button>
                                                 <span onClick={() => setShowSingle(2)}>Pay details</span>
                                             </div>
@@ -224,7 +224,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                                 <h4>25 rental days</h4>
                                                 <button>
                                                     <span>*Total costs:</span>
-                                                    <a href="">$2,493.75</a>
+                                                    <a href="#">$2,493.75</a>
                                                 </button>
                                                 <span onClick={() => setShowSingle(3)}>Pay details</span>
                                             </div>
@@ -277,7 +277,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                                 <h4>25 rental days</h4>
                                                 <button>
                                                     <span>*Total costs:</span>
-                                                    <a href="">$2,493.75</a>
+                                                    <a href="#">$2,493.75</a>
                                                 </button>
                                                 <span onClick={() => setShowSingle(4)}>Pay details</span>
                                             </div>
@@ -361,15 +361,15 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                                 <h4>26 days of car rentals</h4>
                                                 <button>
                                                     <span onClick={() => setShowModalSm(1)}>*Total costs:</span>
-                                                    <a href="">$2,493.75</a>
+                                                    <a href="#">$2,493.75</a>
                                                 </button>
                                                 <button>
                                                     <span>Payment made:</span>
-                                                    <a href="">$0.00</a>
+                                                    <a href="#">$0.00</a>
                                                 </button>
                                                 <button>
                                                     <span>Remaining costs:</span>
-                                                    <a href="">$2,493.75</a>
+                                                    <a href="#">$2,493.75</a>
                                                 </button>
                                                 <span onClick={() => setShowCostDetails(true)}>Cost details</span>
                                             </div>
@@ -382,12 +382,12 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                 </div>
                 {
                     showSingle === null && <div>
-                        <Link href="/Renter/BrowseCars" className="my-btn">Reserve another car</Link>
+                        <Link href="/Renter/BrowseCars" target="_blank" className="my-btn">Reserve another car</Link>
                     </div>
                 }
                 {
                     showSingle !== null && <div className={styles.bottomInfo}>
-                        <Link href="/Renter/BrowseCars" className="my-btn w-100">Reserve another car</Link>
+                        <Link href="/Renter/BrowseCars" target="_blank" className="my-btn w-100" style={{ cursor: "pointer" }}>Reserve another car</Link>
                     </div>
                 }
             </div>
@@ -511,11 +511,10 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
             }
             {
                 showCancellationModal && <>
-                    <ModalLg setModal={setShowCancellationModal} style={{ zIndex: 9999 }}>
+                    <ModalLg setModal={setShowCancellationModal} style={{ zIndex: 9999, paddingTop: "90px" }}>
                         <div className={styles.cancellationModal}>
                             <h2>
-                                Cancellation of active rental for
-                                Toyota Venza LE 2022 (RSRVE Code ATX-001-3088)</h2>
+                                Cancellation of active rental for Toyota Venza LE 2022 (RSRVE Code ATX-001-3088)</h2>
                             <p>
                                 We are sad that this rental is being cancelled. Instead of cancelling your rental,
                                 you may submit Heat Ticket for us to try resolve any rental issue you may have.
@@ -650,200 +649,209 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                             <i className="fa fa-chevron-left"></i>
                         </span>
                     }
-                    {showPaymentModal === "cost" && <div className={PaymentStyles.payFeesAndAddOnModal}>
-                        <h2>Rental payment for Edwards Dane
-                            VEHDE ID: ED-R (TX) 155013-78703)</h2>
-                        <div className={PaymentStyles.resultBox}>
-                            <Image src={CarImg} alt="" />
-                            <div>
-                                <div>
-                                    <Image src={FourDoorImg} alt="" />
-                                    <span>4 Door</span>
-                                </div>
-                                <div>
-                                    <Image src={FiveSeatsImg} alt="" />
-                                    <span>5 Seats</span>
-                                </div>
-                                <div>
-                                    <Image src={MPGIMG} alt="" />
-                                    <span>37-40 Mpg</span>
-                                </div>
-                                <div>
-                                    <Image src={AutomaticImg} alt="" />
-                                    <span>Automatic</span>
-                                </div>
+                    {
+                        showPaymentModal === "cost" && <div className={PaymentStyles.payFeesAndAddOnModal}>
+                            <h2>Rental payment for Edwards Dane
+                                VEHDE ID: ED-R (TX) 155013-78703)</h2>
+                            <div className={PaymentStyles.searchBox}>
+                                <h3>Reservation</h3>
+                                <select name="" id="">
+                                    <option value="">ATX-001-3088</option>
+                                </select>
+                                <input type="text" placeholder='Enter the reserved car name' onChange={() => setPayFeesAndAddOnModal(payFeesAndAddOnModal === "addOnSearch" || payFeesAndAddOnModal === "addOn" ? "addOn" : "searched")} value={"2022 Toyota Venza"} readOnly />
                             </div>
-                            <div>
+                            <div className={PaymentStyles.resultBox}>
+                                <Image src={CarImg} alt="" />
                                 <div>
-                                    <label htmlFor="">Pick-up</label>
                                     <div>
-                                        <Image src={CalendarIcon} alt="Calendar Icon" />
-                                        <div className="d-flex gap-1 align-items-center">
-                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
-                                                <DatePicker
-                                                    style={{ width: "75px" }}
-                                                    selected={pickUpDate}
-                                                    onChange={(date) => setPickUpDate(date)}
-                                                    timeInputLabel="Time:"
-                                                    dateFormat="MM/dd/yyyy"
-                                                // showTimeInput
-                                                />
-                                                <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
-                                            </div>
-                                            <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", maxHeight: "200px", color: "#000000" }}>
-                                                <option value="12:00 PM">12:00 PM</option>
-                                                <option value="12:00 PM">12:30 PM</option>
-                                                <option value="12:00 PM">01:00 PM</option>
-                                                <option value="12:00 PM">01:30 PM</option>
-                                                <option value="12:00 PM">02:00 PM</option>
-                                                <option value="12:00 PM">02:30 PM</option>
-                                                <option value="12:00 PM">03:00 PM</option>
-                                                <option value="12:00 PM">03:30 PM</option>
-                                                <option value="12:00 PM">04:00 PM</option>
-                                                <option value="12:00 PM">04:30 PM</option>
-                                                <option value="12:00 PM">05:00 PM</option>
-                                                <option value="12:00 PM">05:30 PM</option>
-                                                <option value="12:00 PM">06:00 PM</option>
-                                                <option value="12:00 PM">06:30 PM</option>
-                                                <option value="12:00 PM">07:00 PM</option>
-                                                <option value="12:00 PM">07:30 PM</option>
-                                                <option value="12:00 PM">08:00 PM</option>
-                                                <option value="12:00 PM">08:30 PM</option>
-                                                <option value="12:00 PM">09:00 PM</option>
-                                                <option value="12:00 PM">09:30 PM</option>
-                                                <option value="12:00 PM">10:00 PM</option>
-                                                <option value="12:00 PM">10:30 PM</option>
-                                                <option value="12:00 PM">11:00 PM</option>
-                                                <option value="12:00 PM">11:30 PM</option>
-
-                                                <option value="12:00 PM">12:00 AM</option>
-                                                <option value="12:00 AM">12:30 AM</option>
-                                                <option value="12:00 AM">01:00 AM</option>
-                                                <option value="12:00 AM">01:30 AM</option>
-                                                <option value="12:00 AM">02:00 AM</option>
-                                                <option value="12:00 AM">02:30 AM</option>
-                                                <option value="12:00 AM">03:00 AM</option>
-                                                <option value="12:00 AM">03:30 AM</option>
-                                                <option value="12:00 AM">04:00 AM</option>
-                                                <option value="12:00 AM">04:30 AM</option>
-                                                <option value="12:00 AM">05:00 AM</option>
-                                                <option value="12:00 AM">05:30 AM</option>
-                                                <option value="12:00 AM">06:00 AM</option>
-                                                <option value="12:00 AM">06:30 AM</option>
-                                                <option value="12:00 AM">07:00 AM</option>
-                                                <option value="12:00 AM">07:30 AM</option>
-                                                <option value="12:00 AM">08:00 AM</option>
-                                                <option value="12:00 AM">08:30 AM</option>
-                                                <option value="12:00 AM">09:00 AM</option>
-                                                <option value="12:00 AM">09:30 AM</option>
-                                                <option value="12:00 AM">10:00 AM</option>
-                                                <option value="12:00 AM">10:30 AM</option>
-                                                <option value="12:00 AM">11:00 AM</option>
-                                                <option value="12:00 AM">11:30 AM</option>
-                                            </select>
-                                        </div>
+                                        <Image src={FourDoorImg} alt="" />
+                                        <span>4 Door</span>
                                     </div>
                                     <div>
-                                        <Image src={MapIcon} /><input type="text" placeholder='2500 Lakeside Dr Austin, TX 78613' />
+                                        <Image src={FiveSeatsImg} alt="" />
+                                        <span>5 Seats</span>
+                                    </div>
+                                    <div>
+                                        <Image src={MPGIMG} alt="" />
+                                        <span>37-40 Mpg</span>
+                                    </div>
+                                    <div>
+                                        <Image src={AutomaticImg} alt="" />
+                                        <span>Automatic</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="">Drop-off</label>
-                                    <div className="col-lg-4">
-                                        <div className="d-flex gap-2 align-items-center">
+                                    <div>
+                                        <label htmlFor="">Pick-up</label>
+                                        <div>
                                             <Image src={CalendarIcon} alt="Calendar Icon" />
-                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
-                                                <DatePicker
-                                                    style={{ width: "75px" }}
-                                                    selected={dropOffDate}
-                                                    startDate={pickUpDate}
-                                                    onChange={(date) => setDropOffDate(date)}
-                                                    timeInputLabel="Time:"
-                                                    dateFormat="MM/dd/yyyy"
-                                                // showTimeInput
-                                                />
-                                                <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
-                                            </div>
-                                            <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", color: "#000000" }}>
-                                                <option value="12:00 PM">12:00 PM</option>
-                                                <option value="12:00 PM">12:30 PM</option>
-                                                <option value="12:00 PM">01:00 PM</option>
-                                                <option value="12:00 PM">01:30 PM</option>
-                                                <option value="12:00 PM">02:00 PM</option>
-                                                <option value="12:00 PM">02:30 PM</option>
-                                                <option value="12:00 PM">03:00 PM</option>
-                                                <option value="12:00 PM">03:30 PM</option>
-                                                <option value="12:00 PM">04:00 PM</option>
-                                                <option value="12:00 PM">04:30 PM</option>
-                                                <option value="12:00 PM">05:00 PM</option>
-                                                <option value="12:00 PM">05:30 PM</option>
-                                                <option value="12:00 PM">06:00 PM</option>
-                                                <option value="12:00 PM">06:30 PM</option>
-                                                <option value="12:00 PM">07:00 PM</option>
-                                                <option value="12:00 PM">07:30 PM</option>
-                                                <option value="12:00 PM">08:00 PM</option>
-                                                <option value="12:00 PM">08:30 PM</option>
-                                                <option value="12:00 PM">09:00 PM</option>
-                                                <option value="12:00 PM">09:30 PM</option>
-                                                <option value="12:00 PM">10:00 PM</option>
-                                                <option value="12:00 PM">10:30 PM</option>
-                                                <option value="12:00 PM">11:00 PM</option>
-                                                <option value="12:00 PM">11:30 PM</option>
+                                            <div className="d-flex gap-1 align-items-center">
+                                                <div className="d-flex align-items-center" style={{ maxWidth: "80px" }}>
+                                                    <DatePicker
+                                                        style={{ width: "75px" }}
+                                                        selected={pickUpDate}
+                                                        onChange={(date) => setPickUpDate(date)}
+                                                        timeInputLabel="Time:"
+                                                        dateFormat="MM/dd/yyyy"
+                                                    // showTimeInput
+                                                    />
+                                                    <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
+                                                </div>
+                                                <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", maxHeight: "200px", color: "#000000" }}>
+                                                    <option value="12:00 PM">12:00 PM</option>
+                                                    <option value="12:00 PM">12:30 PM</option>
+                                                    <option value="12:00 PM">01:00 PM</option>
+                                                    <option value="12:00 PM">01:30 PM</option>
+                                                    <option value="12:00 PM">02:00 PM</option>
+                                                    <option value="12:00 PM">02:30 PM</option>
+                                                    <option value="12:00 PM">03:00 PM</option>
+                                                    <option value="12:00 PM">03:30 PM</option>
+                                                    <option value="12:00 PM">04:00 PM</option>
+                                                    <option value="12:00 PM">04:30 PM</option>
+                                                    <option value="12:00 PM">05:00 PM</option>
+                                                    <option value="12:00 PM">05:30 PM</option>
+                                                    <option value="12:00 PM">06:00 PM</option>
+                                                    <option value="12:00 PM">06:30 PM</option>
+                                                    <option value="12:00 PM">07:00 PM</option>
+                                                    <option value="12:00 PM">07:30 PM</option>
+                                                    <option value="12:00 PM">08:00 PM</option>
+                                                    <option value="12:00 PM">08:30 PM</option>
+                                                    <option value="12:00 PM">09:00 PM</option>
+                                                    <option value="12:00 PM">09:30 PM</option>
+                                                    <option value="12:00 PM">10:00 PM</option>
+                                                    <option value="12:00 PM">10:30 PM</option>
+                                                    <option value="12:00 PM">11:00 PM</option>
+                                                    <option value="12:00 PM">11:30 PM</option>
 
-                                                <option value="12:00 PM">12:00 AM</option>
-                                                <option value="12:00 AM">12:30 AM</option>
-                                                <option value="12:00 AM">01:00 AM</option>
-                                                <option value="12:00 AM">01:30 AM</option>
-                                                <option value="12:00 AM">02:00 AM</option>
-                                                <option value="12:00 AM">02:30 AM</option>
-                                                <option value="12:00 AM">03:00 AM</option>
-                                                <option value="12:00 AM">03:30 AM</option>
-                                                <option value="12:00 AM">04:00 AM</option>
-                                                <option value="12:00 AM">04:30 AM</option>
-                                                <option value="12:00 AM">05:00 AM</option>
-                                                <option value="12:00 AM">05:30 AM</option>
-                                                <option value="12:00 AM">06:00 AM</option>
-                                                <option value="12:00 AM">06:30 AM</option>
-                                                <option value="12:00 AM">07:00 AM</option>
-                                                <option value="12:00 AM">07:30 AM</option>
-                                                <option value="12:00 AM">08:00 AM</option>
-                                                <option value="12:00 AM">08:30 AM</option>
-                                                <option value="12:00 AM">09:00 AM</option>
-                                                <option value="12:00 AM">09:30 AM</option>
-                                                <option value="12:00 AM">10:00 AM</option>
-                                                <option value="12:00 AM">10:30 AM</option>
-                                                <option value="12:00 AM">11:00 AM</option>
-                                                <option value="12:00 AM">11:30 AM</option>
-                                            </select>
+                                                    <option value="12:00 PM">12:00 AM</option>
+                                                    <option value="12:00 AM">12:30 AM</option>
+                                                    <option value="12:00 AM">01:00 AM</option>
+                                                    <option value="12:00 AM">01:30 AM</option>
+                                                    <option value="12:00 AM">02:00 AM</option>
+                                                    <option value="12:00 AM">02:30 AM</option>
+                                                    <option value="12:00 AM">03:00 AM</option>
+                                                    <option value="12:00 AM">03:30 AM</option>
+                                                    <option value="12:00 AM">04:00 AM</option>
+                                                    <option value="12:00 AM">04:30 AM</option>
+                                                    <option value="12:00 AM">05:00 AM</option>
+                                                    <option value="12:00 AM">05:30 AM</option>
+                                                    <option value="12:00 AM">06:00 AM</option>
+                                                    <option value="12:00 AM">06:30 AM</option>
+                                                    <option value="12:00 AM">07:00 AM</option>
+                                                    <option value="12:00 AM">07:30 AM</option>
+                                                    <option value="12:00 AM">08:00 AM</option>
+                                                    <option value="12:00 AM">08:30 AM</option>
+                                                    <option value="12:00 AM">09:00 AM</option>
+                                                    <option value="12:00 AM">09:30 AM</option>
+                                                    <option value="12:00 AM">10:00 AM</option>
+                                                    <option value="12:00 AM">10:30 AM</option>
+                                                    <option value="12:00 AM">11:00 AM</option>
+                                                    <option value="12:00 AM">11:30 AM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Image src={MapIcon} /><input type="text" placeholder='2500 Lakeside Dr Austin, TX 78613' />
                                         </div>
                                     </div>
                                     <div>
-                                        <Image src={MapIcon} /><input type="text" placeholder='2500 Lakeside Dr Austin, TX 78613' />
+                                        <label htmlFor="">Drop-off</label>
+                                        <div className="col-lg-4">
+                                            <div className="d-flex gap-2 align-items-center">
+                                                <Image src={CalendarIcon} alt="Calendar Icon" />
+                                                <div className="d-flex align-items-center" style={{ maxWidth: "80px" }}>
+                                                    <DatePicker
+                                                        style={{ width: "75px" }}
+                                                        selected={dropOffDate}
+                                                        startDate={pickUpDate}
+                                                        onChange={(date) => setDropOffDate(date)}
+                                                        timeInputLabel="Time:"
+                                                        dateFormat="MM/dd/yyyy"
+                                                    // showTimeInput
+                                                    />
+                                                    <i class="fa fa-angle-down" style={{ fontSize: "12px" }}></i>
+                                                </div>
+                                                <select name="" id="" style={{ border: "none", background: "transparent", outline: "none", fontSize: "11px", fontWeight: 500, marginLeft: "15px", color: "#000000" }}>
+                                                    <option value="12:00 PM">12:00 PM</option>
+                                                    <option value="12:00 PM">12:30 PM</option>
+                                                    <option value="12:00 PM">01:00 PM</option>
+                                                    <option value="12:00 PM">01:30 PM</option>
+                                                    <option value="12:00 PM">02:00 PM</option>
+                                                    <option value="12:00 PM">02:30 PM</option>
+                                                    <option value="12:00 PM">03:00 PM</option>
+                                                    <option value="12:00 PM">03:30 PM</option>
+                                                    <option value="12:00 PM">04:00 PM</option>
+                                                    <option value="12:00 PM">04:30 PM</option>
+                                                    <option value="12:00 PM">05:00 PM</option>
+                                                    <option value="12:00 PM">05:30 PM</option>
+                                                    <option value="12:00 PM">06:00 PM</option>
+                                                    <option value="12:00 PM">06:30 PM</option>
+                                                    <option value="12:00 PM">07:00 PM</option>
+                                                    <option value="12:00 PM">07:30 PM</option>
+                                                    <option value="12:00 PM">08:00 PM</option>
+                                                    <option value="12:00 PM">08:30 PM</option>
+                                                    <option value="12:00 PM">09:00 PM</option>
+                                                    <option value="12:00 PM">09:30 PM</option>
+                                                    <option value="12:00 PM">10:00 PM</option>
+                                                    <option value="12:00 PM">10:30 PM</option>
+                                                    <option value="12:00 PM">11:00 PM</option>
+                                                    <option value="12:00 PM">11:30 PM</option>
+
+                                                    <option value="12:00 PM">12:00 AM</option>
+                                                    <option value="12:00 AM">12:30 AM</option>
+                                                    <option value="12:00 AM">01:00 AM</option>
+                                                    <option value="12:00 AM">01:30 AM</option>
+                                                    <option value="12:00 AM">02:00 AM</option>
+                                                    <option value="12:00 AM">02:30 AM</option>
+                                                    <option value="12:00 AM">03:00 AM</option>
+                                                    <option value="12:00 AM">03:30 AM</option>
+                                                    <option value="12:00 AM">04:00 AM</option>
+                                                    <option value="12:00 AM">04:30 AM</option>
+                                                    <option value="12:00 AM">05:00 AM</option>
+                                                    <option value="12:00 AM">05:30 AM</option>
+                                                    <option value="12:00 AM">06:00 AM</option>
+                                                    <option value="12:00 AM">06:30 AM</option>
+                                                    <option value="12:00 AM">07:00 AM</option>
+                                                    <option value="12:00 AM">07:30 AM</option>
+                                                    <option value="12:00 AM">08:00 AM</option>
+                                                    <option value="12:00 AM">08:30 AM</option>
+                                                    <option value="12:00 AM">09:00 AM</option>
+                                                    <option value="12:00 AM">09:30 AM</option>
+                                                    <option value="12:00 AM">10:00 AM</option>
+                                                    <option value="12:00 AM">10:30 AM</option>
+                                                    <option value="12:00 AM">11:00 AM</option>
+                                                    <option value="12:00 AM">11:30 AM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Image src={MapIcon} /><input type="text" placeholder='2500 Lakeside Dr Austin, TX 78613' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className={PaymentStyles.costBox}>
-                            <div>
-                                <h2>Rental Deposit <span>($105.00)</span> </h2>
-                            </div>
-                            <div>
-                                <h2>Total Rental Costs <span>($3,285.52)</span></h2>
+                            <div className={PaymentStyles.costBox}>
                                 <div>
-                                    <span>Base cost (5% discounted)</span>
-                                    <span>$2,493.75</span>
-                                    <span>Estimated taxes & fees</span>
-                                    <span>$791.77</span>
-                                    <span>Estimated Total Costs</span>
-                                    <span>$3,285.52</span>
+                                    <h2>Rental Deposit <span>($105.00)</span> </h2>
+                                </div>
+                                <div>
+                                    <h2>Total Rental Costs <span>($3,285.52)</span></h2>
+                                    <div>
+                                        <span>Base cost (5% discounted)</span>
+                                        <span>$2,493.75</span>
+                                        <span>Estimated taxes & fees</span>
+                                        <span>$791.77</span>
+                                        <span>Estimated Total Costs</span>
+                                        <span>$3,285.52</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div className={PaymentStyles.buttonBox}>
+                                <button onClick={() => setShowPaymentModal("payment")}> <span>*$105.00</span> Pay Rental Deposit </button>
+                                <button onClick={() => setShowPaymentModal("payment")}>**$3,285.52 Pay Total Rental Costs</button>
+                            </div>
                         </div>
-                        <div className={PaymentStyles.buttonBox}>
-                            <button onClick={() => setShowPaymentModal("payment")}> <span>*$105.00</span> Pay Rental Deposit </button>
-                            <button onClick={() => setShowPaymentModal("payment")}>**$3,285.52 Pay Total Rental Costs</button>
-                        </div>
-                    </div>}
+                    }
                     {
                         showPaymentModal === "payment" && <div className={PaymentStyles.checkoutModal}>
                             <h2>Paying $105.00 as rental deposit for reservation code ATX-001-3099</h2>

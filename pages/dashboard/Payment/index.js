@@ -27,6 +27,12 @@ import CalendarIcon from "../../../assets/img/calendar-icon.png"
 import RegularInsuranceImg from "../../../assets/img/dashboard/MyRenter/RegularInsurance.png"
 import VEHSAVEImg from "../../../assets/img/dashboard/MyRenter/VEHSAVE.png"
 import RoadsideAssistanceImg from "../../../assets/img/dashboard/MyRenter/RoadsideAssistance.png"
+import ProtectionBox from "../../../components/Rental/Review/ProtectionBox"
+import MainBox from '../../../components/Rental/Review/MainBox'
+import RentalDataPopupHeader from '../../../components/Rental/RentalDataPopupHeader'
+import CarDetailsPopupPictures from '../../../components/carPictures&Specification/CarDetailsPopupPictures'
+
+import ReservationStyles from "../../../styles/dashboard/Rental/Reservation.module.css"
 
 
 
@@ -48,6 +54,7 @@ const Payment = () => {
     const [payFeesAndAddOnModal, setPayFeesAndAddOnModal] = useState(null)
     const [checkoutModal, setCheckoutModal] = useState(null)
     const [payFeesModal, setPayFeesModal] = useState(null)
+    const [showDetails, setShowDetails] = useState(null)
 
     useEffect(() => {
         console.log(payFeesAndAddOnModal)
@@ -102,9 +109,7 @@ const Payment = () => {
                         <div className={styles.renterBanner}>
                             <h2>Payment</h2>
                             <p><span>ATTENTION:</span> You currently have one or more outstanding payments to make at this moment.</p>
-                            <p>Please click “Pay Fees” below to pay any outstanding fees applicable to any of your scheduled
-                                reservations, or “Add- On to pay for additional services like Protection (auto insurance) and
-                                VEHSAVE.”?</p>
+                            <p>Please select “Pay Fees” below to pay any outstanding fees applicable to any of your scheduled reservations, or “Add-On” to pay for additional services like Protection (auto insurance) and VEHSAVE.</p>
                             <div>
                                 <button className='my-btn' onClick={() => setPayFeesModal({})}>Pay Fees</button>
                                 <button onClick={() => setPayFeesAndAddOnModal("addOnSearch")}>Add-On</button>
@@ -129,7 +134,7 @@ const Payment = () => {
                                         </td>
                                         <td>
                                             <h5>Toyota Venza LE 2022</h5>
-                                            <span onClick={() => setPayFeesAndAddOnModal("searched")}>See details</span>
+                                            <span onClick={() => setShowDetails({})}>See details</span>
                                         </td>
                                         <td>
                                             <Link href="">ATX-001-3099</Link>
@@ -148,7 +153,7 @@ const Payment = () => {
                                         </td>
                                         <td>
                                             <h5>Toyota Venza LE 2022</h5>
-                                            <span onClick={() => setPayFeesAndAddOnModal("searched")}>See details</span>
+                                            <span onClick={() => setShowDetails({})}>See details</span>
                                         </td>
                                         <td>
                                             <Link href="">ATX-001-3099</Link>
@@ -167,7 +172,7 @@ const Payment = () => {
                                         </td>
                                         <td>
                                             <h5>Toyota Venza LE 2022</h5>
-                                            <span onClick={() => setPayFeesAndAddOnModal("searched")}>See details</span>
+                                            <span onClick={() => setShowDetails({})}>See details</span>
                                         </td>
                                         <td>
                                             <Link href="">ATX-001-3099</Link>
@@ -191,8 +196,8 @@ const Payment = () => {
                     {
                         payFeesAndAddOnModal !== null && <ModalLg setModal={setPayFeesAndAddOnModal}>
                             <div className={styles.payFeesAndAddOnModal}>
-                                <h2>Rental payment for Edwards Dane
-                                    <br />VEHDE ID: ED-R (TX) 155013-78703)</h2>
+                                <h2>Rental payment for Edwards Dane VEHDE ID:
+                                    <br /> ED-R (TX) 155013-78703)</h2>
                                 <p>Please select a reservation, from the list of your existing
                                     reservations, for which you want to pay for.</p>
                                 <div className={styles.searchBox}>
@@ -582,7 +587,7 @@ const Payment = () => {
                                                 <span>$0</span>
                                             </div>
                                         </div>
-                                        <div className={styles.addOnCheckBox}>
+                                        {/* <div className={styles.addOnCheckBox}>
                                             <div>
                                                 <span>10% Save</span>
                                                 <h3>Regular Insurance</h3>
@@ -601,7 +606,8 @@ const Payment = () => {
                                                     <span>$9.95/DAY</span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
+                                        <ProtectionBox />
                                         <div className='text-center mt-4'>
                                             <button className="my-btn mx-auto">Proceed to Checkout</button>
                                         </div>
@@ -619,7 +625,7 @@ const Payment = () => {
                                                 <span>$0</span>
                                             </div>
                                         </div>
-                                        <div className={styles.addOnCheckBox}>
+                                        {/* <div className={styles.addOnCheckBox}>
                                             <div>
                                                 <span>
                                                     <i className='fa fa-info'></i>
@@ -665,7 +671,8 @@ const Payment = () => {
                                                     <span>$9.95/DAY</span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
+                                        <ProtectionBox />
                                         <div className='text-center mt-4'>
                                             <button className="my-btn mx-auto">Proceed to Checkout</button>
                                         </div>
@@ -762,9 +769,9 @@ const Payment = () => {
 
                                     <div className={`${styles.checkoutModalCheckbox} mt-3`}>
                                         <input type="checkbox" name="" id="" />
-                                        <label htmlFor="">Free cancellation with full refund before March 13, 2022, at 00:45 PM</label>
+                                        <label htmlFor="">I agree to VEHDE’s <Link href="">Terms of Use</Link> and acknowledge that I have read the <Link href="">Privacy Notice</Link>.</label>
                                     </div>
-                                    <p>I agree to VEHDE’s <Link href="">Terms of Use</Link> and acknowledge that I have read the <Link href="">Privacy Notice</Link>.</p>
+                                    <p>Free cancellation with full refund before March 13, 2022, at 00:45 PM</p>
                                 </div>
                                 <button className='my-btn mt-3 mx-auto' onClick={() => setCheckoutModal("paid")}>Pay Now</button>
                             </div>
@@ -774,6 +781,7 @@ const Payment = () => {
                         payFeesModal && <ModalLg setModal={setPayFeesModal}>
                             <div className={styles.payFeesModal}>
                                 <h2>Fees and Payment Schedules</h2>
+                                <p>Please select a reservation, from the list of your existing reservations, for which you want to pay for.</p>
                                 <div>
                                     <div>
                                         <div>
@@ -828,9 +836,53 @@ const Payment = () => {
                                     </div>
                                 </div>
                                 <div className={styles.buttons}>
-                                    <button onClick={() => { setCheckoutModal("checking"); setPayFeesModal(null) }}>Pay Fees</button>
+                                    <button onClick={() => { setPayFeesAndAddOnModal("searched"); setPayFeesModal(null) }}>Pay Fees</button>
                                     {/* <button onClick={() => { setPayFeesAndAddOnModal("addOnSearch"); setPayFeesModal(null) }}>Add-On</button> */}
                                 </div>
+                            </div>
+                        </ModalLg>
+                    }
+                    {
+                        showDetails && <ModalLg setModal={setShowDetails}>
+                            <RentalDataPopupHeader hideHighlight={true} />
+                            <MainBox hideEstCost={true} hideList={true} hidePrice={true} hideageResidency={true} showAttention="warn" />
+                            <div className={ReservationStyles.rentalDataList}>
+                                <div>
+                                    <h3>Highlighted Features</h3>
+                                    <div>
+                                        <span>
+                                            <i className="fa fa-check"></i>
+                                        </span>
+                                        <span>Hybrid powertrain with 219 net system horse power</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <i className="fa fa-check"></i>
+                                        </span>
+                                        <span>Electronic On-Demand All-Wheel Drive (AWD)</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <i className="fa fa-check"></i>
+                                        </span>
+                                        <span>Height-adjustable hands-free power liftgate with jam protection</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <i className="fa fa-check"></i>
+                                        </span>
+                                        <span>8-way power-adjustable driver's seat with lumbar support</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <i className="fa fa-check"></i>
+                                        </span>
+                                        <span>Toyota Safety Sense™ 2.0 (TSS 2.0) 173 and Star Safety System™</span>
+                                    </div>
+                                    <h4>Save Money</h4>
+                                    <p><span>5% discount</span> for at least <span>7-day reservation</span> applies to this rental</p>
+                                </div>
+                                <CarDetailsPopupPictures />
                             </div>
                         </ModalLg>
                     }

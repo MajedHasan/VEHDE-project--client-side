@@ -328,8 +328,8 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
                         <p style={{ marginTop: "70px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>VEHDE makes protection plans available to guests. Details of the protection plans can be found by reviewing</p>
                         <p style={{ fontSize: "12px", color: "#6A6A6A" }}>Understanding and choosing ride auto protection.</p>
 
-                        <p style={{ marginTop: "30px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>VEHDE makes protection plans available to guests. Details of the protection plans can be found by reviewing</p>
-                        <p style={{ fontSize: "12px", color: "#6A6A6A" }}>Understanding and choosing ride auto protection.</p>
+                        <p style={{ marginTop: "30px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>Guests that want supplemental protection may purchase personal coverage as Add-On</p>
+                        {/* <p style={{ fontSize: "12px", color: "#6A6A6A" }}>Understanding and choosing ride auto protection.</p> */}
 
                         <div className="mt-5">
                             <button className="my-btn mx-auto">Add-On</button>

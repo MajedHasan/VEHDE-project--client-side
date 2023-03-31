@@ -439,7 +439,7 @@ export default function Home() {
                                         <div className="d-flex gap-2 align-items-center">
                                             <Image src={CalendarIcon} alt="Calendar Icon" />
                                             <div className="d-flex gap-1 align-items-center">
-                                                <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
+                                                <div className="d-flex align-items-center" style={{ maxWidth: "80px" }}>
                                                     <DatePicker
                                                         style={{ width: "75px" }}
                                                         selected={pickUpDate}
@@ -514,7 +514,7 @@ export default function Home() {
                                         </div>
                                         <div className="d-flex gap-2 align-items-center">
                                             <Image src={CalendarIcon} alt="Calendar Icon" />
-                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
+                                            <div className="d-flex align-items-center" style={{ maxWidth: "80px" }}>
                                                 <DatePicker
                                                     style={{ width: "75px" }}
                                                     selected={dropOffDate}

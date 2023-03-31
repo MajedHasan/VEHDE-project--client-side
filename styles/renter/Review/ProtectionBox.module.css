@@ -8,17 +8,59 @@
 
 .container>div {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: auto;
 }
 
+.container>div>div>span:nth-child(1) {
+    position: relative;
+    border-radius: 99px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>div>div>span:nth-child(1):hover>p {
+    visibility: visible;
+}
+
+.container>div>div>span:nth-child(1)>p {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.70);
+    padding: 8px 15px;
+    border-radius: 8px;
+    visibility: hidden;
+    text-align: center;
+}
+
+.container>div>div>span {
+    display: block;
+    width: fit-content;
+    border-radius: 7px;
+    background: #DE4F4D;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-left: auto;
+    padding: 4px 12px;
+}
+
 .container>div>div {
-    background: #FFFFFF;
+    background: #fefefe;
     padding: 20px 25px;
     border-radius: 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.20);
 }
 
 .container>div>div>button {
@@ -36,7 +78,7 @@
 .container>div>div>h4 {
     color: #000000;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 25px;
     margin: 25px auto !important;
 }
 
@@ -49,7 +91,7 @@
 
 
 .container>div>div>img {
-    max-width: 150px;
+    max-width: 120px;
     width: 100%;
     height: auto;
 }

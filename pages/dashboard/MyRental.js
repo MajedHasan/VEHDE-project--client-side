@@ -6,6 +6,7 @@ import Reservation from "../../components/Rental/Reservation"
 import styles from "../../styles/dashboard/Rental/MyRental.module.css"
 import CarImg from "../../assets/img/dashboard/MyHost/Rental/car.png"
 import MainBox from "../../components/Rental/Review/MainBox"
+import ProtectionBox from "../../components/Rental/Review/ProtectionBox"
 
 
 const MyRenter = () => {
@@ -189,8 +190,7 @@ const MyRenter = () => {
                         <h2>Modifying active rental for
                             <span>Toyota Venza LE 2022 (RSRVE Code ATX-001-3088)</span>
                         </h2>
-                        <p>Please select the category of rental to modify and
-                            provide the required information.</p>
+                        <p>You can now review and modify your reservation based on your new preferences</p>
                         <div>
                             <div>
                                 <span>RSRVE Code</span>
@@ -226,7 +226,8 @@ const MyRenter = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div style={{ padding: 0 }}></div>
+                        {/* <div>
                             <div>
                                 <h4>Regular Insurance</h4>
                                 <Image src={require("../../assets/img/dashboard/MyRenter/RegularInsurance.png")} alt="" />
@@ -251,7 +252,8 @@ const MyRenter = () => {
                                     <label htmlFor="">$15/DAY</label>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <ProtectionBox />
                         <div className="mt-3">
                             <button className="my-btn mx-auto">Proceed to Checkout</button>
                         </div>

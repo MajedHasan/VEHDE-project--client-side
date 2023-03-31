@@ -52,6 +52,10 @@ const BrowseCars = () => {
     const [overview, setOverview] = useState(null)
     const [detail, setDetail] = useState(null)
 
+    const [carMakes, setCarMakes] = useState(
+        ["Acura", "Alfa Romeo", "Aston Marton", "BMW", "Bentley", "Buick", "CODA", "Cadilac", "Chevrolet", "Chrsyler", "Daewoo", "Daihatsu", "Dodge", "Eagle", "Ferrari", "Fiat", "Fisker", "Ford", "Freightliner", "GMC", "Genesis", "Geo", "Honda", "Hummer", "Hyundai", "Infiniti", "Isuzu", "Jaguar", "Jeep", "Kia", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "Maserati", "Maybach", "Mazda", "Mclaren", "Mercedes - Benz", "Mercury", "Mini", "Mitsubishi", "Nissan", "Oldsmobile", "Panoz", "Plymouth", "Pontaic", "Posche", "Ram", "Rivian", "Rolls - Royce", "Saab", "Saturn", "Scion", "Smart", "Srt", "Subaru", "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo"]
+    )
+
 
     const handleChangeOptimizer = () => {
         setIsOptimizerOn(!isOptimizerOn)
@@ -61,7 +65,7 @@ const BrowseCars = () => {
 
     return (
         <>
-            <MainLayout stopHeaderSticky={true} hideFooter={true} fullWidth={true}>
+            <MainLayout hideFooter={true} fullWidth={true}>
                 <main className={styles.main}>
                     <div className="container">
                         <div>
@@ -147,37 +151,17 @@ const BrowseCars = () => {
                                                 <h2>Make your car</h2>
                                                 <div className={styles.makeFilterOption}>
                                                     <div>
-                                                        <input type="checkbox" id="allCarMakes" />
-                                                        <label htmlFor="allCarMakes">All car makes</label>
+                                                        <input type="checkbox" id="allCarMakes" value="Any Make" />
+                                                        <label htmlFor="allCarMakes">Any Make</label>
                                                     </div>
-                                                    <div>
-                                                        <input type="checkbox" id="Acura" />
-                                                        <label htmlFor="Acura">Acura</label>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" id="AlfaRomeo" />
-                                                        <label htmlFor="AlfaRomeo">Alfa Romeo</label>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" id="Audi" />
-                                                        <label htmlFor="Audi">Audi</label>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" id="Buick" />
-                                                        <label htmlFor="Buick">Buick</label>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" id="Cadillac" />
-                                                        <label htmlFor="Cadillac">Cadillac</label>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" id="Chevrolet" />
-                                                        <label htmlFor="Chevrolet">Chevrolet</label>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" id="Chrysler" />
-                                                        <label htmlFor="Chrysler">Chrysler</label>
-                                                    </div>
+                                                    {
+                                                        carMakes?.map(((make, index) => (
+                                                            <div>
+                                                                <input type="checkbox" id={make} value={make} />
+                                                                <label htmlFor={make}>{make}</label>
+                                                            </div>
+                                                        )))
+                                                    }
                                                 </div>
                                                 <hr />
                                                 <div className={styles.filterButtonBox}>

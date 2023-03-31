@@ -71,6 +71,10 @@
     display: block;
 }
 
+.pickUpDropOffBox>div>div>div>div>div input {
+    max-width: 66px;
+}
+
 .datePickerBox {
     display: flex;
     align-items: center;
@@ -218,6 +222,7 @@
     padding: 5px 20px;
     border-radius: 99px;
     margin: auto;
+    cursor: pointer;
 }
 
 .attentionBox>i {

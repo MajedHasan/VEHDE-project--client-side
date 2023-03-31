@@ -30,6 +30,16 @@
     color: #000000;
 }
 
+.container>div>div>div>div>div>div input {
+    font-weight: 500;
+    font-size: 11px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #000000;
+    max-width: 65px;
+}
+
 .container>div>div button {
     max-width: inherit;
 }
