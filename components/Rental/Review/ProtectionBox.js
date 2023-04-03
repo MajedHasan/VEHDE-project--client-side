@@ -6,10 +6,10 @@ import RoadsideAssistanceImg from "../../../assets/img/dashboard/MyRenter/Roadsi
 import Image from "next/image"
 
 
-const ProtectionBox = () => {
+const ProtectionBox = ({ customStyles, hideTitle }) => {
     return (
-        <div className={styles.container}>
-            <h2>Protection (Optional)</h2>
+        <div className={styles.container} style={customStyles && customStyles}>
+            {hideTitle !== true && <h2>Protection (Optional)</h2>}
             <div>
                 {/* <div>
                     <button>10% Save</button>

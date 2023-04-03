@@ -417,7 +417,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                 }
                             </button>
                         </div>
-                        <Link href="/Renter/BrowseCars">Reserve another car here</Link>
+                        <Link href="/Renter/BrowseCars" target="_blank">Reserve another car here</Link>
                     </div>
                 </ModalMd>
             }
@@ -512,9 +512,10 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
             {
                 showCancellationModal && <>
                     <ModalLg setModal={setShowCancellationModal} style={{ zIndex: 9999, paddingTop: "90px" }}>
+                        <i className="fa fa-chevron-left" style={{ cursor: "pointer" }} onClick={() => setShowCancellationModal(null)}></i>
                         <div className={styles.cancellationModal}>
                             <h2>
-                                Cancellation of active rental for Toyota Venza LE 2022 (RSRVE Code ATX-001-3088)</h2>
+                                Cancellation of active rental for Toyota Venza LE 2022 <br /> (RSRVE Code ATX-001-3088)</h2>
                             <p>
                                 We are sad that this rental is being cancelled. Instead of cancelling your rental,
                                 you may submit Heat Ticket for us to try resolve any rental issue you may have.
@@ -580,7 +581,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                 <span>25</span>
                                 <span>$105</span>
                             </div>
-                            <Link href="/Renter/BrowseCars">Reserve another car here</Link>
+                            <Link href="/Renter/BrowseCars" target="_blank">Reserve another car here</Link>
                         </div>
                     </div>
                 </ModalMd>
@@ -643,7 +644,7 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                 </ModalMd>
             }
             {
-                showPaymentModal && <ModalLg setModal={setShowPaymentModal} style={{ marginTop: "45px" }}>
+                showPaymentModal && <ModalLg setModal={setShowPaymentModal} style={{ zIndex: 9999 }}>
                     {
                         showPaymentModal === "payment" && <span style={{ cursor: "pointer" }} onClick={() => setShowPaymentModal("cost")}>
                             <i className="fa fa-chevron-left"></i>
@@ -651,8 +652,8 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                     }
                     {
                         showPaymentModal === "cost" && <div className={PaymentStyles.payFeesAndAddOnModal}>
-                            <h2>Rental payment for Edwards Dane
-                                VEHDE ID: ED-R (TX) 155013-78703)</h2>
+                            <h2>Rental payment for Edwards Dane <br />
+                                (VEHDE ID: ED-R (TX) 155013-78703)</h2>
                             <div className={PaymentStyles.searchBox}>
                                 <h3>Reservation</h3>
                                 <select name="" id="">
@@ -938,10 +939,14 @@ const Reservation = ({ setModifyModal, showCancellationModal, setShowCancellatio
                                 </div>
 
                                 <div className={`${PaymentStyles.checkoutModalCheckbox} mt-3`}>
-                                    <input type="checkbox" name="" id="" />
                                     <label htmlFor="">Free cancellation with full refund before March 13, 2022, at 00:45 PM</label>
                                 </div>
-                                <p>I agree to VEHDE’s <span>Terms of Use</span> and acknowledge that I have read the <span>Privacy Notice</span>.</p>
+                                <div className={`${PaymentStyles.checkoutModalCheckbox} mt-3`}>
+                                    <input type="checkbox" name="" id="" />
+                                    <label htmlFor="">
+                                        <p style={{ color: "#898989", marginBottom: 0 }}>I agree to VEHDE’s <span style={{ color: "#DE4F4D" }}>Terms of Use</span> and acknowledge that I have read the <span style={{ color: "#DE4F4D" }}>Privacy Notice</span>.</p>
+                                    </label>
+                                </div>
                             </div>
                             <button className='my-btn mt-3 mx-auto' onClick={() => setShowPaymentModal(null)}>Pay Now</button>
                         </div>

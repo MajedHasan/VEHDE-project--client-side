@@ -56,11 +56,6 @@ const Payment = () => {
     const [payFeesModal, setPayFeesModal] = useState(null)
     const [showDetails, setShowDetails] = useState(null)
 
-    useEffect(() => {
-        console.log(payFeesAndAddOnModal)
-    }, [payFeesAndAddOnModal])
-
-
 
     return (
         <DashboardLayout>
@@ -196,8 +191,8 @@ const Payment = () => {
                     {
                         payFeesAndAddOnModal !== null && <ModalLg setModal={setPayFeesAndAddOnModal}>
                             <div className={styles.payFeesAndAddOnModal}>
-                                <h2>Rental payment for Edwards Dane VEHDE ID:
-                                    <br /> ED-R (TX) 155013-78703)</h2>
+                                <h2>Rental payment for Edwards Dane
+                                    <br /> (VEHDE ID: ED-R (TX) 155013-78703)</h2>
                                 <p>Please select a reservation, from the list of your existing
                                     reservations, for which you want to pay for.</p>
                                 <div className={styles.searchBox}>
@@ -235,7 +230,7 @@ const Payment = () => {
                                                     <div>
                                                         <Image src={CalendarIcon} alt="Calendar Icon" />
                                                         <div className="d-flex gap-1 align-items-center">
-                                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
+                                                            <div className="d-flex align-items-center" style={{ maxWidth: "80px" }}>
                                                                 <DatePicker
                                                                     style={{ width: "75px" }}
                                                                     selected={pickUpDate}
@@ -308,7 +303,7 @@ const Payment = () => {
                                                     <div className="col-lg-4">
                                                         <div className="d-flex gap-2 align-items-center">
                                                             <Image src={CalendarIcon} alt="Calendar Icon" />
-                                                            <div className="d-flex align-items-center gap-1" style={{ maxWidth: "80px" }}>
+                                                            <div className="d-flex align-items-center" style={{ maxWidth: "80px" }}>
                                                                 <DatePicker
                                                                     style={{ width: "75px" }}
                                                                     selected={dropOffDate}

@@ -279,7 +279,7 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                 </div>
             </div>
             {
-                showPaymentModal && <ModalLg setModal={setShowPaymentModal} style={{ marginTop: "45px" }}>
+                showPaymentModal && <ModalLg setModal={setShowPaymentModal} style={{ marginTop: "45px", zIndex: 9999 }}>
                     {
                         showPaymentModal === "payment" && <span style={{ cursor: "pointer" }} onClick={() => setShowPaymentModal("cost")}>
                             <i className="fa fa-chevron-left"></i>
@@ -287,8 +287,8 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                     }
                     {
                         showPaymentModal === "cost" && <div className={PaymentStyles.payFeesAndAddOnModal}>
-                            <h2>Rental payment for Edwards Dane
-                                VEHDE ID: ED-R (TX) 155013-78703)</h2>
+                            <h2>Rental payment for Edwards Dane <br />
+                                (VEHDE ID: ED-R (TX) 155013-78703)</h2>
                             <div className={PaymentStyles.searchBox}>
                                 <h3>Reservation</h3>
                                 <select name="" id="">
@@ -577,7 +577,12 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                                     <input type="checkbox" name="" id="" />
                                     <label htmlFor="">Free cancellation with full refund before March 13, 2022, at 00:45 PM</label>
                                 </div>
-                                <p>I agree to VEHDE’s <span>Terms of Use</span> and acknowledge that I have read the <span>Privacy Notice</span>.</p>
+                                <div className={`${PaymentStyles.checkoutModalCheckbox} mt-3`}>
+                                    <input type="checkbox" name="" id="" />
+                                    <label htmlFor="">
+                                        <p style={{ color: "#898989", marginBottom: 0 }}>I agree to VEHDE’s <span style={{ color: "#DE4F4D" }}>Terms of Use</span> and acknowledge that I have read the <span style={{ color: "#DE4F4D" }}>Privacy Notice</span>.</p>
+                                    </label>
+                                </div>
                             </div>
                             <button className='my-btn mt-3 mx-auto' onClick={() => setShowPaymentModal(null)}>Pay Now</button>
                         </div>

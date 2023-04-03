@@ -92,10 +92,10 @@ const VEHDEPass = () => {
                                             <p>
                                                 Your rental car, <span>Toyota Venza 2022</span> with
                                                 <span> RSRVE Code RSVE ATX-001-3056</span>, is <Link href="">VEHDEPass</Link> advantage eligible.
-                                                <Link href="">VEHDEPass</Link> membership reduces your current rental costs by $56.25.</p>
+                                                <Link href=""> VEHDEPass</Link> membership reduces your current rental costs by $56.25.</p>
                                             <p>
                                                 Your <Link href="">VEHDEPass</Link> membership is currently inactive.
-                                                Please activate your <Link href="">VEHDEPass</Link> by switching the toggle below.
+                                                Please activate your <Link href=""> VEHDEPass</Link> by switching the toggle below.
                                             </p>
                                         </>
                                     }

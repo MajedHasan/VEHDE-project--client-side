@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from "../../styles/dashboard/Header.module.css"
+import PaymentPageStyles from "../../styles/dashboard/Payment.module.css"
 
 import HelpImg from "../../assets/img/dashboard/help.svg"
 import UserImg from "../../assets/img/dashboard/user.svg"
@@ -15,6 +16,7 @@ import ProfileModalImg3 from "../../assets/img/dashboard/MyRenter/ProfileModalIm
 import ProfileModalImg4 from "../../assets/img/dashboard/MyRenter/ProfileModalImg4.png"
 import ProfileModalImg5 from "../../assets/img/dashboard/MyRenter/ProfileModalImg5.png"
 import ProfileModalImg6 from "../../assets/img/dashboard/MyRenter/ProfileModalImg6.png"
+import ProtectionBox from "../Rental/Review/ProtectionBox"
 
 
 const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
@@ -320,7 +322,7 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
                 </ModalLg>
             }
             {
-                showModalMd === "auto" && <ModalMd setModal={setShowModalMd}>
+                showModalMd === "auto" && <ModalLg setModal={setShowModalMd}>
                     <div className={`${styles.modalLgBox}`}>
                         <h2>VEHDE
                             <span>Auto Insurance</span>
@@ -328,14 +330,25 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
                         <p style={{ marginTop: "70px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>VEHDE makes protection plans available to guests. Details of the protection plans can be found by reviewing</p>
                         <p style={{ fontSize: "12px", color: "#6A6A6A" }}>Understanding and choosing ride auto protection.</p>
 
-                        <p style={{ marginTop: "30px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>Guests that want supplemental protection may purchase personal coverage as Add-On</p>
-                        {/* <p style={{ fontSize: "12px", color: "#6A6A6A" }}>Understanding and choosing ride auto protection.</p> */}
+                        <p style={{ marginTop: "30px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>Guests that want supplemental protection may purchase personal coverage as <span style={{ color: "#6A6A6A" }}>Add-On</span></p>
 
-                        <div className="mt-5">
+
+                        <p style={{ fontSize: "15px", color: "#6A6A6A", marginTop: "40px" }}> Please select a reservation, from the list of your existing reservations, for which you want to review it's Add-On coverage.</p>
+
+                        <div className={PaymentPageStyles.searchBox}>
+                            <h3>Reservation</h3>
+                            <select name="" id="">
+                                <option value="">ATX-001-3088</option>
+                            </select>
+                            <input type="text" placeholder='Enter the reserved car name' onChange={() => setPayFeesAndAddOnModal(payFeesAndAddOnModal === "addOnSearch" || payFeesAndAddOnModal === "addOn" ? "addOn" : "searched")} value={"2022 Toyota Venza"} />
+                        </div>
+                        <ProtectionBox hideTitle={true} customStyles={{ padding: "15px" }} />
+
+                        <div className="">
                             <button className="my-btn mx-auto">Add-On</button>
                         </div>
                     </div>
-                </ModalMd>
+                </ModalLg>
             }
             {
                 showModalMd !== "auto" && showModalMd !== null && showModalMd !== false && <ModalMd setModal={setShowModalMd}>

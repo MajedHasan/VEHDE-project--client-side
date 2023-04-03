@@ -80,6 +80,7 @@ const MyRenter = () => {
             }
             {
                 discountModal !== "discount" && discountModal !== null && <ModalLg setModal={setDiscountModal}>
+                    <i className="fa fa-chevron-left" style={{ cursor: "pointer" }} onClick={() => setDiscountModal("discount")}></i>
                     <div className={styles.discountModalSingle}>
                         <h2>My Discount | {discountModal}</h2>
                         <div className={styles.tableWrapper}>
@@ -188,7 +189,7 @@ const MyRenter = () => {
                     <span onClick={() => setModifyModal(null)} style={{ cursor: "pointer" }}> <i className="fa fa-chevron-left"></i> </span>
                     <div className={styles.modifyModalWrapper}>
                         <h2>Modifying active rental for
-                            <span>Toyota Venza LE 2022 (RSRVE Code ATX-001-3088)</span>
+                            <span>(Toyota Venza LE 2022 RSRVE Code ATX-001-3088)</span>
                         </h2>
                         <p>You can now review and modify your reservation based on your new preferences</p>
                         <div>
