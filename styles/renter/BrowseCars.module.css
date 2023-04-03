@@ -6,9 +6,9 @@
 .main>div {
     display: grid;
     grid-template-columns: 70% 30%;
-    gap: 25px;
+    gap: 22px;
     max-width: 100%;
-    min-height: 92vh;
+    min-height: 85vh;
 }
 
 .searchFilterBox {
@@ -18,17 +18,17 @@
     padding: 15px 10px;
 }
 
-.main>div>div:nth-child(1) {
+/* .main>div>div:nth-child(1) {
     position: sticky;
     top: 3px;
     z-index: 99999;
-}
+} */
 
 .searchFilterBox>div:nth-child(2) {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 12px;
     flex-wrap: wrap;
 }
 
@@ -341,7 +341,7 @@
 
 .mapWrapper {
     position: sticky;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     top: 3px;
 }
 
@@ -350,7 +350,7 @@
     height: 100%;
     max-height: 700px;
     border-radius: 20px;
-    max-width: 93%;
+    max-width: 92%;
 }
 
 .mapWrapper>div:nth-child(1) {
@@ -408,13 +408,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding: 10px 8px;
+    padding: 1px 5px;
     border-radius: 10px;
     height: 100%;
-    max-height: 58vh;
+    max-height: 55vh;
     overflow-y: scroll;
     /* background: #fafafa; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .quickViewListWrapper::-webkit-scrollbar,
@@ -563,9 +563,10 @@
     grid-template-columns: repeat(1, 1fr);
     overflow-x: hidden;
     /* max-height: 2000px; */
-    row-gap: 60px;
+    row-gap: 20px;
 }
 
+/* 
 .boardViewListWrapper>div {
     background: #F4F4F4;
     padding: 25px;
@@ -701,7 +702,7 @@
 .boardViewListWrapper>div>div:nth-child(4)>button:nth-child(3) {
     background: #FFFFFF;
     border: 1px solid #000000;
-}
+} */
 
 /* ======================xxx=== Board View List ===xxx====================== */
 
@@ -733,8 +734,8 @@
         max-height: 100vh;
     }
 
-    .quickViewListWrapper,
-    .boardViewListWrapper {
+    /* .boardViewListWrapper, */
+    .quickViewListWrapper {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -744,17 +745,17 @@
 }
 
 @media only screen and (max-width:768px) {
-    .boardViewListWrapper>div {
+    /* .boardViewListWrapper>div {
         max-width: 300px;
         margin: auto;
-    }
+    } */
 
-    .boardViewListWrapper>div>div:nth-child(1)>div:nth-child(1)>div:nth-child(1) {
+    /* .boardViewListWrapper>div>div:nth-child(1)>div:nth-child(1)>div:nth-child(1) {
         width: 45px;
         height: 45px;
-    }
+    } */
 
-    .boardViewListWrapper>div>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>h4 {
+    /* .boardViewListWrapper>div>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>h4 {
         font-size: 12px;
     }
 
@@ -778,11 +779,11 @@
 
     .boardViewListWrapper>div>div:nth-child(4) {
         grid-template-columns: repeat(1, 1fr);
-    }
+    } */
 }
 
 @media only screen and (max-width:768px) {
-    .boardViewListWrapper>div {
+    /* .boardViewListWrapper>div {
         max-width: 280px;
-    }
+    } */
 }

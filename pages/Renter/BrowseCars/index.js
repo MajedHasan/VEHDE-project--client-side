@@ -30,6 +30,7 @@ import { useRouter } from "next/router"
 import ModalMd from "../../../components/common/ModalMd"
 import CarDetailsOverviewPopup from "../../../components/carPictures&Specification/CarDetailsOverviewPopup"
 import AboutHostPopup from "../../../components/Rental/AboutHostPopup"
+import BrowseCarsBoardView from "../../../components/Rental/BrowseCarsBoardView"
 
 
 const BrowseCars = () => {
@@ -363,7 +364,9 @@ const BrowseCars = () => {
                             }
                             {
                                 viewType === "board" && <div className={styles.boardViewListWrapper}>
-                                    <div>
+                                    <BrowseCarsBoardView />
+                                    <BrowseCarsBoardView />
+                                    {/* <div>
                                         <div>
                                             <div>
                                                 <div>
@@ -403,7 +406,7 @@ const BrowseCars = () => {
                                             <button onClick={() => setOverview({})}>Overview</button>
                                             <button onClick={() => setDetail({})}>Detail</button>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             }
                             {/* <div className="mt-4">
