@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from "../../styles/renter/BrowseCarsBoardView.module.css"
+import SingleCarDetailsStyles from "../../styles/renter/SingleCarDetails.module.css"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
@@ -230,13 +231,13 @@ const BrowseCarsBoardView = () => {
 
             {
                 overview !== null && <ModalMd setModal={setOverview}>
-                    <h2 className={styles.popupHeader}>Host Category: <span>Individual</span></h2>
+                    <h2 className={SingleCarDetailsStyles.popupHeader}>Host Category: <span>Individual</span></h2>
                     <CarDetailsOverviewPopup></CarDetailsOverviewPopup>
                 </ModalMd>
             }
             {
                 detail !== null && <ModalMd setModal={setDetail}>
-                    <h2 className={styles.popupHeader}>About Host</h2>
+                    <h2 className={SingleCarDetailsStyles.popupHeader}>Reservation Details</h2>
                     <AboutHostPopup payNowUrl={`./BrowseCars/123456/review`}></AboutHostPopup>
                 </ModalMd>
             }

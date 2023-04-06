@@ -54,7 +54,7 @@ const review = () => {
                                         <input type="text" placeholder='Enter your phone number' />
                                     </div>
 
-                                    <div className='row align-items-center' style={{ background: "#FFFFFF", borderRadius: "99px", margin: 0 }}>
+                                    {/* <div className='row align-items-center' style={{ background: "#FFFFFF", borderRadius: "99px", margin: 0 }}>
                                         <div className={`${PaymentStyles.checkoutModalInputBox} col-md-5 col-12`}>
                                             <label htmlFor="">Driver's license</label>
                                             <input type="text" placeholder="Enter your driver's license number" />
@@ -67,7 +67,13 @@ const review = () => {
                                             <label htmlFor="">State</label>
                                             <input type="text" placeholder="Enter your state" />
                                         </div>
+                                    </div> */}
+
+                                    <div className="d-flex align-items-center ms-3">
+                                        <input type="checkbox" name="" id="" />
+                                        <label htmlFor="" style={{ marginLeft: "5px" }}>Provide my driver's license now</label>
                                     </div>
+
                                     <p>Renters are required by laws to have valid driver’s license which may be subject to verification from the state of issuance.</p>
                                 </div>
                                 <button className='my-btn mt-3 mx-auto w-md-100 w-50'>Checkout</button>

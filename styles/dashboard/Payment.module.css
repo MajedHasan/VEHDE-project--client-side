@@ -596,7 +596,7 @@
     border-radius: 20px;
     margin-bottom: 15px;
     display: grid;
-    grid-template-columns: 30% 45% 25%;
+    grid-template-columns: 27.3% 45% 25%;
     gap: 15px;
 }
 
