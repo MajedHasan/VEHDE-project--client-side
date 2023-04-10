@@ -55,6 +55,7 @@ const Payment = () => {
     const [checkoutModal, setCheckoutModal] = useState(null)
     const [payFeesModal, setPayFeesModal] = useState(null)
     const [showDetails, setShowDetails] = useState(null)
+    const [feesType, setFeesType] = useState("rental")
 
 
     return (
@@ -787,39 +788,50 @@ const Payment = () => {
                                         </div>
                                         <Image src={CarImg} alt="" />
                                         <h4>2022 Toyota Venza</h4>
-                                        <button>RENTAL FEES</button>
-                                        <button>PENALTY FEES</button>
+                                        <button onClick={() => setFeesType("rental")}>RENTAL FEES</button>
+                                        <button onClick={() => setFeesType("penalty")}>PENALTY FEES</button>
                                     </div>
                                     <div>
-                                        <h4>RENTAL COST DETAILS</h4>
-                                        <div> RENTAL DURATION| <span>25 days</span> </div>
-                                        <div>
-                                            <button>RATE| <span>$105</span></button>
-                                            <button>REGULAR</button>
-                                        </div>
-                                        <div>
-                                            <span>Base Cost</span>
-                                            <span>$2,625.00</span>
-                                            <span className={styles.redText}>Discount Host Agreed to Give Renter (5%)</span>
-                                            <span className={styles.redText}>$131.25</span>
-                                            <span>Delivery Fee from Renter</span>
-                                            <span>$ -</span>
-                                            <span>Gross Cost</span>
-                                            <span>$2,493.75</span>
-                                        </div>
-                                        <div>
-                                            <span className={styles.redText}>Taxes & Fees</span>
-                                            <span className={styles.redText}>$791.77</span>
-                                            <span>Service Fees (13.5%)</span>
-                                            <span>$336.66</span>
-                                            <span>Total Tax (18.25%)</span>
-                                            <span>$ 455.11</span>
-                                        </div>
-                                        <div>
-                                            <span>ESTIMATED TOTAL COST</span>
-                                            <span>$3,285.52</span>
-                                        </div>
-                                        <Link href="">For further details, please check the <span>VEHDE Rental Payment Policy</span></Link>
+                                        {
+                                            feesType === "rental" && <>
+                                                <h4>RENTAL COST DETAILS</h4>
+                                                <div> RENTAL DURATION| <span>25 days</span> </div>
+                                                <div>
+                                                    <button>RATE| <span>$105</span></button>
+                                                    <button>REGULAR</button>
+                                                </div>
+                                                <div>
+                                                    <span>Base Cost</span>
+                                                    <span>$2,625.00</span>
+                                                    <span className={styles.redText}>Discount Host Agreed to Give Renter (5%)</span>
+                                                    <span className={styles.redText}>$131.25</span>
+                                                    <span>Delivery Fee from Renter</span>
+                                                    <span>$ -</span>
+                                                    <span>Gross Cost</span>
+                                                    <span>$2,493.75</span>
+                                                </div>
+                                                <div>
+                                                    <span className={styles.redText}>Taxes & Fees</span>
+                                                    <span className={styles.redText}>$791.77</span>
+                                                    <span>Service Fees (13.5%)</span>
+                                                    <span>$336.66</span>
+                                                    <span>Total Tax (18.25%)</span>
+                                                    <span>$ 455.11</span>
+                                                </div>
+                                                <div>
+                                                    <span>ESTIMATED TOTAL COST</span>
+                                                    <span>$3,285.52</span>
+                                                </div>
+                                                <Link href="">For further details, please check the <span>VEHDE Rental Payment Policy</span></Link>
+                                            </>
+                                        }
+                                        {
+                                            feesType === "penalty" && <>
+                                                <h4>PENALTY FEES</h4>
+                                                <p style={{ margin: "20px 0", lineHeight: 1, fontSize: "14px" }}>Good job! You currently have no penalty fees on this reservation.</p>
+                                                <p style={{ marginTop: "20px", lineHeight: 1, fontSize: "14px" }}>For further details, please check the <Link href="" style={{ color: "#737373" }}>VEHDE Penalty Fees Policy</Link></p>
+                                            </>
+                                        }
                                     </div>
                                     <div>
                                         <h4>RENTAL PAYMENT DETAILS</h4>

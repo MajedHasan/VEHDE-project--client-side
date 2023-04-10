@@ -18,7 +18,7 @@ const review = () => {
                     {
                         screen === null && <ReivewHeaderBox></ReivewHeaderBox>
                     }
-                    <MainBox hideEstCost={screen === null ? true : false} hidePrice={screen === "protection" ? true : false} hideList={screen === "protection" ? true : false} hideageResidency={screen === "protection" ? true : false}></MainBox>
+                    <MainBox hideEstCost={screen === null ? true : false} hidePrice={screen === "protection" ? true : false} hideList={screen === "protection" ? true : false} hideageResidency={screen === "protection" ? true : false} showCarNameInTitle={true}></MainBox>
 
                     {
                         screen === null && <div>

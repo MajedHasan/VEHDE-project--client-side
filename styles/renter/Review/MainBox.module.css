@@ -1,3 +1,15 @@
+.mainContainer {
+    position: relative;
+}
+
+.mainContainer>h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -70px;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+}
+
 .container {
     background: #000000;
     border-radius: 25px;
