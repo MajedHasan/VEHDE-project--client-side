@@ -18,6 +18,7 @@ import PaymentStyles from "../../../styles/dashboard/Payment.module.css"
 import CarImg from "../../../assets/img/dashboard/MyHost/Rental/car.png"
 import MPGIMG from "../../../assets/img/dashboard/MyRenter/Payment/37-40MPG.png"
 import MapIcon from "../../../assets/img/map-icon.png"
+import ProtectionBox from "./ProtectionBox"
 
 
 
@@ -520,10 +521,11 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                                     <label htmlFor="">Phone number</label>
                                     <input type="text" placeholder='Enter your phone number' />
                                 </div>
-                                <div className={PaymentStyles.checkoutModalCheckbox}>
+                                <ProtectionBox hideTitle={true} />
+                                {/* <div className={PaymentStyles.checkoutModalCheckbox}>
                                     <input type="checkbox" name="" id="" />
                                     <label htmlFor="">Provide my driver’s license now</label>
-                                </div>
+                                </div> */}
                                 <p>Renters are required by laws to have valid driver’s license which may be subject to verification from the state of issuance.</p>
                             </div>
                             <div>
@@ -583,7 +585,6 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                                     <label htmlFor="">Free cancellation with full refund before March 13, 2022, at 00:45 PM</label>
                                 </div>
                                 <div className={`${PaymentStyles.checkoutModalCheckbox} mt-3`}>
-                                    <input type="checkbox" name="" id="" />
                                     <label htmlFor="">
                                         <p style={{ color: "#898989", marginBottom: 0 }}>I agree to VEHDE’s <span style={{ color: "#DE4F4D" }}>Terms of Use</span> and acknowledge that I have read the <span style={{ color: "#DE4F4D" }}>Privacy Notice</span>.</p>
                                     </label>

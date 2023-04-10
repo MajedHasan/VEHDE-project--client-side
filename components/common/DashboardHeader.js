@@ -325,7 +325,7 @@ const DashboardHeader = ({ mobileMenu, setMobileMenu, userRole }) => {
                 showModalMd === "auto" && <ModalLg setModal={setShowModalMd}>
                     <div className={`${styles.modalLgBox}`}>
                         <h2>VEHDE
-                            <span>Auto Insurance</span>
+                            <span style={{ fontSize: "18px" }}>Auto Insurance</span>
                         </h2>
                         <p style={{ marginTop: "70px", fontSize: "14px", lineHeight: 1, marginBottom: "5px" }}>VEHDE makes protection plans available to guests. Details of the protection plans can be found by reviewing</p>
                         <p style={{ fontSize: "12px", color: "#6A6A6A" }}>Understanding and choosing ride auto protection.</p>

@@ -69,10 +69,10 @@ const review = () => {
                                         </div>
                                     </div> */}
 
-                                    <div className="d-flex align-items-center ms-3">
+                                    {/* <div className="d-flex align-items-center ms-3">
                                         <input type="checkbox" name="" id="" />
                                         <label htmlFor="" style={{ marginLeft: "5px" }}>Provide my driver's license now</label>
-                                    </div>
+                                    </div> */}
 
                                     <p>Renters are required by laws to have valid driver’s license which may be subject to verification from the state of issuance.</p>
                                 </div>

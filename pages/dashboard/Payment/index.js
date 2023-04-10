@@ -705,12 +705,14 @@ const Payment = () => {
                                         <label htmlFor="">Phone number</label>
                                         <input type="text" placeholder='Enter your phone number' />
                                     </div>
-                                    <div className={styles.checkoutModalCheckbox}>
+                                    <ProtectionBox hideTitle={true} />
+                                    {/* <div className={styles.checkoutModalCheckbox}>
                                         <input type="checkbox" name="" id="" />
                                         <label htmlFor="">Provide my driver’s license now</label>
-                                    </div>
+                                    </div> */}
                                     <p>Renters are required by laws to have valid driver’s license which may be subject to verification from the state of issuance.</p>
                                 </div>
+
                                 <div>
                                     <h3>PAYMENT INFORMATION</h3>
                                     <div className={`${styles.checkoutModalInputBox} my-2`}>
@@ -765,7 +767,7 @@ const Payment = () => {
 
                                     <div className={`${styles.checkoutModalCheckbox} mt-3`}>
                                         <input type="checkbox" name="" id="" />
-                                        <label htmlFor="">I agree to VEHDE’s <Link href="">Terms of Use</Link> and acknowledge that I have read the <Link href="">Privacy Notice</Link>.</label>
+                                        <label htmlFor="">I agree to VEHDE’s <Link href="" style={{ color: "#DE4F4D" }}>Terms of Use</Link> and acknowledge that I have read the <Link href="" style={{ color: "#DE4F4D" }}>Privacy Notice</Link>.</label>
                                     </div>
                                     <p>Free cancellation with full refund before March 13, 2022, at 00:45 PM</p>
                                 </div>
