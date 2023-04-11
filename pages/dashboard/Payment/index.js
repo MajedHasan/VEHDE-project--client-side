@@ -716,7 +716,9 @@ const Payment = () => {
                                         </div>
                                         <div className={`${styles.checkoutModalInputBox} col-md-4 col-12`}>
                                             <label htmlFor="">State</label>
-                                            <input type="text" placeholder="Enter your state" />
+                                            <select name="" id="">
+                                                <option value="">Select the state</option>
+                                            </select>
                                         </div>
                                     </div>
                                     {/* <div className={styles.checkoutModalCheckbox}>
