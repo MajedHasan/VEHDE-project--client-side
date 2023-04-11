@@ -18,7 +18,6 @@ import PaymentStyles from "../../../styles/dashboard/Payment.module.css"
 import CarImg from "../../../assets/img/dashboard/MyHost/Rental/car.png"
 import MPGIMG from "../../../assets/img/dashboard/MyRenter/Payment/37-40MPG.png"
 import MapIcon from "../../../assets/img/map-icon.png"
-import ProtectionBox from "./ProtectionBox"
 
 
 
@@ -521,7 +520,20 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                                     <label htmlFor="">Phone number</label>
                                     <input type="text" placeholder='Enter your phone number' />
                                 </div>
-                                <ProtectionBox hideTitle={true} />
+                                <div className='row align-items-center' style={{ background: "#FFFFFF", borderRadius: "99px", margin: 0 }}>
+                                    <div className={`${PaymentStyles.checkoutModalInputBox} col-md-5 col-12`}>
+                                        <label htmlFor="">Driver's license</label>
+                                        <input type="text" placeholder="Enter your driver's license number" />
+                                    </div>
+                                    <div className={`${PaymentStyles.checkoutModalInputBox} col-md-3 col-12`}>
+                                        <label htmlFor="">Expriation date</label>
+                                        <input type="text" placeholder='Day/Month/Year' />
+                                    </div>
+                                    <div className={`${PaymentStyles.checkoutModalInputBox} col-md-4 col-12`}>
+                                        <label htmlFor="">State</label>
+                                        <input type="text" placeholder="Enter your state" />
+                                    </div>
+                                </div>
                                 {/* <div className={PaymentStyles.checkoutModalCheckbox}>
                                     <input type="checkbox" name="" id="" />
                                     <label htmlFor="">Provide my driver’s license now</label>
@@ -581,10 +593,11 @@ const MainBox = ({ hidePrice, hideList, hideageResidency, hideEstCost, showAtten
                                 </div>
 
                                 <div className={`${PaymentStyles.checkoutModalCheckbox} mt-3`}>
-                                    <input type="checkbox" name="" id="" />
+                                    {/* <input type="checkbox" name="" id="" /> */}
                                     <label htmlFor="">Free cancellation with full refund before March 13, 2022, at 00:45 PM</label>
                                 </div>
-                                <div className={`${PaymentStyles.checkoutModalCheckbox} mt-3`}>
+                                <div className={`${PaymentStyles.checkoutModalCheckbox} mt-1`}>
+                                    <input type="checkbox" />
                                     <label htmlFor="">
                                         <p style={{ color: "#898989", marginBottom: 0 }}>I agree to VEHDE’s <span style={{ color: "#DE4F4D" }}>Terms of Use</span> and acknowledge that I have read the <span style={{ color: "#DE4F4D" }}>Privacy Notice</span>.</p>
                                     </label>

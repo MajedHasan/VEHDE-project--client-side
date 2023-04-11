@@ -705,7 +705,20 @@ const Payment = () => {
                                         <label htmlFor="">Phone number</label>
                                         <input type="text" placeholder='Enter your phone number' />
                                     </div>
-                                    <ProtectionBox hideTitle={true} />
+                                    <div className='row align-items-center' style={{ background: "#FFFFFF", borderRadius: "99px", margin: 0 }}>
+                                        <div className={`${styles.checkoutModalInputBox} col-md-5 col-12`}>
+                                            <label htmlFor="">Driver's license</label>
+                                            <input type="text" placeholder="Enter your driver's license number" />
+                                        </div>
+                                        <div className={`${styles.checkoutModalInputBox} col-md-3 col-12`}>
+                                            <label htmlFor="">Expriation date</label>
+                                            <input type="text" placeholder='Day/Month/Year' />
+                                        </div>
+                                        <div className={`${styles.checkoutModalInputBox} col-md-4 col-12`}>
+                                            <label htmlFor="">State</label>
+                                            <input type="text" placeholder="Enter your state" />
+                                        </div>
+                                    </div>
                                     {/* <div className={styles.checkoutModalCheckbox}>
                                         <input type="checkbox" name="" id="" />
                                         <label htmlFor="">Provide my driver’s license now</label>
