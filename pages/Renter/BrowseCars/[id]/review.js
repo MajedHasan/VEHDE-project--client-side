@@ -54,7 +54,7 @@ const review = () => {
                                         <input type="text" placeholder='Enter your phone number' />
                                     </div>
 
-                                    {/* <div className='row align-items-center' style={{ background: "#FFFFFF", borderRadius: "99px", margin: 0 }}>
+                                    <div className='row align-items-center' style={{ background: "#FFFFFF", borderRadius: "99px", margin: 0 }}>
                                         <div className={`${PaymentStyles.checkoutModalInputBox} col-md-5 col-12`}>
                                             <label htmlFor="">Driver's license</label>
                                             <input type="text" placeholder="Enter your driver's license number" />
@@ -67,7 +67,7 @@ const review = () => {
                                             <label htmlFor="">State</label>
                                             <input type="text" placeholder="Enter your state" />
                                         </div>
-                                    </div> */}
+                                    </div>
 
                                     {/* <div className="d-flex align-items-center ms-3">
                                         <input type="checkbox" name="" id="" />
