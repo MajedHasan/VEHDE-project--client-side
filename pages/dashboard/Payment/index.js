@@ -836,12 +836,21 @@ const Payment = () => {
                                         }
                                     </div>
                                     <div>
-                                        <h4>RENTAL PAYMENT DETAILS</h4>
-                                        <span>RENTAL DEPOSIT: $ 105.00</span>
-                                        <span className={styles.redText}>Deadline 4/17/2022 10:45 AM</span>
-                                        <span>OUTSTANDING: $ 3,180.52</span>
-                                        <span className={styles.redText}>Deadline 4/18/2022 10:45 PM</span>
-                                        <span className={styles.greenText}>Paid 3/10/2022 2:15 AM</span>
+                                        {
+                                            feesType === "rental" && <>
+                                                <h4>RENTAL PAYMENT DETAILS</h4>
+                                                <span>RENTAL DEPOSIT: $ 105.00</span>
+                                                <span className={styles.redText}>Deadline 4/17/2022 10:45 AM</span>
+                                                <span>OUTSTANDING: $ 3,180.52</span>
+                                                <span className={styles.redText}>Deadline 4/18/2022 10:45 PM</span>
+                                                <span className={styles.greenText}>Paid 3/10/2022 2:15 AM</span>
+                                            </>
+                                        }
+                                        {
+                                            feesType === "penalty" && <>
+                                                <h4>PENALTY FEES DETAILS</h4>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                                 <div className={styles.buttons}>

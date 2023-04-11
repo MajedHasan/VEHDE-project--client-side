@@ -188,8 +188,8 @@ const MyRenter = () => {
                 modifyModal && <ModalLg setModal={setModifyModal}>
                     <span onClick={() => setModifyModal(null)} style={{ cursor: "pointer" }}> <i className="fa fa-chevron-left"></i> </span>
                     <div className={styles.modifyModalWrapper}>
-                        <h2 style={{ fontWeight: "bolder" }}>Modifying active rental for
-                            <span>(Toyota Venza LE 2022 RSRVE Code ATX-001-3088)</span>
+                        <h2 style={{ fontWeight: "bolder" }}>Modifying active rental for Toyota Venza LE 2022
+                            <span>(RSRVE Code ATX-001-3088)</span>
                         </h2>
                         <p>You can now review and modify your reservation based on your new preferences</p>
                         <div>
